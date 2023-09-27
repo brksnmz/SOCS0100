@@ -1,0 +1,51 @@
+[
+  {
+    "objectID": "2023/weeks/week01/slides.html#your-lecturer",
+    "href": "2023/weeks/week01/slides.html#your-lecturer",
+    "title": "🗓️ Week 01 Introduction to Computational Social Science",
+    "section": "Your lecturer",
+    "text": "Your lecturer\n\n\n\n\n\nDr Sonmez Lecturer in Quantitative Social ScienceProgramme Director of BSc SSDS\n\n\n\n\nPhD in Sociology (University of Essex)\nMA in Longitudinal Social Research (University of Essex)\nBA in Economics (Bilkent University)\n\nExperimental Methods  Social Norms  Trust\n\n\n\n\n\nSOCS0100 – Computational Tools for Reproducible Social Science"
+  },
+  {
+    "objectID": "2023/index.html",
+    "href": "2023/index.html",
+    "title": "SOCS0100 - Computational Tools for Reproducible Social Science",
+    "section": "",
+    "text": "📢 Important\n\n\n\n\n\n(03/10/2023)\n\n🗓️ Week 01 lecture material is now available!\n\n\n\n\n\n🧑🏻‍🏫 Module Team\n\nModule Convenor\n\n\n\nBurak Sonmez  Lecturer in Quantitative Social Science  University College London 📧 b.sonmez@ucl.ac.uk ( at )\nOffice Hours:\n\nWhen:Fridays 16:00-18:00\nWhere:55-59 Gordon Square, 416\nHow to book: Please email me in advance\n\n\n\n\n\n\n📍 Lectures\nFridays 10:00-12:00 at Roberts Building 309\n\n\n💻 Practical Session Groups\n\nGroup 01\n\n📆 Fridays\n⌚ 12:00 - 13:00\n📍 Bedford Way (20) 631\n🧑‍🏫 Burak Sonmez\n\n\n\nGroup 02\n\n📆 Fridays\n⌚ 15:00 - 16:00\n📍 Bedford Way (20) 828\n🧑‍🏫 Burak Sonmez"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "SOCS0100 - Computational Tools for Reproducible Social Science",
+    "section": "",
+    "text": "📑 Module Brief\nThis module will provide students with computational and reproducible research tools that are frequently used in social data science. More specifically, it will first introduce students to how to use R Studio and GitHub together as a toolkit for reproducible social science research, illustrating key features of R packages to manage databases and conduct data analysis. Second, students will learn the fundamentals of functional programming, such as familiarity with conditional flow (e.g. if-else conditionals) and creating functions to automate some common tasks for data wrangling and visualisation. Students will also be shown how they can use these functions in data science projects to make their project workflow more efficient. Third, students will be introduced the concepts of ethical Webscraping, as well as learning how to scrap both static and dynamic webpages. Forth, students will learn how to build and deploy Shiny apps to create interactive data visualisation. Finally, working with different APIs will be introduced.\n\n\n🎯 Learning Objectives\nAfter completing the module students should be able to: - Familiarised with foundations and applications of social data science\n\nEquipped with the skills to understand computational tools for reproducible research\nAware of the potential and pitfalls of social data science\nAble to collaborate in reproducible research projects, using a source-code repository\n\n\nSelect Academic Year/Term:\n 2023/24"
+  },
+  {
+    "objectID": "2023/weeks/week01/page.html",
+    "href": "2023/weeks/week01/page.html",
+    "title": "🗓️ Week 01 - Introduction to Computational Social Science",
+    "section": "",
+    "text": "Introduction to computational social science and open science: data and code sharing, project management, and collaborations – the use of git and GitHub. This week students will be introduced how they can set up their own GitHub account and subscribe to the module organisation to engage with both individual and group assignments throughout the module."
+  },
+  {
+    "objectID": "2023/weeks/week01/page.html#lecture-slides",
+    "href": "2023/weeks/week01/page.html#lecture-slides",
+    "title": "🗓️ Week 01 - Introduction to Computational Social Science",
+    "section": "👨‍🏫 Lecture Slides",
+    "text": "👨‍🏫 Lecture Slides\nEither click on the slide area below or click here to view it in fullscreen. Use your keypad to navigate the slides.\n\n\n\n\n🎥 Looking for lecture recordings? You can only find those on Moodle."
+  },
+  {
+    "objectID": "2023/weeks/week01/page.html#lab-materials",
+    "href": "2023/weeks/week01/page.html#lab-materials",
+    "title": "🗓️ Week 01 - Introduction to Computational Social Science",
+    "section": "✍️ Lab Materials",
+    "text": "✍️ Lab Materials\n🚧 Come back after the lecture to read the practicals for the week 🚧"
+  },
+  {
+    "objectID": "2023/weeks/week01/page.html#required-reading",
+    "href": "2023/weeks/week01/page.html#required-reading",
+    "title": "🗓️ Week 01 - Introduction to Computational Social Science",
+    "section": "📚 Required Reading",
+    "text": "📚 Required Reading\n\nEdelman, A., Wolff, T., Montagne, D. & Bail, C. A. (2020). Computational Social Science and Sociology, Annual Review of Sociology.\nBryan, J. (2018), Happy Git and GitHub for the useR, GitHub."
+  }
+]
