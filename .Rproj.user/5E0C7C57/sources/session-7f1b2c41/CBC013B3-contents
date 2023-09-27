@@ -1,0 +1,84 @@
+project:
+  type: "website"
+  title: "Computational Tools for Reproducible Social Science 2023/24"
+  output-dir: _output
+  render:
+    - "index.qmd"
+    - "2023/*.qmd"
+    - "2023/weeks/week01/*.qmd"
+
+website:
+  title: "Computational Tools for Reproducible Social Science 2023/24"
+  page-navigation: true
+  reader-mode: true
+  open-graph: true
+  twitter-card: 
+    creator: "@<socioburak>"
+    site: "\\@<socioburak>"
+  favicon: "figures/icons/course_favicon.png"
+  search:
+    location: navbar
+    type: textbox
+  sidebar:
+    style: docked
+    contents:
+      - href: 2023/index.qmd
+        text: "🏠 Home"
+      # - href: 2023/syllabus.qmd
+      #   text: "📓 Syllabus"
+      # - href: 2023/communication.qmd
+      #   text: "📟 Communication"
+      # - href: 2023/assignments.qmd
+      #   text: "✍️ Assignments"
+      #   contents:
+      #     - href: 2023/assignments/assignment01.qmd
+      #       text: "📝 Assignment 01"
+      #     - href: 2023/assignments/assignment02.qmd
+      #       text: "📝 Assignment 02"
+      - section: "🗓️ Weeks"
+        contents:
+         - href: 2023/weeks/week01/page.qmd
+           text: Week 01
+           contents:
+             - href: 2023/weeks/week01/page.qmd
+               text: 👨‍🏫 Lecture Material
+            #  - href: 2023/weeks/week01/lab.qmd
+            #    text: 💻 Lab Roadmap
+            #  - href: 2023/weeks/week01/appendix.qmd
+            #    text: 🔖 Appendix
+
+  navbar:
+    background: primary
+  page-footer:
+    background: light
+    left: "Copyright 2023, Burak Sonmez" 
+
+
+
+bibliography: references/references.bib
+csl: references/chicago-author-date.csl
+
+
+format:
+  html:
+    author: Dr [Burak Sonmez](#)
+    author-meta: Dr Burak Sonmez
+    date-format: "DD MMMM YYYY"
+
+    email-obfuscation: javascript
+    link-external-newwindow: true
+    link-external-icon: true
+    link-external-filter: ^(?:http:|https:)\/\/(?:brksnmz\.github\.io\/|localhost)
+
+    theme:
+      light: 
+        - journal
+        - css/custom.scss # I use this just to change the default colour
+    css: 
+      - css/custom_style.css
+      - css/syllabus.css
+    toc: true
+
+#margin-header: |
+# ![](/figures/logos/MY_INSTITUTION.jpeg)
+

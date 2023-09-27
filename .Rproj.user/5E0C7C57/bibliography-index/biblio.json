@@ -1,0 +1,524 @@
+{
+    "sources": [
+        {
+            "author": [
+                {
+                    "family": "Hall",
+                    "given": "Eric"
+                }
+            ],
+            "id": "hall2000internet",
+            "issued": {
+                "date-parts": [
+                    [
+                        2000
+                    ]
+                ]
+            },
+            "publisher": "\" O’Reilly Media, Inc.\"",
+            "title": "Internet core protocols: The definitive guide: Help for network administrators",
+            "title-short": "Internet core protocols",
+            "type": "book"
+        },
+        {
+            "ISBN": "9781789537529",
+            "abstract": "Linux is a Unix-like computer operating system assembled under the model of free and open-source software development and distribution. This book will teach all the important command-line tools and utilities using real-world examples. You’ll learn everything you need to know as a new Linux system administrator",
+            "author": [
+                {
+                    "family": "Pelz",
+                    "given": "Oliver"
+                }
+            ],
+            "id": "pelz_fundamentals_2018",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018
+                    ]
+                ]
+            },
+            "note": "OCLC: 1045044188",
+            "publisher": "Packt Publishing Ltd",
+            "publisher-place": "Birmingham",
+            "title": "Fundamentals of Linux: Explore the Essentials of the Linux Command Line",
+            "title-short": "Fundamentals of Linux",
+            "type": "book"
+        },
+        {
+            "ISBN": "9781788990158",
+            "abstract": "Shell scripting is a quick method to prototype a complex application or a problem by automating tasks when working on Linux-based systems. This book will make use of both simple one-line commands and command sequences and complex problems can be solved with ease, from text processing to backing up sysadmin tools",
+            "author": [
+                {
+                    "family": "Ebrahim",
+                    "given": "Mokhtar"
+                },
+                {
+                    "family": "Mallett",
+                    "given": "Andrew"
+                }
+            ],
+            "edition": "2nd ed",
+            "id": "ebrahim_mastering_2018",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018
+                    ]
+                ]
+            },
+            "note": "OCLC: 1034631829",
+            "publisher": "Packt Publishing",
+            "publisher-place": "Birmingham",
+            "title": "Mastering Linux Shell Scripting: A practical guide to Linux command-line, Bash scripting, and Shell programming, 2nd Edition",
+            "title-short": "Mastering Linux Shell Scripting",
+            "type": "book"
+        },
+        {
+            "URL": "https://www.computerhistory.org/timeline/1950/",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2022,
+                        9,
+                        16
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "literal": "Computer History Museum"
+                }
+            ],
+            "container-title": "1950  Timeline of Computer History",
+            "id": "computer_history_museum_1950_nodate",
+            "title": "1950  Timeline of Computer History",
+            "type": ""
+        },
+        {
+            "ISBN": "9780471694663",
+            "author": [
+                {
+                    "family": "Silberschatz",
+                    "given": "Abraham"
+                },
+                {
+                    "family": "Galvin",
+                    "given": "Peter B."
+                },
+                {
+                    "family": "Gagne",
+                    "given": "Greg"
+                }
+            ],
+            "edition": "7th ed",
+            "id": "silberschatz_operating_2005",
+            "issued": {
+                "date-parts": [
+                    [
+                        2005
+                    ]
+                ]
+            },
+            "keyword": "Operating systems (Computers)",
+            "publisher": "J. Wiley & Sons",
+            "publisher-place": "Hoboken, NJ",
+            "title": "Operating system concepts",
+            "type": "book"
+        },
+        {
+            "URL": "https://news.learnenough.com/macos-bash-zshell",
+            "abstract": "News & blog about Learn Enough (including the Ruby on Rails Tutorial)",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2022,
+                        8,
+                        31
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Hartl",
+                    "given": "Michael"
+                }
+            ],
+            "container-title": "Learn Enough News & Blog",
+            "genre": "Online {Course}",
+            "id": "hartl_using_2020",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020,
+                        4
+                    ]
+                ]
+            },
+            "title": "Using Z Shell on Macs with the Learn Enough Tutorials",
+            "title-short": "Using Z Shell on Macs",
+            "type": ""
+        },
+        {
+            "URL": "https://www.howtogeek.com/763775/what-is-ubuntu/",
+            "abstract": "In online discussions, you may have heard the term “Ubuntu” thrown around, often in the context of discussing alternatives to Windows. So what exactly is it, and why do people choose to use it?",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2022,
+                        8,
+                        31
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Abubakar",
+                    "given": "Mohammed"
+                }
+            ],
+            "container-title": "How-To Geek",
+            "genre": "Blogpost",
+            "id": "abubakar_what_2021",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021,
+                        12
+                    ]
+                ]
+            },
+            "title": "What Is Ubuntu?",
+            "title-short": "What Is Ubuntu?",
+            "type": ""
+        },
+        {
+            "URL": "https://ubuntu.com/tutorials/install-ubuntu-on-wsl2-on-windows-11-with-gui-support",
+            "abstract": "Ubuntu is an open source software operating system that runs from the desktop, to the cloud, to all your internet connected things.",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2022,
+                        8,
+                        31
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "literal": "Canonical"
+                }
+            ],
+            "container-title": "Ubuntu",
+            "genre": "Tutorial",
+            "id": "canonical_install_2022",
+            "issued": {
+                "date-parts": [
+                    [
+                        2022
+                    ]
+                ]
+            },
+            "title": "Install Ubuntu on WSL2 on Windows 11 with GUI support",
+            "title-short": "Install Ubuntu on WSL2 on Windows 11 with GUI support",
+            "type": ""
+        },
+        {
+            "URL": "https://docs.microsoft.com/en-us/windows/wsl/about",
+            "abstract": "Learn about the Windows Subsystem for Linux, including the different versions and ways you can use them.",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2022,
+                        8,
+                        31
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "literal": "Microsoft"
+                }
+            ],
+            "container-title": "What is Windows Subsystem for Linux",
+            "genre": "Tutorial",
+            "id": "microsoft_what_2022",
+            "issued": {
+                "date-parts": [
+                    [
+                        2022,
+                        8
+                    ]
+                ]
+            },
+            "title": "What is Windows Subsystem for Linux",
+            "title-short": "What is Windows Subsystem for Linux",
+            "type": ""
+        },
+        {
+            "DOI": "10.1371/journal.pcbi.1008645",
+            "ISSN": "1553-7358",
+            "URL": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1008645",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2022,
+                        8,
+                        30
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Brandies",
+                    "given": "Parice A."
+                },
+                {
+                    "family": "Hogg",
+                    "given": "Carolyn J."
+                }
+            ],
+            "container-title": "PLOS Computational Biology",
+            "id": "brandies_ten_2021",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021,
+                        2
+                    ]
+                ]
+            },
+            "keyword": "Bioinformatics, Cloud computing, Computational pipelines, Computer software, Operating systems, Programming languages, Software tools, Source code",
+            "page": "e1008645",
+            "title": "Ten simple rules for getting started with command-line bioinformatics",
+            "type": "article-journal",
+            "volume": "17"
+        },
+        {
+            "ISBN": "9781449358655",
+            "URL": "https://ebookcentral.proquest.com/lib/londonschoolecons/detail.action?docID=1465965",
+            "author": [
+                {
+                    "family": "Schutt",
+                    "given": "Rachel"
+                },
+                {
+                    "family": "O’Neil",
+                    "given": "Cathy"
+                }
+            ],
+            "edition": "First edition",
+            "id": "schutt_doing_2013",
+            "issued": {
+                "date-parts": [
+                    [
+                        2013
+                    ]
+                ]
+            },
+            "keyword": "Big data, Cyberinfrastructure, Data mining, Data structures (Computer science), Database management, Information science",
+            "note": "OCLC: ocn827841776",
+            "publisher": "O’Reilly Media",
+            "publisher-place": "Beijing ; Sebastopol",
+            "title": "Doing data science",
+            "type": "book"
+        },
+        {
+            "DOI": "10.1017/9781139161879",
+            "ISBN": "9781139161879 9781107023987 9781107676510",
+            "URL": "https://www.cambridge.org/highereducation/product/9781139161879/book",
+            "abstract": "Most textbooks on regression focus on theory and the simplest of examples. Real statistical problems, however, are complex and subtle. This is not a book about the theory of regression. It is about using regression to solve real problems of comparison, estimation, prediction, and causal inference. Unlike other books, it focuses on practical issues such as sample size and missing data and a wide range of goals and techniques. It jumps right in to methods and computer code you can use immediately. Real examples, real stories from the authors’ experience demonstrate what regression can do and its limitations, with practical advice for understanding assumptions and implementing methods for experiments and observational studies. They make a smooth transition to logistic regression and GLM. The emphasis is on computation in R and Stan rather than derivations, with code available online. Graphics and presentation aid understanding of the models and model fitting.",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2022,
+                        8,
+                        26
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Gelman",
+                    "given": "Andrew"
+                },
+                {
+                    "family": "Hill",
+                    "given": "Jennifer"
+                },
+                {
+                    "family": "Vehtari",
+                    "given": "Aki"
+                }
+            ],
+            "edition": "1",
+            "id": "gelman_regression_2020",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020,
+                        7
+                    ]
+                ]
+            },
+            "publisher": "Cambridge University Press",
+            "title": "Regression and Other Stories",
+            "type": "book"
+        },
+        {
+            "URL": "https://ourworldindata.org/rise-of-social-media",
+            "abstract": "Social media sites are used by more than two-thirds of all internet users. When did the rise of social media start and what are the largest sites today?",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2022,
+                        8,
+                        25
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Ortiz-Ospina",
+                    "given": "Esteban"
+                }
+            ],
+            "container-title": "Our World in Data",
+            "id": "ortiz-ospina_rise_2019",
+            "issued": {
+                "date-parts": [
+                    [
+                        2019,
+                        9
+                    ]
+                ]
+            },
+            "title": "The rise of social media",
+            "type": ""
+        },
+        {
+            "URL": "http://wapo.st/WKKTMh",
+            "abstract": "Two photos showing how our technological lives have changed are compelling, but not a direct comparison.",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2022,
+                        8,
+                        25
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Kolawole",
+                    "given": "Emi"
+                }
+            ],
+            "container-title": "Washington Post",
+            "id": "kolawole_about_2013",
+            "issued": {
+                "date-parts": [
+                    [
+                        2013,
+                        3
+                    ]
+                ]
+            },
+            "title": "About those 2005 and 2013 photos of the crowds in St. Peter’s Square",
+            "type": ""
+        },
+        {
+            "URL": "https://www.washingtonpost.com/graphics/2017/entertainment/tech-generations/",
+            "abstract": "How did people watch videos, listen to music or access the internet in other generations?",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2022,
+                        8,
+                        25
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Fischer-Baum",
+                    "given": "Reuben"
+                }
+            ],
+            "container-title": "Washington Post",
+            "id": "fischer-baum_what_2017",
+            "issued": {
+                "date-parts": [
+                    [
+                        2017,
+                        11
+                    ]
+                ]
+            },
+            "title": "What “tech world” did you grow up in?",
+            "type": ""
+        },
+        {
+            "ISBN": "9781108560412",
+            "URL": "https://librarysearch.lse.ac.uk/permalink/f/1n2k4al/TN_cdi_askewsholts_vlebooks_9781108673907",
+            "abstract": "\"This book introduces the field of data science in a practical and accessible manner, using a hands-on approach that assumes no prior knowledge of the subject. The foundational ideas and techniques of data science are provided independently from technology, allowing students to easily develop a firm understanding of the subject without a strong technical background, as well as being presented with material that will have continual relevance even after tools and technologies change. Using popular data science tools such as Python and R, the book offers many examples of real-life applications, with practice ranging from small to big data. A suite of online material for both instructors and students provides a strong supplement to the book, including datasets, chapter slides, solutions, sample exams and curriculum suggestions. This entry-level textbook is ideally suited to readers from a range of disciplines wishing to build a practical, working knowledge of data science\"–",
+            "author": [
+                {
+                    "family": "Shah",
+                    "given": "Chirag"
+                }
+            ],
+            "id": "shah_hands-introduction_2020",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "keyword": "Computer science, Information technology",
+            "publisher": "Cambridge University Press",
+            "publisher-place": "Cambridge, United Kingdom ; New York, NY, USA",
+            "title": "A hands-on introduction to data science",
+            "type": "book"
+        },
+        {
+            "DOI": "10.1162/99608f92.55546b4a",
+            "URL": "https://hdsr.mitpress.mit.edu/pub/t37qjoi7/release/4",
+            "abstract": "There is increasing recognition that the data scientist “unicorn”—one who can master all the necessary skills of data science required by businesses—exists only rarely, if at all. Successful data science teams in business organizations, then, need to assemble people with a variety of different skills. This is only possible at scale with clear classification and certification of skills. While such certifications and classifications are in their early days, some firms are beginning to create them, and they are beginning to emerge in professional associations as well. Ideally, universities and other education providers and certifiers of data science skills would also employ standard skill classifications to communicate the skills they intend to inculcate.",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2022,
+                        8,
+                        22
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Davenport",
+                    "given": "Thomas"
+                }
+            ],
+            "container-title": "Harvard Data Science Review",
+            "id": "davenport_beyond_2020",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020,
+                        5
+                    ]
+                ]
+            },
+            "title": "Beyond Unicorns: Educating, Classifying, and Certifying Business Data Scientists",
+            "title-short": "Beyond Unicorns",
+            "type": "article-journal",
+            "volume": "2"
+        }
+    ],
+    "project_biblios": [
+        "references/references.bib"
+    ]
+}
