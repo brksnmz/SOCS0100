@@ -37,7 +37,8 @@ editor:
 <img src="/figures/people/brk_pic.jpeg" alt="Photo of Burak Sonmez" class="img-responsive atto_image_button_text-bottom" role="presentation" style="object-fit: cover;width:5em;height:5em;border-radius: 50%;font-size:1em;"/>
 
 <figcaption><strong>Dr <a href="#" target="_blank" class="external">Sonmez</a></strong>
-<br/>Lecturer in Quantitative Social Science<br/>Programme Director of BSc SSDS</figcaption>
+<br/>Lecturer in Quantitative Social Science<br/>Programme Director of
+BSc SSDS</figcaption>
 
 </figure>
 :::
@@ -47,10 +48,9 @@ editor:
 -   MA in Longitudinal Social Research (University of Essex)
 -   BA in Economics (Bilkent University)
 
-[Experimental Methods]{.tag style="background-color:var(--quarto-hl-st-color)"}
-<br/> [Social Norms]{.tag
-style="background-color:var(--quarto-hl-fu-color)"} <br/> [Trust]{.tag
-style="background-color:var(--quarto-hl-dv-color)"}
+[Experimental Methods]{.tag
+style="background-color:var(--quarto-hl-st-color)"} <br/> [Social
+Norms]{.tag style="background-color:var(--quarto-hl-fu-color)"} <br/>
+[Trust]{.tag style="background-color:var(--quarto-hl-dv-color)"}
 :::
 :::
-
