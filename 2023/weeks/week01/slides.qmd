@@ -1,6 +1,6 @@
 ---
 subtitle: "SOCS0100 -- Computational Tools for Reproducible Social Science"
-title: "<font style='font-size:1em;'>🗓️ Week 01<br/> Introduction to Computational Social Science</font>"
+title: "<font style='font-size:0.75em;'>🗓️ Week 01<br/> Introduction to Computational Social Science</font>"
 author: Dr [Burak Sonmez](#)
 institute: '[University College London](#)'
 date: 06 October 2023
