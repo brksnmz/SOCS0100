@@ -4,6 +4,7 @@ project:
   output-dir: docs
   render:
     - "index.qmd"
+    - "Rworkshop.qmd"
     - "2023/*.qmd"
     - "2023/weeks/week01/*.qmd"
 
