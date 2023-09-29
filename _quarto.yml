@@ -5,8 +5,8 @@ project:
   render:
     - "index.qmd"
     - "2023/*.qmd"
-    - "2023/workshop/rworkshop/*.qmd"
     - "2023/weeks/week01/*.qmd"
+    - "2023/workshop/rworkshop/*.qmd"
 
 website:
   title: "Computational Tools for Reproducible Social Science 2023/24"

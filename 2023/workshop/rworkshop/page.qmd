@@ -1,6 +1,5 @@
 ---
 title: "🗓️ A Gentle Introduction to R"
-format: html
 ---
 
 In preparation for the module you should begin completing the introductory R workshop. This workshop is designed for those who have no prior knowledge in R. Hence, please feel free to skip the parts if you feel confident about the introductory knowledge. 
