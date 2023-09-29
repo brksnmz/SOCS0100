@@ -26,14 +26,6 @@ editor:
     wrap: 72
 ---
 
-```{r}
-#| echo = FALSE
-knitr::opts_chunk$set(collapse = TRUE, comment = "#", highlight = TRUE)
-#knitr::opts_chunk$set(collapse = TRUE, highlight = TRUE)
-#knitr::opts_chunk$set(comment = "#", collapse = TRUE)
-  #comment = "#" makes it so results from a code chunk start with "#"; default is "##"
-```
-
 ## What is R?
 
 ```{r}
@@ -42,11 +34,8 @@ knitr::opts_chunk$set(collapse = TRUE, comment = "#", highlight = TRUE)
 #| fig.align = "right",
 #| out.width = "15%"
 ```
-<figure>
 
-<img src="/figures/images/rlogo.png">
-
-</figure>
+<figure><img src="/figures/images/rlogo.png"/></figure>
 
 -   R is a widely known open-source software environment for statistical
     computing and graphics. Download: https://cran.r-project.org/ for
@@ -73,11 +62,7 @@ knitr::opts_chunk$set(collapse = TRUE, comment = "#", highlight = TRUE)
 #| out.width = "35%"
 ```
 
-<figure>
-
-<img src="/figures/images/rlogo1.png">
-
-</figure>
+<figure><img src="/figures/images/rlogo1.png"/></figure>
 
 -   We are going to use R Studio in this workshop. R Studio is free
     software that runs R in the background with some brilliant features
@@ -99,11 +84,8 @@ knitr::opts_chunk$set(collapse = TRUE, comment = "#", highlight = TRUE)
 #| fig.align = "centre",
 #| out.width = "85%"
 ```
-<figure>
 
-<img src="/figures/images/rstudio1.png">
-
-</figure>
+<figure><img src="/figures/images/rstudio1.png"/></figure>
 
 ## Working with R Script Files
 
@@ -122,11 +104,7 @@ knitr::opts_chunk$set(collapse = TRUE, comment = "#", highlight = TRUE)
 #| out.width = "85%"
 ```
 
-<figure>
-
-<img src="/figures/images/rscript.png">
-
-</figure>
+<figure><img src="/figures/images/rscript.png"/></figure>
 
 ## Running R code
 
@@ -137,11 +115,7 @@ knitr::opts_chunk$set(collapse = TRUE, comment = "#", highlight = TRUE)
 #| out.width = "75%"
 ```
 
-<figure>
-
-<img src="/figures/images/rstudio2.png">
-
-</figure>
+<figure><img src="/figures/images/rstudio2.png"/></figure>
 
 -   When running multiple lines: select all lines, then press 'Run' or
     cmd/ctrl+enter
@@ -155,11 +129,7 @@ knitr::opts_chunk$set(collapse = TRUE, comment = "#", highlight = TRUE)
 #| out.width = "75%"
 ```
 
-<figure>
-
-<img src="/figures/images/markdown1.png">
-
-</figure>
+<figure><img src="/figures/images/markdown1.png"/></figure>
 
 -   R Markdown/Quarto produces dynamic output formats in html, pdf, MS
     Word, dashboards, Beamer presentations, etc.
@@ -183,11 +153,7 @@ knitr::opts_chunk$set(collapse = TRUE, comment = "#", highlight = TRUE)
 #| out.width = "20%"
 ```
 
-<figure>
-
-<img src="/figures/images/package1.png">
-
-</figure>
+<figure><img src="/figures/images/package1.png"/></figure>
 
 -   And there are R packages developed and shared by others. Some R
     packages include:
@@ -223,11 +189,7 @@ library(tidyverse)
 #| out.width = "70%"
 ```
 
-<figure>
-
-<img src="/figures/images/help.png">
-
-</figure>
+<figure><img src="/figures/images/help.png"/></figure>
 
 ## Learning outcomes in this online workshop
 
@@ -645,11 +607,7 @@ is.na(df)
 #| out.width = "55%"
 ```
 
-<figure>
-
-<img src="/figures/images/if.png">
-
-</figure>
+<figure><img src="/figures/images/if.png"/></figure>
 
 ## Conditionals
 
@@ -709,11 +667,7 @@ find_biden_age(df)
 #| out.width = "75%"
 ```
 
-<figure>
-
-<img src="/figures/images/loop.png">
-
-</figure>
+<figure><img src="/figures/images/loop.png"/></figure>
 
 ## Programming: loops
 
@@ -862,11 +816,7 @@ head(m, 3)
 #| out.width = "75%"
 ```
 
-<figure>
-
-<img src="/figures/images/ggplot.png">
-
-</figure>
+<figure><img src="/figures/images/ggplot.png"/></figure>
 
 ## Introducing ggplot2
 
@@ -951,17 +901,10 @@ p + geom_point(color = "orange") +
 #| fig.show = "hold",
 #| out.width = "30%"
 ```
-<figure>
 
-<img src="/figures/images/kieran.jpg">
+<figure><img src="/figures/images/kieran.jpg"/></figure>
 
-</figure>
-
-<figure>
-
-<img src="/figures/images/wickham.jpg">
-
-</figure>
+<figure><img src="/figures/images/wickham.jpg"/></figure>
 
 -   https://community.rstudio.com/
 -   https://socviz.co/ (DataViz)
