@@ -4,7 +4,7 @@ project:
   output-dir: docs
   render:
     - "index.qmd"
-    - "Rworkshop.qmd"
+    - "2023/Rworkshop.qmd"
     - "2023/*.qmd"
     - "2023/weeks/week01/*.qmd"
 
@@ -25,7 +25,7 @@ website:
     contents:
       - href: 2023/index.qmd
         text: "🏠 Home"
-     - href: 2023/Rworkshop.qmd
+      - href: 2023/Rworkshop.qmd
         text: "📟 R Workshop"
       # - href: 2023/syllabus.qmd
       #   text: "📓 Syllabus"  

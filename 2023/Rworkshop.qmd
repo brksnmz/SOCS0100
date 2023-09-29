@@ -691,13 +691,13 @@ rm(list = ls())
 -   Setting the working directory
 
 ```{r}
-setwd ("~/Desktop/R_Workshop")
+setwd ("~/Desktop/SOCS0100")
 ```
 
 -   Importing data
 
 ```{r}
-load("gss2016.RData")
+load("~/data/gss2016.RData")
 ```
 
 ## Importing data
