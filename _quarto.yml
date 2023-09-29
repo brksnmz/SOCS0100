@@ -47,10 +47,10 @@ website:
             #    text: 🔖 Appendix
       - section: "📟 R Workshop"
         contents:
-         - href: 2023/workshop/page.qmd
+         - href: 2023/workshop/rworkshop/page.qmd
            text: 📟 R Workshop
            contents:
-             - href: 2023/workshop/page.qmd
+             - href: 2023/workshop/rworkshop/page.qmd
                text: 👨‍🏫 Workshop Material
   navbar:
     background: primary
