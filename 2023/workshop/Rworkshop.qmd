@@ -1,6 +1,6 @@
 ---
 subtitle: "SOCS0100 -- Computational Tools for Reproducible Social Science"
-title: "<font style='font-size:0.5em;'>🗓️ Week 01<br/>A Gentle Introduction to R</font>"
+title: "<font style='font-size:0.5em;'>🗓<br/>A Gentle Introduction to R</font>"
 author: Dr [Burak Sonmez](#)
 institute: '[University College London](#)'
 date: 01 October 2023
@@ -26,7 +26,7 @@ editor:
     wrap: 72
 ---
 
-## What is R?
+#### What is R?
 
 ```{r}
 #| label = "rlogo",
