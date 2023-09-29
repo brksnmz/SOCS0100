@@ -47,5 +47,411 @@
     "title": "🗓️ Week 01 - Introduction to Computational Social Science",
     "section": "📚 Required Reading",
     "text": "📚 Required Reading\n\nEdelman, A., Wolff, T., Montagne, D. & Bail, C. A. (2020). Computational Social Science and Sociology, Annual Review of Sociology.\nBryan, J. (2018), Happy Git and GitHub for the useR, GitHub."
+  },
+  {
+    "objectID": "2023/Rworkshop.html#what-is-r",
+    "href": "2023/Rworkshop.html#what-is-r",
+    "title": "🗓️ Week 01A Gentle Introduction to R",
+    "section": "What is R?",
+    "text": "What is R?\n\n\n\n\nR is a widely known open-source software environment for statistical computing and graphics. Download: https://cran.r-project.org/ for both Windows and (Mac) OS X\nR is more than statistical software; it is essentially a programming language based on statistical programming language S (1976)\nDeveloped by Ross Ihaka & Robert Gentleman (1995)\nR may be a little bit challenging at the beginning because R demands precision, and carrying out simple tasks may seem to require a lot of effort\nOnce you get acquainted with R, however, you can handle both basic and complex tasks with ease"
+  },
+  {
+    "objectID": "2023/Rworkshop.html#lets-get-started-with-r-studio",
+    "href": "2023/Rworkshop.html#lets-get-started-with-r-studio",
+    "title": "🗓️ Week 01A Gentle Introduction to R",
+    "section": "Let’s get started with R Studio",
+    "text": "Let’s get started with R Studio\n\n\n\n\nWe are going to use R Studio in this workshop. R Studio is free software that runs R in the background with some brilliant features\nIt is an integrated development environment (IDE) for R. It includes a console, syntax-highlighting editor that supports direct code execution, as well as tools for plotting, history, debugging and workspace management\nGo to https://www.rstudio.com/products/rstudio/download/\nSelect “RSTUDIO-2023.06.2-561.EXE - Windows 10/11 (64-bit)” for Windows users\nSelect “RSTUDIO-2023.06.2-561.DMG - macOS 11+ (64-bit)” for Mac users"
+  },
+  {
+    "objectID": "2023/Rworkshop.html#the-rstudio-interface",
+    "href": "2023/Rworkshop.html#the-rstudio-interface",
+    "title": "🗓️ Week 01A Gentle Introduction to R",
+    "section": "The RStudio interface",
+    "text": "The RStudio interface"
+  },
+  {
+    "objectID": "2023/Rworkshop.html#working-with-r-script-files",
+    "href": "2023/Rworkshop.html#working-with-r-script-files",
+    "title": "🗓️ Week 01A Gentle Introduction to R",
+    "section": "Working with R Script Files",
+    "text": "Working with R Script Files\n\nRather than typing R commands into the console, we typically write short programs, known as “R scripts” that contain the R commands that we wish to execute\nA file editor tab will open in the source panel. R code can be entered here\nYou can use File, then Save to give your script a name and save it in your working directory."
+  },
+  {
+    "objectID": "2023/Rworkshop.html#running-r-code",
+    "href": "2023/Rworkshop.html#running-r-code",
+    "title": "🗓️ Week 01A Gentle Introduction to R",
+    "section": "Running R code",
+    "text": "Running R code\n\n\n\n\nWhen running multiple lines: select all lines, then press ‘Run’ or cmd/ctrl+enter"
+  },
+  {
+    "objectID": "2023/Rworkshop.html#r-markdownquarto",
+    "href": "2023/Rworkshop.html#r-markdownquarto",
+    "title": "🗓️ Week 01A Gentle Introduction to R",
+    "section": "R Markdown/Quarto",
+    "text": "R Markdown/Quarto\n\n\n\n\nR Markdown/Quarto produces dynamic output formats in html, pdf, MS Word, dashboards, Beamer presentations, etc.\nWe will be learning how to effectively use Quarto for reproducible documents in week 5"
+  },
+  {
+    "objectID": "2023/Rworkshop.html#base-r-vs-r-packages",
+    "href": "2023/Rworkshop.html#base-r-vs-r-packages",
+    "title": "🗓️ Week 01A Gentle Introduction to R",
+    "section": "Base R vs R packages",
+    "text": "Base R vs R packages\n\nThere are “default” packages that come with R. Some of these include:\n\nmean(), median(), max(), min(), and sd()\nls() to see what we have in the environment\nsetwd() to set your working directory\nprint() to display the “things” on the console\n\n\n\n\n\n\nAnd there are R packages developed and shared by others. Some R packages include:\n\nforeign\nggplot2\ntidyverse"
+  },
+  {
+    "objectID": "2023/Rworkshop.html#installing-and-loading-r-packages",
+    "href": "2023/Rworkshop.html#installing-and-loading-r-packages",
+    "title": "🗓️ Week 01A Gentle Introduction to R",
+    "section": "Installing and loading R packages",
+    "text": "Installing and loading R packages\n\nYou only need to install a package once on your computer. To install an R package use install.package() function.\n\ninstall.packages(“tidyverse”)\n\nHowever, you need to load a package everytime you plan to use it. To load a package use the library() function.\n\n\n\nThe following package(s) will be installed:\n- tidyverse [2.0.0]\nThese packages will be installed into \"~/Desktop/SOCS0100/renv/library/R-4.3/aarch64-apple-darwin20\".\n\n# Installing packages --------------------------------------------------------\n- Installing tidyverse ...                      OK [linked from cache]\nSuccessfully installed 1 package in 3.5 milliseconds."
+  },
+  {
+    "objectID": "2023/Rworkshop.html#its-easy-to-ask-for-help",
+    "href": "2023/Rworkshop.html#its-easy-to-ask-for-help",
+    "title": "🗓️ Week 01A Gentle Introduction to R",
+    "section": "It’s easy to ask for HELP",
+    "text": "It’s easy to ask for HELP\n\nYou can either use help() function to access R help files or use help section in the bottom right pane to search"
+  },
+  {
+    "objectID": "2023/Rworkshop.html#learning-outcomes-in-this-online-workshop",
+    "href": "2023/Rworkshop.html#learning-outcomes-in-this-online-workshop",
+    "title": "🗓️ Week 01A Gentle Introduction to R",
+    "section": "Learning outcomes in this online workshop",
+    "text": "Learning outcomes in this online workshop\nAble to:\n\nRead and write lines of R code (even if you do not understand all functions, you know how to look them up)\nUnderstand what ‘tidy’ data is, how to generate it, and work with it\nOpen, read, manipulate, analyse, visualise, and save a dataset, using some packages\nUse RStudio, and use it to write an R script and an R markdown document"
+  },
+  {
+    "objectID": "2023/Rworkshop.html#r-basics",
+    "href": "2023/Rworkshop.html#r-basics",
+    "title": "🗓️ Week 01A Gentle Introduction to R",
+    "section": "R basics",
+    "text": "R basics\n\nR as a calculator\n\n\n\n[1] 5\n\n\n[1] 7\n\n\n[1] 30"
+  },
+  {
+    "objectID": "2023/Rworkshop.html#assignment",
+    "href": "2023/Rworkshop.html#assignment",
+    "title": "🗓️ Week 01A Gentle Introduction to R",
+    "section": "Assignment",
+    "text": "Assignment\nAssignment means creating a variable or more generally, an “object” and assigning values to it\n\n&lt;- is the assignment operator\ngood practice to put a space before and after assignment operator!\n\n\n\n[1] 10\n\n\n[1] \"SOCS0100\"\n\n\n[1] \"Next slide please\"\n\n\n\nThe console has displayed “Next slide please”. This is in quotation, which tells R that we are entering a text (string)"
+  },
+  {
+    "objectID": "2023/Rworkshop.html#objects",
+    "href": "2023/Rworkshop.html#objects",
+    "title": "🗓️ Week 01A Gentle Introduction to R",
+    "section": "Objects",
+    "text": "Objects\n\nMost statistical software, such as Stata, operates on datasets including rows of observations and columns of variables\nHowever, R is an “object-oriented” programming language like Python and JavaScript\nYou can consider objects as anything you can assign values to (e.g. data, functions)\nRemember, you can also check what objects you have got in the environment by calling the ls() function"
+  },
+  {
+    "objectID": "2023/Rworkshop.html#objects-1",
+    "href": "2023/Rworkshop.html#objects-1",
+    "title": "🗓️ Week 01A Gentle Introduction to R",
+    "section": "Objects",
+    "text": "Objects\n\nObjects can be categorised by “type” and by “class”\nFor instance, a date is an object with a numeric type and a date class\nThere is no limit to the number of objects R can hold (except RAM memory)"
+  },
+  {
+    "objectID": "2023/Rworkshop.html#logicals",
+    "href": "2023/Rworkshop.html#logicals",
+    "title": "🗓️ Week 01A Gentle Introduction to R",
+    "section": "Logicals",
+    "text": "Logicals\n\nA logical is True or False, and can also be written as T or F. Logicals are mostly used as follows:\n\n\n\n\n==\nis equal to\n\n\n!=\nis not\n\n\n&gt;=\nlarger than or equal to\n\n\n&lt;\nsmaller than\n\n\n\n\n\n[1] TRUE\n\n\n[1] TRUE\n\n\n[1] TRUE\n\n\n[1] FALSE"
+  },
+  {
+    "objectID": "2023/Rworkshop.html#vectors",
+    "href": "2023/Rworkshop.html#vectors",
+    "title": "🗓️ Week 01A Gentle Introduction to R",
+    "section": "Vectors",
+    "text": "Vectors\n\nA vector is a collection of values\nThe individual values within a vector are called “elements”\nValues in a vector can be numeric, character (e.g., “SOCS0100”), or some other type\nFor instance, you can use the combine function c() to create a numeric vector that contains elements (e.g. your modules at UCL and your grades)\n\n\n\n[1] \"S0CS0100\" \"SOCS0079\" \"SOCS0081\"\n\n\n\n\n[1] 60 63 65"
+  },
+  {
+    "objectID": "2023/Rworkshop.html#practicals-5-min",
+    "href": "2023/Rworkshop.html#practicals-5-min",
+    "title": "🗓️ Week 01A Gentle Introduction to R",
+    "section": "Practicals (~5 min)",
+    "text": "Practicals (~5 min)\n\nUsing either the R console or the R script file, please do the following exercises:\n\n\nCreate a vector called v1 with three elements, where all the elements are numbers. Then print the values.\nCreate a vector called v2 with four elements, where all the elements are characters. Then print the values.\nCreate a vector called v3 with five elements, where some elements are numeric and some elements are characters. Then print the values."
+  },
+  {
+    "objectID": "2023/Rworkshop.html#solutions",
+    "href": "2023/Rworkshop.html#solutions",
+    "title": "🗓️ Week 01A Gentle Introduction to R",
+    "section": "Solutions",
+    "text": "Solutions\n\n\n[1]  50 100 150\n\n\n\n\n[1] \"s\" \"o\" \"c\" \"i\"\n\n\n\n\n[1] \"s\" \"o\" \"4\" \"9\" \"1\"\n\n\n1\nThe data in a vector must be only one type or mode (numeric, character, or logical) though. You can’t mix modes in the same vector"
+  },
+  {
+    "objectID": "2023/Rworkshop.html#basic-data-structures",
+    "href": "2023/Rworkshop.html#basic-data-structures",
+    "title": "🗓️ Week 01A Gentle Introduction to R",
+    "section": "Basic data structures",
+    "text": "Basic data structures\n\nThere are two broad types of vectors (Grolemund & Wickham, 2016):\n\n\nAtomic vectors: They are objects that contain elements. They are homogeneous. In other words, all elements within atomic vector must be of the same type. There are six types of atomic vectors: logical, integer, double, character, complex, and raw.\nLists: They are also objects that contain elements. Lists can be heterogeneous though. For example, one element can be an integer and another element can be character.\n\n\nThese two concepts are not quite intuitive, but they will settle down after a while."
+  },
+  {
+    "objectID": "2023/Rworkshop.html#length-of-an-vector-is-the-number-of-elements",
+    "href": "2023/Rworkshop.html#length-of-an-vector-is-the-number-of-elements",
+    "title": "🗓️ Week 01A Gentle Introduction to R",
+    "section": "Length of an vector is the number of elements",
+    "text": "Length of an vector is the number of elements\n\nYou can use length() function to examine vector length\n\n\n\n[1] 10 14 18\n\n\n[1] 3\n\n\n[1] \"Lennon\"    \"McCartney\" \"Harrison\"  \"Starr\"    \n\n\n[1] 4"
+  },
+  {
+    "objectID": "2023/Rworkshop.html#its-straightforward-to-identify-type-of-a-vector",
+    "href": "2023/Rworkshop.html#its-straightforward-to-identify-type-of-a-vector",
+    "title": "🗓️ Week 01A Gentle Introduction to R",
+    "section": "It’s straightforward to identify type of a vector",
+    "text": "It’s straightforward to identify type of a vector\n\nYou can use typeof() function to examine vector type\n\n\n\n[1] 10 14 18\n\n\n[1] \"double\"\n\n\n[1] 0.5 1.5\n\n\n[1] \"double\"\n\n\n[1] \"Lennon\"    \"McCartney\" \"Harrison\"  \"Starr\"    \n\n\n[1] \"character\""
+  },
+  {
+    "objectID": "2023/Rworkshop.html#sequences",
+    "href": "2023/Rworkshop.html#sequences",
+    "title": "🗓️ Week 01A Gentle Introduction to R",
+    "section": "Sequences",
+    "text": "Sequences\n\nA sequence is a set of numbers in ascending or descending order (e.g., 1, 2, 3)\nIt can be created using the colon operator : with the notation start:end\nYou can use seq() function to create a series of numbers and assign it to an object.\n\n\n\n[1]  5  6  7  8  9 10\n\n\n[1] 6\n\n\n\n\n[1] 10 11 12 13 14 15\n\n\n[1] 10 11 12 13 14 15\n\n\n[1] 100 110 120 130 140 150"
+  },
+  {
+    "objectID": "2023/Rworkshop.html#vectors-can-be-used-in-mathematical-operations",
+    "href": "2023/Rworkshop.html#vectors-can-be-used-in-mathematical-operations",
+    "title": "🗓️ Week 01A Gentle Introduction to R",
+    "section": "Vectors can be used in mathematical operations",
+    "text": "Vectors can be used in mathematical operations\n\n\n[1]  3  4  5  6  7  8  9 10\n\n\n\n\n[1] 6.5\n\n\n\n\n[1]  6  8 10 12 14 16 18 20\n\n\n\n\n[1] 3 1 3\n\n\n[1] 1 0 6"
+  },
+  {
+    "objectID": "2023/Rworkshop.html#understanding-structure-of-lists-using-str-function",
+    "href": "2023/Rworkshop.html#understanding-structure-of-lists-using-str-function",
+    "title": "🗓️ Week 01A Gentle Introduction to R",
+    "section": "Understanding structure of lists using str() function",
+    "text": "Understanding structure of lists using str() function\n\n\n[1] \"list\"\n\n\n[1] 3\n\n\nList of 3\n $ : num 1\n $ : num 2\n $ : num 3\n\n\n\nRemember that each element of a list can be a vector of different length\n\n\n\nList of 2\n $ : num [1:2] 1 2\n $ : num [1:3] -1 0 5"
+  },
+  {
+    "objectID": "2023/Rworkshop.html#data-types-can-differ-across-elements-within-a-list",
+    "href": "2023/Rworkshop.html#data-types-can-differ-across-elements-within-a-list",
+    "title": "🗓️ Week 01A Gentle Introduction to R",
+    "section": "Data types can differ across elements within a list",
+    "text": "Data types can differ across elements within a list\n\n\n[1] \"list\"\n\n\n[1] 4\n\n\nList of 4\n $ : num 5\n $ : num 6\n $ : chr \"beatles\"\n $ : logi TRUE"
+  },
+  {
+    "objectID": "2023/Rworkshop.html#lists-can-contain-other-lists",
+    "href": "2023/Rworkshop.html#lists-can-contain-other-lists",
+    "title": "🗓️ Week 01A Gentle Introduction to R",
+    "section": "Lists can contain other lists",
+    "text": "Lists can contain other lists\n\n\nList of 3\n $ : num [1:2] 5 6\n $ :List of 2\n  ..$ : chr \"beatles\"\n  ..$ : chr \"radiohead\"\n $ :List of 3\n  ..$ : num 10\n  ..$ : num 20\n  ..$ : num 30"
+  },
+  {
+    "objectID": "2023/Rworkshop.html#you-can-also-name-each-element-in-the-list",
+    "href": "2023/Rworkshop.html#you-can-also-name-each-element-in-the-list",
+    "title": "🗓️ Week 01A Gentle Introduction to R",
+    "section": "You can also name each element in the list",
+    "text": "You can also name each element in the list\n\n\nList of 3\n $ a: num [1:2] 5 6\n $ b:List of 2\n  ..$ : chr \"beatles\"\n  ..$ : chr \"radiohead\"\n $ c:List of 2\n  ..$ : num 10\n  ..$ : num 20\n\n\n\nYou can use names() function to show names of elements in the list\n\n\n\n[1] \"a\" \"b\" \"c\"\n\n\nNULL"
+  },
+  {
+    "objectID": "2023/Rworkshop.html#accessing-individual-elements-in-a-list",
+    "href": "2023/Rworkshop.html#accessing-individual-elements-in-a-list",
+    "title": "🗓️ Week 01A Gentle Introduction to R",
+    "section": "Accessing individual elements in a list",
+    "text": "Accessing individual elements in a list\n-You can use the syntax: list_name$element_name\n\n\n[1] 5 6\n\n\n[1] \"double\"\n\n\n[1] 2\n\n\n[1] \"list\"\n\n\n[1] 2"
+  },
+  {
+    "objectID": "2023/Rworkshop.html#combining-the-vectors-to-a-unidimensionalmultidimensional-list-with-c",
+    "href": "2023/Rworkshop.html#combining-the-vectors-to-a-unidimensionalmultidimensional-list-with-c",
+    "title": "🗓️ Week 01A Gentle Introduction to R",
+    "section": "Combining the vectors to a unidimensional/multidimensional list with c()",
+    "text": "Combining the vectors to a unidimensional/multidimensional list with c()\n\nLet’s say you have two vectors: candidate and age\n\n\n\n[1] 67.25\n\n\n\n\n[1] \"Biden\"  \"Harris\" \"Trump\"  \"Pence\"  \"78\"     \"56\"     \"74\"     \"61\"    \n\n\n[[1]]\n[1] \"Biden\"  \"Harris\" \"Trump\"  \"Pence\" \n\n[[2]]\n[1] 78 56 74 61"
+  },
+  {
+    "objectID": "2023/Rworkshop.html#combine-the-vectors-to-a-twodimensional-data-frame-with-data.frame",
+    "href": "2023/Rworkshop.html#combine-the-vectors-to-a-twodimensional-data-frame-with-data.frame",
+    "title": "🗓️ Week 01A Gentle Introduction to R",
+    "section": "Combine the vectors to a twodimensional data frame, with data.frame()",
+    "text": "Combine the vectors to a twodimensional data frame, with data.frame()\n\n\n  candidate age\n1     Biden  78\n2    Harris  56\n3     Trump  74\n4     Pence  61\n\n\n  candidate              age       \n Length:4           Min.   :56.00  \n Class :character   1st Qu.:59.75  \n Mode  :character   Median :67.50  \n                    Mean   :67.25  \n                    3rd Qu.:75.00  \n                    Max.   :78.00"
+  },
+  {
+    "objectID": "2023/Rworkshop.html#factors-a-special-type-of-vector-defined-by-levels",
+    "href": "2023/Rworkshop.html#factors-a-special-type-of-vector-defined-by-levels",
+    "title": "🗓️ Week 01A Gentle Introduction to R",
+    "section": "Factors – a special type of vector, defined by levels",
+    "text": "Factors – a special type of vector, defined by levels\n\n\n[1] \"Male\"   \"Female\" \"Male\"   \"Male\"  \n\n\n[1] Male   Female Male   Male  \nLevels: Female Male\n\n\n\n\n  candidate age    sex\n1     Biden  78   Male\n2    Harris  56 Female\n3     Trump  74   Male\n4     Pence  61   Male"
+  },
+  {
+    "objectID": "2023/Rworkshop.html#dataframes-in-r-main-takeaways",
+    "href": "2023/Rworkshop.html#dataframes-in-r-main-takeaways",
+    "title": "🗓️ Week 01A Gentle Introduction to R",
+    "section": "Dataframes in R (main takeaways)",
+    "text": "Dataframes in R (main takeaways)\n\nData in R are held in objects of different types, dimensions and classes\nA data frame is just a list\nEach element in data frame must be a vector, not a list\nEach element (column) is a variable\nThe length of an element is the number of observations (rows)\nEach element is also named\nYou may have several different datasets with various types and shapes contained in the R environment"
+  },
+  {
+    "objectID": "2023/Rworkshop.html#r-built-in-datasets",
+    "href": "2023/Rworkshop.html#r-built-in-datasets",
+    "title": "🗓️ Week 01A Gentle Introduction to R",
+    "section": "R built-in datasets",
+    "text": "R built-in datasets\n\nYou can use the View() function to display the data frame like a spreadsheet\nPlease type this on the R Console View(longley)\nRemember that you can access individual columns of a data frame by using the dollar sign $\n\n\n\n [1] 1947 1948 1949 1950 1951 1952 1953 1954 1955 1956 1957 1958 1959 1960 1961\n[16] 1962\n\n\n [1] 107.608 108.632 109.773 110.929 112.075 113.270 115.094 116.219 117.388\n[10] 118.734 120.445 121.950 123.366 125.368 127.852 130.081"
+  },
+  {
+    "objectID": "2023/Rworkshop.html#accessing-certain-observations-rows-andor-certain-columns-variables",
+    "href": "2023/Rworkshop.html#accessing-certain-observations-rows-andor-certain-columns-variables",
+    "title": "🗓️ Week 01A Gentle Introduction to R",
+    "section": "Accessing certain observations (rows) and/or certain columns (variables)",
+    "text": "Accessing certain observations (rows) and/or certain columns (variables)\n\nYou can use square brackets to subset data frames, in which the row coordinate goes first and the column coordinate second.\n\n\n\n     GNP.deflator     GNP Unemployed Armed.Forces Population Year Employed\n1951         96.2 328.975      209.9        309.9    112.075 1951   63.221\n\n\n [1] 1947 1948 1949 1950 1951 1952 1953 1954 1955 1956 1957 1958 1959 1960 1961\n[16] 1962\n\n\n     GNP.deflator     GNP Unemployed Armed.Forces Population Year Employed\n1947         83.0 234.289      235.6        159.0    107.608 1947   60.323\n1948         88.5 259.426      232.5        145.6    108.632 1948   61.122\n\n\n     Population Year\n1947    107.608 1947\n1948    108.632 1948"
+  },
+  {
+    "objectID": "2023/Rworkshop.html#missing-data",
+    "href": "2023/Rworkshop.html#missing-data",
+    "title": "🗓️ Week 01A Gentle Introduction to R",
+    "section": "Missing data",
+    "text": "Missing data\n\nLet’s add a column (variable) to our data:\n\n\n\n[1] Yes  Yes  No   &lt;NA&gt;\nLevels: No Yes\n\n\n\nna.rm argument asks whether to remove NA values prior to calculation\nFor most functions, default value is na.rm = FALSE\nIf you specify, na.rm = TRUE , NA values removed prior to calculation\n\n\n\n[1] NA\n\n\n[1] 6"
+  },
+  {
+    "objectID": "2023/Rworkshop.html#missing-data-1",
+    "href": "2023/Rworkshop.html#missing-data-1",
+    "title": "🗓️ Week 01A Gentle Introduction to R",
+    "section": "Missing data",
+    "text": "Missing data\n\nYou must realise that NA is not a level!\nNA is a special keyword, not the same as the character string “NA”\n\n\n\n  candidate age    sex tax_return\n1     Biden  78   Male        Yes\n2    Harris  56 Female        Yes\n3     Trump  74   Male         No\n4     Pence  61   Male       &lt;NA&gt;\n\n\n\nYou can use is.na() function to determine if a value is missing\n\n\n\n     candidate   age   sex tax_return\n[1,]     FALSE FALSE FALSE      FALSE\n[2,]     FALSE FALSE FALSE      FALSE\n[3,]     FALSE FALSE FALSE      FALSE\n[4,]     FALSE FALSE FALSE       TRUE"
+  },
+  {
+    "objectID": "2023/Rworkshop.html#programming-if-statements",
+    "href": "2023/Rworkshop.html#programming-if-statements",
+    "title": "🗓️ Week 01A Gentle Introduction to R",
+    "section": "Programming: if statements",
+    "text": "Programming: if statements\n\nA test/condition is this statement true or false?\nIf the statement A is true, then do B; if false, then do C (optional)"
+  },
+  {
+    "objectID": "2023/Rworkshop.html#conditionals",
+    "href": "2023/Rworkshop.html#conditionals",
+    "title": "🗓️ Week 01A Gentle Introduction to R",
+    "section": "Conditionals",
+    "text": "Conditionals\n\nYou can use if(){}else{} function\n\n\n\n[1] \"Bingo\""
+  },
+  {
+    "objectID": "2023/Rworkshop.html#programming-functions",
+    "href": "2023/Rworkshop.html#programming-functions",
+    "title": "🗓️ Week 01A Gentle Introduction to R",
+    "section": "Programming: functions",
+    "text": "Programming: functions\n\nWe previously use some predefined functions (e.g. mean(), sum(), length())\nWe can customize functions to serve our special needs\nFunctions contain multiple instructions that create a cohesive unit:\n\nname &lt;- function(argument_1, argument_2, …){\n    commands\n    return(value)                                                                                       \n}"
+  },
+  {
+    "objectID": "2023/Rworkshop.html#programming-functions-1",
+    "href": "2023/Rworkshop.html#programming-functions-1",
+    "title": "🗓️ Week 01A Gentle Introduction to R",
+    "section": "Programming: functions",
+    "text": "Programming: functions\n\nLet’s remember our created dataset\nArguments, sometimes referred to as parameters, are special variables that are passed into functions, so that they can be used to perform some tasks\n\n\n\n  candidate age    sex tax_return\n1     Biden  78   Male        Yes\n2    Harris  56 Female        Yes\n3     Trump  74   Male         No\n4     Pence  61   Male       &lt;NA&gt;\n\n\n\n\n[1] 78"
+  },
+  {
+    "objectID": "2023/Rworkshop.html#programming-loops",
+    "href": "2023/Rworkshop.html#programming-loops",
+    "title": "🗓️ Week 01A Gentle Introduction to R",
+    "section": "Programming: loops",
+    "text": "Programming: loops\n\nInstructions needs to be applied multiple times\nInput is an iterable object (e.g. multiple similar elements)"
+  },
+  {
+    "objectID": "2023/Rworkshop.html#programming-loops-1",
+    "href": "2023/Rworkshop.html#programming-loops-1",
+    "title": "🗓️ Week 01A Gentle Introduction to R",
+    "section": "Programming: loops",
+    "text": "Programming: loops\n\n\n[1] \"The course will\" \"finish\"          \"in\"              \"1\"              \n[5] \"minutes\"        \n[1] \"The course will\" \"finish\"          \"in\"              \"2\"              \n[5] \"minutes\"        \n[1] \"The course will\" \"finish\"          \"in\"              \"3\"              \n[5] \"minutes\"        \n[1] \"The course will\" \"finish\"          \"in\"              \"4\"              \n[5] \"minutes\"        \n[1] \"The course will\" \"finish\"          \"in\"              \"5\"              \n[5] \"minutes\""
+  },
+  {
+    "objectID": "2023/Rworkshop.html#importing-data",
+    "href": "2023/Rworkshop.html#importing-data",
+    "title": "🗓️ Week 01A Gentle Introduction to R",
+    "section": "Importing data",
+    "text": "Importing data\n\nData come in many different file formats such as .csv, .tab, .dta, .sav, etc. Today we will load a dataset which is stored in R’s native file format: .RData\nrm() function in R is used to delete objects from the memory\n\n\nSetting the working directory\n\n\nImporting data"
+  },
+  {
+    "objectID": "2023/Rworkshop.html#importing-data-1",
+    "href": "2023/Rworkshop.html#importing-data-1",
+    "title": "🗓️ Week 01A Gentle Introduction to R",
+    "section": "Importing data",
+    "text": "Importing data\n\nInspecting the names of the variables and the dimensions of the dataset (dimension 1 = rows, dimension 2 = columns)\n\n\n\n [1] \"id\"       \"year\"     \"wtssall\"  \"vpsu\"     \"vstrat\"   \"polviews\"\n [7] \"born\"     \"adults\"   \"hompop\"   \"race\"     \"region\"   \"age\"     \n[13] \"sex\"      \"one\"      \"gunlaw\"   \"cappun\"   \"grass\"    \"eqwlth\"  \n[19] \"marital\"  \"wrkstat\"  \"income16\" \"rincom16\" \"trust\"    \"socommun\"\n[25] \"socrel\"   \"socfrend\" \"relig\"    \"friend\"   \"degree\"   \"pres12\"  \n[31] \"natsci\"   \"confinan\" \"conbus\"   \"conclerg\" \"coneduc\"  \"conpress\"\n[37] \"contv\"    \"conjudge\" \"consci\"   \"conlegis\" \"conarmy\"  \"spenviro\"\n[43] \"sphlth\"   \"sppolice\" \"spschool\" \"sparms\"   \"sparts\"  \n\n\n[1] 2867   47"
+  },
+  {
+    "objectID": "2023/Rworkshop.html#subsetting-data-frames-with-and",
+    "href": "2023/Rworkshop.html#subsetting-data-frames-with-and",
+    "title": "🗓️ Week 01A Gentle Introduction to R",
+    "section": "Subsetting Data Frames with [] and $",
+    "text": "Subsetting Data Frames with [] and $\n\nShow all obs where respondents’ sex is male (1) (1276) and all columns (variables)\n\n\n\n[1] 1276   47\n\n\n\nShow all obs where respondents’ sex is female (2) (1591) and the first three columns (first 3 variables)\nShow all obs where respondents’ sex is “female” (2) and race is “black” (2) (283)\n\n\n\n[1] 1591    3\n\n\n[1] 283  47"
+  },
+  {
+    "objectID": "2023/Rworkshop.html#subsetting-with-base-r-function",
+    "href": "2023/Rworkshop.html#subsetting-with-base-r-function",
+    "title": "🗓️ Week 01A Gentle Introduction to R",
+    "section": "Subsetting with Base R function",
+    "text": "Subsetting with Base R function\n\nThe subset() is a base R function and easiest way to “filter” observations, which can be combined with select() another base R function to select variables\n\n\n\n[1] \"confinan\" \"conbus\"   \"conclerg\" \"coneduc\"  \"conpress\" \"contv\"    \"conjudge\"\n[8] \"consci\""
+  },
+  {
+    "objectID": "2023/Rworkshop.html#introducing-tidyverse",
+    "href": "2023/Rworkshop.html#introducing-tidyverse",
+    "title": "🗓️ Week 01A Gentle Introduction to R",
+    "section": "Introducing tidyverse",
+    "text": "Introducing tidyverse\n\nTidyverse has become the most popular way of cleaning and manipulating data in R\nTidyverse commands can be more efficient with less lines of code\n\n\n\n\ntidyverse\nbase R\noperation\n\n\n\n\nselect()\n[ ]+ c() OR subset()\n“extract” variables\n\n\nfilter()\n[ ]+ $ OR subset()\n“extract” observations\n\n\n\nlibrary(tidyverse)\ntrust_inst &lt;- select(gss, confinan, conbus, sex, race)\ngss_race &lt;- filter(gss, race == 1)\n\nYou can also use %in% operator to further filter\n\ngss_filter &lt;- filter(gss, sex == 1, marital %in% 2:4)"
+  },
+  {
+    "objectID": "2023/Rworkshop.html#rename-variables",
+    "href": "2023/Rworkshop.html#rename-variables",
+    "title": "🗓️ Week 01A Gentle Introduction to R",
+    "section": "Rename variables",
+    "text": "Rename variables\n\nrename() function renames variables within a data frame object\n\nrename(obj_name, new_name = old_name,...)"
+  },
+  {
+    "objectID": "2023/Rworkshop.html#creating-new-variables-and-renaming-with-mutate-and",
+    "href": "2023/Rworkshop.html#creating-new-variables-and-renaming-with-mutate-and",
+    "title": "🗓️ Week 01A Gentle Introduction to R",
+    "section": "Creating new variables and renaming with mutate() and %>%",
+    "text": "Creating new variables and renaming with mutate() and %&gt;%\n\n\n      age ethnicity sex age_2\n59600  47         1   1  2209\n59601  61         1   1  3721\n59602  72         1   1  5184"
+  },
+  {
+    "objectID": "2023/Rworkshop.html#simple-plots",
+    "href": "2023/Rworkshop.html#simple-plots",
+    "title": "🗓️ Week 01A Gentle Introduction to R",
+    "section": "Simple plots",
+    "text": "Simple plots\n```{r} #| label = \"rhist\", #| fig.align = \"centre\", #| out.width = \"70%\" hist(gss$age)"
+  },
+  {
+    "objectID": "2023/Rworkshop.html#simple-plots-1",
+    "href": "2023/Rworkshop.html#simple-plots-1",
+    "title": "🗓️ Week 01A Gentle Introduction to R",
+    "section": "Simple plots",
+    "text": "Simple plots\n```{r} #| label = \"rgrp\", #| fig.align = \"centre\", #| out.width = \"70%\" plot(longley$Year, longley$GNP, type=\"l\")"
+  },
+  {
+    "objectID": "2023/Rworkshop.html#introducing-ggplot2",
+    "href": "2023/Rworkshop.html#introducing-ggplot2",
+    "title": "🗓️ Week 01A Gentle Introduction to R",
+    "section": "Introducing ggplot2",
+    "text": "Introducing ggplot2\n\nggplot2 is to focus on data visualisation as part of the tidyverse\nggplot2 visualises the data in a tidy dataframe. Thus, ggplot expects the input data to be in a dataframe\nThere are four main parts of a basic ggplot2 visualisation: the ggplot() function, the data parameter, the aes()function, and the geom"
+  },
+  {
+    "objectID": "2023/Rworkshop.html#introducing-ggplot2-1",
+    "href": "2023/Rworkshop.html#introducing-ggplot2-1",
+    "title": "🗓️ Week 01A Gentle Introduction to R",
+    "section": "Introducing ggplot2",
+    "text": "Introducing ggplot2\n\nYou begin every plot by telling the ggplot() function what your data is\nWhen you provide an argument to the data parameter, it will always be a data.frame object of some type\nYou will define how the variables in this data logically map onto the plot’s aesthetics. Mappings are specified using the aes() function\nYou can combine the argument that define the type of plot you want, which is called a geom. Each geom has a function that creates it\nFor example, geom_point() makes scatterplots, geom_bar() makes barplots, geom_boxplot() makes boxplots"
+  },
+  {
+    "objectID": "2023/Rworkshop.html#plotting-with-ggplot2",
+    "href": "2023/Rworkshop.html#plotting-with-ggplot2",
+    "title": "🗓️ Week 01A Gentle Introduction to R",
+    "section": "Plotting with ggplot2",
+    "text": "Plotting with ggplot2"
+  },
+  {
+    "objectID": "2023/Rworkshop.html#plotting-with-ggplot2-1",
+    "href": "2023/Rworkshop.html#plotting-with-ggplot2-1",
+    "title": "🗓️ Week 01A Gentle Introduction to R",
+    "section": "Plotting with ggplot2",
+    "text": "Plotting with ggplot2\n\nYou can build your plots layer by layer"
+  },
+  {
+    "objectID": "2023/Rworkshop.html#plotting-with-ggplot2-2",
+    "href": "2023/Rworkshop.html#plotting-with-ggplot2-2",
+    "title": "🗓️ Week 01A Gentle Introduction to R",
+    "section": "Plotting with ggplot2",
+    "text": "Plotting with ggplot2\n\nGross Domestic Product per capita is not normally distributed across the country years. The x-axis scale would probably look better if it were transformed from a linear scale to a log scale"
+  },
+  {
+    "objectID": "2023/Rworkshop.html#plotting-with-ggplot2-3",
+    "href": "2023/Rworkshop.html#plotting-with-ggplot2-3",
+    "title": "🗓️ Week 01A Gentle Introduction to R",
+    "section": "Plotting with ggplot2",
+    "text": "Plotting with ggplot2"
+  },
+  {
+    "objectID": "2023/Rworkshop.html#open-sources-for-r",
+    "href": "2023/Rworkshop.html#open-sources-for-r",
+    "title": "🗓️ Week 01A Gentle Introduction to R",
+    "section": "Open sources for R",
+    "text": "Open sources for R\n\n\n\n\n\n\n\nhttps://community.rstudio.com/\nhttps://socviz.co/ (DataViz)\nhttps://r4ds.had.co.nz/ (R for Data Science)"
   }
 ]
