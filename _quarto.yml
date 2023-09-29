@@ -24,10 +24,10 @@ website:
     contents:
       - href: 2023/index.qmd
         text: "🏠 Home"
+     - href: 2023/Rworkshop.qmd
+        text: "📟 R Workshop"
       # - href: 2023/syllabus.qmd
-      #   text: "📓 Syllabus"
-       - href: 2023/Rworkshop.qmd
-         text: "📟 R Workshop"
+      #   text: "📓 Syllabus"  
       # - href: 2023/assignments.qmd
       #   text: "✍️ Assignments"
       #   contents:
