@@ -102,7 +102,7 @@
     "href": "2023/Rworkshop.html#installing-and-loading-r-packages",
     "title": "🗓️ Week 01A Gentle Introduction to R",
     "section": "Installing and loading R packages",
-    "text": "Installing and loading R packages\n\nYou only need to install a package once on your computer. To install an R package use install.package() function.\n\ninstall.packages(“tidyverse”)\n\nHowever, you need to load a package everytime you plan to use it. To load a package use the library() function.\n\n\n\nThe following package(s) will be installed:\n- tidyverse [2.0.0]\nThese packages will be installed into \"~/Desktop/SOCS0100/renv/library/R-4.3/aarch64-apple-darwin20\".\n\n# Installing packages --------------------------------------------------------\n- Installing tidyverse ...                      OK [linked from cache]\nSuccessfully installed 1 package in 3.5 milliseconds."
+    "text": "Installing and loading R packages\n\nYou only need to install a package once on your computer. To install an R package use install.package() function.\n\ninstall.packages(“tidyverse”)\n\nHowever, you need to load a package everytime you plan to use it. To load a package use the library() function.\n\n\n\nThe following package(s) will be installed:\n- tidyverse [2.0.0]\nThese packages will be installed into \"~/Desktop/SOCS0100/renv/library/R-4.3/aarch64-apple-darwin20\".\n\n# Installing packages --------------------------------------------------------\n- Installing tidyverse ...                      OK [linked from cache]\nSuccessfully installed 1 package in 3.6 milliseconds."
   },
   {
     "objectID": "2023/Rworkshop.html#its-easy-to-ask-for-help",
