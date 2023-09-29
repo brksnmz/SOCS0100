@@ -47,11 +47,13 @@ website:
             #    text: 💻 Lab Roadmap
             #  - href: 2023/weeks/week01/appendix.qmd
             #    text: 🔖 Appendix
-            
-        - section: "📟 R Workshop"
-          contents:
-           - href: 2023/Rworkshop.qmd
-             text: R Workshop    
+      - section: "📟 R Workshop"
+        contents:
+         - href: 2023/workshop/page.qmd
+           text: 📟 R Workshop
+           contents:
+             - href: 2023/workshop/page.qmd
+               text: 👨‍🏫 Workshop Material
   navbar:
     background: primary
   page-footer:

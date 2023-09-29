@@ -173,7 +173,7 @@ install.packages("tidyverse")
 
 ```{r}
 #| message = FALSE
-install.packages("tidyverse")
+install.packages("tidyverse", repos = "https://cloud.r-project.org")
 library(tidyverse)
 ```
 
