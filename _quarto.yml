@@ -27,9 +27,9 @@ website:
         text: "🏠 Home"
       # - href: 2023/syllabus.qmd
       #   text: "📓 Syllabus"  
-        - href: 2023/workshop/rworkshop/page.qmd
-          text: "📟 R Workshop"
-          contents:
+      - href: 2023/workshop/rworkshop/page.qmd
+        text: "📟 R Workshop"
+        contents:
             - href: 023/workshop/rworkshop/page.qmd
               text: "📟 R Workshop"
       #     - href: 2023/assignments/assignment02.qmd
