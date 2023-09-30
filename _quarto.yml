@@ -14,8 +14,8 @@ website:
   reader-mode: true
   open-graph: true
   twitter-card: 
-    creator: "@<socioburak>"
-    site: "\\@<socioburak>"
+    creator: "@socioburak"
+    site: "\\@socioburak"
   favicon: "figures/icons/course_favicon.png"
   search:
     location: navbar
@@ -27,11 +27,11 @@ website:
         text: "🏠 Home"
       # - href: 2023/syllabus.qmd
       #   text: "📓 Syllabus"  
-      # - href: 2023/assignments.qmd
-      #   text: "✍️ Assignments"
-      #   contents:
-      #     - href: 2023/assignments/assignment01.qmd
-      #       text: "📝 Assignment 01"
+        - href: 2023/workshop/rworkshop/page.qmd
+          text: "📟 R Workshop"
+          contents:
+            - href: 023/workshop/rworkshop/page.qmd
+              text: "📟 R Workshop"
       #     - href: 2023/assignments/assignment02.qmd
       #       text: "📝 Assignment 02"
       - section: "🗓️ Weeks"
@@ -45,13 +45,13 @@ website:
             #    text: 💻 Lab Roadmap
             #  - href: 2023/weeks/week01/appendix.qmd
             #    text: 🔖 Appendix
-      - section: "📟 R Workshop"
-        contents:
-         - href: 2023/workshop/rworkshop/page.qmd
-           text: 📟 R Workshop
-           contents:
-             - href: 2023/workshop/rworkshop/page.qmd
-               text: 👨‍🏫 Workshop Material
+      #- section: "📟 R Workshop"
+       # contents:
+        # - href: 2023/workshop/rworkshop/page.qmd
+         #  text: 📟 R Workshop
+          # contents:
+           #  - href: 2023/workshop/rworkshop/page.qmd
+             #  text: 👨‍🏫 Workshop Material
   navbar:
     background: primary
   page-footer:
