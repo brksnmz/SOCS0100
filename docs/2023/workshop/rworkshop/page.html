@@ -8,7 +8,7 @@
 
 <meta name="author" content="Dr Burak Sonmez">
 
-<title>Computational Tools for Reproducible Social Science 2023/24 - 🗓️ Week 01 - Introduction to Computational Social Science</title>
+<title>Computational Tools for Reproducible Social Science 2023/24 - 🗓️ A Gentle Introduction to R</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,7 +31,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../../">
-<link href="../../../2023/workshop/rworkshop/page.html" rel="prev">
+<link href="../../../2023/weeks/week01/page.html" rel="next">
+<link href="../../../2023/index.html" rel="prev">
 <link href="../../../figures/icons/course_favicon.png" rel="icon" type="image/png">
 <script src="../../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../../site_libs/quarto-html/popper.min.js"></script>
@@ -66,10 +67,10 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="../../../css/custom_style.css">
 <link rel="stylesheet" href="../../../css/syllabus.css">
-<meta property="og:title" content="Computational Tools for Reproducible Social Science 2023/24 - 🗓️ Week 01 - Introduction to Computational Social Science">
+<meta property="og:title" content="Computational Tools for Reproducible Social Science 2023/24 - 🗓️ A Gentle Introduction to R">
 <meta property="og:description" content="">
 <meta property="og:site-name" content="Computational Tools for Reproducible Social Science 2023/24">
-<meta name="twitter:title" content="Computational Tools for Reproducible Social Science 2023/24 - 🗓️ Week 01 - Introduction to Computational Social Science">
+<meta name="twitter:title" content="Computational Tools for Reproducible Social Science 2023/24 - 🗓️ A Gentle Introduction to R">
 <meta name="twitter:description" content="">
 <meta name="twitter:creator" content="@socioburak">
 <meta name="twitter:site" content="\@socioburak">
@@ -102,7 +103,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../2023/weeks/week01/page.html">🗓️ Weeks</a></li><li class="breadcrumb-item"><a href="../../../2023/weeks/week01/page.html">Week 01</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../2023/workshop/rworkshop/page.html">📟 R Workshop</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
     </div>
@@ -122,7 +123,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../../2023/workshop/rworkshop/page.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../2023/workshop/rworkshop/page.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">📟 R Workshop</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -131,7 +132,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../2023/workshop/rworkshop/page.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../2023/workshop/rworkshop/page.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">📟 R Workshop</span></a>
   </div>
 </li>
@@ -148,16 +149,16 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../../2023/weeks/week01/page.html" class="sidebar-item-text sidebar-link active">
+            <a href="../../../2023/weeks/week01/page.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 01</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="" class="collapse list-unstyled sidebar-section depth2 show">  
+      <ul id="" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../2023/weeks/week01/page.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../../2023/weeks/week01/page.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">👨‍🏫 Lecture Material</span></a>
   </div>
 </li>
@@ -177,9 +178,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#lecture-slides" id="toc-lecture-slides" class="nav-link active" data-scroll-target="#lecture-slides">👨‍🏫 Lecture Slides</a></li>
-  <li><a href="#lab-materials" id="toc-lab-materials" class="nav-link" data-scroll-target="#lab-materials">✍️ Lab Materials</a></li>
-  <li><a href="#required-reading" id="toc-required-reading" class="nav-link" data-scroll-target="#required-reading">📚 Required Reading</a></li>
+  <li><a href="#workshop-slides" id="toc-workshop-slides" class="nav-link active" data-scroll-target="#workshop-slides">👨‍🏫 Workshop Slides</a></li>
   </ul>
 </nav>
     </div>
@@ -188,7 +187,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">🗓️ Week 01 - Introduction to Computational Social Science</h1>
+<h1 class="title">🗓️ A Gentle Introduction to R</h1>
 </div>
 
 
@@ -209,26 +208,15 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>Introduction to computational social science and open science: data and code sharing, project management, and collaborations – the use of git and GitHub. This week students will be introduced how they can set up their own GitHub account and subscribe to the module organisation to engage with both individual and group assignments throughout the module.</p>
-<section id="lecture-slides" class="level2">
-<h2 class="anchored" data-anchor-id="lecture-slides">👨‍🏫 Lecture Slides</h2>
-<p>Either click on the slide area below or click <a href="../../../2023/weeks/week01/slides.html">here</a> to view it in fullscreen. Use your keypad to navigate the slides.</p>
+<p>In preparation for the module you should begin completing the introductory R workshop. This workshop is designed for those who have no prior knowledge in R. Hence, please feel free to skip the parts if you feel confident about the introductory knowledge.</p>
+<section id="workshop-slides" class="level2">
+<h2 class="anchored" data-anchor-id="workshop-slides">👨‍🏫 Workshop Slides</h2>
+<p>Either click on the slide area below or click <a href="../../../2023/workshop/rworkshop/Rworkshop.html">here</a> to view it in fullscreen. Use your keypad to navigate the slides.</p>
 <div class="container" style="position: relative;overflow: hidden;width: 100%;min-height:600px;">
-<iframe src="slides.html" style="position=absolute;top: 0;left: 0;bottom: 0;right: 0;width: 100%;min-height:600px;">
+<iframe src="Rworkshop.html" style="position=absolute;top: 0;left: 0;bottom: 0;right: 0;width: 100%;min-height:600px;">
 </iframe>
 </div>
-<p>🎥 Looking for lecture recordings? You can only find those on Moodle.</p>
-</section>
-<section id="lab-materials" class="level2">
-<h2 class="anchored" data-anchor-id="lab-materials">✍️ Lab Materials</h2>
-<p>🚧 Come back after the lecture to read the practicals for the week 🚧</p>
-</section>
-<section id="required-reading" class="level2">
-<h2 class="anchored" data-anchor-id="required-reading">📚 Required Reading</h2>
-<ul>
-<li><p><a href="https://www.annualreviews.org/doi/10.1146/annurev-soc-121919-054621">Edelman, A., Wolff, T., Montagne, D. &amp; Bail, C. A. (2020). Computational Social Science and Sociology, Annual Review of Sociology.</a></p></li>
-<li><p><a href="https://happygitwithr.com/">Bryan, J. (2018), Happy Git and GitHub for the useR, GitHub.</a></p></li>
-</ul>
+<p>🎥 Looking for the workshop recording? You can only find those on Moodle.</p>
 
 
 </section>
@@ -485,11 +473,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../../2023/workshop/rworkshop/page.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">📟 R Workshop</span>
+      <a href="../../../2023/index.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">🏠 Home</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="../../../2023/weeks/week01/page.html" class="pagination-link">
+        <span class="nav-page-text">Week 01</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->

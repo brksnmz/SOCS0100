@@ -11,7 +11,7 @@
     "href": "2023/index.html",
     "title": "SOCS0100 - Computational Tools for Reproducible Social Science",
     "section": "",
-    "text": "🧑🏻‍🏫 Module Team\n\nModule Convenor\n\n\n\nBurak Sonmez  Lecturer in Quantitative Social Science  University College London 📧 b.sonmez@ucl.ac.uk ( at )\nOffice Hours:\n\nWhen:Fridays 16:00-18:00\nWhere:55-59 Gordon Square, 416\nHow to book: Please email me in advance\n\n\n\n\n\n\n📍 Lectures\nFridays 10:00-12:00 at Roberts Building 309\n\n\n💻 Practical Session Groups\n\nGroup 01\n\n📆 Fridays\n⌚ 12:00 - 13:00\n📍 Bedford Way (20) 631\n🧑‍🏫 Burak Sonmez\n\n\n\nGroup 02\n\n📆 Fridays\n⌚ 15:00 - 16:00\n📍 Bedford Way (20) 828\n🧑‍🏫 Burak Sonmez"
+    "text": "📢 Important\n\n\n\n\n\n(03/10/2023)\n\n🗓️ Week 01 lecture material is now available!\n\n\n\n\n\n🧑🏻‍🏫 Module Team\n\nModule Convenor\n\n\n\nBurak Sonmez  Lecturer in Quantitative Social Science  University College London 📧 b.sonmez@ucl.ac.uk ( at )\nOffice Hours:\n\nWhen:Fridays 16:00-18:00\nWhere:55-59 Gordon Square, 416\nHow to book: Please email me in advance\n\n\n\n\n\n\n📍 Lectures\nFridays 10:00-12:00 at Roberts Building 309\n\n\n💻 Practical Session Groups\n\nGroup 01\n\n📆 Fridays\n⌚ 12:00 - 13:00\n📍 Bedford Way (20) 631\n🧑‍🏫 Burak Sonmez\n\n\n\nGroup 02\n\n📆 Fridays\n⌚ 15:00 - 16:00\n📍 Bedford Way (20) 828\n🧑‍🏫 Burak Sonmez"
   },
   {
     "objectID": "index.html",
@@ -453,5 +453,26 @@
     "title": "🗓️ Week 01A Gentle Introduction to R",
     "section": "Open sources for R",
     "text": "Open sources for R\n\n\n\n\n\n\n\nhttps://community.rstudio.com/\nhttps://socviz.co/ (DataViz)\nhttps://r4ds.had.co.nz/ (R for Data Science)"
+  },
+  {
+    "objectID": "2023/workshop/rworkshop/page.html",
+    "href": "2023/workshop/rworkshop/page.html",
+    "title": "🗓️ A Gentle Introduction to R",
+    "section": "",
+    "text": "In preparation for the module you should begin completing the introductory R workshop. This workshop is designed for those who have no prior knowledge in R. Hence, please feel free to skip the parts if you feel confident about the introductory knowledge."
+  },
+  {
+    "objectID": "2023/workshop/rworkshop/page.html#workshop-slides",
+    "href": "2023/workshop/rworkshop/page.html#workshop-slides",
+    "title": "🗓️ A Gentle Introduction to R",
+    "section": "👨‍🏫 Workshop Slides",
+    "text": "👨‍🏫 Workshop Slides\nEither click on the slide area below or click here to view it in fullscreen. Use your keypad to navigate the slides.\n\n\n\n\n🎥 Looking for the workshop recording? You can only find those on Moodle."
+  },
+  {
+    "objectID": "2023/weeks/week01/slides.html",
+    "href": "2023/weeks/week01/slides.html",
+    "title": "🗓️ Week 01 Introduction to Computational Social Science",
+    "section": "",
+    "text": "Dr Sonmez Lecturer in Quantitative Social ScienceProgramme Director of BSc SSDS\n\n\n\n\nPhD in Sociology (University of Essex)\nMA in Longitudinal Social Research (University of Essex)\nBA in Economics (Bilkent University)\n\nExperimental Methods  Social Norms  Trust"
   }
 ]
