@@ -487,6 +487,20 @@
     "href": "2023/weeks/week01/slides.html#social-networks",
     "title": "🗓️ Week 01 Introduction to Computational Social Science",
     "section": "Social Networks",
-    "text": "Social Networks\n\nBail et al. (2019) use Google Search data to track the diffusion of cultural products across global networks. Together, these studies show that microlevel interactions between individuals can generate macrolevel diffusion patterns\n\n\n\n\n\nSOCS0100 – Computational Tools for Reproducible Social Science"
+    "text": "Social Networks\n\nBail et al. (2019) use Google Search data to track the diffusion of cultural products across global networks. Together, these studies show that microlevel interactions between individuals can generate macrolevel diffusion patterns"
+  },
+  {
+    "objectID": "2023/weeks/week01/slides.html#collective-action-and-opinion-change",
+    "href": "2023/weeks/week01/slides.html#collective-action-and-opinion-change",
+    "title": "🗓️ Week 01 Introduction to Computational Social Science",
+    "section": "Collective Action and Opinion Change",
+    "text": "Collective Action and Opinion Change\n\nvan de Rijt’s et al. leverage Change.org, an online petitioning platform, to conduct field experiments in which samples of petitions are assigned different quantities of signatures as treatments. These experiments demonstrate the importance of cumulative advantage effects in collective actions (van de Rijt et al. 2016)\nFlores (2017) uses text data from Twitter to show how anti-immigration laws hardened public opinion against immigration in Arizona"
+  },
+  {
+    "objectID": "2023/weeks/week01/slides.html#sociology-of-knowledge",
+    "href": "2023/weeks/week01/slides.html#sociology-of-knowledge",
+    "title": "🗓️ Week 01 Introduction to Computational Social Science",
+    "section": "Sociology of Knowledge",
+    "text": "Sociology of Knowledge\n\nDrawing on data from JSTOR (one of the largest digital repositories of academic journals), King et al. (2017) show that men are more likely to cite themselves than women —a tendency that increased over the past two decades\n\n\n\n\n\nSOCS0100 – Computational Tools for Reproducible Social Science"
   }
 ]
