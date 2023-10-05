@@ -501,6 +501,41 @@
     "href": "2023/weeks/week01/slides.html#sociology-of-knowledge",
     "title": "🗓️ Week 01 Introduction to Computational Social Science",
     "section": "Sociology of Knowledge",
-    "text": "Sociology of Knowledge\n\nDrawing on data from JSTOR (one of the largest digital repositories of academic journals), King et al. (2017) show that men are more likely to cite themselves than women —a tendency that increased over the past two decades\n\n\n\n\n\nSOCS0100 – Computational Tools for Reproducible Social Science"
+    "text": "Sociology of Knowledge\n\nDrawing on data from JSTOR (one of the largest digital repositories of academic journals), King et al. (2017) show that men are more likely to cite themselves than women —a tendency that increased over the past two decades"
+  },
+  {
+    "objectID": "2023/weeks/week01/slides.html#virtual-reality-and-social-psychology",
+    "href": "2023/weeks/week01/slides.html#virtual-reality-and-social-psychology",
+    "title": "🗓️ Week 01 Introduction to Computational Social Science",
+    "section": "Virtual Reality and Social Psychology",
+    "text": "Virtual Reality and Social Psychology\n\nvan Loon et al. (2018) paid university students to perform collaborative tasks, but randomised half of them into a treatment condition where they used virtual reality to take the perspective of the other research participants. This intervention increased prosocial behavior\nVirtual reality holds great promise for studying how people respond to social settings within tightly controlled experiments"
+  },
+  {
+    "objectID": "2023/weeks/week01/slides.html#cultural-sociology",
+    "href": "2023/weeks/week01/slides.html#cultural-sociology",
+    "title": "🗓️ Week 01 Introduction to Computational Social Science",
+    "section": "Cultural Sociology",
+    "text": "Cultural Sociology\n\nSalganik et al. (2006) created an online “music lab” to study how peer influence shapes musical preferences of new artists. In their experiment, participants rated music from obscure bands. In the control condition, participants received no information about its popularity, whereas those in the treatment condition were shown how many times songs were downloaded. Treated respondents were more likely to listen to songs with high download rates and to rate such songs more positively"
+  },
+  {
+    "objectID": "2023/weeks/week01/slides.html#economic-sociology-and-organisations",
+    "href": "2023/weeks/week01/slides.html#economic-sociology-and-organisations",
+    "title": "🗓️ Week 01 Introduction to Computational Social Science",
+    "section": "Economic Sociology and Organisations",
+    "text": "Economic Sociology and Organisations\n\nStudies indicate certain network compositions benefit women differently than men. For example, women are more likely to succeed if they are part of an inner circle within a network that is predominantly female (Yang et al. 2019)"
+  },
+  {
+    "objectID": "2023/weeks/week01/slides.html#demography-and-population-studies",
+    "href": "2023/weeks/week01/slides.html#demography-and-population-studies",
+    "title": "🗓️ Week 01 Introduction to Computational Social Science",
+    "section": "Demography and Population Studies",
+    "text": "Demography and Population Studies\n\nLin & Lundquist (2013) find that women are more likely to respond to dating invitations from members of dominant racial and ethnic groups, regardless of social distance\nOutside of the US context, using 58,880 hetero sexual members drawn from an original sample of 876,658 hetero sexual site users, Potârcă & Mills (2015) identify very strong racial and ethnic homogamy across European countries—and particularly those with ethnically homogeneous populations"
+  },
+  {
+    "objectID": "2023/weeks/week01/slides.html#why-git-why-github",
+    "href": "2023/weeks/week01/slides.html#why-git-why-github",
+    "title": "🗓️ Week 01 Introduction to Computational Social Science",
+    "section": "Why Git? Why GitHub?",
+    "text": "Why Git? Why GitHub?\n\nGit is a version control system. Its original purpose was to help groups of developers work collaboratively on big software projects. Git manages the evolution of a set of files – called a repository – in a sane, highly structured way\n\n\n\n\n\nSOCS0100 – Computational Tools for Reproducible Social Science"
   }
 ]
