@@ -55,6 +55,8 @@ Norms]{.tag style="background-color:var(--quarto-hl-fu-color)"} <br/>
 :::
 :::
 
+# Intro to CSS
+
 ## Computational Social Science {.smaller}
 
 -   It is an interdisciplinary field that advances theories of human
@@ -63,4 +65,5 @@ Norms]{.tag style="background-color:var(--quarto-hl-fu-color)"} <br/>
     as administrative records.
 -   Our purpose is to map how such computational tools are currently
     being applied in empirical settings across social sciences.
--   ![](https://github.com/brksnmz/SOCS0100/blob/master/figures/images/css.png)
+
+<img src="/figures/images/css.png" alt="Number of CSS publications"/>
