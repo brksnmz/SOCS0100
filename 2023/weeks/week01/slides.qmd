@@ -227,5 +227,126 @@ Norms]{.tag style="background-color:var(--quarto-hl-fu-color)"} <br/>
     discounts, join organizations, etc. in the future, so don't fret
     about any of that now. **Except your username. You might want to
     give that some thought**
-    
-![](/figures/images/github-vid.mp4){.absolute width="500" height="250" loop="true"}
+
+![](/figures/images/github-vid.mp4){.absolute width="500" height="250"
+loop="true"}
+
+## Install or upgrade R and RStudio {.smaller}
+
+-   Install a pre-compiled binary of R for your OS from here:
+    <https://cloud.r-project.org>
+
+-   Already have R installed? **Hold on: This is a great time to make
+    sure your R installation is current. Check your current version like
+    so:**
+
+    ``` r
+    R.version.string
+    ```
+
+-   Install RStudio Desktop: Already have RStudio? **Hold on: This is a
+    great time to upgrade to the latest Preview version. Download it
+    here:** <https://www.rstudio.com/products/rstudio/download/preview/>
+
+-   Update your R packages:
+
+``` r
+update.packages(ask = FALSE, checkBuilt = TRUE)
+```
+
+## Installation (GUI) {.smaller}
+
+-   Install GitHub Desktop from <https://desktop.github.com/>
+
+<img src="/figures/images/git2.png" alt="git" width="500" height="350" style="display: block; margin: 0 auto;"/>
+
+## Install Git {.smaller}
+
+-   Go to the **shell**. Enter which git to request the path to your Git
+    executable:
+
+``` r
+which git
+## /usr/bin/git
+git --version
+## git version 2.42.0
+```
+
+-   If you are successful, that's great! You have Git already. No need
+    to install! Move on. If, instead, you see something more like git:
+    command not found, keep reading
+
+-   macOS users might get an immediate offer to install command line
+    developer tools. Yes, you should accept! Click "Install" and read
+    more below
+
+## Installing Git through macOS {.smaller}
+
+-   Install the **Xcode** command line tools (not all of Xcode), which
+    includes Git.
+
+-   Go to the shell and enter one of these commands to elicit an offer
+    to install developer command line tools:
+
+``` r
+git --version
+git config
+```
+
+-   Accept the offer! Click on "Install".
+
+-   Here's another way to request this installation, more directly:
+
+``` r
+xcode-select --install
+```
+
+-   Please note also that, after upgrading macOS, you might need to
+    re-do the above and/or re-agree to the Xcode license agreement
+
+## Installing Git through Windows {.smaller}
+
+-   Install [Git for Windows](https://gitforwindows.org/), also known as
+    msysgit or "Git Bash", to get Git in addition to some other useful
+    tools, such as the Bash shell
+
+-   Git for Windows leaves the Git executable in a conventional
+    location, which will help you and other programs, e.g. RStudio, find
+    it and use it. This also supports a transition to more expert use,
+    because the "Git Bash" shell will be useful as you venture outside
+    of R/RStudio
+
+    -   **NOTE**: When asked about "Adjusting your PATH environment",
+        make sure to select "Git from the command line and also from
+        3rd-party software". Otherwise, we believe it is good to accept
+        the defaults.
+    -   **Note that** RStudio for Windows prefers for Git to be
+        installed below C:/Program Files and this appears to be the
+        default. This implies, for example, that the Git executable on
+        my Windows system is found at C:/Program Files/Git/bin/git.exe.
+        Unless you have specific reasons to otherwise, follow this
+        convention.
+
+## Introducing yourself to Git {.smaller}
+
+-   In the **shell**
+
+``` r
+git config --global user.name "Burak Sonmez"
+git config --global user.email "burak@example.com"
+git config --global --list
+```
+
+-   substituting your name and the email associated with your GitHub
+    account.
+
+-   The usethis package offers an alternative approach. You can set your
+    Git user name and email from within R:
+
+``` r
+## install if needed (do this exactly once):
+## install.packages("usethis")
+
+library(usethis)
+use_git_config(user.name = "Burak Sonmez", user.email = "burak@example.org")
+```

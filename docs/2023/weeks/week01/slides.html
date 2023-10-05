@@ -31,6 +31,71 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="../../../site_libs/revealjs/dist/theme/quarto.css">
   <link rel="stylesheet" href="../../../css/styles_slides.css">
@@ -499,6 +564,84 @@ Dr <a href="#/">Burak Sonmez</a>
 <li><p>You will be able to upgrade to a paid level of service, apply discounts, join organizations, etc. in the future, so don’t fret about any of that now. <strong>Except your username. You might want to give that some thought</strong></p></li>
 </ul>
 <p><video data-src="../../../figures/images/github-vid.mp4" class="absolute" style="width: 500px; height: 250px; " loop="true" controls=""><a href="../../../figures/images/github-vid.mp4">Video</a></video></p>
+</section>
+<section id="install-or-upgrade-r-and-rstudio" class="slide level2 smaller">
+<h2>Install or upgrade R and RStudio</h2>
+<ul>
+<li><p>Install a pre-compiled binary of R for your OS from here: <a href="https://cloud.r-project.org" class="uri">https://cloud.r-project.org</a></p></li>
+<li><p>Already have R installed? <strong>Hold on: This is a great time to make sure your R installation is current. Check your current version like so:</strong></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>R.version.string</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>Install RStudio Desktop: Already have RStudio? <strong>Hold on: This is a great time to upgrade to the latest Preview version. Download it here:</strong> <a href="https://www.rstudio.com/products/rstudio/download/preview/" class="uri">https://www.rstudio.com/products/rstudio/download/preview/</a></p></li>
+<li><p>Update your R packages:</p></li>
+</ul>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">update.packages</span>(<span class="at">ask =</span> <span class="cn">FALSE</span>, <span class="at">checkBuilt =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="installation-gui" class="slide level2 smaller">
+<h2>Installation (GUI)</h2>
+<ul>
+<li>Install GitHub Desktop from <a href="https://desktop.github.com/" class="uri">https://desktop.github.com/</a></li>
+</ul>
+<p><img src="../../../figures/images/git2.png" alt="git" width="500" height="350" style="display: block; margin: 0 auto;"></p>
+</section>
+<section id="install-git" class="slide level2 smaller">
+<h2>Install Git</h2>
+<ul>
+<li>Go to the <strong>shell</strong>. Enter which git to request the path to your Git executable:</li>
+</ul>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>which git</span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="do">## /usr/bin/git</span></span>
+<span id="cb3-3"><a href="#cb3-3"></a>git <span class="sc">--</span>version</span>
+<span id="cb3-4"><a href="#cb3-4"></a><span class="do">## git version 2.42.0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li><p>If you are successful, that’s great! You have Git already. No need to install! Move on. If, instead, you see something more like git: command not found, keep reading</p></li>
+<li><p>macOS users might get an immediate offer to install command line developer tools. Yes, you should accept! Click “Install” and read more below</p></li>
+</ul>
+</section>
+<section id="installing-git-through-macos" class="slide level2 smaller">
+<h2>Installing Git through macOS</h2>
+<ul>
+<li><p>Install the <strong>Xcode</strong> command line tools (not all of Xcode), which includes Git.</p></li>
+<li><p>Go to the shell and enter one of these commands to elicit an offer to install developer command line tools:</p></li>
+</ul>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>git <span class="sc">--</span>version</span>
+<span id="cb4-2"><a href="#cb4-2"></a>git config</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li><p>Accept the offer! Click on “Install”.</p></li>
+<li><p>Here’s another way to request this installation, more directly:</p></li>
+</ul>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>xcode<span class="sc">-</span>select <span class="sc">--</span>install</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>Please note also that, after upgrading macOS, you might need to re-do the above and/or re-agree to the Xcode license agreement</li>
+</ul>
+</section>
+<section id="installing-git-through-windows" class="slide level2 smaller">
+<h2>Installing Git through Windows</h2>
+<ul>
+<li><p>Install <a href="https://gitforwindows.org/">Git for Windows</a>, also known as msysgit or “Git Bash”, to get Git in addition to some other useful tools, such as the Bash shell</p></li>
+<li><p>Git for Windows leaves the Git executable in a conventional location, which will help you and other programs, e.g.&nbsp;RStudio, find it and use it. This also supports a transition to more expert use, because the “Git Bash” shell will be useful as you venture outside of R/RStudio</p>
+<ul>
+<li><strong>NOTE</strong>: When asked about “Adjusting your PATH environment”, make sure to select “Git from the command line and also from 3rd-party software”. Otherwise, we believe it is good to accept the defaults.</li>
+<li><strong>Note that</strong> RStudio for Windows prefers for Git to be installed below C:/Program Files and this appears to be the default. This implies, for example, that the Git executable on my Windows system is found at C:/Program Files/Git/bin/git.exe. Unless you have specific reasons to otherwise, follow this convention.</li>
+</ul></li>
+</ul>
+</section>
+<section id="introducing-yourself-to-git" class="slide level2 smaller">
+<h2>Introducing yourself to Git</h2>
+<ul>
+<li>In the <strong>shell</strong></li>
+</ul>
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>git config <span class="sc">--</span>global user.name <span class="st">"Burak Sonmez"</span></span>
+<span id="cb6-2"><a href="#cb6-2"></a>git config <span class="sc">--</span>global user.email <span class="st">"burak@example.com"</span></span>
+<span id="cb6-3"><a href="#cb6-3"></a>git config <span class="sc">--</span>global <span class="sc">--</span>list</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li><p>substituting your name and the email associated with your GitHub account.</p></li>
+<li><p>The usethis package offers an alternative approach. You can set your Git user name and email from within R:</p></li>
+</ul>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="do">## install if needed (do this exactly once):</span></span>
+<span id="cb7-2"><a href="#cb7-2"></a><span class="do">## install.packages("usethis")</span></span>
+<span id="cb7-3"><a href="#cb7-3"></a></span>
+<span id="cb7-4"><a href="#cb7-4"></a><span class="fu">library</span>(usethis)</span>
+<span id="cb7-5"><a href="#cb7-5"></a><span class="fu">use_git_config</span>(<span class="at">user.name =</span> <span class="st">"Burak Sonmez"</span>, <span class="at">user.email =</span> <span class="st">"burak@example.org"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
 <img src="../../../figures/icons/course_favicon.png" class="slide-logo r-stretch"><div class="footer footer-default">

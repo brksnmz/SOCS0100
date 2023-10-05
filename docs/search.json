@@ -578,6 +578,48 @@
     "href": "2023/weeks/week01/slides.html#register-a-github-account",
     "title": "🗓️ Week 01 Introduction to Computational Social Science",
     "section": "Register a GitHub account",
-    "text": "Register a GitHub account\n\nRegister an account with GitHub. It’s free!\n\nhttps://github.com\n\nYou will be able to upgrade to a paid level of service, apply discounts, join organizations, etc. in the future, so don’t fret about any of that now. Except your username. You might want to give that some thought\n\nVideo\n\n\n\nSOCS0100 – Computational Tools for Reproducible Social Science"
+    "text": "Register a GitHub account\n\nRegister an account with GitHub. It’s free!\n\nhttps://github.com\n\nYou will be able to upgrade to a paid level of service, apply discounts, join organizations, etc. in the future, so don’t fret about any of that now. Except your username. You might want to give that some thought\n\nVideo"
+  },
+  {
+    "objectID": "2023/weeks/week01/slides.html#install-or-upgrade-r-and-rstudio",
+    "href": "2023/weeks/week01/slides.html#install-or-upgrade-r-and-rstudio",
+    "title": "🗓️ Week 01 Introduction to Computational Social Science",
+    "section": "Install or upgrade R and RStudio",
+    "text": "Install or upgrade R and RStudio\n\nInstall a pre-compiled binary of R for your OS from here: https://cloud.r-project.org\nAlready have R installed? Hold on: This is a great time to make sure your R installation is current. Check your current version like so:\nR.version.string\nInstall RStudio Desktop: Already have RStudio? Hold on: This is a great time to upgrade to the latest Preview version. Download it here: https://www.rstudio.com/products/rstudio/download/preview/\nUpdate your R packages:\n\nupdate.packages(ask = FALSE, checkBuilt = TRUE)"
+  },
+  {
+    "objectID": "2023/weeks/week01/slides.html#installation-gui",
+    "href": "2023/weeks/week01/slides.html#installation-gui",
+    "title": "🗓️ Week 01 Introduction to Computational Social Science",
+    "section": "Installation (GUI)",
+    "text": "Installation (GUI)\n\nInstall GitHub Desktop from https://desktop.github.com/"
+  },
+  {
+    "objectID": "2023/weeks/week01/slides.html#install-git",
+    "href": "2023/weeks/week01/slides.html#install-git",
+    "title": "🗓️ Week 01 Introduction to Computational Social Science",
+    "section": "Install Git",
+    "text": "Install Git\n\nGo to the shell. Enter which git to request the path to your Git executable:\n\nwhich git\n## /usr/bin/git\ngit --version\n## git version 2.42.0\n\nIf you are successful, that’s great! You have Git already. No need to install! Move on. If, instead, you see something more like git: command not found, keep reading\nmacOS users might get an immediate offer to install command line developer tools. Yes, you should accept! Click “Install” and read more below"
+  },
+  {
+    "objectID": "2023/weeks/week01/slides.html#installing-git-through-macos",
+    "href": "2023/weeks/week01/slides.html#installing-git-through-macos",
+    "title": "🗓️ Week 01 Introduction to Computational Social Science",
+    "section": "Installing Git through macOS",
+    "text": "Installing Git through macOS\n\nInstall the Xcode command line tools (not all of Xcode), which includes Git.\nGo to the shell and enter one of these commands to elicit an offer to install developer command line tools:\n\ngit --version\ngit config\n\nAccept the offer! Click on “Install”.\nHere’s another way to request this installation, more directly:\n\nxcode-select --install\n\nPlease note also that, after upgrading macOS, you might need to re-do the above and/or re-agree to the Xcode license agreement"
+  },
+  {
+    "objectID": "2023/weeks/week01/slides.html#introducing-yourself-to-git",
+    "href": "2023/weeks/week01/slides.html#introducing-yourself-to-git",
+    "title": "🗓️ Week 01 Introduction to Computational Social Science",
+    "section": "Introducing yourself to Git",
+    "text": "Introducing yourself to Git\n\nIn the shell\n\ngit config --global user.name \"Burak Sonmez\"\ngit config --global user.email \"burak@example.com\"\ngit config --global --list\n\nsubstituting your name and the email associated with your GitHub account.\nThe usethis package offers an alternative approach. You can set your Git user name and email from within R:\n\n## install if needed (do this exactly once):\n## install.packages(\"usethis\")\n\nlibrary(usethis)\nuse_git_config(user.name = \"Burak Sonmez\", user.email = \"burak@example.org\")\n\n\n\nSOCS0100 – Computational Tools for Reproducible Social Science"
+  },
+  {
+    "objectID": "2023/weeks/week01/slides.html#installing-git-through-windows",
+    "href": "2023/weeks/week01/slides.html#installing-git-through-windows",
+    "title": "🗓️ Week 01 Introduction to Computational Social Science",
+    "section": "Installing Git through Windows",
+    "text": "Installing Git through Windows\n\nInstall Git for Windows, also known as msysgit or “Git Bash”, to get Git in addition to some other useful tools, such as the Bash shell\nGit for Windows leaves the Git executable in a conventional location, which will help you and other programs, e.g. RStudio, find it and use it. This also supports a transition to more expert use, because the “Git Bash” shell will be useful as you venture outside of R/RStudio\n\nNOTE: When asked about “Adjusting your PATH environment”, make sure to select “Git from the command line and also from 3rd-party software”. Otherwise, we believe it is good to accept the defaults.\nNote that RStudio for Windows prefers for Git to be installed below C:/Program Files and this appears to be the default. This implies, for example, that the Git executable on my Windows system is found at C:/Program Files/Git/bin/git.exe. Unless you have specific reasons to otherwise, follow this convention."
   }
 ]
