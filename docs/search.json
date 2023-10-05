@@ -550,7 +550,7 @@
     "href": "2023/weeks/week01/slides.html#why-github",
     "title": "🗓️ Week 01 Introduction to Computational Social Science",
     "section": "Why GitHub?",
-    "text": "Why GitHub?\n\nIt provides a home for your Git-based projects on the internet. If you have no idea what we are talking about, think of it as DropBox but much, much better\nThe remote host acts as a distribution channel for your Git-managed project. It allows other people to see your stuff, sync up with you, and perhaps even make changes\n\n\n\n\n\nSOCS0100 – Computational Tools for Reproducible Social Science"
+    "text": "Why GitHub?\n\nIt provides a home for your Git-based projects on the internet. If you have no idea what we are talking about, think of it as DropBox but much, much better\nThe remote host acts as a distribution channel for your Git-managed project. It allows other people to see your stuff, sync up with you, and perhaps even make changes"
   },
   {
     "objectID": "2023/weeks/week01/slides.html#collective-action-and-opinion-science",
@@ -558,5 +558,26 @@
     "title": "🗓️ Week 01 Introduction to Computational Social Science",
     "section": "Collective Action and Opinion Science",
     "text": "Collective Action and Opinion Science\n\nvan de Rijt’s et al. leverage Change.org, an online petitioning platform, to conduct field experiments in which samples of petitions are assigned different quantities of signatures as treatments. These experiments demonstrate the importance of cumulative advantage effects in collective actions (van de Rijt et al. 2016)\nFlores (2017) uses text data from Twitter to show how anti-immigration laws hardened public opinion against immigration in Arizona"
+  },
+  {
+    "objectID": "2023/weeks/week01/slides.html#what-is-the-payoff",
+    "href": "2023/weeks/week01/slides.html#what-is-the-payoff",
+    "title": "🗓️ Week 01 Introduction to Computational Social Science",
+    "section": "What is the payoff?",
+    "text": "What is the payoff?\n\nExposure: If someone needs to see your work or if you want them to try out your code, they can easily get it from GitHub. If they use Git, they can clone or fork your repository. If they don’t use Git, they can still browse your project on GitHub like a normal website and even grab everything by downloading a zip archive\nCollaboration: If you need to collaborate on data analysis or code development, then everyone should use Git. Use GitHub as your clearinghouse: individuals work independently, then send work back to GitHub for reconciliation and transmission to the rest of the team\n\nManaging a project via Git/GitHub is much more like the Google Doc scenario and enjoys many of the same advantages. It is definitely more complicated than collaborating on a Google Doc, but this puts you in the right mindset"
+  },
+  {
+    "objectID": "2023/weeks/week01/slides.html#who-can-do-what",
+    "href": "2023/weeks/week01/slides.html#who-can-do-what",
+    "title": "🗓️ Week 01 Introduction to Computational Social Science",
+    "section": "Who can do what?",
+    "text": "Who can do what?\n\nA public repository is readable by the world. The owner can grant higher levels of permission to others, such as the ability to push commits\nA private repository is invisible to the world. The owner can grant read, write (push), or admin access to others\nThere is also a formal notion of an organization, which can be useful for managing repository permissions for entire teams of people\nGitHub repositories are just like Git repositories, but with some added features. For example, GitHub allows for pull requests, where one developer can propose changes to a project that another developer can review and approve. GitHub also includes tools for project management, such as issue tracking and project boards.\nOne key thing to remember is that GitHub doesn’t just store a copy of your code files — it stores the entire history of changes to the files, thanks to Git. This allows other collaborators to view the files at an earlier point in time, or even revert the entire project back to an earlier state."
+  },
+  {
+    "objectID": "2023/weeks/week01/slides.html#register-a-github-account",
+    "href": "2023/weeks/week01/slides.html#register-a-github-account",
+    "title": "🗓️ Week 01 Introduction to Computational Social Science",
+    "section": "Register a GitHub account",
+    "text": "Register a GitHub account\n\nRegister an account with GitHub. It’s free!\n\nhttps://github.com\n\nYou will be able to upgrade to a paid level of service, apply discounts, join organizations, etc. in the future, so don’t fret about any of that now. Except your username. You might want to give that some thought\n\n\n\n\n\nSOCS0100 – Computational Tools for Reproducible Social Science"
   }
 ]

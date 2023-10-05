@@ -172,3 +172,60 @@ Norms]{.tag style="background-color:var(--quarto-hl-fu-color)"} <br/>
     and perhaps even make changes
 
 {{< video https://www.youtube.com/watch?v=pBy1zgt0XPc width="600" height="300" >}}
+
+## What is the payoff? {.smaller}
+
+-   **Exposure**: If someone needs to see your work or if you want them
+    to try out your code, they can easily get it from GitHub. If they
+    use Git, they can clone or fork your repository. If they don't use
+    Git, they can still browse your project on GitHub like a normal
+    website and even grab everything by downloading a zip archive
+
+-   **Collaboration**: If you need to collaborate on data analysis or
+    code development, then everyone should use Git. Use GitHub as your
+    clearinghouse: individuals work independently, then send work back
+    to GitHub for reconciliation and transmission to the rest of the
+    team
+
+    -   Managing a project via Git/GitHub is much more like the Google
+        Doc scenario and enjoys many of the same advantages. It is
+        definitely more complicated than collaborating on a Google Doc,
+        but this puts you in the right mindset
+
+## Who can do what? {.smaller}
+
+-   A public repository is readable by the world. The owner can grant
+    higher levels of permission to others, such as the ability to push
+    commits
+
+-   A private repository is invisible to the world. The owner can grant
+    read, write (push), or admin access to others
+
+-   There is also a formal notion of an organization, which can be
+    useful for managing repository permissions for entire teams of
+    people
+
+-   GitHub repositories are just like Git repositories, but with some
+    added features. For example, GitHub allows for pull requests, where
+    one developer can propose changes to a project that another
+    developer can review and approve. GitHub also includes tools for
+    project management, such as issue tracking and project boards.
+
+-   One key thing to remember is that GitHub doesn't just store a copy
+    of your code files --- it stores the entire history of changes to
+    the files, thanks to Git. This allows other collaborators to view
+    the files at an earlier point in time, or even revert the entire
+    project back to an earlier state.
+
+## Register a GitHub account {.smaller}
+
+-   Register an account with GitHub. It's free!
+
+    -   <https://github.com>
+
+-   You will be able to upgrade to a paid level of service, apply
+    discounts, join organizations, etc. in the future, so don't fret
+    about any of that now. **Except your username. You might want to
+    give that some thought**
+    
+{{< video github-vid.mp4 width="600" height="300" >}}
