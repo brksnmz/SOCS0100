@@ -67,7 +67,7 @@ Norms]{.tag style="background-color:var(--quarto-hl-fu-color)"} <br/>
 -   Our purpose is to map how such computational tools are currently
     being applied in empirical settings across social sciences.
 
-<img src="/figures/images/css.png" alt="Number of pubs" width="600" height="600" style="display: block; margin: 0 auto;">
+<img src="/figures/images/css.png" alt="Number of pubs" width="400" height="400" style="display: block; margin: 0 auto;">
 
 ## Social Networks {.smaller}
 
