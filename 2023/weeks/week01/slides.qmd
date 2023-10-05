@@ -76,7 +76,7 @@ Norms]{.tag style="background-color:var(--quarto-hl-fu-color)"} <br/>
     show that microlevel interactions between individuals can generate
     macrolevel diffusion patterns
 
-<img src="/figures/images/css2.png" alt="Bail et al." width="600" height="600" style="display: block; margin: 0 auto;"/>
+<img src="/figures/images/css2.png" alt="Bail et al." width="400" height="400" style="display: block; margin: 0 auto;"/>
 
 ## Collective Action and Opinion Science {.smaller}
 
@@ -90,7 +90,7 @@ Norms]{.tag style="background-color:var(--quarto-hl-fu-color)"} <br/>
     anti-immigration laws hardened public opinion against immigration in
     Arizona
 
-<img src="/figures/images/css5.png" alt="Rijt et al." width="500" height="300" style="display: block; margin: 0 auto;"/>
+<img src="/figures/images/css5.png" alt="Rijt et al." width="400" height="300" style="display: block; margin: 0 auto;"/>
 
 ## Sociology of Knowledge {.smaller}
 
@@ -112,7 +112,7 @@ Norms]{.tag style="background-color:var(--quarto-hl-fu-color)"} <br/>
 -   Virtual reality holds great promise for studying how people respond
     to social settings within tightly controlled experiments
 
-<img src="/figures/images/css6.png" alt="Loon et al." width="500" height="300" style="display: block; margin: 0 auto;"/>
+<img src="/figures/images/css6.png" alt="Loon et al." width="400" height="300" style="display: block; margin: 0 auto;"/>
 
 ## Cultural Sociology {.smaller}
 
@@ -159,7 +159,7 @@ Norms]{.tag style="background-color:var(--quarto-hl-fu-color)"} <br/>
     typical data analytical projects, which often consist of data,
     figures, reports, and, yes, source code.
 
-<img src="/figures/images/git1.png" alt="git" width="600" height="250" style="display: block; margin: 0 auto;"/>
+<img src="/figures/images/git1.png" alt="git" width="400" height="250" style="display: block; margin: 0 auto;"/>
 
 ## Why GitHub? {.smaller}
 
@@ -228,4 +228,4 @@ Norms]{.tag style="background-color:var(--quarto-hl-fu-color)"} <br/>
     about any of that now. **Except your username. You might want to
     give that some thought**
     
-![](figure/images/github-vid.mp4){.absolute height="250" loop="true"}
+![](/figures/images/github-vid.mp4){.absolute width="500" height="250" loop="true"}
