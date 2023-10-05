@@ -480,6 +480,13 @@
     "href": "2023/weeks/week01/slides.html#computational-social-science",
     "title": "🗓️ Week 01 Introduction to Computational Social Science",
     "section": "Computational Social Science",
-    "text": "Computational Social Science\n\nIt is an interdisciplinary field that advances theories of human behavior by applying computational techniques to large datasets from social media sites, the Internet, or other digitized archives such as administrative records.\nOur purpose is to map how such computational tools are currently being applied in empirical settings across social sciences.\n\n\n\n\n\nSOCS0100 – Computational Tools for Reproducible Social Science"
+    "text": "Computational Social Science\n\nIt is an interdisciplinary field that advances theories of human behavior by applying computational techniques to large datasets from social media sites, the Internet, or other digitized archives such as administrative records.\nOur purpose is to map how such computational tools are currently being applied in empirical settings across social sciences."
+  },
+  {
+    "objectID": "2023/weeks/week01/slides.html#social-networks",
+    "href": "2023/weeks/week01/slides.html#social-networks",
+    "title": "🗓️ Week 01 Introduction to Computational Social Science",
+    "section": "Social Networks",
+    "text": "Social Networks\n\nBail et al. (2019) use Google Search data to track the diffusion of cultural products across global networks. Together, these studies show that microlevel interactions between individuals can generate macrolevel diffusion patterns\n\n\n\n\nBail et al.\n\n\n\n\n\nSOCS0100 – Computational Tools for Reproducible Social Science"
   }
 ]

@@ -1,5 +1,5 @@
 ---
-subtitle: "SOCS0100 -- Computational Tools for Reproducible Social Science"
+subtitle: ""
 title: "<font style='font-size:0.75em;'>🗓️ Week 01<br/> Introduction to Computational Social Science</font>"
 author: Dr [Burak Sonmez](#)
 institute: '[University College London](#)'
@@ -67,3 +67,13 @@ Norms]{.tag style="background-color:var(--quarto-hl-fu-color)"} <br/>
     being applied in empirical settings across social sciences.
 
 <img src="/figures/images/css.png" alt="Number of CSS publications"/>
+
+## Social Networks {.smaller}
+
+-   Bail et al. (2019) use Google Search data to track the diffusion of
+    cultural products across global networks. Together, these studies
+    show that microlevel interactions between individuals can generate
+    macrolevel diffusion patterns
+
+![Bail et al.](/figures/images/css2.png){alt="Bail et al."
+fig-align="center"}
