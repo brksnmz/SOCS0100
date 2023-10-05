@@ -122,4 +122,7 @@ Norms]{.tag style="background-color:var(--quarto-hl-fu-color)"} <br/>
 
 - Git is a version control system. Its original purpose was to help groups of developers work collaboratively on big software projects. Git manages the evolution of a set of files – called a repository – in a sane, highly structured way
 
+- We use it to manage the diverse collection of files that make up typical data analytical projects, which often consist of data, figures, reports, and, yes, source code.
+
 <img src="/figures/images/git1.png" alt="git" width="700" height="500" style="display: block; margin: 0 auto;">
+
