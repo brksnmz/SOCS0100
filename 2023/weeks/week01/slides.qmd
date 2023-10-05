@@ -228,4 +228,4 @@ Norms]{.tag style="background-color:var(--quarto-hl-fu-color)"} <br/>
     about any of that now. **Except your username. You might want to
     give that some thought**
     
-{{< video github-vid.mp4 width="600" height="300" >}}
+{{< video figures/images/github-vid.mp4 width="600" height="300" >}}
