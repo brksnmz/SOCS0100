@@ -537,5 +537,19 @@
     "title": "🗓️ Week 01 Introduction to Computational Social Science",
     "section": "Why Git? Why GitHub?",
     "text": "Why Git? Why GitHub?\n\nGit is a version control system. Its original purpose was to help groups of developers work collaboratively on big software projects. Git manages the evolution of a set of files – called a repository – in a sane, highly structured way\nWe use it to manage the diverse collection of files that make up typical data analytical projects, which often consist of data, figures, reports, and, yes, source code.\n\n\n\n\n\nSOCS0100 – Computational Tools for Reproducible Social Science"
+  },
+  {
+    "objectID": "2023/weeks/week01/slides.html#why-git",
+    "href": "2023/weeks/week01/slides.html#why-git",
+    "title": "🗓️ Week 01 Introduction to Computational Social Science",
+    "section": "Why Git?",
+    "text": "Why Git?\n\nGit is a version control system. Its original purpose was to help groups of developers work collaboratively on big software projects. Git manages the evolution of a set of files – called a repository – in a sane, highly structured way\nWe use it to manage the diverse collection of files that make up typical data analytical projects, which often consist of data, figures, reports, and, yes, source code."
+  },
+  {
+    "objectID": "2023/weeks/week01/slides.html#why-github",
+    "href": "2023/weeks/week01/slides.html#why-github",
+    "title": "🗓️ Week 01 Introduction to Computational Social Science",
+    "section": "Why GitHub?",
+    "text": "Why GitHub?\n\nIt provides a home for your Git-based projects on the internet. If you have no idea what we are talking about, think of it as DropBox but much, much better\nThe remote host acts as a distribution channel for your Git-managed project. It allows other people to see your stuff, sync up with you, and perhaps even make changes\n\n\n\n\n\n\nSOCS0100 – Computational Tools for Reproducible Social Science"
   }
 ]

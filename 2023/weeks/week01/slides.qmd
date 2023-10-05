@@ -118,11 +118,19 @@ Norms]{.tag style="background-color:var(--quarto-hl-fu-color)"} <br/>
 
 # Git and GitHub
 
-## Why Git? Why GitHub?  {.smaller}
+## Why Git? {.smaller}
 
 - Git is a version control system. Its original purpose was to help groups of developers work collaboratively on big software projects. Git manages the evolution of a set of files – called a repository – in a sane, highly structured way
 
 - We use it to manage the diverse collection of files that make up typical data analytical projects, which often consist of data, figures, reports, and, yes, source code.
 
-<img src="/figures/images/git1.png" alt="git" width="700" height="500" style="display: block; margin: 0 auto;">
+<img src="/figures/images/git1.png" alt="git" width="600" height="400" style="display: block; margin: 0 auto;">
+
+## Why GitHub? {.smaller}
+
+- It provides a home for your Git-based projects on the internet. If you have no idea what we are talking about, think of it as DropBox but much, much better
+
+- The remote host acts as a distribution channel for your Git-managed project. It allows other people to see your stuff, sync up with you, and perhaps even make changes
+
+<iframe width="560" height="315" src="https://www.youtube.com/watch?v=pBy1zgt0XPc"></iframe>
 
