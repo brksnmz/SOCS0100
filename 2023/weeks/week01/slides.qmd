@@ -61,8 +61,9 @@ Norms]{.tag style="background-color:var(--quarto-hl-fu-color)"} <br/>
 
 -   It is an interdisciplinary field that advances theories of human
     behavior by applying computational techniques to large datasets from
-    social media sites, the Internet, or other digitized archives such
+    social media sites, the Internet, or other digitised archives such
     as administrative records.
+    
 -   Our purpose is to map how such computational tools are currently
     being applied in empirical settings across social sciences.
 
@@ -75,5 +76,4 @@ Norms]{.tag style="background-color:var(--quarto-hl-fu-color)"} <br/>
     show that microlevel interactions between individuals can generate
     macrolevel diffusion patterns
 
-![Bail et al.](/figures/images/css2.png){alt="Bail et al."
-fig-align="center"}
+<img src="/figures/images/css2.png" alt="Bail et al." width="600" height="600" style="display: block; margin: 0 auto;">
