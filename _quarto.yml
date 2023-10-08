@@ -29,9 +29,9 @@ website:
       #   text: "📓 Syllabus" 
       - section: "📟 R Workshop"
         contents:
-      - href: 2023/workshop/rworkshop/page.qmd
-        text: "📟 R Workshop Slides"
-        contents:
+         - href: 2023/workshop/rworkshop/page.qmd
+           text: "📟 R Workshop Slides"
+           contents:
       #      - href: 2023/workshop/rworkshop/page.qmd
       #        text: "📟 R Workshop"
       #     - href: 2023/assignments/assignment02.qmd
