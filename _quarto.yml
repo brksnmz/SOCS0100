@@ -26,9 +26,11 @@ website:
       - href: 2023/index.qmd
         text: "🏠 Home"
       # - href: 2023/syllabus.qmd
-      #   text: "📓 Syllabus"  
+      #   text: "📓 Syllabus" 
+      - section: "📟 R Workshop"
+        contents:
       - href: 2023/workshop/rworkshop/page.qmd
-        text: "📟 R Workshop"
+        text: "📟 R Workshop Slides"
         contents:
       #      - href: 2023/workshop/rworkshop/page.qmd
       #        text: "📟 R Workshop"
