@@ -1,5 +1,5 @@
 ---
-subtitle: "SOCS0100 -- Computational Tools for Reproducible Social Science"
+subtitle: ""
 title: "<font style='font-size:0.5em;'>🗓<br/>A Gentle Introduction to R</font>"
 author: Dr [Burak Sonmez](#)
 institute: '[University College London](#)'
@@ -20,13 +20,13 @@ format:
     preview-links: auto
     logo: /figures/icons/course_favicon.png
     css: /css/styles_slides.css
-    footer: ""
+    footer: "SOCS0100 -- Computational Tools for Reproducible Social Science"
 editor: 
   markdown: 
     wrap: 72
 ---
 
-#### What is R?
+## What is R? {.smaller}
 
 ```{r}
 #| label = "rlogo",
@@ -35,10 +35,10 @@ editor:
 #| out.width = "15%"
 ```
 
-<figure><img src="/figures/images/rlogo.png"/></figure>
+<img src="/figures/images/rlogo.png" width="200" height="200" style="display: block; margin: 0 auto;"/>
 
 -   R is a widely known open-source software environment for statistical
-    computing and graphics. Download: https://cran.r-project.org/ for
+    computing and graphics. Download:<https://cran.r-project.org/> for
     both Windows and (Mac) OS X
 
 -   R is more than statistical software; it is essentially a programming
@@ -53,7 +53,7 @@ editor:
 -   Once you get acquainted with R, however, you can handle both basic
     and complex tasks with ease
 
-## Let's get started with R Studio
+## Let's get started with R Studio {.smaller}
 
 ```{r}
 #| label = "rlogo1",
@@ -62,21 +62,25 @@ editor:
 #| out.width = "35%"
 ```
 
-<figure><img src="/figures/images/rlogo1.png"/></figure>
+<img src="/figures/images/rlogo1.png" width="200" height="200" style="display: block; margin: 0 auto;"/>
 
 -   We are going to use R Studio in this workshop. R Studio is free
     software that runs R in the background with some brilliant features
+
 -   It is an **i**ntegrated **d**evelopment **e**nvironment (IDE) for R.
     It includes a console, syntax-highlighting editor that supports
     direct code execution, as well as tools for plotting, history,
     debugging and workspace management
+
 -   Go to <https://www.rstudio.com/products/rstudio/download/>
+
 -   Select "RSTUDIO-2023.06.2-561.EXE - Windows 10/11 (64-bit)" for
     Windows users
+
 -   Select "RSTUDIO-2023.06.2-561.DMG - macOS 11+ (64-bit)" for Mac
     users
 
-## The RStudio interface
+## The RStudio interface {.smaller}
 
 ```{r}
 #| label = "rstudio1",
@@ -85,17 +89,19 @@ editor:
 #| out.width = "85%"
 ```
 
-<figure><img src="/figures/images/rstudio1.png"/></figure>
+<img src="/figures/images/rstudio1.png" width="600" height="600" style="display: block; margin: 0 auto;"/>
 
-## Working with R Script Files
+## Working with R Script Files {.smaller}
 
 -   Rather than typing R commands into the console, we typically write
     short programs, known as "R scripts" that contain the R commands
     that we wish to execute
+    
 -   A file editor tab will open in the source panel. R code can be
     entered here
+    
 -   You can use File, then Save to give your script a name and save it
-    in your working directory.
+    in your working directory
 
 ```{r}
 #| label = "rscript",
@@ -104,9 +110,9 @@ editor:
 #| out.width = "85%"
 ```
 
-<figure><img src="/figures/images/rscript.png"/></figure>
+<img src="/figures/images/rscript.png" width="400" height="400" style="display: block; margin: 0 auto;"/>
 
-## Running R code
+## Running R code {.smaller}
 
 ```{r}
 #| label = "rstudio2",
@@ -114,13 +120,12 @@ editor:
 #| fig.align = "centre",
 #| out.width = "75%"
 ```
-
-<figure><img src="/figures/images/rstudio2.png"/></figure>
+<img src="/figures/images/rstudio2.png" width="500" height="500" style="display: block; margin: 0 auto;"/>
 
 -   When running multiple lines: select all lines, then press 'Run' or
     cmd/ctrl+enter
 
-## R Markdown/Quarto
+## R Markdown/Quarto {.smaller}
 
 ```{r}
 #| label = "markdown1",
@@ -129,7 +134,7 @@ editor:
 #| out.width = "75%"
 ```
 
-<figure><img src="/figures/images/markdown1.png"/></figure>
+<img src="/figures/images/markdown1.png" width="500" height="500" style="display: block; margin: 0 auto;"/>
 
 -   R Markdown/Quarto produces dynamic output formats in html, pdf, MS
     Word, dashboards, Beamer presentations, etc.
@@ -137,7 +142,7 @@ editor:
 -   We will be learning how to effectively use Quarto for reproducible
     documents in week 5
 
-## Base R vs R packages
+## Base R vs R packages {.smaller}
 
 -   There are "default" packages that come with R. Some of these
     include:
