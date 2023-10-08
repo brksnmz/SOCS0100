@@ -30,8 +30,8 @@ website:
       - href: 2023/workshop/rworkshop/page.qmd
         text: "📟 R Workshop"
         contents:
-            - href: 2023/workshop/rworkshop/page.qmd
-              text: "📟 R Workshop"
+      #      - href: 2023/workshop/rworkshop/page.qmd
+      #        text: "📟 R Workshop"
       #     - href: 2023/assignments/assignment02.qmd
       #       text: "📝 Assignment 02"
       - section: "🗓️ Weeks"
