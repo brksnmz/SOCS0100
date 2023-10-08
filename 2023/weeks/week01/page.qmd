@@ -6,10 +6,10 @@ Introduction to computational social science and open science: data and code sha
 
 ## 👨‍🏫 Lecture Slides
 
-Either click on the slide area below or click [here](Rworkshop.pdf) to view it in fullscreen. Use your keypad to navigate the slides.
+Either click on the slide area below or click [here](slides.qmd) to view it in fullscreen. Use your keypad to navigate the slides.
 
 ::: {.container style="position: relative;overflow: hidden;width: 100%;min-height:600px;"}
-<iframe src="Rworkshop.pdf" style="position=absolute;top: 0;left: 0;bottom: 0;right: 0;width: 100%;min-height:600px;">
+<iframe src="slides.qmd" style="position=absolute;top: 0;left: 0;bottom: 0;right: 0;width: 100%;min-height:600px;">
 
 </iframe>
 :::
