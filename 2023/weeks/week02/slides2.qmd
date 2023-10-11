@@ -105,6 +105,14 @@ editor:
     figure, or result in the paper and indicating the command file (or
     header within a larger command file) used to generate each one
 
+-   A README is often the first item a visitor will see when visiting
+    your repository. README files typically include information on:
+
+    -   **What the project does**
+    -   **How users can get started with the project**
+    -   **Where users can get help with your project**
+    -   **Who maintains and contributes to the project**    
+
 ## About READMEs {.smaller}
 
 -   You can add a README file to a repository to communicate important
@@ -117,14 +125,6 @@ editor:
     see ["Adding a code of conduct to your project" and "Setting up your
     project for healthy
     contributions"](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions)
-
--   A README is often the first item a visitor will see when visiting
-    your repository. README files typically include information on:
-
-    -   **What the project does**
-    -   **How users can get started with the project**
-    -   **Where users can get help with your project**
-    -   **Who maintains and contributes to the project**
 
 -   If a repository contains more than one README file, then the file
     shown is chosen from locations in the following order: the .github
@@ -177,7 +177,7 @@ editor:
     by clicking the File menu, selecting New File, then R script, or
     using the keyboard shortcut **Cmd/Ctrl + Shift + N**
 
-<img src="/figures/images/rscriptnew.png" alt="Wickham &amp; Cetinkaya-Rundel 2022" width="500" height="500" style="display: block; margin: 0 auto;"/>
+<img src="/figures/images/rscriptnew.png" alt="Wickham &amp; Cetinkaya-Rundel 2022" width="500" height="400" style="display: block; margin: 0 auto;"/>
 
 ## Recommendations {.smaller}
 
@@ -201,9 +201,7 @@ pacman::p_load(
 ```
 
 -   Make your R scripts reproducible by replacing `library(pkg)` with
-    `groundhog.library(pkg,date)`
-
--   `groundhog.library()` loads packages & their dependencies as
+    `groundhog.library(pkg,date)` `groundhog.library()` loads packages & their dependencies as
     available on chosen date on CRAN
 
 ``` r
@@ -265,7 +263,6 @@ report-draft-notes.txt
 -   Step 2: For each project, create a project directory named after the
     project
 
-    -   name_of_the_project
     -   data: raw, processed (all processed, cleaned, and tided)
     -   figures
     -   reports (PDF, HTML, TEX, etc.,)
@@ -282,12 +279,12 @@ report-draft-notes.txt
 
 - To help keep your R scripts as the source of truth for your analysis, we highly recommend that you instruct RStudio not to preserve your workspace between sessions
 
-<img src="/figures/images/project1.png" alt="R Studio" width="500" height="500" style="display: block; margin: 0 auto;"/>
+<img src="/figures/images/project1.png" alt="R Studio" width="500" height="400" style="display: block; margin: 0 auto;"/>
 
 ## RStudio Projects {.smaller}
 
 - Keeping all the files associated with a given project (input data, R scripts, analytical results, and figures) together in one directory is such a wise and common practice that RStudio has built-in support for this via projects
 
-<img src="/figures/images/project2.png" alt="R Studio" width="500" height="500" style="display: block; margin: 0 auto;"/>
+<img src="/figures/images/project2.png" alt="R Studio" width="500" height="400" style="display: block; margin: 0 auto;"/>
 
 ## Connecting your projects to GitHub {.smaller}

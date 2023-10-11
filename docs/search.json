@@ -662,14 +662,14 @@
     "href": "2023/weeks/week02/slides2.html#readme-file",
     "title": "🗓️ Week 02Computational Thinking and Reproducibility",
     "section": "README File",
-    "text": "README File\n\nThe README file walks the others through the contents of the replication package and how they relate to the contents of the project. We think this is most effectively organised by presenting the data files to be used first, and then referring to each table, figure, or result in the paper and indicating the command file (or header within a larger command file) used to generate each one"
+    "text": "README File\n\nThe README file walks the others through the contents of the replication package and how they relate to the contents of the project. We think this is most effectively organised by presenting the data files to be used first, and then referring to each table, figure, or result in the paper and indicating the command file (or header within a larger command file) used to generate each one\nA README is often the first item a visitor will see when visiting your repository. README files typically include information on:\n\nWhat the project does\nHow users can get started with the project\nWhere users can get help with your project\nWho maintains and contributes to the project"
   },
   {
     "objectID": "2023/weeks/week02/slides2.html#about-readmes",
     "href": "2023/weeks/week02/slides2.html#about-readmes",
     "title": "🗓️ Week 02Computational Thinking and Reproducibility",
     "section": "About READMEs",
-    "text": "About READMEs\n\nYou can add a README file to a repository to communicate important information about your project. A README, along with a repository license, citation file, contribution guidelines, and a code of conduct, communicates expectations for your project and helps you manage contributions\nFor more information about providing guidelines for your project, see “Adding a code of conduct to your project” and “Setting up your project for healthy contributions”\nA README is often the first item a visitor will see when visiting your repository. README files typically include information on:\n\nWhat the project does\nHow users can get started with the project\nWhere users can get help with your project\nWho maintains and contributes to the project\n\nIf a repository contains more than one README file, then the file shown is chosen from locations in the following order: the .github directory, then the repository’s root directory, and finally the docs directory"
+    "text": "About READMEs\n\nYou can add a README file to a repository to communicate important information about your project. A README, along with a repository license, citation file, contribution guidelines, and a code of conduct, communicates expectations for your project and helps you manage contributions\nFor more information about providing guidelines for your project, see “Adding a code of conduct to your project” and “Setting up your project for healthy contributions”\nIf a repository contains more than one README file, then the file shown is chosen from locations in the following order: the .github directory, then the repository’s root directory, and finally the docs directory"
   },
   {
     "objectID": "2023/weeks/week02/slides2.html#why-we-need-computational-thinking",
@@ -704,7 +704,7 @@
     "href": "2023/weeks/week02/slides2.html#recommendations",
     "title": "🗓️ Week 02Computational Thinking and Reproducibility",
     "section": "Recommendations",
-    "text": "Recommendations\n\nStart your script with the packages you need. That way, if you share your code with others, they can easily see which packages they need to install\nNote that you should never include install.packages() in a script you share\nIf you have multiple packages to install, then please consider using the pacman package\n\ninstall.packages(\"pacman\")\n\npacman::p_load(\n  ggplot2,\n  dplyr, \n  usethis)\n\nMake your R scripts reproducible by replacing library(pkg) with groundhog.library(pkg,date)\ngroundhog.library() loads packages & their dependencies as available on chosen date on CRAN\n\ninstall.packages(\"groundhog\")\nlibrary(\"groundhog\")\npkgs &lt;- c(\"rio\",\"metafor\")\ngroundhog.library(pkgs, \"2021-09-01\")"
+    "text": "Recommendations\n\nStart your script with the packages you need. That way, if you share your code with others, they can easily see which packages they need to install\nNote that you should never include install.packages() in a script you share\nIf you have multiple packages to install, then please consider using the pacman package\n\ninstall.packages(\"pacman\")\n\npacman::p_load(\n  ggplot2,\n  dplyr, \n  usethis)\n\nMake your R scripts reproducible by replacing library(pkg) with groundhog.library(pkg,date) groundhog.library() loads packages & their dependencies as available on chosen date on CRAN\n\ninstall.packages(\"groundhog\")\nlibrary(\"groundhog\")\npkgs &lt;- c(\"rio\",\"metafor\")\ngroundhog.library(pkgs, \"2021-09-01\")"
   },
   {
     "objectID": "2023/weeks/week02/slides2.html#computational-reproducilibility",
@@ -725,7 +725,7 @@
     "href": "2023/weeks/week02/slides2.html#how-to-organise-files-in-a-project",
     "title": "🗓️ Week 02Computational Thinking and Reproducibility",
     "section": "How to Organise Files in a Project",
-    "text": "How to Organise Files in a Project\n\nStep 1: Environment is part of your project. If someone cannot reproduce your environment, they won’t be able to run your code\nStep 2: For each project, create a project directory named after the project\n\nname_of_the_project\ndata: raw, processed (all processed, cleaned, and tided)\nfigures\nreports (PDF, HTML, TEX, etc.,)\nresults (model outcomes, etc.,)\nscripts (i.e., functions)\n.gitignore (for Git)\nname_of_project.Rproj (for R)\nREADME.md (for Git)\n\nStep 3: Launch R Studio. Choose File &gt; New project &gt; Browse existing directories &gt; Create project. This allows each project has its workspace"
+    "text": "How to Organise Files in a Project\n\nStep 1: Environment is part of your project. If someone cannot reproduce your environment, they won’t be able to run your code\nStep 2: For each project, create a project directory named after the project\n\ndata: raw, processed (all processed, cleaned, and tided)\nfigures\nreports (PDF, HTML, TEX, etc.,)\nresults (model outcomes, etc.,)\nscripts (i.e., functions)\n.gitignore (for Git)\nname_of_project.Rproj (for R)\nREADME.md (for Git)\n\nStep 3: Launch R Studio. Choose File &gt; New project &gt; Browse existing directories &gt; Create project. This allows each project has its workspace"
   },
   {
     "objectID": "2023/weeks/week02/slides2.html#projects",
