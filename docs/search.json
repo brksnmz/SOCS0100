@@ -746,7 +746,7 @@
     "href": "2023/weeks/week02/slides2.html#connecting-your-projects-to-github",
     "title": "🗓️ Week 02Computational Thinking and Reproducibility",
     "section": "Connecting your projects to GitHub",
-    "text": "Connecting your projects to GitHub\n\n\n\nSOCS0100 – Computational Tools for Reproducible Social Science"
+    "text": "Connecting your projects to GitHub\n\nFirst create a repo on GitHub\n\nVideo\n\n\n\nSOCS0100 – Computational Tools for Reproducible Social Science"
   },
   {
     "objectID": "2023/weeks/week02/page2.html",
@@ -775,5 +775,54 @@
     "title": "🗓️ Week 02 - Computational Thinking and Reproducibility",
     "section": "📚 Required Reading",
     "text": "📚 Required Reading\n\nChristensen, G., Freese, J., & Miguel, E. (2019). Transparent and Reproducible Social Science Research: How to Do Open Science. University of California Press. (Chapter 10 & 11).\nWickham, H., Çetinkaya-Rundel, M., & Grolemund, G. (2023). R for data science. ” O’Reilly Media, Inc.”. (Chapter 7)."
+  },
+  {
+    "objectID": "2023/weeks/week02/slides2.html#first-create-a-repo-on-github",
+    "href": "2023/weeks/week02/slides2.html#first-create-a-repo-on-github",
+    "title": "🗓️ Week 02Computational Thinking and Reproducibility",
+    "section": "First create a repo on GitHub",
+    "text": "First create a repo on GitHub\nVideo"
+  },
+  {
+    "objectID": "2023/weeks/week02/slides2.html#cloning",
+    "href": "2023/weeks/week02/slides2.html#cloning",
+    "title": "🗓️ Week 02Computational Thinking and Reproducibility",
+    "section": "Cloning",
+    "text": "Cloning\nVideo"
+  },
+  {
+    "objectID": "2023/weeks/week02/slides2.html#working-on-loca-repo-and-commit-your-changes",
+    "href": "2023/weeks/week02/slides2.html#working-on-loca-repo-and-commit-your-changes",
+    "title": "🗓️ Week 02Computational Thinking and Reproducibility",
+    "section": "Working on loca repo and commit your changes",
+    "text": "Working on loca repo and commit your changes\nVideo\n\n\n\nSOCS0100 – Computational Tools for Reproducible Social Science"
+  },
+  {
+    "objectID": "2023/weeks/week02/slides2.html#working-on-local-repo-and-commit-your-changes",
+    "href": "2023/weeks/week02/slides2.html#working-on-local-repo-and-commit-your-changes",
+    "title": "🗓️ Week 02Computational Thinking and Reproducibility",
+    "section": "Working on local repo and commit your changes",
+    "text": "Working on local repo and commit your changes\nVideo"
+  },
+  {
+    "objectID": "2023/weeks/week02/slides2.html#tracking-files",
+    "href": "2023/weeks/week02/slides2.html#tracking-files",
+    "title": "🗓️ Week 02Computational Thinking and Reproducibility",
+    "section": "Tracking files",
+    "text": "Tracking files\nVideo"
+  },
+  {
+    "objectID": "2023/weeks/week02/slides2.html#undoing-mistakes",
+    "href": "2023/weeks/week02/slides2.html#undoing-mistakes",
+    "title": "🗓️ Week 02Computational Thinking and Reproducibility",
+    "section": "Undoing mistakes",
+    "text": "Undoing mistakes\n\nImagine you did some work, committed the changes, and pushed them to the remote repo. But you’d like to undo those changes\nSay you added some plain text by mistake to README.md. Running git revert will do the opposite of what you just did (i.e., remove the plain text) and create a new commit. You can then git push this to the remote.\n\ngit revert [commit id]\ngit push"
+  },
+  {
+    "objectID": "2023/weeks/week02/slides2.html#creating-rstudio-project-from-the-existing-directory",
+    "href": "2023/weeks/week02/slides2.html#creating-rstudio-project-from-the-existing-directory",
+    "title": "🗓️ Week 02Computational Thinking and Reproducibility",
+    "section": "Creating RStudio project from the existing directory",
+    "text": "Creating RStudio project from the existing directory\nVideo\n\n\n\nSOCS0100 – Computational Tools for Reproducible Social Science"
   }
 ]

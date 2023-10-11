@@ -287,4 +287,43 @@ report-draft-notes.txt
 
 <img src="/figures/images/project2.png" alt="R Studio" width="500" height="400" style="display: block; margin: 0 auto;"/>
 
-## Connecting your projects to GitHub {.smaller}
+# Connecting Your Projects to GitHub 
+
+## First create a repo on GitHub {.smaller}
+
+![](/figures/images/gitrecord.mp4){.absolute width="600" height="500"
+loop="true"}
+
+## Cloning {.smaller}
+
+![](/figures/images/gitrecord2.mp4){.absolute width="600" height="500"
+loop="true"}
+
+## Working on local repo and commit your changes {.smaller}
+
+![](/figures/images/gitrecord3.mp4){.absolute width="600" height="500"
+loop="true"}
+
+## Tracking files {.smaller}
+
+![](/figures/images/gitrecord4.mp4){.absolute width="600" height="500"
+loop="true"}
+
+## Undoing mistakes {.smaller}
+
+- Imagine you did some work, committed the changes, and pushed them to the remote repo. But you'd like to undo those changes
+
+- Say you added some plain text by mistake to README.md. Running `git revert` will do the opposite of what you just did (i.e., remove the plain text) and create a new commit. You can then `git push` this to the remote.
+
+```r
+git revert [commit id]
+git push
+```
+
+## Creating RStudio project from the existing directory
+
+![](/figures/images/gitrecord5.mp4){.absolute width="600" height="400"
+loop="true"}
+
+
+

@@ -422,6 +422,7 @@ Dr <a href="#/">Burak Sonmez</a>
 <li><a href="#/reproducibility" id="/toc-reproducibility">Reproducibility</a></li>
 <li><a href="#/computational-thinking" id="/toc-computational-thinking">Computational Thinking</a></li>
 <li><a href="#/project-workflow" id="/toc-project-workflow">Project Workflow</a></li>
+<li><a href="#/connecting-your-projects-to-github" id="/toc-connecting-your-projects-to-github">Connecting Your Projects to GitHub</a></li>
 </ul>
 </nav>
 </section>
@@ -622,9 +623,40 @@ report-draft-notes.txt</code></pre>
 <li>Keeping all the files associated with a given project (input data, R scripts, analytical results, and figures) together in one directory is such a wise and common practice that RStudio has built-in support for this via projects</li>
 </ul>
 <p><img src="../../../figures/images/project2.png" alt="R Studio" width="500" height="400" style="display: block; margin: 0 auto;"></p>
+</section></section>
+<section>
+<section id="connecting-your-projects-to-github" class="title-slide slide level1">
+<h1>Connecting Your Projects to GitHub</h1>
+
 </section>
-<section id="connecting-your-projects-to-github" class="slide level2 smaller">
-<h2>Connecting your projects to GitHub</h2>
+<section id="first-create-a-repo-on-github" class="slide level2 smaller">
+<h2>First create a repo on GitHub</h2>
+<p><video data-src="../../../figures/images/gitrecord.mp4" class="absolute" style="width: 600px; height: 500px; " loop="true" controls=""><a href="../../../figures/images/gitrecord.mp4">Video</a></video></p>
+</section>
+<section id="cloning" class="slide level2 smaller">
+<h2>Cloning</h2>
+<p><video data-src="../../../figures/images/gitrecord2.mp4" class="absolute" style="width: 600px; height: 500px; " loop="true" controls=""><a href="../../../figures/images/gitrecord2.mp4">Video</a></video></p>
+</section>
+<section id="working-on-local-repo-and-commit-your-changes" class="slide level2 smaller">
+<h2>Working on local repo and commit your changes</h2>
+<p><video data-src="../../../figures/images/gitrecord3.mp4" class="absolute" style="width: 600px; height: 500px; " loop="true" controls=""><a href="../../../figures/images/gitrecord3.mp4">Video</a></video></p>
+</section>
+<section id="tracking-files" class="slide level2 smaller">
+<h2>Tracking files</h2>
+<p><video data-src="../../../figures/images/gitrecord4.mp4" class="absolute" style="width: 600px; height: 500px; " loop="true" controls=""><a href="../../../figures/images/gitrecord4.mp4">Video</a></video></p>
+</section>
+<section id="undoing-mistakes" class="slide level2 smaller">
+<h2>Undoing mistakes</h2>
+<ul>
+<li><p>Imagine you did some work, committed the changes, and pushed them to the remote repo. But you’d like to undo those changes</p></li>
+<li><p>Say you added some plain text by mistake to README.md. Running <code>git revert</code> will do the opposite of what you just did (i.e., remove the plain text) and create a new commit. You can then <code>git push</code> this to the remote.</p></li>
+</ul>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>git revert [commit id]</span>
+<span id="cb4-2"><a href="#cb4-2"></a>git push</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="creating-rstudio-project-from-the-existing-directory" class="slide level2">
+<h2>Creating RStudio project from the existing directory</h2>
+<p><video data-src="../../../figures/images/gitrecord5.mp4" class="absolute" style="width: 600px; height: 400px; " loop="true" controls=""><a href="../../../figures/images/gitrecord5.mp4">Video</a></video></p>
 
 
 <img src="../../../figures/icons/course_favicon.png" class="slide-logo r-stretch"><div class="footer footer-default">
