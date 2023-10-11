@@ -11,7 +11,7 @@
     "href": "2023/index.html",
     "title": "SOCS0100 - Computational Tools for Reproducible Social Science",
     "section": "",
-    "text": "📢 Important\n\n\n\n\n\n(03/10/2023)\n\n🗓️ Week 01 lecture material is now available!\n\n\n\n\n\n🧑🏻‍🏫 Module Team\n\nModule Convenor\n\n\n\nBurak Sonmez  Lecturer in Quantitative Social Science  University College London 📧 b.sonmez@ucl.ac.uk ( at )\nOffice Hours:\n\nWhen:Fridays 16:00-18:00\nWhere:55-59 Gordon Square, 416\nHow to book: Please email me in advance\n\n\n\n\n\n\n📍 Lectures\nFridays 10:00-12:00 at Roberts Building 309\n\n\n💻 Practical Session Groups\n\nGroup 01\n\n📆 Fridays\n⌚ 12:00 - 13:00\n📍 Bedford Way (20) W 2.08\n🧑‍🏫 Burak Sonmez\n\n\n\nGroup 02\n\n📆 Fridays\n⌚ 15:00 - 16:00\n📍 Bedford Way (20) 828\n🧑‍🏫 Burak Sonmez"
+    "text": "📢 Important\n\n\n\n\n\n(11/10/2023)\n\n🗓️ Week 02 lecture material is now available!\n\n\n\n\n\n🧑🏻‍🏫 Module Team\n\nModule Convenor\n\n\n\nBurak Sonmez  Lecturer in Quantitative Social Science  University College London 📧 b.sonmez@ucl.ac.uk ( at )\nOffice Hours:\n\nWhen:Fridays 16:00-18:00\nWhere:55-59 Gordon Square, 416\nHow to book: Please email me in advance\n\n\n\n\n\n\n📍 Lectures\nFridays 10:00-12:00 at Roberts Building 309\n\n\n💻 Practical Session Groups\n\nGroup 01\n\n📆 Fridays\n⌚ 12:00 - 13:00\n📍 Bedford Way (20) W 2.08\n🧑‍🏫 Burak Sonmez\n\n\n\nGroup 02\n\n📆 Fridays\n⌚ 15:00 - 16:00\n📍 Bedford Way (20) 828\n🧑‍🏫 Burak Sonmez"
   },
   {
     "objectID": "index.html",
@@ -621,5 +621,159 @@
     "title": "🗓️ Week 01 Introduction to Computational Social Science",
     "section": "Installing Git through Windows",
     "text": "Installing Git through Windows\n\nInstall Git for Windows, also known as msysgit or “Git Bash”, to get Git in addition to some other useful tools, such as the Bash shell\nGit for Windows leaves the Git executable in a conventional location, which will help you and other programs, e.g. RStudio, find it and use it. This also supports a transition to more expert use, because the “Git Bash” shell will be useful as you venture outside of R/RStudio\n\nNOTE: When asked about “Adjusting your PATH environment”, make sure to select “Git from the command line and also from 3rd-party software”. Otherwise, we believe it is good to accept the defaults.\nNote that RStudio for Windows prefers for Git to be installed below C:/Program Files and this appears to be the default. This implies, for example, that the Git executable on my Windows system is found at C:/Program Files/Git/bin/git.exe. Unless you have specific reasons to otherwise, follow this convention."
+  },
+  {
+    "objectID": "2023/weeks/week02/slides2.html#data-sharing",
+    "href": "2023/weeks/week02/slides2.html#data-sharing",
+    "title": "🗓️ Week 02Computational Thinking and Reproducibility",
+    "section": "Data Sharing",
+    "text": "Data Sharing\n\nData sharing serves at least two distinct scientific purposes: 1) evaluative and 2) generative\n\nThe evaluative purpose of sharing data is to increase the credibility of findings by allowing the evidence to be directly verified and interrogated by others\nThe generative purpose is to enable other investigators to pursue new questions and thereby maximise the total potential research contribution of data"
+  },
+  {
+    "objectID": "2023/weeks/week02/slides2.html#why-are-data-sharing-policies-necessary",
+    "href": "2023/weeks/week02/slides2.html#why-are-data-sharing-policies-necessary",
+    "title": "🗓️ Week 02Computational Thinking and Reproducibility",
+    "section": "Why are Data-sharing Policies Necessary?",
+    "text": "Why are Data-sharing Policies Necessary?\n\nThe code presents data sharing as a matter of norms: researchers have an ethical obligation to allow colleagues to verify results and, if possible, to make their dataset broadly available after they have finished with it\nIn 2006, a group of Dutch psychologists sought to obtain data for all empirical studies published in two issues of four major psychology journals\n\nThey were successful only 27 percent of the time (Wicherts et al. 2006). Additionally, the studies for which authors did not share data were more likely to report weaker evidence and contain simple reporting errors"
+  },
+  {
+    "objectID": "2023/weeks/week02/slides2.html#private-data",
+    "href": "2023/weeks/week02/slides2.html#private-data",
+    "title": "🗓️ Week 02Computational Thinking and Reproducibility",
+    "section": "Private Data",
+    "text": "Private Data\n\nData are confidential when researchers have information about the identity of participants but agree to keep identities private\nData are anonymous when researchers themselves do not know respondents’ identities"
+  },
+  {
+    "objectID": "2023/weeks/week02/slides2.html#anonymizing-data",
+    "href": "2023/weeks/week02/slides2.html#anonymizing-data",
+    "title": "🗓️ Week 02Computational Thinking and Reproducibility",
+    "section": "Anonymizing Data",
+    "text": "Anonymizing Data\n\nDirect identifiers are variables that obviously identify individuals, including names, email addresses, and social security numbers. Of course, these must be removed in order for the resulting dataset to be anonymous. But just because direct identifiers have been removed does not mean the data are truly anonymous\nFor instance, Netflix once sponsored a contest in which data scientists were given information about how users had rated some films and asked to predict how those users would rate others. The dataset included only seemingly minimal information: a random ID number for individuals, the film, the date of the rating, and the number of stars given. Narayanan and Shmatikov (2008) demonstrated that one could use correspondences in the dates of reviews between the Netflix data and the IMDB site to match some IDs in the Netflix data to IMDB usernames, and some IMDB usernames could then be easily connected to people’s real identities"
+  },
+  {
+    "objectID": "2023/weeks/week02/slides2.html#making-your-data-and-coding-available",
+    "href": "2023/weeks/week02/slides2.html#making-your-data-and-coding-available",
+    "title": "🗓️ Week 02Computational Thinking and Reproducibility",
+    "section": "Making Your Data and Coding Available",
+    "text": "Making Your Data and Coding Available\n\nResearchers have often made data public by simply posting a file on their personal websites, but this is far from best practice nowadays. Personal websites come and go, whereas data archivists’ jobs require them to think in terms of posterity\nA clear and thoughtful description of what should go in a data replication package, for instance, has been provided by the American Journal of Political Science (AJPS; Jacoby and Lupton 2016). Their guidelines break the work of assembling a replication package into four components: README file; analysis datasets; software commands; and information to reconstruct analysis dataset"
+  },
+  {
+    "objectID": "2023/weeks/week02/slides2.html#readme-file",
+    "href": "2023/weeks/week02/slides2.html#readme-file",
+    "title": "🗓️ Week 02Computational Thinking and Reproducibility",
+    "section": "README File",
+    "text": "README File\n\nThe README file walks the others through the contents of the replication package and how they relate to the contents of the project. We think this is most effectively organised by presenting the data files to be used first, and then referring to each table, figure, or result in the paper and indicating the command file (or header within a larger command file) used to generate each one"
+  },
+  {
+    "objectID": "2023/weeks/week02/slides2.html#about-readmes",
+    "href": "2023/weeks/week02/slides2.html#about-readmes",
+    "title": "🗓️ Week 02Computational Thinking and Reproducibility",
+    "section": "About READMEs",
+    "text": "About READMEs\n\nYou can add a README file to a repository to communicate important information about your project. A README, along with a repository license, citation file, contribution guidelines, and a code of conduct, communicates expectations for your project and helps you manage contributions\nFor more information about providing guidelines for your project, see “Adding a code of conduct to your project” and “Setting up your project for healthy contributions”\nA README is often the first item a visitor will see when visiting your repository. README files typically include information on:\n\nWhat the project does\nHow users can get started with the project\nWhere users can get help with your project\nWho maintains and contributes to the project\n\nIf a repository contains more than one README file, then the file shown is chosen from locations in the following order: the .github directory, then the repository’s root directory, and finally the docs directory"
+  },
+  {
+    "objectID": "2023/weeks/week02/slides2.html#why-we-need-computational-thinking",
+    "href": "2023/weeks/week02/slides2.html#why-we-need-computational-thinking",
+    "title": "🗓️ Week 02Computational Thinking and Reproducibility",
+    "section": "Why we need computational thinking",
+    "text": "Why we need computational thinking\n\nIf social scientists want to work efficiently, they should make the most of modern programming languages, which excel at automating tasks\n\nConsider a UCL student or researcher who wishes to streamline their work. Instead of manually gathering and managing data, they could opt to create a reproducible workflow that automatically collects, parses, and organises the information into interconnected databases. This approach also involves the responsibility of maintaining and ensuring the data’s quality. However, it offers the advantage of reducing data collection costs significantly, greatly enhancing the potential for reproducibility and scalability in their research endeavors. Additionally, they can choose to document their code and share it publicly through their GitHub repository or even package essential functions as open-source libraries for wider accessibility and collaboration\n\nSocial scientists don’t need to become software engineers. Programming is a tool, not a goal. Consider automating parts of social science research using programming as a means to that end"
+  },
+  {
+    "objectID": "2023/weeks/week02/slides2.html#version-control",
+    "href": "2023/weeks/week02/slides2.html#version-control",
+    "title": "🗓️ Week 02Computational Thinking and Reproducibility",
+    "section": "Version Control",
+    "text": "Version Control\n\n\nThis helps to track the following information:\n\nWhich changes were made?\nWho made the changes?\nWhen were the changes made?\nWhy were changes needed?"
+  },
+  {
+    "objectID": "2023/weeks/week02/slides2.html#a-schematic-git-workflow",
+    "href": "2023/weeks/week02/slides2.html#a-schematic-git-workflow",
+    "title": "🗓️ Week 02Computational Thinking and Reproducibility",
+    "section": "A Schematic Git Workflow",
+    "text": "A Schematic Git Workflow"
+  },
+  {
+    "objectID": "2023/weeks/week02/slides2.html#workflow-scripts-and-projects",
+    "href": "2023/weeks/week02/slides2.html#workflow-scripts-and-projects",
+    "title": "🗓️ Week 02Computational Thinking and Reproducibility",
+    "section": "Workflow: Scripts and Projects",
+    "text": "Workflow: Scripts and Projects\n\nGive yourself more room to work, use the script editor. Open it up by clicking the File menu, selecting New File, then R script, or using the keyboard shortcut Cmd/Ctrl + Shift + N"
+  },
+  {
+    "objectID": "2023/weeks/week02/slides2.html#recommendations",
+    "href": "2023/weeks/week02/slides2.html#recommendations",
+    "title": "🗓️ Week 02Computational Thinking and Reproducibility",
+    "section": "Recommendations",
+    "text": "Recommendations\n\nStart your script with the packages you need. That way, if you share your code with others, they can easily see which packages they need to install\nNote that you should never include install.packages() in a script you share\nIf you have multiple packages to install, then please consider using the pacman package\n\ninstall.packages(\"pacman\")\n\npacman::p_load(\n  ggplot2,\n  dplyr, \n  usethis)\n\nMake your R scripts reproducible by replacing library(pkg) with groundhog.library(pkg,date)\ngroundhog.library() loads packages & their dependencies as available on chosen date on CRAN\n\ninstall.packages(\"groundhog\")\nlibrary(\"groundhog\")\npkgs &lt;- c(\"rio\",\"metafor\")\ngroundhog.library(pkgs, \"2021-09-01\")"
+  },
+  {
+    "objectID": "2023/weeks/week02/slides2.html#computational-reproducilibility",
+    "href": "2023/weeks/week02/slides2.html#computational-reproducilibility",
+    "title": "🗓️ Week 02Computational Thinking and Reproducibility",
+    "section": "Computational Reproducilibility",
+    "text": "Computational Reproducilibility\n\nComputational reproduciblity = code + data + environment + distribution\nRoger Peng’s checklist\n\nStart with science (avoid vague questions and concepts)\nDon’t do things by hand (not only about automation but also documentation)\nDon’t point and click (same problem)\nTeach a computer (automation also solves documentation to some extent)\nUse some version control\nDon’t save output (instead, keep the input and code)\nSet your seed\nThink about the entire pipeline"
+  },
+  {
+    "objectID": "2023/weeks/week02/slides2.html#saving-and-naming",
+    "href": "2023/weeks/week02/slides2.html#saving-and-naming",
+    "title": "🗓️ Week 02Computational Thinking and Reproducibility",
+    "section": "Saving and naming",
+    "text": "Saving and naming\n\nFile names should be machine readable: avoid spaces, symbols, and special characters. Don’t rely on case sensitivity to distinguish files\nFile names should be human readable: use file names to describe what’s in the file\nFile names should play well with default ordering: start file names with numbers so that alphabetical sorting puts them in the order they get used\n\n01-load-data.R\n02-exploratory-analysis.R\n03-model-approach-1.R\n04-model-approach-2.R\nfig-01.png\nfig-02.png\nreport-2022-03-20.qmd\nreport-2022-04-02.qmd\nreport-draft-notes.txt"
+  },
+  {
+    "objectID": "2023/weeks/week02/slides2.html#how-to-organise-files-in-a-project",
+    "href": "2023/weeks/week02/slides2.html#how-to-organise-files-in-a-project",
+    "title": "🗓️ Week 02Computational Thinking and Reproducibility",
+    "section": "How to Organise Files in a Project",
+    "text": "How to Organise Files in a Project\n\nStep 1: Environment is part of your project. If someone cannot reproduce your environment, they won’t be able to run your code\nStep 2: For each project, create a project directory named after the project\n\nname_of_the_project\ndata: raw, processed (all processed, cleaned, and tided)\nfigures\nreports (PDF, HTML, TEX, etc.,)\nresults (model outcomes, etc.,)\nscripts (i.e., functions)\n.gitignore (for Git)\nname_of_project.Rproj (for R)\nREADME.md (for Git)\n\nStep 3: Launch R Studio. Choose File &gt; New project &gt; Browse existing directories &gt; Create project. This allows each project has its workspace"
+  },
+  {
+    "objectID": "2023/weeks/week02/slides2.html#projects",
+    "href": "2023/weeks/week02/slides2.html#projects",
+    "title": "🗓️ Week 02Computational Thinking and Reproducibility",
+    "section": "Projects",
+    "text": "Projects\n\nTo help keep your R scripts as the source of truth for your analysis, we highly recommend that you instruct RStudio not to preserve your workspace between sessions"
+  },
+  {
+    "objectID": "2023/weeks/week02/slides2.html#rstudio-projects",
+    "href": "2023/weeks/week02/slides2.html#rstudio-projects",
+    "title": "🗓️ Week 02Computational Thinking and Reproducibility",
+    "section": "RStudio Projects",
+    "text": "RStudio Projects\n\nKeeping all the files associated with a given project (input data, R scripts, analytical results, and figures) together in one directory is such a wise and common practice that RStudio has built-in support for this via projects"
+  },
+  {
+    "objectID": "2023/weeks/week02/slides2.html#connecting-your-projects-to-github",
+    "href": "2023/weeks/week02/slides2.html#connecting-your-projects-to-github",
+    "title": "🗓️ Week 02Computational Thinking and Reproducibility",
+    "section": "Connecting your projects to GitHub",
+    "text": "Connecting your projects to GitHub\n\n\n\nSOCS0100 – Computational Tools for Reproducible Social Science"
+  },
+  {
+    "objectID": "2023/weeks/week02/page2.html",
+    "href": "2023/weeks/week02/page2.html",
+    "title": "🗓️ Week 02 - Computational Thinking and Reproducibility",
+    "section": "",
+    "text": "This week will introduce students to how to think computationally, data structures, and project workflow (linking R projects to GitHub), focusing on reproducibility. Students will also be shown how to load and update relevant data science libraries into R."
+  },
+  {
+    "objectID": "2023/weeks/week02/page2.html#lecture-slides",
+    "href": "2023/weeks/week02/page2.html#lecture-slides",
+    "title": "🗓️ Week 02 - Computational Thinking and Reproducibility",
+    "section": "👨‍🏫 Lecture Slides",
+    "text": "👨‍🏫 Lecture Slides\nEither click on the slide area below or click here to view it in fullscreen. Use your keypad to navigate the slides.\n\n\n\n\n🎥 Looking for lecture recordings? You can only find those on Moodle."
+  },
+  {
+    "objectID": "2023/weeks/week02/page2.html#lab-materials",
+    "href": "2023/weeks/week02/page2.html#lab-materials",
+    "title": "🗓️ Week 02 - Computational Thinking and Reproducibility",
+    "section": "✍️ Lab Materials",
+    "text": "✍️ Lab Materials\n🚧 Students will create an RStudio project with a solid workflow, while practicing the principles of reproducibility.🚧"
+  },
+  {
+    "objectID": "2023/weeks/week02/page2.html#required-reading",
+    "href": "2023/weeks/week02/page2.html#required-reading",
+    "title": "🗓️ Week 02 - Computational Thinking and Reproducibility",
+    "section": "📚 Required Reading",
+    "text": "📚 Required Reading\n\nChristensen, G., Freese, J., & Miguel, E. (2019). Transparent and Reproducible Social Science Research: How to Do Open Science. University of California Press. (Chapter 10 & 11).\nWickham, H., Çetinkaya-Rundel, M., & Grolemund, G. (2023). R for data science. ” O’Reilly Media, Inc.”. (Chapter 7)."
   }
 ]

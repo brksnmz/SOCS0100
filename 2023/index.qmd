@@ -7,12 +7,11 @@ format: html
 ::: {.callout-important collapse=false}
 ## 📢 Important
 
-(03/10/2023)
+(11/10/2023)
 
-- [🗓️ Week 01 lecture material](/2023/weeks/week01/page.qmd) is now available!
+- [🗓️ Week 02 lecture material](/2023/weeks/week02/page2.qmd) is now available!
 
 :::
-
 
 # 🧑🏻‍🏫 Module Team
 
