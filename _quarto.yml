@@ -7,6 +7,7 @@ project:
     - "2023/*.qmd"
     - "2023/weeks/week01/*.qmd"
     - "2023/weeks/week02/*.qmd"
+    - "2023/weeks/week03/*.qmd"
     - "2023/workshop/rworkshop/*.qmd"
 
 website:
@@ -48,7 +49,12 @@ website:
            text: Week 02
            contents:
              - href: 2023/weeks/week02/page2.qmd
-               text: 👨‍🏫 Lecture Material       
+               text: 👨‍🏫 Lecture Material 
+         - href: 2023/weeks/week03/page3.qmd
+           text: Week 03
+           contents:
+             - href: 2023/weeks/week03/page3.qmd
+               text: 👨‍🏫 Lecture Material      
             #  - href: 2023/weeks/week01/lab.qmd
             #    text: 💻 Lab Roadmap
             #  - href: 2023/weeks/week01/appendix.qmd

@@ -11,7 +11,7 @@
     "href": "2023/index.html",
     "title": "SOCS0100 - Computational Tools for Reproducible Social Science",
     "section": "",
-    "text": "📢 Important\n\n\n\n\n\n(11/10/2023)\n\n🗓️ Week 02 lecture material is now available!\n\n\n\n\n\n🧑🏻‍🏫 Module Team\n\nModule Convenor\n\n\n\nBurak Sonmez  Lecturer in Quantitative Social Science  University College London 📧 b.sonmez@ucl.ac.uk ( at )\nOffice Hours:\n\nWhen:Fridays 16:00-18:00\nWhere:55-59 Gordon Square, 416\nHow to book: Please email me in advance\n\n\n\n\n\n\n📍 Lectures\nFridays 10:00-12:00 at Roberts Building 309\n\n\n💻 Practical Session Groups\n\nGroup 01\n\n📆 Fridays\n⌚ 12:00 - 13:00\n📍 Bedford Way (20) W 2.08\n🧑‍🏫 Burak Sonmez\n\n\n\nGroup 02\n\n📆 Fridays\n⌚ 15:00 - 16:00\n📍 Bedford Way (20) 828\n🧑‍🏫 Burak Sonmez"
+    "text": "📢 Important\n\n\n\n\n\n(19/10/2023)\n\n🗓️ Week 03 lecture material is now available!\n\n\n\n\n\n🧑🏻‍🏫 Module Team\n\nModule Convenor\n\n\n\nBurak Sonmez  Lecturer in Quantitative Social Science  University College London 📧 b.sonmez@ucl.ac.uk ( at )\nOffice Hours:\n\nWhen:Fridays 16:00-18:00\nWhere:55-59 Gordon Square, 416\nHow to book: Please email me in advance\n\n\n\n\n\n\n📍 Lectures\nFridays 10:00-12:00 at Roberts Building 309\n\n\n💻 Practical Session Groups\n\nGroup 01\n\n📆 Fridays\n⌚ 12:00 - 13:00\n📍 Bedford Way (20) W 2.08\n🧑‍🏫 Burak Sonmez\n\n\n\nGroup 02\n\n📆 Fridays\n⌚ 15:00 - 16:00\n📍 Bedford Way (20) 828\n🧑‍🏫 Burak Sonmez"
   },
   {
     "objectID": "index.html",
@@ -775,5 +775,243 @@
     "title": "🗓️ Week 02 - Computational Thinking and Reproducibility",
     "section": "📚 Required Reading",
     "text": "📚 Required Reading\n\nChristensen, G., Freese, J., & Miguel, E. (2019). Transparent and Reproducible Social Science Research: How to Do Open Science. University of California Press. (Chapter 10 & 11).\nWickham, H., Çetinkaya-Rundel, M., & Grolemund, G. (2023). R for data science. ” O’Reilly Media, Inc.”. (Chapter 7)."
+  },
+  {
+    "objectID": "2023/weeks/week03/slides3.html#tidy-data",
+    "href": "2023/weeks/week03/slides3.html#tidy-data",
+    "title": "🗓️ Week 03Wrangling and Tidying Data",
+    "section": "Tidy data",
+    "text": "Tidy data\n“In the space between chaos and shape, there was another chance.” (C.S. Lewis)\n\nWhat makes data tidy:\n\nEach variable should form a column\nEach observation should form a row\nEach value is a cell; each cell is a single value"
+  },
+  {
+    "objectID": "2023/weeks/week03/slides3.html#untidy-data",
+    "href": "2023/weeks/week03/slides3.html#untidy-data",
+    "title": "🗓️ Week 03Wrangling and Tidying Data",
+    "section": "Untidy data",
+    "text": "Untidy data"
+  },
+  {
+    "objectID": "2023/weeks/week03/slides3.html#rules-for-storing-tidy-data",
+    "href": "2023/weeks/week03/slides3.html#rules-for-storing-tidy-data",
+    "title": "🗓️ Week 03Wrangling and Tidying Data",
+    "section": "Rules for storing tidy data",
+    "text": "Rules for storing tidy data\n\nBe consistent\nChoose good names for things\nWrite dates as YYYY-MM-DD\nNo empty cells\nPut just one thing in a cell\nDon’t use font color or highlighting as data"
+  },
+  {
+    "objectID": "2023/weeks/week03/slides3.html#why-your-data-should-be-tidy",
+    "href": "2023/weeks/week03/slides3.html#why-your-data-should-be-tidy",
+    "title": "🗓️ Week 03Wrangling and Tidying Data",
+    "section": "Why your data should be tidy",
+    "text": "Why your data should be tidy\n\nOpting for a consistent method of data storage offers a broad benefit. When you maintain a uniform data structure, it simplifies the process of mastering tools that interact with it, as they possess a foundational consistency\nA distinct advantage of arranging variables in columns is that it leverages R’s vectorized capabilities. As you discovered in the R workshop, the majority of built-in R functions are designed to operate on vectors of values, which enhances the seamless transformation of tidy data"
+  },
+  {
+    "objectID": "2023/weeks/week03/slides3.html#overview-of-data",
+    "href": "2023/weeks/week03/slides3.html#overview-of-data",
+    "title": "🗓️ Week 03Wrangling and Tidying Data",
+    "section": "Overview of data",
+    "text": "Overview of data"
+  },
+  {
+    "objectID": "2023/weeks/week03/slides3.html#collection-of-r-packages-for-tidy-data",
+    "href": "2023/weeks/week03/slides3.html#collection-of-r-packages-for-tidy-data",
+    "title": "🗓️ Week 03Wrangling and Tidying Data",
+    "section": "Collection of R packages for tidy data",
+    "text": "Collection of R packages for tidy data\nIf dataframes are tidy, it’s easy to transform, visualise, model, and program them using tidyverse packages"
+  },
+  {
+    "objectID": "2023/weeks/week03/slides3.html#loading-required-packages",
+    "href": "2023/weeks/week03/slides3.html#loading-required-packages",
+    "title": "🗓️ Week 03Wrangling and Tidying Data",
+    "section": "Loading required packages",
+    "text": "Loading required packages\n#| echo: true\n#| warning: false\npacman::p_load(\n  tidyverse, # the tidyverse framework\n  skimr # quickly providing a broad overview of a data frame\n)"
+  },
+  {
+    "objectID": "2023/weeks/week03/slides3.html#displaying-and-summarising-data-i",
+    "href": "2023/weeks/week03/slides3.html#displaying-and-summarising-data-i",
+    "title": "🗓️ Week 03Wrangling and Tidying Data",
+    "section": "Displaying and summarising data I",
+    "text": "Displaying and summarising data I\nThere are so many different ways of looking at data in R\n#| echo: true\nstr(table1)\n\nglimpse(table1)\n\n#skim(table1)"
+  },
+  {
+    "objectID": "2023/weeks/week03/slides3.html#displaying-and-summarising-data-ii",
+    "href": "2023/weeks/week03/slides3.html#displaying-and-summarising-data-ii",
+    "title": "🗓️ Week 03Wrangling and Tidying Data",
+    "section": "Displaying and summarising data II",
+    "text": "Displaying and summarising data II\n#| echo: true\nstarwars %&gt;%\n  select(name, height, mass)\n\nstarwars %&gt;%\n  group_by(gender) %&gt;%\n  summarize(\n    avg_height = mean(height, na.rm = TRUE) %&gt;% round(2)\n  )"
+  },
+  {
+    "objectID": "2023/weeks/week03/slides3.html#reshaping",
+    "href": "2023/weeks/week03/slides3.html#reshaping",
+    "title": "🗓️ Week 03Wrangling and Tidying Data",
+    "section": "Reshaping",
+    "text": "Reshaping"
+  },
+  {
+    "objectID": "2023/weeks/week03/slides3.html#pivoting",
+    "href": "2023/weeks/week03/slides3.html#pivoting",
+    "title": "🗓️ Week 03Wrangling and Tidying Data",
+    "section": "Pivoting",
+    "text": "Pivoting"
+  },
+  {
+    "objectID": "2023/weeks/week03/slides3.html#pivot-long",
+    "href": "2023/weeks/week03/slides3.html#pivot-long",
+    "title": "🗓️ Week 03Wrangling and Tidying Data",
+    "section": "Pivot long",
+    "text": "Pivot long\n\npivot_longer() increases the number of rows (longer) and decreases the number of columns. The inverse function is pivot_wider()\nThe names of the ID### columns rotate into an index row (number), and the measure values shift over to the corresponding number and group"
+  },
+  {
+    "objectID": "2023/weeks/week03/slides3.html#pivot-longer",
+    "href": "2023/weeks/week03/slides3.html#pivot-longer",
+    "title": "🗓️ Week 03Wrangling and Tidying Data",
+    "section": "Pivot longer",
+    "text": "Pivot longer\n#| echo: true\ntable4a\n#| echo: true\ntable4a %&gt;%\n  pivot_longer(\n    cols = c(\"1999\", \"2000\"), # Selected columns\n    names_to = \"year\", # Shorter columns (the columns going to be in one column called year)\n    values_to = \"cases\"\n  ) # Longer rows (the values are going to be in a separate column called named cases)"
+  },
+  {
+    "objectID": "2023/weeks/week03/slides3.html#pivot-longer-another-example",
+    "href": "2023/weeks/week03/slides3.html#pivot-longer-another-example",
+    "title": "🗓️ Week 03Wrangling and Tidying Data",
+    "section": "Pivot longer (another example)",
+    "text": "Pivot longer (another example)\n#| echo: true\nbillboard"
+  },
+  {
+    "objectID": "2023/weeks/week03/slides3.html#use-pivot-longer",
+    "href": "2023/weeks/week03/slides3.html#use-pivot-longer",
+    "title": "🗓️ Week 03Wrangling and Tidying Data",
+    "section": "Use pivot longer",
+    "text": "Use pivot longer\n#| echo: true\nbillboard %&gt;%\n  pivot_longer(\n    cols = starts_with(\"wk\"), # Use regular expressions\n    names_to = \"week\",\n    values_to = \"rank\",\n    values_drop_na = TRUE # Drop NAs\n  )"
+  },
+  {
+    "objectID": "2023/weeks/week03/slides3.html#pivot-wide",
+    "href": "2023/weeks/week03/slides3.html#pivot-wide",
+    "title": "🗓️ Week 03Wrangling and Tidying Data",
+    "section": "Pivot wide",
+    "text": "Pivot wide\nNow the values in number become the new column names, and the measure values get inserted into the intersection of ID### columns and group"
+  },
+  {
+    "objectID": "2023/weeks/week03/slides3.html#use-pivot-wider",
+    "href": "2023/weeks/week03/slides3.html#use-pivot-wider",
+    "title": "🗓️ Week 03Wrangling and Tidying Data",
+    "section": "Use pivot wider",
+    "text": "Use pivot wider\n#| echo: true\ntable2\n#| echo: true\ntable2 %&gt;%\n  pivot_wider(\n    names_from = type, # first\n    values_from = count # second\n  )"
+  },
+  {
+    "objectID": "2023/weeks/week03/slides3.html#further-challenges-separating",
+    "href": "2023/weeks/week03/slides3.html#further-challenges-separating",
+    "title": "🗓️ Week 03Wrangling and Tidying Data",
+    "section": "Further challenges (separating)",
+    "text": "Further challenges (separating)\n#| echo: true\ntable3\nYou can specify how to separate joined values\n#| echo: true\ntable3 %&gt;%\n  separate(rate,\n    into = c(\"cases\", \"population\"),\n    sep = \"/\"\n  )"
+  },
+  {
+    "objectID": "2023/weeks/week03/slides3.html#grammar-of-data-wrangling",
+    "href": "2023/weeks/week03/slides3.html#grammar-of-data-wrangling",
+    "title": "🗓️ Week 03Wrangling and Tidying Data",
+    "section": "Grammar of data wrangling",
+    "text": "Grammar of data wrangling\nThere is a package specifically designed for helping you wrangle your data. This package is called dplyr and will allow you to easily accomplish many of the data wrangling tasks necessary\n\n%&gt;% - pipe operator for chaining a sequence of operations\nglimpse() - get an overview of what’s included in dataset\nfilter() - filter rows\nselect() - select, rename, and reorder columns\nrename() - rename columns\narrange() - reorder rows\nmutate() - create a new column\ngroup_by() - group variables\nsummarize() - summarize information within a dataset\nleft_join() - combine data across data frame"
+  },
+  {
+    "objectID": "2023/weeks/week03/slides3.html#rearranging-data",
+    "href": "2023/weeks/week03/slides3.html#rearranging-data",
+    "title": "🗓️ Week 03Wrangling and Tidying Data",
+    "section": "Rearranging data",
+    "text": "Rearranging data\n#| echo: true\nglimpse(mtcars)\n#| echo: true\n#| output-location: slide\ndplyr::arrange(mtcars, mpg) # Low to High (default)\n#dplyr::arrange(mtcars, desc(mpg)) # High to Row"
+  },
+  {
+    "objectID": "2023/weeks/week03/slides3.html#renaming-columns",
+    "href": "2023/weeks/week03/slides3.html#renaming-columns",
+    "title": "🗓️ Week 03Wrangling and Tidying Data",
+    "section": "Renaming columns",
+    "text": "Renaming columns\n#| echo: true\n#| output-location: slide\ndf &lt;- mtcars %&gt;% rename(milepergalon = mpg)\nglimpse(df)"
+  },
+  {
+    "objectID": "2023/weeks/week03/slides3.html#subsetting-observations-row",
+    "href": "2023/weeks/week03/slides3.html#subsetting-observations-row",
+    "title": "🗓️ Week 03Wrangling and Tidying Data",
+    "section": "Subsetting observations (row)",
+    "text": "Subsetting observations (row)\nAdding single condition:\n#| echo: true\nstarwars %&gt;%\n  dplyr::filter(sex == \"female\") %&gt;%\n  arrange(desc(height))"
+  },
+  {
+    "objectID": "2023/weeks/week03/slides3.html#subsetting-observations-row-1",
+    "href": "2023/weeks/week03/slides3.html#subsetting-observations-row-1",
+    "title": "🗓️ Week 03Wrangling and Tidying Data",
+    "section": "Subsetting observations (row)",
+    "text": "Subsetting observations (row)\nAdding multiple condition:\n#| echo: true\nstarwars %&gt;%\n  dplyr::filter(height &lt; 180 & height &gt; 160)"
+  },
+  {
+    "objectID": "2023/weeks/week03/slides3.html#further-examples",
+    "href": "2023/weeks/week03/slides3.html#further-examples",
+    "title": "🗓️ Week 03Wrangling and Tidying Data",
+    "section": "Further examples",
+    "text": "Further examples\nFilter brown and black hair_color\n#| echo: true\nstarwars %&gt;%\n  dplyr::filter(hair_color %in% c(\"black\", \"brown\"))"
+  },
+  {
+    "objectID": "2023/weeks/week03/slides3.html#choose-row-by-position",
+    "href": "2023/weeks/week03/slides3.html#choose-row-by-position",
+    "title": "🗓️ Week 03Wrangling and Tidying Data",
+    "section": "Choose row by position",
+    "text": "Choose row by position\n#| echo: true\nstarwars %&gt;%\n  arrange(desc(height)) %&gt;%\n  slice(1:6)"
+  },
+  {
+    "objectID": "2023/weeks/week03/slides3.html#subsetting-variables-columns",
+    "href": "2023/weeks/week03/slides3.html#subsetting-variables-columns",
+    "title": "🗓️ Week 03Wrangling and Tidying Data",
+    "section": "Subsetting variables (columns)",
+    "text": "Subsetting variables (columns)\n#| echo: true\nnames(msleep)\n# Only numeric\nmsleep %&gt;%\n  dplyr::select(where(is.numeric))"
+  },
+  {
+    "objectID": "2023/weeks/week03/slides3.html#subsetting-variables-columns-by-their-names",
+    "href": "2023/weeks/week03/slides3.html#subsetting-variables-columns-by-their-names",
+    "title": "🗓️ Week 03Wrangling and Tidying Data",
+    "section": "Subsetting variables (columns) by their names",
+    "text": "Subsetting variables (columns) by their names\n#| echo: true\nmsleep %&gt;%\n  dplyr::select(contains(\"sleep\"))"
+  },
+  {
+    "objectID": "2023/weeks/week03/slides3.html#additional-tips",
+    "href": "2023/weeks/week03/slides3.html#additional-tips",
+    "title": "🗓️ Week 03Wrangling and Tidying Data",
+    "section": "Additional tips",
+    "text": "Additional tips\nReal-world data are usually messier. The janitor package is useful to fix this kind of problem\n#| echo: true\nmessy_data &lt;- tibble::tribble(\n  ~\"ColNum1\", ~\"COLNUM2\", ~\"COL & NUM3\",\n  1, 2, 3\n)\n\nmessy_data\n#| echo: true\npacman::p_load(janitor)\n\njanitor::clean_names(messy_data)"
+  },
+  {
+    "objectID": "2023/weeks/week03/slides3.html#creating-new-columns",
+    "href": "2023/weeks/week03/slides3.html#creating-new-columns",
+    "title": "🗓️ Week 03Wrangling and Tidying Data",
+    "section": "Creating new columns",
+    "text": "Creating new columns\nReturning to our msleep dataset, after filtering and re-ordering, we can create a new column with mutate(). Within mutate(), we will calculate the number of minutes each mammal sleeps by multiplying the number of hours each animal sleeps by 60 mins\n#| echo: true\nmsleep %&gt;%\n  filter(order == \"Primates\", sleep_total &gt; 10) %&gt;%\n  select(name, sleep_rem, sleep_cycle, sleep_total) %&gt;%\n  arrange(name) %&gt;%\n  mutate(sleep_total_min = sleep_total * 60)"
+  },
+  {
+    "objectID": "2023/weeks/week03/slides3.html#summarising-exercise",
+    "href": "2023/weeks/week03/slides3.html#summarising-exercise",
+    "title": "🗓️ Week 03Wrangling and Tidying Data",
+    "section": "Summarising exercise",
+    "text": "Summarising exercise\n#| echo: true\ntablea &lt;- msleep %&gt;%\n  group_by(order) %&gt;%\n  summarise(\n    n = n(),\n    mean_sleep = mean(sleep_total),\n    sd_sleep = sd(sleep_total)\n  )\ntablea"
+  },
+  {
+    "objectID": "2023/weeks/week03/slides3.html#producing-tables",
+    "href": "2023/weeks/week03/slides3.html#producing-tables",
+    "title": "🗓️ Week 03Wrangling and Tidying Data",
+    "section": "Producing tables",
+    "text": "Producing tables\n#| echo: true\n#| output-location: slide\n#| warning: false\npacman::p_load(\n  kableExtra,\n  flextable\n)\n\n# For HTML and LaTeX\ntablea %&gt;% kableExtra::kable()"
+  },
+  {
+    "objectID": "2023/weeks/week03/slides3.html#grouped-summaries",
+    "href": "2023/weeks/week03/slides3.html#grouped-summaries",
+    "title": "🗓️ Week 03Wrangling and Tidying Data",
+    "section": "Grouped summaries",
+    "text": "Grouped summaries\n#| echo: true\nmsleep %&gt;%\n  group_by(order) %&gt;%\n  summarise(mean_sleep = mean(sleep_total))"
+  },
+  {
+    "objectID": "2023/weeks/week03/slides3.html#combining-data-across-data-frames",
+    "href": "2023/weeks/week03/slides3.html#combining-data-across-data-frames",
+    "title": "🗓️ Week 03Wrangling and Tidying Data",
+    "section": "Combining Data Across Data Frames",
+    "text": "Combining Data Across Data Frames\nThere is often information stored in several separate data frames that you’ll want in a single data frame. There are many different ways to join separate data frames. Here, we’ll demonstrate how left_join() function works\n#| echo: true\n#create data frame\ndf1 &lt;- data.frame(a = c('a', 'b', 'c', 'd', 'e', 'f'),\n                  b = c(12, 14, 14, 18, 22, 23))\n\ndf2 &lt;- data.frame(a = c('a', 'a', 'a', 'b', 'b', 'b'),\n                  c = c(23, 24, 33, 34, 37, 41))\n\ndf3 &lt;- data.frame(a = c('d', 'e', 'f', 'g', 'h', 'i'),\n                  d = c(23, 24, 33, 34, 37, 41))\ncombined_data &lt;- df1 %&gt;%\n              left_join(df2, by='a') %&gt;%\n              left_join(df3, by='a')\ncombined_data"
+  },
+  {
+    "objectID": "2023/weeks/week03/slides3.html#lab-exercise",
+    "href": "2023/weeks/week03/slides3.html#lab-exercise",
+    "title": "🗓️ Week 03Wrangling and Tidying Data",
+    "section": "Lab exercise",
+    "text": "Lab exercise\nProblem set:\n\nImport the dataset called “Natural disasters (EMDAT)”: This data has been aggregated by Our World in Data by country and year based on the raw database of disasters published by EM-DAT, CRED / UCLouvain, Brussels, Belgium\nCreate a new public repository for the project (e.g. README.md, scripts)\nInspect the data briefly and identify its structure\nSelect the variables that capture the information related to deaths, injuries, homelessness caused by all disasters. You can rename the variables\nCreate three tables showing the highest averages of deaths, injuries, and homelessness (e.g. top 10)\nCreate a new binary variable in the original dataset to show whether the number of deaths by all disasters is higher than 500 in a given year\nReshape the dataset (selected version) and save it as a separate dataset in your repository\n\n\n\n\nSOCS0100 – Computational Tools for Reproducible Social Science"
   }
 ]

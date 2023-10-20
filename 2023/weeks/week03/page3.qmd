@@ -1,0 +1,27 @@
+---
+title: "🗓️ Week 03 ->Wrangling and Tidying Data"
+---
+
+How to effectively use Tidyverse -- the key R functions for data wrangling. This week will introduce students to tidying data in R. This will include learning about transforming data frames; tidying data in a specific format; merging and appending multiple datasets; and other aspects of data manipulation.
+
+## 👨‍🏫 Lecture Slides
+
+Either click on the slide area below or click [here](slides3.qmd) to view it in fullscreen. Use your keypad to navigate the slides.
+
+::: {.container style="position: relative;overflow: hidden;width: 100%;min-height:600px;"}
+<iframe src="slides3.html" style="position=absolute;top: 0;left: 0;bottom: 0;right: 0;width: 100%;min-height:600px;">
+
+</iframe>
+:::
+
+🎥 Looking for lecture recordings? You can only find those on Moodle.
+
+## ✍️ Lab Materials
+
+🚧 Students will be working with real world datasets to complete a series of data wrangling tasks through Tidyverse packages.🚧
+
+## 📚 Required Reading
+
+-   [Wickham, H., Çetinkaya-Rundel, M., & Grolemund, G. (2023). R for data science. " O'Reilly Media, Inc.". (Chapter 6, 8, and 9).](https://r4ds.hadley.nz/data-tidy)
+
+-   [Wickham, H., Averick, M., Bryan, J., Chang, W., McGowan, L. D. A., François, R., ... & Yutani, H. (2019). Welcome to the Tidyverse. Journal of open source software, 4(43), 1686.](https://joss.theoj.org/papers/10.21105/joss.01686)

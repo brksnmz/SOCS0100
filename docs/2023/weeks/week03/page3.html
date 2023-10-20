@@ -8,7 +8,7 @@
 
 <meta name="author" content="Dr Burak Sonmez">
 
-<title>Computational Tools for Reproducible Social Science 2023/24 - SOCS0100 - Computational Tools for Reproducible Social Science</title>
+<title>Computational Tools for Reproducible Social Science 2023/24 - 🗓️ Week 03 -&gt;Wrangling and Tidying Data</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -24,24 +24,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="../2023/workshop/rworkshop/page.html" rel="next">
-<link href="../figures/icons/course_favicon.png" rel="icon" type="image/png">
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<link href="../../../2023/weeks/week02/page2.html" rel="prev">
+<link href="../../../figures/icons/course_favicon.png" rel="icon" type="image/png">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -64,18 +64,16 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="../css/custom_style.css">
-<link rel="stylesheet" href="../css/syllabus.css">
-<meta property="og:title" content="Computational Tools for Reproducible Social Science 2023/24 - SOCS0100 - Computational Tools for Reproducible Social Science">
-<meta property="og:description" content="Academic Year: 2023/24">
-<meta property="og:image" content="../figures/people/brk_pic.jpeg">
+<link rel="stylesheet" href="../../../css/custom_style.css">
+<link rel="stylesheet" href="../../../css/syllabus.css">
+<meta property="og:title" content="Computational Tools for Reproducible Social Science 2023/24 - 🗓️ Week 03 ->Wrangling and Tidying Data">
+<meta property="og:description" content="">
 <meta property="og:site-name" content="Computational Tools for Reproducible Social Science 2023/24">
-<meta name="twitter:title" content="Computational Tools for Reproducible Social Science 2023/24 - SOCS0100 - Computational Tools for Reproducible Social Science">
-<meta name="twitter:description" content="Academic Year: 2023/24">
-<meta name="twitter:image" content="../figures/people/brk_pic.jpeg">
+<meta name="twitter:title" content="Computational Tools for Reproducible Social Science 2023/24 - 🗓️ Week 03 ->Wrangling and Tidying Data">
+<meta name="twitter:description" content="">
 <meta name="twitter:creator" content="@socioburak">
 <meta name="twitter:site" content="\@socioburak">
-<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:card" content="summary">
 </head>
 
 <body class="nav-sidebar docked nav-fixed">
@@ -85,7 +83,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title">Computational Tools for Reproducible Social Science 2023/24</span>
     </a>
   </div>
@@ -104,7 +102,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../2023/index.html">🏠 Home</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../2023/weeks/week01/page.html">🗓️ Weeks</a></li><li class="breadcrumb-item"><a href="../../../2023/weeks/week03/page3.html">Week 03</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
     </div>
@@ -118,7 +116,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../2023/index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../../2023/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">🏠 Home</span></a>
   </div>
 </li>
@@ -133,7 +131,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../2023/workshop/rworkshop/page.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../2023/workshop/rworkshop/page.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">📟 R Workshop Slides</span></a>
   </div>
 </li>
@@ -150,7 +148,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../2023/weeks/week01/page.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../2023/weeks/week01/page.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 01</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -159,7 +157,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../2023/weeks/week01/page.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../2023/weeks/week01/page.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">👨‍🏫 Lecture Material</span></a>
   </div>
 </li>
@@ -167,7 +165,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../2023/weeks/week02/page2.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../2023/weeks/week02/page2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 02</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -176,7 +174,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../2023/weeks/week02/page2.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../2023/weeks/week02/page2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">👨‍🏫 Lecture Material</span></a>
   </div>
 </li>
@@ -184,16 +182,16 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../2023/weeks/week03/page3.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../2023/weeks/week03/page3.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Week 03</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../2023/weeks/week03/page3.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../2023/weeks/week03/page3.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">👨‍🏫 Lecture Material</span></a>
   </div>
 </li>
@@ -207,15 +205,15 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar"><div class="quarto-margin-header"><div class="margin-header-item">
-<p><img src="../figures/logos/MY_INSTITUTION.jpeg" class="img-fluid"></p>
+<p><img src="../../../figures/logos/MY_INSTITUTION.jpeg" class="img-fluid"></p>
 </div></div>
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#module-team" id="toc-module-team" class="nav-link active" data-scroll-target="#module-team">🧑🏻‍🏫 Module Team</a></li>
-  <li><a href="#lectures" id="toc-lectures" class="nav-link" data-scroll-target="#lectures">📍 Lectures</a></li>
-  <li><a href="#practical-session-groups" id="toc-practical-session-groups" class="nav-link" data-scroll-target="#practical-session-groups">💻 Practical Session Groups</a></li>
+  <li><a href="#lecture-slides" id="toc-lecture-slides" class="nav-link active" data-scroll-target="#lecture-slides">👨‍🏫 Lecture Slides</a></li>
+  <li><a href="#lab-materials" id="toc-lab-materials" class="nav-link" data-scroll-target="#lab-materials">✍️ Lab Materials</a></li>
+  <li><a href="#required-reading" id="toc-required-reading" class="nav-link" data-scroll-target="#required-reading">📚 Required Reading</a></li>
   </ul>
 </nav>
     </div>
@@ -224,8 +222,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">SOCS0100 - Computational Tools for Reproducible Social Science</h1>
-<p class="subtitle lead">Academic Year: 2023/24</p>
+<h1 class="title">🗓️ Week 03 -&gt;Wrangling and Tidying Data</h1>
 </div>
 
 
@@ -246,72 +243,26 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+<p>How to effectively use Tidyverse – the key R functions for data wrangling. This week will introduce students to tidying data in R. This will include learning about transforming data frames; tidying data in a specific format; merging and appending multiple datasets; and other aspects of data manipulation.</p>
+<section id="lecture-slides" class="level2">
+<h2 class="anchored" data-anchor-id="lecture-slides">👨‍🏫 Lecture Slides</h2>
+<p>Either click on the slide area below or click <a href="../../../2023/weeks/week03/slides3.html">here</a> to view it in fullscreen. Use your keypad to navigate the slides.</p>
+<div class="container" style="position: relative;overflow: hidden;width: 100%;min-height:600px;">
+<iframe src="slides3.html" style="position=absolute;top: 0;left: 0;bottom: 0;right: 0;width: 100%;min-height:600px;">
+</iframe>
 </div>
-<div class="callout-title-container flex-fill">
-📢 Important
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse show">
-<div class="callout-body-container callout-body">
-<p>(19/10/2023)</p>
-<ul>
-<li><a href="../2023/weeks/week03/page3.html">🗓️ Week 03 lecture material</a> is now available!</li>
-</ul>
-</div>
-</div>
-</div>
-<section id="module-team" class="level1">
-<h1>🧑🏻‍🏫 Module Team</h1>
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Module Convenor</a></li></ul>
-<div class="tab-content">
-<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<p><img src="../figures/people/brk_pic.jpeg" class="img-fluid" style="object-fit: cover;width:5em;height:5em;border-radius: 50%;" data-fig-align="left" alt="Photo of Dr Burak Sonmez"><br>
-<strong><a href="#">Burak Sonmez</a></strong> <br> Lecturer in Quantitative Social Science <br> <a href="#">University College London</a><br> 📧 <script type="text/javascript">
-<!--
-h='';a='&#64;';n='';e=n+a+h;
-document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail">'+'&#98;&#46;&#x73;&#x6f;&#110;&#x6d;&#x65;&#122;&#64;&#x75;&#x63;&#108;&#46;&#x61;&#x63;&#46;&#x75;&#x6b;'+'<\/'+'a'+'>');
-// -->
-</script><noscript>b.sonmez@ucl.ac.uk ( at )</noscript></p>
-<p>Office Hours:</p>
-<ul>
-<li>When:Fridays 16:00-18:00</li>
-<li>Where:55-59 Gordon Square, 416</li>
-<li>How to book: Please email me in advance</li>
-</ul>
-</div>
-</div>
-</div>
+<p>🎥 Looking for lecture recordings? You can only find those on Moodle.</p>
 </section>
-<section id="lectures" class="level1">
-<h1>📍 Lectures</h1>
-<p>Fridays 10:00-12:00 at Roberts Building 309</p>
+<section id="lab-materials" class="level2">
+<h2 class="anchored" data-anchor-id="lab-materials">✍️ Lab Materials</h2>
+<p>🚧 Students will be working with real world datasets to complete a series of data wrangling tasks through Tidyverse packages.🚧</p>
 </section>
-<section id="practical-session-groups" class="level1">
-<h1>💻 Practical Session Groups</h1>
-<div style="display:inline-block;width: 28.5%;border-style: dotted;border-width: 1px;border-color: &quot;#fefefe&quot;; margin:1%;padding:1.5%;background-color:#fafafa">
-<p><strong>Group 01</strong></p>
+<section id="required-reading" class="level2">
+<h2 class="anchored" data-anchor-id="required-reading">📚 Required Reading</h2>
 <ul>
-<li>📆 Fridays</li>
-<li>⌚ 12:00 - 13:00</li>
-<li>📍 Bedford Way (20) W 2.08</li>
-<li>🧑‍🏫 Burak Sonmez</li>
+<li><p><a href="https://r4ds.hadley.nz/data-tidy">Wickham, H., Çetinkaya-Rundel, M., &amp; Grolemund, G. (2023). R for data science. ” O’Reilly Media, Inc.”. (Chapter 6, 8, and 9).</a></p></li>
+<li><p><a href="https://joss.theoj.org/papers/10.21105/joss.01686">Wickham, H., Averick, M., Bryan, J., Chang, W., McGowan, L. D. A., François, R., … &amp; Yutani, H. (2019). Welcome to the Tidyverse. Journal of open source software, 4(43), 1686.</a></p></li>
 </ul>
-</div>
-<div style="display:inline-block;width: 28.5%;border-style: dotted;border-width: 1px;border-color: &quot;#fefefe&quot;; margin:1%;padding:1.5%;background-color:#fafafa">
-<p><strong>Group 02</strong></p>
-<ul>
-<li>📆 Fridays</li>
-<li>⌚ 15:00 - 16:00</li>
-<li>📍 Bedford Way (20) 828</li>
-<li>🧑‍🏫 Burak Sonmez</li>
-</ul>
-</div>
 
 
 </section>
@@ -568,11 +519,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="../../../2023/weeks/week02/page2.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Week 02</span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../2023/workshop/rworkshop/page.html" class="pagination-link">
-        <span class="nav-page-text">📟 R Workshop Slides</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->
