@@ -30,33 +30,41 @@ editor:
 
 ## Tidy data {.smaller}
 
-"In the space between chaos and shape, there was another chance." (C.S. Lewis)
+"In the space between chaos and shape, there was another chance." (C.S.
+Lewis)
 
-- What makes data tidy:
-  - Each variable should form a column
-  - Each observation should form a row
-  - Each value is a cell; each cell is a single value
-  
+-   What makes data tidy:
+    -   Each variable should form a column
+    -   Each observation should form a row
+    -   Each value is a cell; each cell is a single value
+
 <img src="/figures/images/tidy1.png" alt="Source:R for Data Science" width="400" height="350" style="display: block; margin: 0 auto;"/>
-  
+
 ## Untidy data {.smaller}
 
 <img src="/figures/images/untidy.png" alt="Source: US Census Fact Finder, General Economic Characteristics, ACS 2017" width="500" height="300" style="display: block; margin: 0 auto;"/>
 
 ## Rules for storing tidy data {.smaller}
 
-- Be consistent
-- Choose good names for things
-- Write dates as YYYY-MM-DD
-- No empty cells
-- Put just one thing in a cell
-- Don’t use font color or highlighting as data
+-   Be consistent
+-   Choose good names for things
+-   Write dates as YYYY-MM-DD
+-   No empty cells
+-   Put just one thing in a cell
+-   Don't use font color or highlighting as data
 
 ## Why your data should be tidy {.smaller}
 
-- Opting for a consistent method of data storage offers a broad benefit. When you maintain a uniform data structure, it simplifies the process of mastering tools that interact with it, as they possess a foundational consistency
+-   Opting for a consistent method of data storage offers a broad
+    benefit. When you maintain a uniform data structure, it simplifies
+    the process of mastering tools that interact with it, as they
+    possess a foundational consistency
 
-- A distinct advantage of arranging variables in columns is that it leverages R's vectorized capabilities. As you discovered in the R workshop, the majority of built-in R functions are designed to operate on vectors of values, which enhances the seamless transformation of tidy data
+-   A distinct advantage of arranging variables in columns is that it
+    leverages R's vectorized capabilities. As you discovered in the R
+    workshop, the majority of built-in R functions are designed to
+    operate on vectors of values, which enhances the seamless
+    transformation of tidy data
 
 ## Overview of data {.smaller}
 
@@ -64,18 +72,19 @@ editor:
 
 ## Collection of R packages for tidy data {.smaller}
 
-If dataframes are tidy, it’s easy to transform, visualise, model, and program them using tidyverse packages
+If dataframes are tidy, it's easy to transform, visualise, model, and
+program them using tidyverse packages
 
 <img src="/figures/images/tidyverse.png" alt="Source: Tidyverse" width="500" height="300" style="display: block; margin: 0 auto;"/>
 
 ## Loading required packages {.smaller}
 
-```r
+```{r}
 #| echo: true
 #| warning: false
 pacman::p_load(
   tidyverse, # the tidyverse framework
-  skimr # quickly providing a broad overview of a data frame
+  skimr# quickly providing a broad overview of a data frame
 )
 ```
 
@@ -83,7 +92,7 @@ pacman::p_load(
 
 There are so many different ways of looking at data in R
 
-```r
+```{r}
 #| echo: true
 str(table1)
 
@@ -94,7 +103,7 @@ glimpse(table1)
 
 ## Displaying and summarising data II {.smaller}
 
-```r
+```{r}
 #| echo: true
 starwars %>%
   select(name, height, mass)
@@ -116,21 +125,23 @@ starwars %>%
 
 ## Pivot long {.smaller}
 
-- `pivot_longer()` increases the number of rows (longer) and decreases the number of columns. The inverse function is `pivot_wider()`
+-   `pivot_longer()` increases the number of rows (longer) and decreases
+    the number of columns. The inverse function is `pivot_wider()`
 
-- The names of the ID### columns rotate into an index row (number), and the measure values shift over to the corresponding number
-and group
+-   The names of the ID### columns rotate into an index row (number),
+    and the measure values shift over to the corresponding number and
+    group
 
 <img src="/figures/images/pivot-longer.png" alt="Source: https://www.storybench.org" width="400" height="400" style="display: block; margin: 0 auto;"/>
 
 ## Pivot longer {.smaller}
 
-```r
+```{r}
 #| echo: true
 table4a
 ```
 
-```r
+```{r}
 #| echo: true
 table4a %>%
   pivot_longer(
@@ -142,14 +153,14 @@ table4a %>%
 
 ## Pivot longer (another example) {.smaller}
 
-```r
+```{r}
 #| echo: true
 billboard
 ```
 
 ## Use pivot longer {.smaller}
 
-```r
+```{r}
 #| echo: true
 billboard %>%
   pivot_longer(
@@ -162,18 +173,19 @@ billboard %>%
 
 ## Pivot wide {.smaller}
 
-Now the values in number become the new column names, and the measure values get inserted into the intersection of ID### columns and group
+Now the values in number become the new column names, and the measure
+values get inserted into the intersection of ID### columns and group
 
 <img src="/figures/images/pivot-wide.png" alt="Source: https://www.storybench.org" width="400" height="400" style="display: block; margin: 0 auto;"/>
 
 ## Use pivot wider {.smaller}
 
-```r
+```{r}
 #| echo: true
 table2
 ```
 
-```r
+```{r}
 #| echo: true
 table2 %>%
   pivot_wider(
@@ -184,15 +196,14 @@ table2 %>%
 
 ## Further challenges (separating) {.smaller}
 
-
-```r
+```{r}
 #| echo: true
 table3
 ```
 
 You can specify how to separate joined values
 
-```r
+```{r}
 #| echo: true
 table3 %>%
   separate(rate,
@@ -203,27 +214,29 @@ table3 %>%
 
 ## Grammar of data wrangling {.smaller}
 
-There is a package specifically designed for helping you wrangle your data. This package is called `dplyr` and will allow you to easily accomplish many of the data wrangling tasks necessary
+There is a package specifically designed for helping you wrangle your
+data. This package is called `dplyr` and will allow you to easily
+accomplish many of the data wrangling tasks necessary
 
-- `%>%` - pipe operator for chaining a sequence of operations
-- glimpse() - get an overview of what’s included in dataset
-- filter() - filter rows
-- select() - select, rename, and reorder columns
-- rename() - rename columns
-- arrange() - reorder rows
-- mutate() - create a new column
-- group_by() - group variables
-- summarize() - summarize information within a dataset
-- left_join() - combine data across data frame
+-   `%>%` - pipe operator for chaining a sequence of operations
+-   glimpse() - get an overview of what's included in dataset
+-   filter() - filter rows
+-   select() - select, rename, and reorder columns
+-   rename() - rename columns
+-   arrange() - reorder rows
+-   mutate() - create a new column
+-   group_by() - group variables
+-   summarize() - summarize information within a dataset
+-   left_join() - combine data across data frame
 
 ## Rearranging data {.smaller}
 
-```r
+```{r}
 #| echo: true
 glimpse(mtcars)
 ```
 
-```r
+```{r}
 #| echo: true
 #| output-location: slide
 dplyr::arrange(mtcars, mpg) # Low to High (default)
@@ -232,7 +245,7 @@ dplyr::arrange(mtcars, mpg) # Low to High (default)
 
 ## Renaming columns {.smaller}
 
-```r
+```{r}
 #| echo: true
 #| output-location: slide
 df <- mtcars %>% rename(milepergalon = mpg)
@@ -243,7 +256,7 @@ glimpse(df)
 
 Adding single condition:
 
-```r
+```{r}
 #| echo: true
 starwars %>%
   dplyr::filter(sex == "female") %>%
@@ -254,7 +267,7 @@ starwars %>%
 
 Adding multiple condition:
 
-```r
+```{r}
 #| echo: true
 starwars %>%
   dplyr::filter(height < 180 & height > 160) 
@@ -264,7 +277,7 @@ starwars %>%
 
 Filter brown and black hair_color
 
-```r
+```{r}
 #| echo: true
 starwars %>%
   dplyr::filter(hair_color %in% c("black", "brown"))
@@ -272,7 +285,7 @@ starwars %>%
 
 ## Choose row by position {.smaller}
 
-```r
+```{r}
 #| echo: true
 starwars %>%
   arrange(desc(height)) %>%
@@ -281,7 +294,7 @@ starwars %>%
 
 ## Subsetting variables (columns) {.smaller}
 
-```r
+```{r}
 #| echo: true
 names(msleep)
 # Only numeric
@@ -291,8 +304,7 @@ msleep %>%
 
 ## Subsetting variables (columns) by their names {.smaller}
 
-
-```r
+```{r}
 #| echo: true
 msleep %>%
   dplyr::select(contains("sleep"))
@@ -300,9 +312,10 @@ msleep %>%
 
 ## Additional tips {.smaller}
 
-Real-world data are usually messier. The `janitor` package is useful to fix this kind of problem
+Real-world data are usually messier. The `janitor` package is useful to
+fix this kind of problem
 
-```r
+```{r}
 #| echo: true
 messy_data <- tibble::tribble(
   ~"ColNum1", ~"COLNUM2", ~"COL & NUM3",
@@ -312,8 +325,7 @@ messy_data <- tibble::tribble(
 messy_data
 ```
 
-
-```r
+```{r}
 #| echo: true
 pacman::p_load(janitor)
 
@@ -322,9 +334,12 @@ janitor::clean_names(messy_data)
 
 ## Creating new columns {.smaller}
 
-Returning to our msleep dataset, after filtering and re-ordering, we can create a new column with `mutate()`. Within `mutate()`, we will calculate the number of minutes each mammal sleeps by multiplying the number of hours each animal sleeps by 60 mins
+Returning to our msleep dataset, after filtering and re-ordering, we can
+create a new column with `mutate()`. Within `mutate()`, we will
+calculate the number of minutes each mammal sleeps by multiplying the
+number of hours each animal sleeps by 60 mins
 
-```r
+```{r}
 #| echo: true
 msleep %>%
   filter(order == "Primates", sleep_total > 10) %>%
@@ -333,10 +348,9 @@ msleep %>%
   mutate(sleep_total_min = sleep_total * 60)
 ```
 
-
 ## Summarising exercise {.smaller}
 
-```r
+```{r}
 #| echo: true
 tablea <- msleep %>%
   group_by(order) %>%
@@ -350,7 +364,7 @@ tablea
 
 ## Producing tables {.smaller}
 
-```r
+```{r}
 #| echo: true
 #| output-location: slide
 #| warning: false
@@ -365,7 +379,7 @@ tablea %>% kableExtra::kable()
 
 ## Grouped summaries {.smaller}
 
-```r
+```{r}
 #| echo: true
 msleep %>%
   group_by(order) %>%
@@ -374,9 +388,12 @@ msleep %>%
 
 ## Combining Data Across Data Frames {.smaller}
 
-There is often information stored in several separate data frames that you’ll want in a single data frame. There are many different ways to join separate data frames. Here, we’ll demonstrate how `left_join()` function works
+There is often information stored in several separate data frames that
+you'll want in a single data frame. There are many different ways to
+join separate data frames. Here, we'll demonstrate how `left_join()`
+function works
 
-```r
+```{r}
 #| echo: true
 #create data frame
 df1 <- data.frame(a = c('a', 'b', 'c', 'd', 'e', 'f'),
@@ -397,17 +414,26 @@ combined_data
 
 **Problem set:**
 
-- Import the dataset called "Natural disasters (EMDAT)": This data has been aggregated by Our World in Data by country and year based on the raw database of disasters published by EM-DAT, CRED / UCLouvain, Brussels, Belgium 
+-   Import the dataset called "Natural disasters (EMDAT)": This data has
+    been aggregated by Our World in Data by country and year based on
+    the raw database of disasters published by EM-DAT, CRED / UCLouvain,
+    Brussels, Belgium
 
-- Create a new public repository for the project (e.g. README.md, scripts)
+-   Create a new public repository for the project (e.g. README.md,
+    scripts)
 
-- Inspect the data briefly and identify its structure 
+-   Inspect the data briefly and identify its structure
 
-- Select the variables that capture the information related to deaths, injuries,
-homelessness caused by all disasters. You can rename the variables
+-   Select the variables that capture the information related to deaths,
+    injuries, homelessness caused by all disasters. You can rename the
+    variables
 
-- Create three tables showing the highest averages of deaths, injuries, and homelessness (e.g. top 10)
+-   Create three tables showing the highest averages of deaths,
+    injuries, and homelessness (e.g. top 10)
 
-- Create a new binary variable in the original dataset to show whether the number of deaths by all disasters is higher than 500 in a given year
+-   Create a new binary variable in the original dataset to show whether
+    the number of deaths by all disasters is higher than 500 in a given
+    year
 
-- Reshape the dataset (selected version) and save it as a separate dataset in your repository
+-   Reshape the dataset (selected version) and save it as a separate
+    dataset in your repository
