@@ -38,11 +38,11 @@ Lewis)
     -   Each observation should form a row
     -   Each value is a cell; each cell is a single value
 
-<img src="/figures/images/tidy1.png" alt="Source:R for Data Science" width="400" height="350" style="display: block; margin: 0 auto;"/>
+<img src="/figures/images/tidy1.png" alt="Source:R for Data Science" width="400" height="300" style="display: block; margin: 0 auto;"/>
 
 ## Untidy data {.smaller}
 
-<img src="/figures/images/untidy.png" alt="Source: US Census Fact Finder, General Economic Characteristics, ACS 2017" width="500" height="300" style="display: block; margin: 0 auto;"/>
+<img src="/figures/images/untidy.png" alt="Source: US Census Fact Finder, General Economic Characteristics, ACS 2017" width="450" height="300" style="display: block; margin: 0 auto;"/>
 
 ## Rules for storing tidy data {.smaller}
 
@@ -117,7 +117,7 @@ starwars %>%
 
 ## Reshaping {.smaller}
 
-<img src="/figures/images/tidy4.png" alt="Source: R for Data Science" width="400" height="400" style="display: block; margin: 0 auto;"/>
+<img src="/figures/images/tidy4.png" alt="Source: R for Data Science" width="500" height="300" style="display: block; margin: 0 auto;"/>
 
 ## Pivoting {.smaller}
 
@@ -211,6 +211,8 @@ table3 %>%
     sep = "/"
   )
 ```
+
+# Data wrangling 
 
 ## Grammar of data wrangling {.smaller}
 

@@ -823,7 +823,7 @@
     "href": "2023/weeks/week03/slides3.html#loading-required-packages",
     "title": "🗓️ Week 03Wrangling and Tidying Data",
     "section": "Loading required packages",
-    "text": "Loading required packages\n\npacman::p_load(\n  tidyverse, # the tidyverse framework\n  skimr# quickly providing a broad overview of a data frame\n)\n\n\nThe downloaded binary packages are in\n    /var/folders/f6/gb9b_pqd0yg5tl9h5791zmjr0000gp/T//RtmphXuWk3/downloaded_packages\n\nThe downloaded binary packages are in\n    /var/folders/f6/gb9b_pqd0yg5tl9h5791zmjr0000gp/T//RtmphXuWk3/downloaded_packages"
+    "text": "Loading required packages\n\npacman::p_load(\n  tidyverse, # the tidyverse framework\n  skimr# quickly providing a broad overview of a data frame\n)"
   },
   {
     "objectID": "2023/weeks/week03/slides3.html#displaying-and-summarising-data-i",
@@ -991,7 +991,7 @@
     "href": "2023/weeks/week03/slides3.html#producing-tables",
     "title": "🗓️ Week 03Wrangling and Tidying Data",
     "section": "Producing tables",
-    "text": "Producing tables\n\npacman::p_load(\n  kableExtra,\n  flextable\n)"
+    "text": "Producing tables\n\npacman::p_load(\n  kableExtra,\n  flextable\n)\n\n# For HTML and LaTeX\ntablea %&gt;% kableExtra::kable()"
   },
   {
     "objectID": "2023/weeks/week03/slides3.html#grouped-summaries",
@@ -1075,6 +1075,6 @@
     "href": "2023/weeks/week03/slides3.html#producing-tables-output",
     "title": "🗓️ Week 03Wrangling and Tidying Data",
     "section": "Producing tables",
-    "text": "Producing tables\n\n\nThe downloaded binary packages are in\n    /var/folders/f6/gb9b_pqd0yg5tl9h5791zmjr0000gp/T//RtmphXuWk3/downloaded_packages\n\n# For HTML and LaTeX\ntablea %&gt;% kableExtra::kable()\n\n\n\n\norder\nn\nmean_sleep\nsd_sleep\n\n\n\n\nAfrosoricida\n1\n15.600000\nNA\n\n\nArtiodactyla\n6\n4.516667\n2.5119050\n\n\nCarnivora\n12\n10.116667\n3.5021638\n\n\nCetacea\n3\n4.500000\n1.5716234\n\n\nChiroptera\n2\n19.800000\n0.1414214\n\n\nCingulata\n2\n17.750000\n0.4949747\n\n\nDidelphimorphia\n2\n18.700000\n0.9899495\n\n\nDiprotodontia\n2\n12.400000\n1.8384776\n\n\nErinaceomorpha\n2\n10.200000\n0.1414214\n\n\nHyracoidea\n3\n5.666667\n0.5507571\n\n\nLagomorpha\n1\n8.400000\nNA\n\n\nMonotremata\n1\n8.600000\nNA\n\n\nPerissodactyla\n3\n3.466667\n0.8144528\n\n\nPilosa\n1\n14.400000\nNA\n\n\nPrimates\n12\n10.500000\n2.2098951\n\n\nProboscidea\n2\n3.600000\n0.4242641\n\n\nRodentia\n22\n12.468182\n2.8132994\n\n\nScandentia\n1\n8.900000\nNA\n\n\nSoricomorpha\n5\n11.100000\n2.7046257"
+    "text": "Producing tables\n\n\n\n\norder\nn\nmean_sleep\nsd_sleep\n\n\n\n\nAfrosoricida\n1\n15.600000\nNA\n\n\nArtiodactyla\n6\n4.516667\n2.5119050\n\n\nCarnivora\n12\n10.116667\n3.5021638\n\n\nCetacea\n3\n4.500000\n1.5716234\n\n\nChiroptera\n2\n19.800000\n0.1414214\n\n\nCingulata\n2\n17.750000\n0.4949747\n\n\nDidelphimorphia\n2\n18.700000\n0.9899495\n\n\nDiprotodontia\n2\n12.400000\n1.8384776\n\n\nErinaceomorpha\n2\n10.200000\n0.1414214\n\n\nHyracoidea\n3\n5.666667\n0.5507571\n\n\nLagomorpha\n1\n8.400000\nNA\n\n\nMonotremata\n1\n8.600000\nNA\n\n\nPerissodactyla\n3\n3.466667\n0.8144528\n\n\nPilosa\n1\n14.400000\nNA\n\n\nPrimates\n12\n10.500000\n2.2098951\n\n\nProboscidea\n2\n3.600000\n0.4242641\n\n\nRodentia\n22\n12.468182\n2.8132994\n\n\nScandentia\n1\n8.900000\nNA\n\n\nSoricomorpha\n5\n11.100000\n2.7046257"
   }
 ]
