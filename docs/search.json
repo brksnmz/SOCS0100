@@ -1250,7 +1250,7 @@
     "href": "2023/weeks/week04/slides4.html#automatic-plotting-function",
     "title": "🗓️ Week 04Automating – Functional Programming",
     "section": "Automatic plotting function",
-    "text": "Automatic plotting function\n\ncreate_point_plot &lt;- function(i) {\n  airquality %&gt;%\n    ggplot(aes_string(x = names(airquality)[1], y = names(airquality)[i])) +\n    geom_point() +\n    labs(\n      title = glue(\"Relationship between Ozone and {names(airquality)[i]}\"),\n      y = glue(\"{names(airquality)[i]}\")\n    )\n}\n\n\nThe final step is to put the function in map()\n\n\nplots_list &lt;- map(2:ncol(airquality), create_point_plot)\nplots_grid &lt;- gridExtra::grid.arrange(grobs = plots_list, ncol = 2) # Adjust ncol as needed\n\n\n\n\n\nSOCS0100 – Computational Tools for Reproducible Social Science"
+    "text": "Automatic plotting function\n\ncreate_point_plot &lt;- function(i) {\n  airquality %&gt;%\n    ggplot(aes_string(x = names(airquality)[1], y = names(airquality)[i])) +\n    geom_point() +\n    labs(\n      title = glue(\"Relationship between Ozone and {names(airquality)[i]}\"),\n      y = glue(\"{names(airquality)[i]}\")\n    )\n}\n\n\nThe final step is to put the function in map()\n\n\nplots_list &lt;- map(2:ncol(airquality), create_point_plot)\nplots_grid &lt;- gridExtra::grid.arrange(grobs = plots_list, ncol = 2) # Adjust ncol as needed"
   },
   {
     "objectID": "2023/weeks/week04/slides4.html#automatic-plotting-function-output",
@@ -1321,5 +1321,12 @@
     "title": "🗓️ Week 03 ->Wrangling and Tidying Data",
     "section": "📚 Required Reading",
     "text": "📚 Required Reading\n\nWickham, H., Çetinkaya-Rundel, M., & Grolemund, G. (2023). R for data science. ” O’Reilly Media, Inc.”. (Chapter 6, 8, and 9).\nWickham, H., Averick, M., Bryan, J., Chang, W., McGowan, L. D. A., François, R., … & Yutani, H. (2019). Welcome to the Tidyverse. Journal of open source software, 4(43), 1686."
+  },
+  {
+    "objectID": "2023/weeks/week04/slides4.html#lab-exercise",
+    "href": "2023/weeks/week04/slides4.html#lab-exercise",
+    "title": "🗓️ Week 04Automating – Functional Programming",
+    "section": "Lab exercise",
+    "text": "Lab exercise\n\nAgain import the dataset called “Natural disasters (EMDAT)”\nCreate a new public repository on GitHub for this week’s project and add your collaborators\nOpen a new R script and work on the following automating tasks\nUsing purrr, please automate at least one data wrangling task based on the dataset (e.g. summarising data)\nUsing purrr please automate plotting the trends of deaths, injuries, and homelessness caused by all disasters for 5 countries in the dataset\n\n\n\n\nSOCS0100 – Computational Tools for Reproducible Social Science"
   }
 ]

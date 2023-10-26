@@ -499,3 +499,15 @@ plots_list <- map(2:ncol(airquality), create_point_plot)
 plots_grid <- gridExtra::grid.arrange(grobs = plots_list, ncol = 2) # Adjust ncol as needed
 plots_grid
 ```
+
+## Lab exercise {.smaller}
+
+- Again import the dataset called “Natural disasters (EMDAT)”
+
+- Create a new public repository on GitHub for this week's project and add your collaborators 
+
+- Open a new R script and work on the following automating tasks
+
+- Using `purrr`, please automate at least one data wrangling task based on the dataset (e.g. summarising data)
+
+- Using `purrr` please automate plotting the trends of deaths, injuries, and homelessness caused by all disasters for 5 countries in the dataset 
