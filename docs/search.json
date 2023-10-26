@@ -1124,7 +1124,7 @@
     "href": "2023/weeks/week04/slides4.html#coding-style-matters",
     "title": "🗓️ Week 04Automating – Functional Programming",
     "section": "Coding style MATTERS!",
-    "text": "Coding style MATTERS!\n\nBoth the “if” and “function” statements should almost always be accompanied by curly braces {}, and the code within them should be indented. This practice enhances code readability\nStart opening curly braces on a new line, close them on their own line, except when followed by “else,” and maintain code indentation inside them\n\n# Bad example\nif (y &lt; 0 && debug)\nmessage(\"Y is negative\")\n\nif (y == 0) {\n  log(x)\n} \nelse {\n  y ^ x\n}\n\n# Good example\nif (y &lt; 0 && debug) {\n  message(\"Y is negative\")\n}\n\nif (y == 0) {\n  log(x)\n} else {\n  y ^ x\n}"
+    "text": "Coding style MATTERS!\n\nBoth the “if” and “function” statements should almost always be accompanied by curly braces {}, and the code within them should be indented. Start opening curly braces on a new line, close them on their own line, except when followed by “else,” and maintain code indentation inside them\n\n# Bad example\nif (y &lt; 0 && debug)\nmessage(\"Y is negative\")\n\nif (y == 0) {\n  log(x)\n} \nelse {\n  y ^ x\n}\n\n# Good example\nif (y &lt; 0 && debug) {\n  message(\"Y is negative\")\n}\n\nif (y == 0) {\n  log(x)\n} else {\n  y ^ x\n}"
   },
   {
     "objectID": "2023/weeks/week04/slides4.html#if-vs-if_else",
