@@ -11,7 +11,7 @@
     "href": "2023/index.html",
     "title": "SOCS0100 - Computational Tools for Reproducible Social Science",
     "section": "",
-    "text": "📢 Important\n\n\n\n\n\n(19/10/2023)\n\n🗓️ Week 03 lecture material is now available!\n\n\n\n\n\n🧑🏻‍🏫 Module Team\n\nModule Convenor\n\n\n\nBurak Sonmez  Lecturer in Quantitative Social Science  University College London 📧 b.sonmez@ucl.ac.uk ( at )\nOffice Hours:\n\nWhen:Fridays 16:00-18:00\nWhere:55-59 Gordon Square, 416\nHow to book: Please email me in advance\n\n\n\n\n\n\n📍 Lectures\nFridays 10:00-12:00 at Roberts Building 309\n\n\n💻 Practical Session Groups\n\nGroup 01\n\n📆 Fridays\n⌚ 12:00 - 13:00\n📍 Bedford Way (20) W 2.08\n🧑‍🏫 Burak Sonmez\n\n\n\nGroup 02\n\n📆 Fridays\n⌚ 15:00 - 16:00\n📍 Bedford Way (20) 828\n🧑‍🏫 Burak Sonmez"
+    "text": "📢 Important\n\n\n\n\n\n(26/10/2023)\n\n🗓️ Week 04 lecture material is now available!\n\n\n\n\n\n🧑🏻‍🏫 Module Team\n\nModule Convenor\n\n\n\nBurak Sonmez  Lecturer in Quantitative Social Science  University College London 📧 b.sonmez@ucl.ac.uk ( at )\nOffice Hours:\n\nWhen:Fridays 16:00-18:00\nWhere:55-59 Gordon Square, 416\nHow to book: Please email me in advance\n\n\n\n\n\n\n📍 Lectures\nFridays 10:00-12:00 at Roberts Building 309\n\n\n💻 Practical Session Groups\n\nGroup 01\n\n📆 Fridays\n⌚ 12:00 - 13:00\n📍 Bedford Way (20) W 2.08\n🧑‍🏫 Burak Sonmez\n\n\n\nGroup 02\n\n📆 Fridays\n⌚ 15:00 - 16:00\n📍 Bedford Way (20) 828\n🧑‍🏫 Burak Sonmez"
   },
   {
     "objectID": "index.html",
@@ -1076,5 +1076,250 @@
     "title": "🗓️ Week 03Wrangling and Tidying Data",
     "section": "Producing tables",
     "text": "Producing tables\n\n\n\n\norder\nn\nmean_sleep\nsd_sleep\n\n\n\n\nAfrosoricida\n1\n15.600000\nNA\n\n\nArtiodactyla\n6\n4.516667\n2.5119050\n\n\nCarnivora\n12\n10.116667\n3.5021638\n\n\nCetacea\n3\n4.500000\n1.5716234\n\n\nChiroptera\n2\n19.800000\n0.1414214\n\n\nCingulata\n2\n17.750000\n0.4949747\n\n\nDidelphimorphia\n2\n18.700000\n0.9899495\n\n\nDiprotodontia\n2\n12.400000\n1.8384776\n\n\nErinaceomorpha\n2\n10.200000\n0.1414214\n\n\nHyracoidea\n3\n5.666667\n0.5507571\n\n\nLagomorpha\n1\n8.400000\nNA\n\n\nMonotremata\n1\n8.600000\nNA\n\n\nPerissodactyla\n3\n3.466667\n0.8144528\n\n\nPilosa\n1\n14.400000\nNA\n\n\nPrimates\n12\n10.500000\n2.2098951\n\n\nProboscidea\n2\n3.600000\n0.4242641\n\n\nRodentia\n22\n12.468182\n2.8132994\n\n\nScandentia\n1\n8.900000\nNA\n\n\nSoricomorpha\n5\n11.100000\n2.7046257"
+  },
+  {
+    "objectID": "2023/weeks/week04/slides4.html#programming-in-r",
+    "href": "2023/weeks/week04/slides4.html#programming-in-r",
+    "title": "🗓️ Week 04Automating – Functional Programming",
+    "section": "Programming in R",
+    "text": "Programming in R\n\nRepeating yourself in code is dangerous because it can easily lead to errors and inconsistencies\nWhile the syntax might vary, the basic idea of flow, functions, and iteration are common across all programming languages (e.g. Python)"
+  },
+  {
+    "objectID": "2023/weeks/week04/slides4.html#setup",
+    "href": "2023/weeks/week04/slides4.html#setup",
+    "title": "🗓️ Week 04Automating – Functional Programming",
+    "section": "Setup",
+    "text": "Setup\n\n# Install packages\nif (!require(\"pacman\")) {\n  install.packages(\"pacman\")\n}\n\npacman::p_load(\n  tidyverse, # tidyverse pkgs including purrr\n  glue, #combining strings and objects\n  gapminder, # dataset\n  ggplot2, #plotting\n  gridExtra #arranging plots\n  )"
+  },
+  {
+    "objectID": "2023/weeks/week04/slides4.html#flow-control",
+    "href": "2023/weeks/week04/slides4.html#flow-control",
+    "title": "🗓️ Week 04Automating – Functional Programming",
+    "section": "Flow control",
+    "text": "Flow control\n\nSometimes you only want to execute code if a certain condition is met (if-else statement)\n\nif (condition) {\n  # Code executed when condition is TRUE\n} else {\n  # Code executed when condition is FALSE\n}\n\nCondition is a statement that must always evaluate to either TRUE or FALSE (i.e. a vector of length 1)"
+  },
+  {
+    "objectID": "2023/weeks/week04/slides4.html#flow-control-examples",
+    "href": "2023/weeks/week04/slides4.html#flow-control-examples",
+    "title": "🗓️ Week 04Automating – Functional Programming",
+    "section": "Flow control (examples)",
+    "text": "Flow control (examples)\n\naverage = 72\nif (average &gt; 69) {\n    print(\"First-class honours\")\n} else {\n    print(\"Second-class honours\")\n}\n\n[1] \"First-class honours\"\n\n\n\naverage = 69\nif (average &gt; 69) {\n    print(\"First-class honours\")\n} else {\n    print(\"Second-class honours\")\n}\n\n[1] \"Second-class honours\""
+  },
+  {
+    "objectID": "2023/weeks/week04/slides4.html#what-would-you-do-with-multiple-conditions",
+    "href": "2023/weeks/week04/slides4.html#what-would-you-do-with-multiple-conditions",
+    "title": "🗓️ Week 04Automating – Functional Programming",
+    "section": "What would you do with multiple conditions?",
+    "text": "What would you do with multiple conditions?\nif (this) {\n  # Do that\n} else if (that) {\n  # Do something else\n} else {\n  # Do something completely different\n}"
+  },
+  {
+    "objectID": "2023/weeks/week04/slides4.html#going-back-to-earlier-one-condition-example",
+    "href": "2023/weeks/week04/slides4.html#going-back-to-earlier-one-condition-example",
+    "title": "🗓️ Week 04Automating – Functional Programming",
+    "section": "Going back to earlier one-condition example",
+    "text": "Going back to earlier one-condition example\n\nYou can generate more complex conditional statements with Boolean operators like & and |:\n\n\naverage = 50 \n\nif (average &gt; 69) {\n    print(\"Firs-class honours\")\n} else if (average &lt; 70 & average &gt; 59) {\n    print(\"Second-class honours\")\n} else {\n    print(\"Third-class honours\")\n}\n\n[1] \"Third-class honours\"\n\n\n\nIt’s not a good idea to write nested code (lots of else_if() or ifelse())\nIt is not easy to read or debug"
+  },
+  {
+    "objectID": "2023/weeks/week04/slides4.html#coding-style-matters",
+    "href": "2023/weeks/week04/slides4.html#coding-style-matters",
+    "title": "🗓️ Week 04Automating – Functional Programming",
+    "section": "Coding style MATTERS!",
+    "text": "Coding style MATTERS!\n\nBoth the “if” and “function” statements should almost always be accompanied by curly braces {}, and the code within them should be indented. This practice enhances code readability\nStart opening curly braces on a new line, close them on their own line, except when followed by “else,” and maintain code indentation inside them\n\n# Bad example\nif (y &lt; 0 && debug)\nmessage(\"Y is negative\")\n\nif (y == 0) {\n  log(x)\n} \nelse {\n  y ^ x\n}\n\n# Good example\nif (y &lt; 0 && debug) {\n  message(\"Y is negative\")\n}\n\nif (y == 0) {\n  log(x)\n} else {\n  y ^ x\n}"
+  },
+  {
+    "objectID": "2023/weeks/week04/slides4.html#if-vs-if_else",
+    "href": "2023/weeks/week04/slides4.html#if-vs-if_else",
+    "title": "🗓️ Week 04Automating – Functional Programming",
+    "section": "if vs if_else",
+    "text": "if vs if_else\n\nVector operations are where you make multiple comparisons simultaneously for each value stored inside a vector\nImagine you wanted to create a new column identifying whether or not a country-year observation has a life expectancy of at least 35\n\n\ngap &lt;- gapminder\nhead(gap)\n\n# A tibble: 6 × 6\n  country     continent  year lifeExp      pop gdpPercap\n  &lt;fct&gt;       &lt;fct&gt;     &lt;int&gt;   &lt;dbl&gt;    &lt;int&gt;     &lt;dbl&gt;\n1 Afghanistan Asia       1952    28.8  8425333      779.\n2 Afghanistan Asia       1957    30.3  9240934      821.\n3 Afghanistan Asia       1962    32.0 10267083      853.\n4 Afghanistan Asia       1967    34.0 11537966      836.\n5 Afghanistan Asia       1972    36.1 13079460      740.\n6 Afghanistan Asia       1977    38.4 14880372      786.\n\n\ngap_if &lt;- gap %&gt;%\n   mutate(life.35 = if(lifeExp &gt;= 35){\n     1\n   } else {\n     0\n   })\nhead(gap_if)\n\nTry this code and tell us what you think it’s wrong"
+  },
+  {
+    "objectID": "2023/weeks/week04/slides4.html#use-if_else-instead",
+    "href": "2023/weeks/week04/slides4.html#use-if_else-instead",
+    "title": "🗓️ Week 04Automating – Functional Programming",
+    "section": "Use if_else() instead",
+    "text": "Use if_else() instead\n\nThis vectorises the if-else comparison and makes a separate comparison for each row of the data frame\n\n\ngap_ifelse &lt;- gap %&gt;%\n  mutate(life.35 = if_else(lifeExp &gt;= 35, 1, 0))\n\ngap_ifelse\n\n# A tibble: 1,704 × 7\n   country     continent  year lifeExp      pop gdpPercap life.35\n   &lt;fct&gt;       &lt;fct&gt;     &lt;int&gt;   &lt;dbl&gt;    &lt;int&gt;     &lt;dbl&gt;   &lt;dbl&gt;\n 1 Afghanistan Asia       1952    28.8  8425333      779.       0\n 2 Afghanistan Asia       1957    30.3  9240934      821.       0\n 3 Afghanistan Asia       1962    32.0 10267083      853.       0\n 4 Afghanistan Asia       1967    34.0 11537966      836.       0\n 5 Afghanistan Asia       1972    36.1 13079460      740.       1\n 6 Afghanistan Asia       1977    38.4 14880372      786.       1\n 7 Afghanistan Asia       1982    39.9 12881816      978.       1\n 8 Afghanistan Asia       1987    40.8 13867957      852.       1\n 9 Afghanistan Asia       1992    41.7 16317921      649.       1\n10 Afghanistan Asia       1997    41.8 22227415      635.       1\n# ℹ 1,694 more rows"
+  },
+  {
+    "objectID": "2023/weeks/week04/slides4.html#functions",
+    "href": "2023/weeks/week04/slides4.html#functions",
+    "title": "🗓️ Week 04Automating – Functional Programming",
+    "section": "Functions",
+    "text": "Functions\n\nFunctions are the basic building blocks of programmes\nThink of them as mini-scripts. R provides many built-in functions and allows programmers to define their own functions. We have already used dozens of functions created by others (e.g. filter() and sd())\nYou will learn how to write you own functions. The details are pretty simple, yet as usual it is good to get lots of practice!"
+  },
+  {
+    "objectID": "2023/weeks/week04/slides4.html#why-we-need-functions",
+    "href": "2023/weeks/week04/slides4.html#why-we-need-functions",
+    "title": "🗓️ Week 04Automating – Functional Programming",
+    "section": "Why we need functions",
+    "text": "Why we need functions\n\nFunctions allow you to automate common tasks in a more powerful and general way than copy-and-pasting\n\ngap &lt;- gapminder\n\ngap_norm &lt;- gap %&gt;%\n  mutate(pop_norm = (pop - min(pop)) / (max(pop) - min (pop)),\n         gdp_norm = (gdpPercap - min(gdpPercap)) / (max(gdpPercap) - min (gdpPercap)),\n         life_norm = (lifeExp - min(lifeExp) / (max(pop)) - min (lifeExp)))\n\nsummary(gap_norm$pop_norm)\n\nTake a look at the code above and spot the mistake?"
+  },
+  {
+    "objectID": "2023/weeks/week04/slides4.html#key-components-of-functions",
+    "href": "2023/weeks/week04/slides4.html#key-components-of-functions",
+    "title": "🗓️ Week 04Automating – Functional Programming",
+    "section": "Key components of functions",
+    "text": "Key components of functions\n\nName: This should be informative and describe what the function does\nArguments: or list of inputs, to the function. They go inside the parentheses in function()\nThe body: This is the block of code within {} that immediately follows function(…), and it is the code that you develop to perform the action described in the name using the arguments you provide\n\nmy_function &lt;- function(x, y){\n  # do\n  # something\n  # here\n  return(result)\n}"
+  },
+  {
+    "objectID": "2023/weeks/week04/slides4.html#writing-a-function",
+    "href": "2023/weeks/week04/slides4.html#writing-a-function",
+    "title": "🗓️ Week 04Automating – Functional Programming",
+    "section": "Writing a function",
+    "text": "Writing a function\n\nsimple.function &lt;- function(x, y){\n  print(x - y + 1)\n}\n\nsimple.function(x = 2, y = 10)\n\n[1] -7\n\n\n\nNote that return() will only process a single object, so multiple items must usually be returned as a list\n\n\nmultiple.items &lt;- function(x,y){\n  thing1 &lt;- x\n  thing2 &lt;- y\n  return(list(thing1, thing2))\n}\n\nmultiple.items(x = \"some text\", y = \"some data\")\n\n[[1]]\n[1] \"some text\"\n\n[[2]]\n[1] \"some data\""
+  },
+  {
+    "objectID": "2023/weeks/week04/slides4.html#functional-programming-1",
+    "href": "2023/weeks/week04/slides4.html#functional-programming-1",
+    "title": "🗓️ Week 04Automating – Functional Programming",
+    "section": "Functional programming",
+    "text": "Functional programming\n\nWe will now learn how to use purrr to automate workflow in a cleaner, faster, and more extendable way\n\nTask: replacing -99 with NA\n\nLet’s imagine df is a survey dataset.\na, b, c, d = Survey questions\n-99: missing responses\n\n\n# Data\n\nset.seed(1234) # for reproducibility\n\ndf &lt;- tibble(\n  \"a\" = sample(c(-99, 1:3), size = 5, replace = TRUE),\n  \"b\" = sample(c(-99, 1:3), size = 5, replace = TRUE),\n  \"c\" = sample(c(-99, 1:3), size = 5, replace = TRUE),\n  \"d\" = sample(c(-99, 1:3), size = 5, replace = TRUE)\n)"
+  },
+  {
+    "objectID": "2023/weeks/week04/slides4.html#how-would-you-replace--99-with-na-by-copy-and-pasting",
+    "href": "2023/weeks/week04/slides4.html#how-would-you-replace--99-with-na-by-copy-and-pasting",
+    "title": "🗓️ Week 04Automating – Functional Programming",
+    "section": "How would you replace -99 with NA by copy-and-pasting?",
+    "text": "How would you replace -99 with NA by copy-and-pasting?\n\n# Copy and paste\ndf$a[df$a == -99] &lt;- NA\ndf$b[df$b == -99] &lt;- NA\ndf$c[df$c == -99] &lt;- NA\ndf$d[df$d == -99] &lt;- NA\n\ndf\n\n# A tibble: 5 × 4\n      a     b     c     d\n  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1     3     3     3     1\n2     3     2     3     1\n3     1    NA     1     2\n4     1    NA     2     1\n5    NA     1     1     3"
+  },
+  {
+    "objectID": "2023/weeks/week04/slides4.html#lets-use-a-function-for-this-operation",
+    "href": "2023/weeks/week04/slides4.html#lets-use-a-function-for-this-operation",
+    "title": "🗓️ Week 04Automating – Functional Programming",
+    "section": "Let’s use a function for this operation",
+    "text": "Let’s use a function for this operation\n\nIf you write a function, you gain efficiency because you don’t need to copy and paste the computation part\n\n\nfix_missing &lt;- function(x) {\n  x[x == -99] &lt;- NA\n  x\n}\n\n# Apply function to each column (vector)\n\ndf$a &lt;- fix_missing(df$a)\ndf$b &lt;- fix_missing(df$b)\ndf$c &lt;- fix_missing(df$c)\ndf$d &lt;- fix_missing(df$d)\n\ndf\n\n# A tibble: 5 × 4\n      a     b     c     d\n  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1     3     3     3     1\n2     3     2     3     1\n3     1    NA     1     2\n4     1    NA     2     1\n5    NA     1     1     3"
+  },
+  {
+    "objectID": "2023/weeks/week04/slides4.html#how-about-a-tidy-solution-purrr",
+    "href": "2023/weeks/week04/slides4.html#how-about-a-tidy-solution-purrr",
+    "title": "🗓️ Week 04Automating – Functional Programming",
+    "section": "How about a tidy solution? (purrr)",
+    "text": "How about a tidy solution? (purrr)\n\nmap() is a good alternative to for loop\n\n\ndf &lt;- purrr::map_df(df, fix_missing)\n\ndf\n\n# A tibble: 5 × 4\n      a     b     c     d\n  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1     3     3     3     1\n2     3     2     3     1\n3     1    NA     1     2\n4     1    NA     2     1\n5    NA     1     1     3"
+  },
+  {
+    "objectID": "2023/weeks/week04/slides4.html#map-is-a-higher-order-function",
+    "href": "2023/weeks/week04/slides4.html#map-is-a-higher-order-function",
+    "title": "🗓️ Week 04Automating – Functional Programming",
+    "section": "map() is a higher-order function",
+    "text": "map() is a higher-order function\n\nThis is how map() works\nIt applies a given function to each element of a list/vector."
+  },
+  {
+    "objectID": "2023/weeks/week04/slides4.html#illustrating-why-map-can-be-more-efficient-than-loops",
+    "href": "2023/weeks/week04/slides4.html#illustrating-why-map-can-be-more-efficient-than-loops",
+    "title": "🗓️ Week 04Automating – Functional Programming",
+    "section": "Illustrating why map() can be more efficient than loops",
+    "text": "Illustrating why map() can be more efficient than loops\n\ndata(\"airquality\")\n\n# Placeholder\nout1 &lt;- vector(\"double\", ncol(airquality))\n\n# Sequence variable\nfor (i in seq_along(airquality)) { \n\n  # Assign an iteration result to each element of the placeholder list \n  out1[[i]] &lt;- mean(airquality[[i]], na.rm = TRUE)\n}\n\n#vs one-liner map()\nout1 &lt;- airquality %&gt;% map_dbl(mean, na.rm = TRUE)\nout1\n\n     Ozone    Solar.R       Wind       Temp      Month        Day \n 42.129310 185.931507   9.957516  77.882353   6.993464  15.803922"
+  },
+  {
+    "objectID": "2023/weeks/week04/slides4.html#main-takeaways",
+    "href": "2023/weeks/week04/slides4.html#main-takeaways",
+    "title": "🗓️ Week 04Automating – Functional Programming",
+    "section": "Main takeaways",
+    "text": "Main takeaways\n\nmap() is more readable, faster, and easily extendable with other data science tasks (e.g. wrangling and visualization) using %&gt;%\npurrr::map() is simpler to write\nThere is one function for each type of output:\n\nmap() makes a list\nmap_lgl() makes a logical vector\nmap_int() makes an integer vector\nmap_dbl() makes a double vector\nmap_chr() makes a character vector"
+  },
+  {
+    "objectID": "2023/weeks/week04/slides4.html#some-data-wrangling-exercises-using-purrr",
+    "href": "2023/weeks/week04/slides4.html#some-data-wrangling-exercises-using-purrr",
+    "title": "🗓️ Week 04Automating – Functional Programming",
+    "section": "Some data wrangling exercises using purrr",
+    "text": "Some data wrangling exercises using purrr\n\nFiltering:\n\n\n# Create a list of data frames with England's biggest cities and their populations\ndata_list &lt;- list(\n  data.frame(City = c(\"London\", \"Birmingham\", \"Manchester\"),\n             Population = c(8961989, 1141816, 547627)),\n  data.frame(City = c(\"Leeds\", \"Liverpool\", \"Newcastle\"),\n             Population = c(793139, 494814, 148190))\n)\n\n# Define the condition for filtering data frames\npopulation_threshold &lt;- 500000\n\nfiltered_data &lt;- map(data_list, ~ filter(.x, Population &gt;= population_threshold))\n\nfiltered_data\n\n[[1]]\n        City Population\n1     London    8961989\n2 Birmingham    1141816\n3 Manchester     547627\n\n[[2]]\n   City Population\n1 Leeds     793139"
+  },
+  {
+    "objectID": "2023/weeks/week04/slides4.html#some-data-wrangling-exercises-using-purrr-ii",
+    "href": "2023/weeks/week04/slides4.html#some-data-wrangling-exercises-using-purrr-ii",
+    "title": "🗓️ Week 04Automating – Functional Programming",
+    "section": "Some data wrangling exercises using purrr II",
+    "text": "Some data wrangling exercises using purrr II\n\nCombining data frames:\n\n\n# Combine the filtered data frames into a single data frame\ncombined_data &lt;- reduce(filtered_data, bind_rows)\ncombined_data\n\n        City Population\n1     London    8961989\n2 Birmingham    1141816\n3 Manchester     547627\n4      Leeds     793139"
+  },
+  {
+    "objectID": "2023/weeks/week04/slides4.html#automate-plotting",
+    "href": "2023/weeks/week04/slides4.html#automate-plotting",
+    "title": "🗓️ Week 04Automating – Functional Programming",
+    "section": "Automate plotting",
+    "text": "Automate plotting\n\nWe will how to use map() and glue() to automate creating multiple plots\nTask: making the following data visualisation process more efficient\n\ndata(\"airquality\")\n\nairquality %&gt;%\n  ggplot(aes(x = Ozone, y = Solar.R)) +\n  geom_point() +\n  labs(\n    title = \"Relationship between Ozone and Solar.R\",\n    y = \"Solar.R\"\n  )\nairquality %&gt;%\n  ggplot(aes(x = Ozone, y = Wind)) +\n  geom_point() +\n  labs(\n    title = \"Relationship between Ozone and Wind\",\n    y = \"Wind\"\n  )\nairquality %&gt;%\n  ggplot(aes(x = Ozone, y = Temp)) +\n  geom_point() +\n  labs(\n    title = \"Relationship between Ozone and Temp\",\n    y = \"Temp\"\n  )"
+  },
+  {
+    "objectID": "2023/weeks/week04/slides4.html#solution-to-the-automation-problem",
+    "href": "2023/weeks/week04/slides4.html#solution-to-the-automation-problem",
+    "title": "🗓️ Week 04Automating – Functional Programming",
+    "section": "Solution to the automation problem",
+    "text": "Solution to the automation problem\n\nglue() combines strings and objects\n\nFor instance:\n\nnames &lt;- c(\"Nikki\", \"Maria\", \"Ozan\")\n\nfields &lt;- c(\"Economics\", \"Demography\", \"Sociology\")\n\nglue(\"{names} is interested in {fields}.\")\n\nNikki is interested in Economics.\nMaria is interested in Demography.\nOzan is interested in Sociology.\n\n\n\nHence, we can now combine glue() and map()"
+  },
+  {
+    "objectID": "2023/weeks/week04/slides4.html#automatic-plotting-function",
+    "href": "2023/weeks/week04/slides4.html#automatic-plotting-function",
+    "title": "🗓️ Week 04Automating – Functional Programming",
+    "section": "Automatic plotting function",
+    "text": "Automatic plotting function\n\ncreate_point_plot &lt;- function(i) {\n  airquality %&gt;%\n    ggplot(aes_string(x = names(airquality)[1], y = names(airquality)[i])) +\n    geom_point() +\n    labs(\n      title = glue(\"Relationship between Ozone and {names(airquality)[i]}\"),\n      y = glue(\"{names(airquality)[i]}\")\n    )\n}\n\n\nThe final step is to put the function in map()\n\n\nplots_list &lt;- map(2:ncol(airquality), create_point_plot)\nplots_grid &lt;- gridExtra::grid.arrange(grobs = plots_list, ncol = 2) # Adjust ncol as needed\n\n\n\n\n\nSOCS0100 – Computational Tools for Reproducible Social Science"
+  },
+  {
+    "objectID": "2023/weeks/week04/slides4.html#automatic-plotting-function-output",
+    "href": "2023/weeks/week04/slides4.html#automatic-plotting-function-output",
+    "title": "🗓️ Week 04Automating – Functional Programming",
+    "section": "Automatic plotting function",
+    "text": "Automatic plotting function\n\n\n\nplots_grid\n\nTableGrob (3 x 2) \"arrange\": 5 grobs\n  z     cells    name           grob\n1 1 (1-1,1-1) arrange gtable[layout]\n2 2 (1-1,2-2) arrange gtable[layout]\n3 3 (2-2,1-1) arrange gtable[layout]\n4 4 (2-2,2-2) arrange gtable[layout]\n5 5 (3-3,1-1) arrange gtable[layout]"
+  },
+  {
+    "objectID": "2023/weeks/week04/slides4.html#functions-1",
+    "href": "2023/weeks/week04/slides4.html#functions-1",
+    "title": "🗓️ Week 04Automating – Functional Programming",
+    "section": "Functions",
+    "text": "Functions\n\nFunctions are the basic building blocks of programmes\nThink of them as mini-scripts. R provides many built-in functions and allows programmers to define their own functions. We have already used dozens of functions created by others (e.g. filter() and sd())\nYou will learn how to write you own functions. The details are pretty simple, yet as usual it is good to get lots of practice!"
+  },
+  {
+    "objectID": "2023/weeks/week04/page4.html",
+    "href": "2023/weeks/week04/page4.html",
+    "title": "🗓️ Week 04 -Automating (functional programming)",
+    "section": "",
+    "text": "The aim of this week is to introduce students to more advanced programming, such as familiarity with conditional flow (e.g. if-else conditionals) and creating functions to automate some common tasks for data wrangling and plotting. Students will be shown how they can use these functions in data science projects to make their project workflow more efficient."
+  },
+  {
+    "objectID": "2023/weeks/week04/page4.html#lecture-slides",
+    "href": "2023/weeks/week04/page4.html#lecture-slides",
+    "title": "🗓️ Week 04 -Automating (functional programming)",
+    "section": "👨‍🏫 Lecture Slides",
+    "text": "👨‍🏫 Lecture Slides\nEither click on the slide area below or click here to view it in fullscreen. Use your keypad to navigate the slides.\n\n\n\n\n🎥 Looking for lecture recordings? You can only find those on Moodle."
+  },
+  {
+    "objectID": "2023/weeks/week04/page4.html#lab-materials",
+    "href": "2023/weeks/week04/page4.html#lab-materials",
+    "title": "🗓️ Week 04 -Automating (functional programming)",
+    "section": "✍️ Lab Materials",
+    "text": "✍️ Lab Materials\n🚧 Students will be asked to use computational tools to automate repeated things in their entire R workflow (e.g. wrangling, visualisation).🚧"
+  },
+  {
+    "objectID": "2023/weeks/week04/page4.html#required-reading",
+    "href": "2023/weeks/week04/page4.html#required-reading",
+    "title": "🗓️ Week 04 -Automating (functional programming)",
+    "section": "📚 Required Reading",
+    "text": "📚 Required Reading\n\nWickham, H., Çetinkaya-Rundel, M., & Grolemund, G. (2023). R for data science. ” O’Reilly Media, Inc.”. (Chapter 26 & 27)."
+  },
+  {
+    "objectID": "2023/weeks/week03/page3.html",
+    "href": "2023/weeks/week03/page3.html",
+    "title": "🗓️ Week 03 ->Wrangling and Tidying Data",
+    "section": "",
+    "text": "How to effectively use Tidyverse – the key R functions for data wrangling. This week will introduce students to tidying data in R. This will include learning about transforming data frames; tidying data in a specific format; merging and appending multiple datasets; and other aspects of data manipulation."
+  },
+  {
+    "objectID": "2023/weeks/week03/page3.html#lecture-slides",
+    "href": "2023/weeks/week03/page3.html#lecture-slides",
+    "title": "🗓️ Week 03 ->Wrangling and Tidying Data",
+    "section": "👨‍🏫 Lecture Slides",
+    "text": "👨‍🏫 Lecture Slides\nEither click on the slide area below or click here to view it in fullscreen. Use your keypad to navigate the slides.\n\n\n\n\n🎥 Looking for lecture recordings? You can only find those on Moodle."
+  },
+  {
+    "objectID": "2023/weeks/week03/page3.html#lab-materials",
+    "href": "2023/weeks/week03/page3.html#lab-materials",
+    "title": "🗓️ Week 03 ->Wrangling and Tidying Data",
+    "section": "✍️ Lab Materials",
+    "text": "✍️ Lab Materials\n🚧 Students will be working with real world datasets to complete a series of data wrangling tasks through Tidyverse packages.🚧"
+  },
+  {
+    "objectID": "2023/weeks/week03/page3.html#required-reading",
+    "href": "2023/weeks/week03/page3.html#required-reading",
+    "title": "🗓️ Week 03 ->Wrangling and Tidying Data",
+    "section": "📚 Required Reading",
+    "text": "📚 Required Reading\n\nWickham, H., Çetinkaya-Rundel, M., & Grolemund, G. (2023). R for data science. ” O’Reilly Media, Inc.”. (Chapter 6, 8, and 9).\nWickham, H., Averick, M., Bryan, J., Chang, W., McGowan, L. D. A., François, R., … & Yutani, H. (2019). Welcome to the Tidyverse. Journal of open source software, 4(43), 1686."
   }
 ]
