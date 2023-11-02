@@ -1551,6 +1551,6 @@
     "href": "2023/weeks/week05/slides5.html#lab-exercise",
     "title": "🗓️ Week 05Improving Workflow for Reproducible Social Science",
     "section": "Lab exercise",
-    "text": "Lab exercise\n\n\n\nSOCS0100 – Computational Tools for Reproducible Social Science"
+    "text": "Lab exercise\n\nCreate a new Quarto document using File &gt; New File &gt; Quarto Document. Read the instructions. Practice running the chunks individually\nPractice what you’ve learned in the lecture by creating a very short report. The title should be your name, and you should include headings for each step in your report\nUsing any R in-built dataset, you will come up with one data wrangling task (e.g. filtering and summarising) to run its code inside your Quarto document (e.g. code chunk). Make sure that your report should include both code and output\nUsing the same R in-built dataset, you will come up with one data visualisation (e.g. ggplot) to run its code inside your Quarto document (e.g. code chunk). Make sure that your report should include both code and output\nFinally, render your Quarto report in both HTML and PDF format\n\n\n\n\nSOCS0100 – Computational Tools for Reproducible Social Science"
   }
 ]

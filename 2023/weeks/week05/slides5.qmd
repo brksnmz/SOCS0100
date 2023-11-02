@@ -477,3 +477,12 @@ format:
 
 ## Lab exercise {.smaller}
 
+- Create a new Quarto document using File > New File > Quarto Document. Read the instructions. Practice running the chunks individually
+
+- Practice what you’ve learned in the lecture by creating a very short report. The title should be your name, and you should include headings for each step in your report
+
+- Using any R in-built dataset, you will come up with one data wrangling task (e.g. filtering and summarising) to run its code inside your Quarto document (e.g. code chunk). Make sure that your report should include both code and output
+
+- Using the same R in-built dataset, you will come up with one data visualisation (e.g. `ggplot`) to run its code inside your Quarto document (e.g. code chunk). Make sure that your report should include both code and output
+
+- Finally, render your Quarto report in both HTML and PDF format
