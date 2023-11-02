@@ -49,7 +49,7 @@ editor:
 
 ## Quarto CLI {.smaller}
 
-<img src="/figures/images/quarto.png" alt="Source:" width="400" height="400" style="display: block; margin: 0 auto;"/>
+<img src="/figures/images/quarto.png" alt="Source:" width="400" height="600" style="display: block; margin: 0 auto;"/>
 
 ## Quarto visual editor {.smaller}
 
@@ -111,7 +111,7 @@ smaller |>
     https://pandoc.org, which is responsible for creating the finished
     file
 
-<img src="/figures/images/quarto4.png" alt="Source:" width="400" height="200" style="display: block; margin: 0 auto;"/>
+<img src="/figures/images/quarto4.png" alt="Source:" width="350" height="150" style="display: block; margin: 0 auto;"/>
 
 ## Pandoc fenced divs {.smaller}
 
@@ -155,7 +155,7 @@ All this content can be modified
 
 ## Tabsets example {.smaller}
 
-<img src="/figures/images/quarto5.png" alt="Source:" width="400" height="200" style="display: block; margin: 0 auto;"/>
+<img src="/figures/images/quarto5.png" alt="Source:" width="500" height="300" style="display: block; margin: 0 auto;"/>
 
 ## Footnotes {.smaller}
 
@@ -357,7 +357,19 @@ format:
     for two plots, 3 for three plots, etc. This effectively sets
     `out-width` to "50%" for each of your plots if `layout-ncol` is 2,
     "33%" if `layout-ncol` is 3, etc.
-    
+
+## Tables {.smaller}
+
+- You can include two types of tables in a Quarto document: directly in your Quarto document (using the Insert Table menu) or they can be tables generated as a result of a code chunk
+
+```{r}
+#| include: true
+#| echo: true
+mtcars[1:5, ]
+```
+
+- If you prefer that data be displayed with additional formatting you can use the `knitr::kable()` function
+
 ## Bibliographies and Citations {.smaller}
 
 - To add a citation using the visual editor, go to Insert > Citation. Citations can be inserted from a variety of sources:
@@ -462,3 +474,6 @@ format:
 -   [Quarto docs: Presentations](https://quarto.org/docs/presentations/)
 
 - {{< video https://youtu.be/_f3latmOhew? width="600" height="300">}}
+
+## Lab exercise {.smaller}
+

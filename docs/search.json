@@ -11,7 +11,7 @@
     "href": "2023/index.html",
     "title": "SOCS0100 - Computational Tools for Reproducible Social Science",
     "section": "",
-    "text": "📢 Important\n\n\n\n\n\n(26/10/2023)\n\n🗓️ Week 04 lecture material is now available!\n\n\n\n\n\n🧑🏻‍🏫 Module Team\n\nModule Convenor\n\n\n\nBurak Sonmez  Lecturer in Quantitative Social Science  University College London 📧 b.sonmez@ucl.ac.uk ( at )\nOffice Hours:\n\nWhen:Fridays 16:00-18:00\nWhere:55-59 Gordon Square, 416\nHow to book: Please email me in advance\n\n\n\n\n\n\n📍 Lectures\nFridays 10:00-12:00 at Roberts Building 309\n\n\n💻 Practical Session Groups\n\nGroup 01\n\n📆 Fridays\n⌚ 12:00 - 13:00\n📍 Bedford Way (20) W 2.08\n🧑‍🏫 Burak Sonmez\n\n\n\nGroup 02\n\n📆 Fridays\n⌚ 15:00 - 16:00\n📍 Bedford Way (20) 828\n🧑‍🏫 Burak Sonmez"
+    "text": "📢 Important\n\n\n\n\n\n(02/11/2023)\n\n🗓️ Week 05 lecture material is now available!\n\n\n\n\n\n🧑🏻‍🏫 Module Team\n\nModule Convenor\n\n\n\nBurak Sonmez  Lecturer in Quantitative Social Science  University College London 📧 b.sonmez@ucl.ac.uk ( at )\nOffice Hours:\n\nWhen:Fridays 16:00-18:00\nWhere:55-59 Gordon Square, 416\nHow to book: Please email me in advance\n\n\n\n\n\n\n📍 Lectures\nFridays 10:00-12:00 at Roberts Building 309\n\n\n💻 Practical Session Groups\n\nGroup 01\n\n📆 Fridays\n⌚ 12:00 - 13:00\n📍 Bedford Way (20) W 2.08\n🧑‍🏫 Burak Sonmez\n\n\n\nGroup 02\n\n📆 Fridays\n⌚ 15:00 - 16:00\n📍 Bedford Way (20) 828\n🧑‍🏫 Burak Sonmez"
   },
   {
     "objectID": "index.html",
@@ -1509,7 +1509,7 @@
     "href": "2023/weeks/week05/slides5.html#further-materials",
     "title": "🗓️ Week 05Improving Workflow for Reproducible Social Science",
     "section": "Further materials",
-    "text": "Further materials\nReports:\n\nQuarto docs: Documents\n\nPresentations:\n\nQuarto docs: Presentations\n\n\n\n\n\nSOCS0100 – Computational Tools for Reproducible Social Science"
+    "text": "Further materials\nReports:\n\nQuarto docs: Documents\n\nPresentations:\n\nQuarto docs: Presentations"
   },
   {
     "objectID": "2023/weeks/week05/page5.html",
@@ -1538,5 +1538,19 @@
     "title": "🗓️ Week 05 ->Improving Workflow for Reproducible Social Science",
     "section": "📚 Required Reading",
     "text": "📚 Required Reading\n\nWickham, H., Çetinkaya-Rundel, M., & Grolemund, G. (2023). R for data science. ” O’Reilly Media, Inc.”. (Chapter 29 & 30).\nBauer, P. C., & Landesvatter, C. (2023). Writing a reproducible paper with RStudio and Quarto."
+  },
+  {
+    "objectID": "2023/weeks/week05/slides5.html#tables",
+    "href": "2023/weeks/week05/slides5.html#tables",
+    "title": "🗓️ Week 05Improving Workflow for Reproducible Social Science",
+    "section": "Tables",
+    "text": "Tables\n\nYou can include two types of tables in a Quarto document: directly in your Quarto document (using the Insert Table menu) or they can be tables generated as a result of a code chunk\n\n\nmtcars[1:5, ]\n\n                   mpg cyl disp  hp drat    wt  qsec vs am gear carb\nMazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4\nMazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4\nDatsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1\nHornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1\nHornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2\n\n\n\nIf you prefer that data be displayed with additional formatting you can use the knitr::kable() function"
+  },
+  {
+    "objectID": "2023/weeks/week05/slides5.html#lab-exercise",
+    "href": "2023/weeks/week05/slides5.html#lab-exercise",
+    "title": "🗓️ Week 05Improving Workflow for Reproducible Social Science",
+    "section": "Lab exercise",
+    "text": "Lab exercise\n\n\n\nSOCS0100 – Computational Tools for Reproducible Social Science"
   }
 ]
