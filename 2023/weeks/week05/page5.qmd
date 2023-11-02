@@ -1,0 +1,27 @@
+---
+title: "🗓️ Week 05 ->Improving Workflow for Reproducible Social Science"
+---
+
+Student will learn how to combine code, output, and analysis into a single reproducible document through Quarto. They will also learn how to customise appearance and style in reproducible documents. This will help students deliver their assessments in different reproducible output formats.
+
+## 👨‍🏫 Lecture Slides
+
+Either click on the slide area below or click [here](slides5.qmd) to view it in fullscreen. Use your keypad to navigate the slides.
+
+::: {.container style="position: relative;overflow: hidden;width: 100%;min-height:600px;"}
+<iframe src="slides5.html" style="position=absolute;top: 0;left: 0;bottom: 0;right: 0;width: 100%;min-height:600px;">
+
+</iframe>
+:::
+
+🎥 Looking for lecture recordings? You can only find those on Moodle.
+
+## ✍️ Lab Materials
+
+🚧 Students will complete certain tasks to create a single reproducible document through Quarto.🚧
+
+## 📚 Required Reading
+
+-   [Wickham, H., Çetinkaya-Rundel, M., & Grolemund, G. (2023). R for data science. " O'Reilly Media, Inc.". (Chapter 29 & 30).](https://r4ds.hadley.nz/data-tidy)
+
+-   [Bauer, P. C., & Landesvatter, C. (2023). Writing a reproducible paper with RStudio and Quarto.](https://osf.io/preprints/ur4xn/)
