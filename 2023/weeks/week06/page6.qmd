@@ -2,7 +2,7 @@
 title: "🗓️ Week 06 ->From Reproducibility to Interactivity"
 ---
 
-SStudents will learn advanced data visualisation tools. They will specifically learn how to build and deploy Shiny apps to create interactive data visualisations. This will help students create interactive dashboards to disseminate their data in the projects.
+Students will learn advanced data visualisation tools. They will specifically learn how to build and deploy Shiny apps to create interactive data visualisations. This will help students create interactive dashboards to disseminate their data in the projects.
 
 ## 👨‍🏫 Lecture Slides
 
