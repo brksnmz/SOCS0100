@@ -11,7 +11,7 @@
     "href": "2023/index.html",
     "title": "SOCS0100 - Computational Tools for Reproducible Social Science",
     "section": "",
-    "text": "📢 Important\n\n\n\n\n\n(02/11/2023)\n\n🗓️ Week 05 lecture material is now available!\n\n\n\n\n\n🧑🏻‍🏫 Module Team\n\nModule Convenor\n\n\n\nBurak Sonmez  Lecturer in Quantitative Social Science  University College London 📧 b.sonmez@ucl.ac.uk ( at )\nOffice Hours:\n\nWhen:Fridays 16:00-18:00\nWhere:55-59 Gordon Square, 416\nHow to book: Please email me in advance\n\n\n\n\n\n\n📍 Lectures\nFridays 10:00-12:00 at Roberts Building 309\n\n\n💻 Practical Session Groups\n\nGroup 01\n\n📆 Fridays\n⌚ 12:00 - 13:00\n📍 Bedford Way (20) W 2.08\n🧑‍🏫 Burak Sonmez\n\n\n\nGroup 02\n\n📆 Fridays\n⌚ 15:00 - 16:00\n📍 Bedford Way (20) 828\n🧑‍🏫 Burak Sonmez"
+    "text": "📢 Important\n\n\n\n\n\n(14/11/2023)\n\n🗓️ Week 06 lecture material is now available!\n\n\n\n\n\n🧑🏻‍🏫 Module Team\n\nModule Convenor\n\n\n\nBurak Sonmez  Lecturer in Quantitative Social Science  University College London 📧 b.sonmez@ucl.ac.uk ( at )\nOffice Hours:\n\nWhen:Fridays 16:00-18:00\nWhere:55-59 Gordon Square, 416\nHow to book: Please email me in advance\n\n\n\n\n\n\n📍 Lectures\nFridays 10:00-12:00 at Roberts Building 309\n\n\n💻 Practical Session Groups\n\nGroup 01\n\n📆 Fridays\n⌚ 12:00 - 13:00\n📍 Bedford Way (20) W 2.08\n🧑‍🏫 Burak Sonmez\n\n\n\nGroup 02\n\n📆 Fridays\n⌚ 15:00 - 16:00\n📍 Bedford Way (20) 828\n🧑‍🏫 Burak Sonmez"
   },
   {
     "objectID": "index.html",
@@ -1552,5 +1552,229 @@
     "title": "🗓️ Week 05Improving Workflow for Reproducible Social Science",
     "section": "Lab exercise",
     "text": "Lab exercise\n\nCreate a new Quarto document using File &gt; New File &gt; Quarto Document. Read the instructions. Practice running the chunks individually\nPractice what you’ve learned in the lecture by creating a very short report. The title should be your name, and you should include headings for each step in your report\nUsing any R in-built dataset, you will come up with one data wrangling task (e.g. filtering and summarising) to run its code inside your Quarto document (e.g. code chunk). Make sure that your report should include both code and output\nUsing the same R in-built dataset, you will come up with one data visualisation (e.g. ggplot) to run its code inside your Quarto document (e.g. code chunk). Make sure that your report should include both code and output\nFinally, render your Quarto report in both HTML and PDF format\n\n\n\n\nSOCS0100 – Computational Tools for Reproducible Social Science"
+  },
+  {
+    "objectID": "2023/weeks/week06/slides6.html",
+    "href": "2023/weeks/week06/slides6.html",
+    "title": "🗓️ Week 06From Reproducibility to Interactivity",
+    "section": "",
+    "text": "Shiny is a “framework for creating web applications using R code”\nYou can create a dashboard or an interactive map without knowing anything about HTML, CSS, or JavaScript\nYou’ll learn the two key components of every Shiny app: the UI (user interface) which defines how your app looks, and the server function which defines how your app works\nShiny uses reactive programming to automatically update outputs when inputs change so we’ll finish off the chapter by learning the third important component of Shiny apps: reactive expressions\n\n\n\n\n\nYou first need to install install.packages(\"shiny\")\nThen load in your current R session library(shiny)\n\n\n\n\n\nCreate a new directory for your app, and put a single file called app.R in it\nThis app.R file will be used to tell Shiny both how your app should look, and how it should behave\nIf you’re creating a complex app, you can achieve the same goal with two files: ui.R and server.R.\n\n\n\n\nlibrary(shiny)\nui &lt;- fluidPage(\n  \"This is my first Shiny app!\"\n)\nserver &lt;- function(input, output, session) {\n}\nshinyApp(ui, server)\n\n\n\n\nCreate a new directory and an app.R file containing a basic app in one step by clicking File | New Project, then selecting New Directory and Shiny Web Application\nIt is very important that the name of the file is app.R and out in its own folder, otherwise it would not be recognised as a Shiny app\n\n\n\n\n\nThere are a few ways you can run this app:\n\nClick the Run App button in the document toolbar\nUse a keyboard shortcut: Cmd/Ctrl + Shift + Enter\nDeploy to the shinyapps.io cloud\n\ninstall.packages(\"rsconnect\")\nlibrary(rsconnect)\n\nrsconnect::setAccountInfo(name = \"&lt;Account name&gt;\", \n                          token = \"&lt;Token&gt;\",\n                          secret = \"&lt;Secret&gt;\")\n\nrsconnect::deployApp(appNames = \"&lt;App name&gt;\")\n\n\n\n\n\nClick the stop button to stop the app, or press the Escape key."
+  },
+  {
+    "objectID": "2023/weeks/week06/slides6.html#intro-to-shiny",
+    "href": "2023/weeks/week06/slides6.html#intro-to-shiny",
+    "title": "🗓️ Week 06From Reproducibility to Interactivity",
+    "section": "Intro to Shiny",
+    "text": "Intro to Shiny\n\nShiny is a “framework for creating web applications using R code”\nYou can create a dashboard or an interactive map without knowing anything about HTML, CSS, or JavaScript\nYou’ll learn the two key components of every Shiny app: the UI (user interface) which defines how your app looks, and the server function which defines how your app works\nShiny uses reactive programming to automatically update outputs when inputs change so we’ll finish off the chapter by learning the third important component of Shiny apps: reactive expressions"
+  },
+  {
+    "objectID": "2023/weeks/week06/slides6.html#setup",
+    "href": "2023/weeks/week06/slides6.html#setup",
+    "title": "🗓️ Week 06From Reproducibility to Interactivity",
+    "section": "Setup",
+    "text": "Setup\n\nYou first need to install install.packages(\"shiny\")\nThen load in your current R session library(shiny)"
+  },
+  {
+    "objectID": "2023/weeks/week06/slides6.html#creating-app-directory-and-app.r-file",
+    "href": "2023/weeks/week06/slides6.html#creating-app-directory-and-app.r-file",
+    "title": "🗓️ Week 06From Reproducibility to Interactivity",
+    "section": "Creating app directory and app.R file",
+    "text": "Creating app directory and app.R file\n\nCreate a new directory for your app, and put a single file called app.R in it\nThis app.R file will be used to tell Shiny both how your app should look, and how it should behave\nIf you’re creating a complex app, you can achieve the same goal with two files: ui.R and server.R."
+  },
+  {
+    "objectID": "2023/weeks/week06/slides6.html#app.r-file",
+    "href": "2023/weeks/week06/slides6.html#app.r-file",
+    "title": "🗓️ Week 06From Reproducibility to Interactivity",
+    "section": "app.R file",
+    "text": "app.R file\nlibrary(shiny)\nui &lt;- fluidPage(\n  \"This is my first Shiny app!\"\n)\nserver &lt;- function(input, output, session) {\n}\nshinyApp(ui, server)"
+  },
+  {
+    "objectID": "2023/weeks/week06/slides6.html#shiny-basics",
+    "href": "2023/weeks/week06/slides6.html#shiny-basics",
+    "title": "🗓️ Week 06From Reproducibility to Interactivity",
+    "section": "Shiny basics",
+    "text": "Shiny basics\n\nCreate a new directory and an app.R file containing a basic app in one step by clicking File | New Project, then selecting New Directory and Shiny Web Application\nIt is very important that the name of the file is app.R and out in its own folder, otherwise it would not be recognised as a Shiny app"
+  },
+  {
+    "objectID": "2023/weeks/week06/slides6.html#deployment",
+    "href": "2023/weeks/week06/slides6.html#deployment",
+    "title": "🗓️ Week 06From Reproducibility to Interactivity",
+    "section": "Deployment",
+    "text": "Deployment\nThere are a few ways you can run this app:\n\nClick the Run App button in the document toolbar\nUse a keyboard shortcut: Cmd/Ctrl + Shift + Enter\nDeploy to the shinyapps.io cloud\n\ninstall.packages(\"rsconnect\")\nlibrary(rsconnect)\n\nrsconnect::setAccountInfo(name = \"&lt;Account name&gt;\", \n                          token = \"&lt;Token&gt;\",\n                          secret = \"&lt;Secret&gt;\")\n\nrsconnect::deployApp(appNames = \"&lt;App name&gt;\")"
+  },
+  {
+    "objectID": "2023/weeks/week06/slides6.html#cancelling-the-app",
+    "href": "2023/weeks/week06/slides6.html#cancelling-the-app",
+    "title": "🗓️ Week 06From Reproducibility to Interactivity",
+    "section": "Cancelling the app",
+    "text": "Cancelling the app\n\nClick the stop button to stop the app, or press the Escape key."
+  },
+  {
+    "objectID": "2023/weeks/week06/slides6.html#setup-and-loading-the-dataset",
+    "href": "2023/weeks/week06/slides6.html#setup-and-loading-the-dataset",
+    "title": "🗓️ Week 06From Reproducibility to Interactivity",
+    "section": "Setup and loading the dataset",
+    "text": "Setup and loading the dataset\n\nLet’s use the processed EMDAT dataset in which we keep country, year, deaths, injuries, and homelessness variables to build an interactive data visualisation (e.g. plotting trends)\n\n#package uploading \nif (!require(shiny)) install.packages(\"shiny\")\nif (!require(ggplot2)) install.packages(\"ggplot2\")\nif (!require(dplyr)) install.packages(\"dplyr\")\n\nlibrary(shiny)\nlibrary(ggplot2)\nlibrary(dplyr)\n\n# Read data from CSV\ndata &lt;- read.csv(\"emdat_app.csv\")"
+  },
+  {
+    "objectID": "2023/weeks/week06/slides6.html#add-plain-text-to-the-ui",
+    "href": "2023/weeks/week06/slides6.html#add-plain-text-to-the-ui",
+    "title": "🗓️ Week 06From Reproducibility to Interactivity",
+    "section": "Add plain text to the UI",
+    "text": "Add plain text to the UI\n\nYou can place R strings inside fluidPage() to render text\n\nfluidPage(\"Disaster Statistics\", \"Trends\")\n\nReplace the line in your app that assigns an empty fluidPage() into ui with the one above, and run the app\nThe entire UI will be built by passing comma-separated arguments into the fluidPage() function. By passing regular text, the webpage will just render boring unformatted text"
+  },
+  {
+    "objectID": "2023/weeks/week06/slides6.html#add-formatted-text-and-other-html-elements",
+    "href": "2023/weeks/week06/slides6.html#add-formatted-text-and-other-html-elements",
+    "title": "🗓️ Week 06From Reproducibility to Interactivity",
+    "section": "Add formatted text and other HTML elements",
+    "text": "Add formatted text and other HTML elements\n\nIf you want your text to be formatted nicer, Shiny has many functions that are wrappers around HTML tags that format text\n\nh1() function for a top-level header\nh2() for a secondary header\nstrong() to make text bold\nem() to make text italicised\nand many others\n\n\nfluidPage(\n  h1(\"Disasters\"),\n  \"Statistics\",\n  \"Trends\",\n  br(),\n  \"Emdat\",\n  strong(\"data\")\n)"
+  },
+  {
+    "objectID": "2023/weeks/week06/slides6.html#adding-a-title",
+    "href": "2023/weeks/week06/slides6.html#adding-a-title",
+    "title": "🗓️ Week 06From Reproducibility to Interactivity",
+    "section": "Adding a title",
+    "text": "Adding a title\n\nYou could add a title to the app with either h1() or Shiny also has a special function titlePanel()\nUsing titlePanel() adds a visible big title-like text to the top of the page\n\nfluidPage(\n  titlePanel(\"Disaster Statistics Trends\")\n)"
+  },
+  {
+    "objectID": "2023/weeks/week06/slides6.html#adding-a-layout",
+    "href": "2023/weeks/week06/slides6.html#adding-a-layout",
+    "title": "🗓️ Week 06From Reproducibility to Interactivity",
+    "section": "Adding a layout",
+    "text": "Adding a layout\n\nsidebarLayout() to add a simple structure. It provides a simple two-column layout with a smaller sidebar and a larger main panel\nYou can add the following code after the titlePanel()\n\nsidebarLayout(\n  sidebarPanel(\"our inputs will go here\"),\n  mainPanel(\"the results will go here\")\n)\n\nRemember that all the arguments inside fluidPage() need to be separated by commas"
+  },
+  {
+    "objectID": "2023/weeks/week06/slides6.html#adding-inputs-to-the-ui",
+    "href": "2023/weeks/week06/slides6.html#adding-inputs-to-the-ui",
+    "title": "🗓️ Week 06From Reproducibility to Interactivity",
+    "section": "Adding inputs to the UI",
+    "text": "Adding inputs to the UI\n\nInputs are what gives users a way to interact with a Shiny app. Shiny provides many input functions to support many kinds of interactions that the user could have with an app\ntextInput() is used to let the user enter text, numericInput() lets the user select a number, dateInput() is for selecting a date, and selectInput() is for creating a select box (i.e. dropdown menu)\nAll input functions have the same first two arguments: inputId and label. The inputId will be the name that Shiny will use to refer to this input when you want to retrieve its current value\nThe label argument specifies the text in the display label that goes along with the input widget"
+  },
+  {
+    "objectID": "2023/weeks/week06/slides6.html#shiny-inputs",
+    "href": "2023/weeks/week06/slides6.html#shiny-inputs",
+    "title": "🗓️ Week 06From Reproducibility to Interactivity",
+    "section": "Shiny inputs",
+    "text": "Shiny inputs"
+  },
+  {
+    "objectID": "2023/weeks/week06/slides6.html#input-for-country",
+    "href": "2023/weeks/week06/slides6.html#input-for-country",
+    "title": "🗓️ Week 06From Reproducibility to Interactivity",
+    "section": "Input for country",
+    "text": "Input for country\n\nThe first input we can have is to select a country in this data\nThe most appropriate input type in this case is probably the select box. Look at the documentation for selectInput() and create an input function\n\nselectInput(\n    inputId = \"country\",\n    label = \"Select country\",\n    choices = unique(data$country),\n    selected = \"Belgium\"\n  )"
+  },
+  {
+    "objectID": "2023/weeks/week06/slides6.html#input-for-variables-to-analyse",
+    "href": "2023/weeks/week06/slides6.html#input-for-variables-to-analyse",
+    "title": "🗓️ Week 06From Reproducibility to Interactivity",
+    "section": "Input for variables to analyse",
+    "text": "Input for variables to analyse\n\nLike the country variable, for this one we should also have a dropdown menu to choose the variables\n\nselectInput(\n        inputId = \"variable\",\n        label = \"Select variable\",\n        choices = c(\"Deaths\", \"Injuries\", \"Homelessness\"),\n        selected = \"Deaths\"\n      )\n\nAdd these input codes inside sidebarPanel(), after the previous input (separate them with a comma)"
+  },
+  {
+    "objectID": "2023/weeks/week06/slides6.html#input-for-years-to-show-trends-over-certain-period-of-time",
+    "href": "2023/weeks/week06/slides6.html#input-for-years-to-show-trends-over-certain-period-of-time",
+    "title": "🗓️ Week 06From Reproducibility to Interactivity",
+    "section": "Input for years to show trends over certain period of time",
+    "text": "Input for years to show trends over certain period of time\n\nThe most sensible type of input for this is sliderInput()\nLooking at the documentation for sliderInput(), you’ll see that by supplying a vector of length two as the value argument, it can be used to specify a range rather than a single number\n\nsliderInput(\n        inputId = \"year_range\",\n        label = \"Select year range\",\n        min = min(data$Year),\n        max = max(data$Year),\n        value = c(min(data$Year), max(data$Year)),\n        step = 1,\n        sep = \"\"\n      )"
+  },
+  {
+    "objectID": "2023/weeks/week06/slides6.html#add-placeholders-for-outputs",
+    "href": "2023/weeks/week06/slides6.html#add-placeholders-for-outputs",
+    "title": "🗓️ Week 06From Reproducibility to Interactivity",
+    "section": "Add placeholders for outputs",
+    "text": "Add placeholders for outputs\n\nAfter creating all the inputs, we should add elements to the UI to display the outputs. Outputs can be any object that R creates and that we want to display in our app - such as a plot, a table, or text\nShiny provides several output functions, one for each type of output. Similarly to the input functions, all the output functions have a outputId argument that is used to identify each output, and this argument must be unique for each output"
+  },
+  {
+    "objectID": "2023/weeks/week06/slides6.html#output-for-a-plot",
+    "href": "2023/weeks/week06/slides6.html#output-for-a-plot",
+    "title": "🗓️ Week 06From Reproducibility to Interactivity",
+    "section": "Output for a plot",
+    "text": "Output for a plot\n\nSince we want a plot to show trends of disaster statistics, the function we can use is plotOutput()\nYou can add the following code into the mainPanel()\n\n mainPanel(\n      plotOutput(\"plot\")\n    )"
+  },
+  {
+    "objectID": "2023/weeks/week06/slides6.html#output-for-a-table",
+    "href": "2023/weeks/week06/slides6.html#output-for-a-table",
+    "title": "🗓️ Week 06From Reproducibility to Interactivity",
+    "section": "Output for a table",
+    "text": "Output for a table\n\nSince we want a plot to show trends of disaster statistics, the function we can use is tableOutput()\nYou can add the following code into the mainPanel()\n\n mainPanel(\n      tableOutput(\"results\")\n    )"
+  },
+  {
+    "objectID": "2023/weeks/week06/slides6.html#implement-server-logic-to-create-outputs",
+    "href": "2023/weeks/week06/slides6.html#implement-server-logic-to-create-outputs",
+    "title": "🗓️ Week 06From Reproducibility to Interactivity",
+    "section": "Implement server logic to create outputs",
+    "text": "Implement server logic to create outputs\n\nIf you look at the server function, you’ll notice that it is always defined with two arguments: input and output\nYou must define these two arguments! Both input and output are list-like objects. As the names suggest, input is a list you will read values from and output is a list you will write values to\ninput will contain the values of all the different inputs at any given time, and output is where you will save output objects (such as tables and plots) to display in your app"
+  },
+  {
+    "objectID": "2023/weeks/week06/slides6.html#building-an-output",
+    "href": "2023/weeks/week06/slides6.html#building-an-output",
+    "title": "🗓️ Week 06From Reproducibility to Interactivity",
+    "section": "Building an output",
+    "text": "Building an output\n\nSave the output object into the output list (remember the app template - every server function has an output argument)\nBuild the object with a render* function, where * is the type of output\nAccess input values using the input list (every server function has an input argument)"
+  },
+  {
+    "objectID": "2023/weeks/week06/slides6.html#making-an-output-react-to-an-input-and-building-the-plot-output",
+    "href": "2023/weeks/week06/slides6.html#making-an-output-react-to-an-input-and-building-the-plot-output",
+    "title": "🗓️ Week 06From Reproducibility to Interactivity",
+    "section": "Making an output react to an input and building the plot output",
+    "text": "Making an output react to an input and building the plot output\n\n\n\nLet’s learn how to make an output depended on an input\nThe variable input contains a list of all the inputs that are defined in the UI\ninput$year_range return a vector of length two containing the minimum and maximum year. Whenever the user manipulates the slider in the app, these values are updated, and whatever code relies on it gets re-evaluated. This is a concept known as reactivity\n\n\nserver &lt;- function(input, output, session) {\n  \n  output$plot &lt;- renderPlot({\n    variable &lt;- switch(input$variable,\n                       \"Deaths\" = \"deaths\",\n                       \"Injuries\" = \"injuries\",\n                       \"Homelessness\" = \"homelessness\")\n    \n    data %&gt;%\n      filter(country == input$country, \n             Year &gt;= input$year_range[1], \n             Year &lt;= input$year_range[2]) %&gt;%\n      ggplot(aes(Year, .data[[variable]])) +\n      geom_line() +\n      labs(y = input$variable)\n  })\n  \n}"
+  },
+  {
+    "objectID": "2023/weeks/week06/slides6.html#making-an-output-react-to-an-input-and-building-the-plot-output-1",
+    "href": "2023/weeks/week06/slides6.html#making-an-output-react-to-an-input-and-building-the-plot-output-1",
+    "title": "🗓️ Week 06From Reproducibility to Interactivity",
+    "section": "Making an output react to an input and building the plot output",
+    "text": "Making an output react to an input and building the plot output\n\n\n\nRecall that we have 3 inputs: country, variable, and year. We can filter the data based on the values of these three inputs. We can use dplyr functions to filter the data\n\n\nserver &lt;- function(input, output, session) {\n\noutput$plot &lt;- renderPlot({  variable &lt;- switch(input$variable, \"Deaths\"\n= \"deaths\", \"Injuries\" = \"injuries\", \"Homelessness\" = \"homelessness\")\n\ndata %&gt;%\n  filter(country == input$country, \n         Year &gt;= input$year_range[1], \n         Year &lt;= input$year_range[2]) %&gt;%\n  ggplot(aes(Year, .data[[variable]])) +\n  geom_line() +\n  labs(y = input$variable)\n\n})\n\n}"
+  },
+  {
+    "objectID": "2023/weeks/week06/slides6.html#finalising-your-shiny-app",
+    "href": "2023/weeks/week06/slides6.html#finalising-your-shiny-app",
+    "title": "🗓️ Week 06From Reproducibility to Interactivity",
+    "section": "Finalising your Shiny app",
+    "text": "Finalising your Shiny app\nif (!require(shiny)) install.packages(\"shiny\")\nif (!require(ggplot2)) install.packages(\"ggplot2\")\nif (!require(dplyr)) install.packages(\"dplyr\")\n\nlibrary(shiny)\nlibrary(ggplot2)\nlibrary(dplyr)\n\n# Read data from CSV\ndata &lt;- read.csv(\"emdat_app.csv\")\n\nui &lt;- fluidPage(\n  \n  # Header\n  h1(\"Disaster statistics trends\"),\n  \n  # Sidebar layout\n  sidebarLayout(\n    \n    # Sidebar panel\n    sidebarPanel(\n      selectInput(\n        inputId = \"country\",\n        label = \"Select country\",\n        choices = unique(data$country),\n        selected = \"Belgium\"\n      ),\n      \n      selectInput(\n        inputId = \"variable\",\n        label = \"Select variable\",\n        choices = c(\"Deaths\", \"Injuries\", \"Homelessness\"),\n        selected = \"Deaths\"\n      ),\n      \n      sliderInput(\n        inputId = \"year_range\",\n        label = \"Select year range\",\n        min = min(data$Year),\n        max = max(data$Year),\n        value = c(min(data$Year), max(data$Year)),\n        step = 1,\n        sep = \"\"\n      )\n    ),\n    \n    # Main panel\n    mainPanel(\n      plotOutput(\"plot\")\n    )\n  )\n)\n\nserver &lt;- function(input, output, session) {\n  \n  output$plot &lt;- renderPlot({\n    variable &lt;- switch(input$variable,\n                       \"Deaths\" = \"deaths\",\n                       \"Injuries\" = \"injuries\",\n                       \"Homelessness\" = \"homelessness\")\n    \n    data %&gt;%\n      filter(country == input$country, \n             Year &gt;= input$year_range[1], \n             Year &lt;= input$year_range[2]) %&gt;%\n      ggplot(aes(Year, .data[[variable]])) +\n      geom_line() +\n      labs(y = input$variable)\n  })\n  \n}\n\nshinyApp(ui, server)"
+  },
+  {
+    "objectID": "2023/weeks/week06/slides6.html#further-materials",
+    "href": "2023/weeks/week06/slides6.html#further-materials",
+    "title": "🗓️ Week 06From Reproducibility to Interactivity",
+    "section": "Further materials",
+    "text": "Further materials\nFurther texts:\n\nMastering Shiny\n\nTutorials:\n\nShiny basics"
+  },
+  {
+    "objectID": "2023/weeks/week06/slides6.html#lab-exercise-building-a-disaster-statistics-shiny-app",
+    "href": "2023/weeks/week06/slides6.html#lab-exercise-building-a-disaster-statistics-shiny-app",
+    "title": "🗓️ Week 06From Reproducibility to Interactivity",
+    "section": "Lab exercise: Building a Disaster Statistics Shiny App",
+    "text": "Lab exercise: Building a Disaster Statistics Shiny App\n\n\n\nProblem 1: Setup\n\nInitialise a Shiny app and load required libraries\nRead “emdat_app.csv” into data\n\nProblem 2: UI Design\n\nAdd a title, country selector, variable selector, and year range slider.\n\nProblem 3: Initial Plot\n\nDisplay a placeholder plot\nFilter data based on user inputs and create a line plot\n\n\n\n\nProblem 4: Plot Customisation\n\nLabel axes dynamically based on the selected variable\nImplement UI option for different plot types\n\nProblem 5: Dynamic Updates\n\nUse reactive expressions to update variable choices based on the selected country\nMake the plot dynamically update with user inputs\n\nProblem 6: Testing and Debugging\n\nTest the app with various inputs\n\n\n\n\n\n\n\nSOCS0100 – Computational Tools for Reproducible Social Science"
+  },
+  {
+    "objectID": "2023/weeks/week06/page6.html",
+    "href": "2023/weeks/week06/page6.html",
+    "title": "🗓️ Week 06 ->From Reproducibility to Interactivity",
+    "section": "",
+    "text": "SStudents will learn advanced data visualisation tools. They will specifically learn how to build and deploy Shiny apps to create interactive data visualisations. This will help students create interactive dashboards to disseminate their data in the projects."
+  },
+  {
+    "objectID": "2023/weeks/week06/page6.html#lecture-slides",
+    "href": "2023/weeks/week06/page6.html#lecture-slides",
+    "title": "🗓️ Week 06 ->From Reproducibility to Interactivity",
+    "section": "👨‍🏫 Lecture Slides",
+    "text": "👨‍🏫 Lecture Slides\nEither click on the slide area below or click here to view it in fullscreen. Use your keypad to navigate the slides.\n\n\n\n\n🎥 Looking for lecture recordings? You can only find those on Moodle."
+  },
+  {
+    "objectID": "2023/weeks/week06/page6.html#lab-materials",
+    "href": "2023/weeks/week06/page6.html#lab-materials",
+    "title": "🗓️ Week 06 ->From Reproducibility to Interactivity",
+    "section": "✍️ Lab Materials",
+    "text": "✍️ Lab Materials\n🚧 Students will build their own interactive dashboards through Shiny apps.🚧"
+  },
+  {
+    "objectID": "2023/weeks/week06/page6.html#required-reading",
+    "href": "2023/weeks/week06/page6.html#required-reading",
+    "title": "🗓️ Week 06 ->From Reproducibility to Interactivity",
+    "section": "📚 Required Reading",
+    "text": "📚 Required Reading\n\nWickham, H. (2021). Mastering shiny. ” O’Reilly Media, Inc.”. (Chapter 1, 2, 3, and 7)."
   }
 ]
