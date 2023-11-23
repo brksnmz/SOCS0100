@@ -11,7 +11,7 @@
     "href": "2023/index.html",
     "title": "SOCS0100 - Computational Tools for Reproducible Social Science",
     "section": "",
-    "text": "📢 Important\n\n\n\n\n\n(14/11/2023)\n\n🗓️ Week 06 lecture material is now available!\n\n\n\n\n\n🧑🏻‍🏫 Module Team\n\nModule Convenor\n\n\n\nBurak Sonmez  Lecturer in Quantitative Social Science  University College London 📧 b.sonmez@ucl.ac.uk ( at )\nOffice Hours:\n\nWhen:Fridays 16:00-18:00\nWhere:55-59 Gordon Square, 416\nHow to book: Please email me in advance\n\n\n\n\n\n\n📍 Lectures\nFridays 10:00-12:00 at Roberts Building 309\n\n\n💻 Practical Session Groups\n\nGroup 01\n\n📆 Fridays\n⌚ 12:00 - 13:00\n📍 Bedford Way (20) W 2.08\n🧑‍🏫 Burak Sonmez\n\n\n\nGroup 02\n\n📆 Fridays\n⌚ 15:00 - 16:00\n📍 Bedford Way (20) 828\n🧑‍🏫 Burak Sonmez"
+    "text": "📢 Important\n\n\n\n\n\n(23/11/2023)\n\n🗓️ Week 07 lecture material is now available!\n\n\n\n\n\n🧑🏻‍🏫 Module Team\n\nModule Convenor\n\n\n\nBurak Sonmez  Lecturer in Quantitative Social Science  University College London 📧 b.sonmez@ucl.ac.uk ( at )\nOffice Hours:\n\nWhen:Fridays 16:00-18:00\nWhere:55-59 Gordon Square, 416\nHow to book: Please email me in advance\n\n\n\n\n\n\n📍 Lectures\nFridays 10:00-12:00 at Roberts Building 309\n\n\n💻 Practical Session Groups\n\nGroup 01\n\n📆 Fridays\n⌚ 12:00 - 13:00\n📍 Bedford Way (20) W 2.08\n🧑‍🏫 Burak Sonmez\n\n\n\nGroup 02\n\n📆 Fridays\n⌚ 15:00 - 16:00\n📍 Bedford Way (20) 828\n🧑‍🏫 Burak Sonmez"
   },
   {
     "objectID": "index.html",
@@ -1776,5 +1776,306 @@
     "title": "🗓️ Week 06 ->From Reproducibility to Interactivity",
     "section": "📚 Required Reading",
     "text": "📚 Required Reading\n\nWickham, H. (2021). Mastering shiny. ” O’Reilly Media, Inc.”. (Chapter 1, 2, 3, and 7)."
+  },
+  {
+    "objectID": "2023/weeks/week07/slides7.html",
+    "href": "2023/weeks/week07/slides7.html",
+    "title": "🗓️ Week 07Automated Data Collection I",
+    "section": "",
+    "text": "It does not conform to a data model but has some structure\nIt is not stored in rows and columns\nThis type of data contains tags and elements (Metadata) which is used to group data and describe how the data is stored\nSimilar entities are grouped together and organised in a hierarchy\n\nExamples: HTML (e.g. websites), XML (e.g. government data), JSON (e.g. social media API)\n\n\n\n\n\n\n\n\n\n\nExtracting data from webpages:\n\nIncreasing amount of data is available on websites:\n\nSpeeches, sentences, biographical information\nSocial media data, newspaper articles, forums\nGeographic information, conflict data, climate data\n\nprocess of extracting this information automatically and transforming it into a structured dataset\n\n\n\n\n\n\nAny content that can be viewed on a webpage can be scraped\nNo API needed\nNo rate-limiting or authentication (usually)\n\n\n\n\n\nRarely tailored for researchers\nMessy, unstructured, inconsistent\nEntirely site-dependent\nSites change their layout all the time\n\n\n\n\n\nCheck a site’s terms and conditions before scraping. Some websites disallow scrapers on robots.txt file\nConsider non-intrusive ways to gather data. Don’t exhaust the site’s server\nData protection: data means traces of individuals\nSecure storage vs. deletion of data\nAnonymisation of users\nReview these ethical webscraping tips\n\n\n\n\n\nThe core of a website is HTML (Hyper Text Markup Language)\nHTML defines the structure of a webpage using a series of elements. HTML elements tell the browser how to display the page by labeling pieces of content: “This is a heading,” “this is a paragraph,” “this is a link,” etc.\n\n&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n    &lt;head&gt;\n        &lt;title&gt;Page title&lt;/title&gt;\n    &lt;/head&gt;\n    &lt;body&gt;\n        &lt;p&gt;Hello world!&lt;/p&gt;\n    &lt;/body&gt;\n&lt;/html&gt;\n\n\n\nAn HTML element is defined by a start tag, some content, and an end tag\n\n\n\n\nTag\nMeaning\n\n\n\n\n&lt;head&gt;\npage header (metadata, etc.)\n\n\n&lt;body&gt;\nholds all of the content\n\n\n&lt;p&gt;\nregular text (paragraph)\n\n\n&lt;h1&gt;,&lt;h2&gt;,&lt;h3&gt;\nheader text, levels 1, 2, 3\n\n\nol,,&lt;ul&gt;,&lt;li&gt;\nordered list, unordered list, list item\n\n\n&lt;a href=\"page.html\"&gt;\nlink to “page.html”\n\n\n&lt;table&gt;,&lt;tr&gt;,&lt;td&gt;\ntable, table row, table item\n\n\n&lt;div&gt;,&lt;span&gt;\ngeneral containers\n\n\n&lt;head&gt;\npage header (metadata, etc.)\n\n\n\n\n\n\n\nAll HTML elements can have attributes\n\nattributes provide additional information about an element\nthey are included inside the tag\n\n\n\nExamples:\n&lt;img src=\"no_smiley.jpg\" alt=\"Image that does not exist.\"&gt; &lt;p style=\"color:red\"&gt;This is a paragraph.&lt;/p&gt;\n\n\n\n\nCSS stands for Cascading Style Sheet. CSS defines how HTML elements are to be displayed\nHTML came first. But it was only meant to define content, not format it. While HTML contains tags like  and , this is a very inefficient way to develop a website. Some websites can easily contain 100+ individual pages, each with their own HTML code\nCSS was created specifically to display content on a webpage. Now, one can change the look of an entire website just by changing one file\nMost web designers litter the HTML markup with tons of classes and ids to provide “hooks” for their CSS\nYou can piggyback on these to jump to the parts of the markup that contain the data you need\n\n\n\n\n\nSelectors:\n\nElement selector: p\nClass selector: p class=\"blue\"\nI.D. selector: p id=\"blue\"\n\nDeclarations:\n\nSelector: p\nProperty: background-color\nValue: yellow\n\n\n\n\n\n\n&lt;body&gt;\n    &lt;table id=\"content\"&gt;\n&lt;tr class='name'&gt;\n&lt;td class='firstname'&gt;\n    Kurtis\n&lt;/td&gt;\n&lt;td class='lastname'&gt;\n    McCoy\n&lt;/td&gt;\n&lt;/tr&gt;\n&lt;tr class='name'&gt;\n&lt;td class='firstname'&gt;\n    Leah\n&lt;/td&gt;\n&lt;td class='lastname'&gt;\n    Guerrero\n&lt;/td&gt;\n&lt;/tr&gt;\n&lt;/table&gt;\n&lt;/body&gt;\nWe can use CSS selectors (see example)\n\nSelectorGadget as Chrome Extension\nInspect option in Chrome\n\n\n\n\n\nUse inspect option to select table to copy Xpath –example: //*[@id=\"mw-content-text\"]/div[1]/table[1]"
+  },
+  {
+    "objectID": "2023/weeks/week07/slides7.html#what-is-semi-structured-data",
+    "href": "2023/weeks/week07/slides7.html#what-is-semi-structured-data",
+    "title": "🗓️ Week 07Automated Data Collection I",
+    "section": "What is semi-structured data?",
+    "text": "What is semi-structured data?\n\nIt does not conform to a data model but has some structure\nIt is not stored in rows and columns\nThis type of data contains tags and elements (Metadata) which is used to group data and describe how the data is stored\nSimilar entities are grouped together and organised in a hierarchy\n\nExamples: HTML (e.g. websites), XML (e.g. government data), JSON (e.g. social media API)"
+  },
+  {
+    "objectID": "2023/weeks/week07/slides7.html#what-is-webscraping",
+    "href": "2023/weeks/week07/slides7.html#what-is-webscraping",
+    "title": "🗓️ Week 07Automated Data Collection I",
+    "section": "What is webscraping?",
+    "text": "What is webscraping?\nExtracting data from webpages:\n\nIncreasing amount of data is available on websites:\nSpeeches, sentences, biographical information\nSocial media data, newspaper articles, forums\nGeographic information, conflict data, climate data\nprocess of extracting this information automatically and transforming it into a structured dataset"
+  },
+  {
+    "objectID": "2023/weeks/week07/slides7.html#webscraping-benefits",
+    "href": "2023/weeks/week07/slides7.html#webscraping-benefits",
+    "title": "🗓️ Week 07Automated Data Collection I",
+    "section": "Webscraping benefits",
+    "text": "Webscraping benefits\n\nAny content that can be viewed on a webpage can be scraped\nNo API needed\nNo rate-limiting or authentication (usually)"
+  },
+  {
+    "objectID": "2023/weeks/week07/slides7.html#webscraping-challenges",
+    "href": "2023/weeks/week07/slides7.html#webscraping-challenges",
+    "title": "🗓️ Week 07Automated Data Collection I",
+    "section": "Webscraping challenges",
+    "text": "Webscraping challenges\n\nRarely tailored for researchers\nMessy, unstructured, inconsistent\nEntirely site-dependent\nSites change their layout all the time"
+  },
+  {
+    "objectID": "2023/weeks/week07/slides7.html#ethics-in-webscraping",
+    "href": "2023/weeks/week07/slides7.html#ethics-in-webscraping",
+    "title": "🗓️ Week 07Automated Data Collection I",
+    "section": "Ethics in webscraping",
+    "text": "Ethics in webscraping\n\nCheck a site’s terms and conditions before scraping. Some websites disallow scrapers on robots.txt file\nConsider non-intrusive ways to gather data. Don’t exhaust the site’s server\nData protection: data means traces of individuals\nSecure storage vs. deletion of data\nAnonymisation of users\nReview these ethical webscraping tips"
+  },
+  {
+    "objectID": "2023/weeks/week07/slides7.html#html-basics",
+    "href": "2023/weeks/week07/slides7.html#html-basics",
+    "title": "🗓️ Week 07Automated Data Collection I",
+    "section": "HTML (basics)",
+    "text": "HTML (basics)\n\nThe core of a website is HTML (Hyper Text Markup Language)\nHTML defines the structure of a webpage using a series of elements. HTML elements tell the browser how to display the page by labeling pieces of content: “This is a heading,” “this is a paragraph,” “this is a link,” etc.\n\n&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n    &lt;head&gt;\n        &lt;title&gt;Page title&lt;/title&gt;\n    &lt;/head&gt;\n    &lt;body&gt;\n        &lt;p&gt;Hello world!&lt;/p&gt;\n    &lt;/body&gt;\n&lt;/html&gt;"
+  },
+  {
+    "objectID": "2023/weeks/week07/slides7.html#html-elements",
+    "href": "2023/weeks/week07/slides7.html#html-elements",
+    "title": "🗓️ Week 07Automated Data Collection I",
+    "section": "HTML (elements)",
+    "text": "HTML (elements)\nAn HTML element is defined by a start tag, some content, and an end tag\n\n\n\n\nTag\nMeaning\n\n\n\n\n&lt;head&gt;\npage header (metadata, etc.)\n\n\n&lt;body&gt;\nholds all of the content\n\n\n&lt;p&gt;\nregular text (paragraph)\n\n\n&lt;h1&gt;,&lt;h2&gt;,&lt;h3&gt;\nheader text, levels 1, 2, 3\n\n\nol,,&lt;ul&gt;,&lt;li&gt;\nordered list, unordered list, list item\n\n\n&lt;a href=\"page.html\"&gt;\nlink to “page.html”\n\n\n&lt;table&gt;,&lt;tr&gt;,&lt;td&gt;\ntable, table row, table item\n\n\n&lt;div&gt;,&lt;span&gt;\ngeneral containers\n\n\n&lt;head&gt;\npage header (metadata, etc.)"
+  },
+  {
+    "objectID": "2023/weeks/week07/slides7.html#html-attributes",
+    "href": "2023/weeks/week07/slides7.html#html-attributes",
+    "title": "🗓️ Week 07Automated Data Collection I",
+    "section": "HTML (attributes)",
+    "text": "HTML (attributes)\n\nAll HTML elements can have attributes\nattributes provide additional information about an element\nthey are included inside the tag\n\n\n\nExamples:\n\n&lt;img src=\"no_smiley.jpg\" alt=\"Image that does not exist.\"&gt; &lt;p style=\"color:red\"&gt;This is a paragraph.&lt;/p&gt;"
+  },
+  {
+    "objectID": "2023/weeks/week07/slides7.html#css",
+    "href": "2023/weeks/week07/slides7.html#css",
+    "title": "🗓️ Week 07Automated Data Collection I",
+    "section": "CSS",
+    "text": "CSS\n\nCSS stands for Cascading Style Sheet. CSS defines how HTML elements are to be displayed\nHTML came first. But it was only meant to define content, not format it. While HTML contains tags like &lt;font&gt; and &lt;color&gt;, this is a very inefficient way to develop a website. Some websites can easily contain 100+ individual pages, each with their own HTML code\nCSS was created specifically to display content on a webpage. Now, one can change the look of an entire website just by changing one file\nMost web designers litter the HTML markup with tons of classes and ids to provide “hooks” for their CSS\nYou can piggyback on these to jump to the parts of the markup that contain the data you need"
+  },
+  {
+    "objectID": "2023/weeks/week07/slides7.html#css-anatomy",
+    "href": "2023/weeks/week07/slides7.html#css-anatomy",
+    "title": "🗓️ Week 07Automated Data Collection I",
+    "section": "CSS anatomy",
+    "text": "CSS anatomy\n\nSelectors:\n\nElement selector: p\nClass selector: p class=\"blue\"\nI.D. selector: p id=\"blue\"\n\nDeclarations:\n\nSelector: p\nProperty: background-color\nValue: yellow"
+  },
+  {
+    "objectID": "2023/weeks/week07/slides7.html#css-html",
+    "href": "2023/weeks/week07/slides7.html#css-html",
+    "title": "🗓️ Week 07Automated Data Collection I",
+    "section": "CSS + HTML",
+    "text": "CSS + HTML\n&lt;body&gt;\n    &lt;table id=\"content\"&gt;\n&lt;tr class='name'&gt;\n&lt;td class='firstname'&gt;\nKurtis\n&lt;/td&gt;\n&lt;td class='lastname'&gt;\nMcCoy\n&lt;/td&gt;\n&lt;/tr&gt;\n&lt;tr class='name'&gt;\n&lt;td class='firstname'&gt;\nLeah\n&lt;/td&gt;\n&lt;td class='lastname'&gt;\nGuerrero\n&lt;/td&gt;\n&lt;/tr&gt;\n&lt;/table&gt;\n&lt;/body&gt;\n\nWe can use CSS selectors (see example)\nSelectorGadget as Chrome Extension\nInspect option in Chrome"
+  },
+  {
+    "objectID": "2023/weeks/week07/slides7.html#lets-inspect-a-website",
+    "href": "2023/weeks/week07/slides7.html#lets-inspect-a-website",
+    "title": "🗓️ Week 07Automated Data Collection I",
+    "section": "Let’s inspect a website",
+    "text": "Let’s inspect a website\n\nUse inspect option to select table to copy Xpath –example: //*[@id=\"mw-content-text\"]/div[1]/table[1]"
+  },
+  {
+    "objectID": "2023/weeks/week07/slides7.html#overview-of-rvest",
+    "href": "2023/weeks/week07/slides7.html#overview-of-rvest",
+    "title": "🗓️ Week 07Automated Data Collection I",
+    "section": "Overview of rvest",
+    "text": "Overview of rvest\nThe package rvest allows us to:\n\nCollect the HTML source code of a webpage\nRead the HTML of the page\nSelect and keep certain elements of the page that are of interest\nRelatively simple: no dynamic webpages\n\nMain uses: Tables, texts, extracting links (downloading files)"
+  },
+  {
+    "objectID": "2023/weeks/week07/slides7.html#parsing-html-code",
+    "href": "2023/weeks/week07/slides7.html#parsing-html-code",
+    "title": "🗓️ Week 07Automated Data Collection I",
+    "section": "Parsing HTML code",
+    "text": "Parsing HTML code\nFirst step in webscraping: read HTML code in R and parse it (understanding structure)\n\nxml2 package\nread_html: parse HTML code into R (and )\nrvest package\nhtml_text: extract text from HTML code\nhtml_table: extract tables in HTML code\nhtml_nodes: extract components with CSS selector\nhtml_attrs: extract attributes of nodes"
+  },
+  {
+    "objectID": "2023/weeks/week07/slides7.html#setup",
+    "href": "2023/weeks/week07/slides7.html#setup",
+    "title": "🗓️ Week 07Automated Data Collection I",
+    "section": "Setup",
+    "text": "Setup\npacman::p_load(tidyverse, # tidyverse pkgs including purrr\n               purrr, # automating \n               xml2L, # parsing XML\n               rvest, # parsing HTML\n               robotstxt) #checking path is permitted"
+  },
+  {
+    "objectID": "2023/weeks/week07/slides7.html#parsing-the-url-of-the-website",
+    "href": "2023/weeks/week07/slides7.html#parsing-the-url-of-the-website",
+    "title": "🗓️ Week 07Automated Data Collection I",
+    "section": "Parsing the url of the website",
+    "text": "Parsing the url of the website\nlibrary(rvest)\nlibrary(xml2)\nurl &lt;- \"https://en.wikipedia.org/wiki/University_College_London\"\nparsed &lt;- read_html(url)\nThis returns an xml object that contains all the information of the website"
+  },
+  {
+    "objectID": "2023/weeks/week07/slides7.html#extracting-selected-information",
+    "href": "2023/weeks/week07/slides7.html#extracting-selected-information",
+    "title": "🗓️ Week 07Automated Data Collection I",
+    "section": "Extracting selected information",
+    "text": "Extracting selected information\n\nSelect the desired part\n\nparsed.sub &lt;- html_element(parsed, xpath = '//*[@id=\"mw-content-text\"]/div[1]/table[1]')\n\nConvert to table\n\ntable.df &lt;- html_table(parsed.sub)   \nhead(table.df)"
+  },
+  {
+    "objectID": "2023/weeks/week07/slides7.html#tidying-data-is-part-of-webscraping",
+    "href": "2023/weeks/week07/slides7.html#tidying-data-is-part-of-webscraping",
+    "title": "🗓️ Week 07Automated Data Collection I",
+    "section": "Tidying data is part of webscraping",
+    "text": "Tidying data is part of webscraping\nlibrary(janitor)\n# clean names\nnames(table.df) &lt;-  janitor::make_clean_names(names(table.df))\n\n# Delete empty rows\nempt &lt;- apply(table.df, 1, FUN = function(x) all(is.na(x) | x == \"\"))\ntable.df &lt;- table.df[which(!empt), ]\n\n# Exclude empty columns \ntable.df &lt;- table.df[,-3:-7]\n\nhead(table.df)"
+  },
+  {
+    "objectID": "2023/weeks/week07/slides7.html#automating-the-process",
+    "href": "2023/weeks/week07/slides7.html#automating-the-process",
+    "title": "🗓️ Week 07Automated Data Collection I",
+    "section": "Automating the process",
+    "text": "Automating the process\nThe task is to scrap Wiki info-cards of three universities (UCL; Oxford; Cambridge)\n#see whether path is allowed to be scraped \npaths_allowed(paths=\"https://en.wikipedia.org/wiki/University_College_London\")\n\n#creating url list for the websites to be scraped \nurl_list &lt;- c(\n  \"https://en.wikipedia.org/wiki/University_College_London\",\n  \"https://en.wikipedia.org/wiki/University_of_Cambridge\",\n  \"https://en.wikipedia.org/wiki/University_of_Oxford\"\n)"
+  },
+  {
+    "objectID": "2023/weeks/week07/slides7.html#inspection",
+    "href": "2023/weeks/week07/slides7.html#inspection",
+    "title": "🗓️ Week 07Automated Data Collection I",
+    "section": "Inspection",
+    "text": "Inspection\nurl &lt;- \"https://en.wikipedia.org/wiki/University_College_London\"\n\ndownload.file(url, destfile = \"scraped_page.html\", quiet = TRUE)\n\ntarget &lt;- read_html(\"scraped_page.html\")\n\n# If you want character vector output\ntarget1 &lt;- target %&gt;%\n  html_nodes(xpath = '//*[@id=\"mw-content-text\"]/div[1]/table[1]') %&gt;%\n  html_text() \n\n# If you want table output \ntarget2 &lt;- target %&gt;%\n  html_nodes(xpath = '//*[@id=\"mw-content-text\"]/div[1]/table[1]') %&gt;%\n  html_table()"
+  },
+  {
+    "objectID": "2023/weeks/week07/slides7.html#writing-a-function",
+    "href": "2023/weeks/week07/slides7.html#writing-a-function",
+    "title": "🗓️ Week 07Automated Data Collection I",
+    "section": "Writing a function",
+    "text": "Writing a function\nget_table_from_wiki &lt;- function(url){\n  \n  download.file(url, destfile = \"scraped_page.html\", quiet = TRUE)\n  \n  target &lt;- read_html(\"scraped_page.html\")\n  \n  table &lt;- target %&gt;%\n    html_nodes(xpath = '//*[@id=\"mw-content-text\"]/div[1]/table[1]') %&gt;%\n    html_table() \n  \n  return(table)\n}"
+  },
+  {
+    "objectID": "2023/weeks/week07/slides7.html#automating-data-collection",
+    "href": "2023/weeks/week07/slides7.html#automating-data-collection",
+    "title": "🗓️ Week 07Automated Data Collection I",
+    "section": "Automating data collection",
+    "text": "Automating data collection\n#Testing\nget_table_from_wiki(url_list[[2]])\n\n#Automation\nlibrary(purrr)\nmap(url_list, get_table_from_wiki)"
+  },
+  {
+    "objectID": "2023/weeks/week07/slides7.html#scraping-tables",
+    "href": "2023/weeks/week07/slides7.html#scraping-tables",
+    "title": "🗓️ Week 07Automated Data Collection I",
+    "section": "Scraping tables",
+    "text": "Scraping tables\ntestlink &lt;- read_html(\"https://en.wikipedia.org/wiki/University_College_London\")\ntable &lt;- testlink %&gt;%\n  html_nodes(xpath='//*[@id=\"mw-content-text\"]/div[1]/table[2]') %&gt;%\n  html_table()\n\ntable &lt;- data.frame(table)\ntable"
+  },
+  {
+    "objectID": "2023/weeks/week07/slides7.html#practical-limitations-to-scraping",
+    "href": "2023/weeks/week07/slides7.html#practical-limitations-to-scraping",
+    "title": "🗓️ Week 07Automated Data Collection I",
+    "section": "Practical limitations to scraping",
+    "text": "Practical limitations to scraping\n\nWeb-pages are complex with many different elements\nDealing with the great amount of unstructured data\nAPIs provided at least two advantages over scraping:\nThe first is that they made it easier to get at the data. Rather than effectively ‘unbaking’ the HTML-formatted data and user interface, the API allowed for an ordered and predictable transmission of information\nThe second is that the API often provided information that was not visible to the public through the web"
+  },
+  {
+    "objectID": "2023/weeks/week07/slides7.html#further-materials",
+    "href": "2023/weeks/week07/slides7.html#further-materials",
+    "title": "🗓️ Week 07Automated Data Collection I",
+    "section": "Further materials",
+    "text": "Further materials\nFurther texts:\n\nAutomated data collection with R\n\nTutorials:\n\nrvest"
+  },
+  {
+    "objectID": "2023/weeks/week07/slides7.html#lab-exercise-scraping-global-indicies-table-on-yahoo-finance",
+    "href": "2023/weeks/week07/slides7.html#lab-exercise-scraping-global-indicies-table-on-yahoo-finance",
+    "title": "🗓️ Week 07Automated Data Collection I",
+    "section": "Lab exercise: Scraping global indicies table on Yahoo finance",
+    "text": "Lab exercise: Scraping global indicies table on Yahoo finance\n\n\n\nLoad required libraries\nCheck whether scraping is permitted on Yahoo Finance (https://finance.yahoo.com/world-indices/)\nIdentify XPath for the table, read the path (read_html)\nKeep only the columns: (Name, Last Price, % Change)\nSave this information as a new data frame (yahoo_data)\nUse plotly to create a bar plot to visualise stock indicies prices and changes\n\n\n\n\n\n\n\n\nSOCS0100 – Computational Tools for Reproducible Social Science"
+  },
+  {
+    "objectID": "2023/weeks/week07/page7.html",
+    "href": "2023/weeks/week07/page7.html",
+    "title": "🗓️ Week 07 ->>Automated Data Collection I",
+    "section": "",
+    "text": "Introduction to automated data collection with R (rvest package). This week students will be introduced the concepts of ethical Webscraping and semi-structured data in detail, such as HTML (e.g., websites) and XML (e.g., government data)."
+  },
+  {
+    "objectID": "2023/weeks/week07/page7.html#lecture-slides",
+    "href": "2023/weeks/week07/page7.html#lecture-slides",
+    "title": "🗓️ Week 07 ->>Automated Data Collection I",
+    "section": "👨‍🏫 Lecture Slides",
+    "text": "👨‍🏫 Lecture Slides\nEither click on the slide area below or click here to view it in fullscreen. Use your keypad to navigate the slides.\n\n\n\n\n🎥 Looking for lecture recordings? You can only find those on Moodle."
+  },
+  {
+    "objectID": "2023/weeks/week07/page7.html#lab-materials",
+    "href": "2023/weeks/week07/page7.html#lab-materials",
+    "title": "🗓️ Week 07 ->>Automated Data Collection I",
+    "section": "✍️ Lab Materials",
+    "text": "✍️ Lab Materials\n🚧 Students will extract some texts, links, and tables from static webpages.🚧"
+  },
+  {
+    "objectID": "2023/weeks/week07/page7.html#required-reading",
+    "href": "2023/weeks/week07/page7.html#required-reading",
+    "title": "🗓️ Week 07 ->>Automated Data Collection I",
+    "section": "📚 Required Reading",
+    "text": "📚 Required Reading\n\nHalavais, A. (2019). Overcoming terms of service: a proposal for ethical distributed research. Information, Communication & Society, 22(11), 1567-1581.\nWickham, H. (2019). rvest: Easily harvest (scrape) web pages. Retrieved from https://CRAN.R-project.org/package=rvest."
+  },
+  {
+    "objectID": "2023/weeks/week07/slides7.html#using-rvest-to-read-html",
+    "href": "2023/weeks/week07/slides7.html#using-rvest-to-read-html",
+    "title": "🗓️ Week 07Automated Data Collection I",
+    "section": "Using RVest to Read HTML",
+    "text": "Using RVest to Read HTML"
+  },
+  {
+    "objectID": "2023/weeks/week07/slides7.html#html---elements",
+    "href": "2023/weeks/week07/slides7.html#html---elements",
+    "title": "🗓️ Week 07Automated Data Collection I",
+    "section": "HTML - elements",
+    "text": "HTML - elements\nAn HTML element is defined by a start tag, some content, and an end tag\n\n\n\n\nTag\nMeaning\n\n\n\n\n&lt;head&gt;\npage header (metadata, etc.)\n\n\n&lt;body&gt;\nholds all of the content\n\n\n&lt;p&gt;\nregular text (paragraph)\n\n\n&lt;h1&gt;,&lt;h2&gt;,&lt;h3&gt;\nheader text, levels 1, 2, 3\n\n\nol,,&lt;ul&gt;,&lt;li&gt;\nordered list, unordered list, list item\n\n\n&lt;a href=\"page.html\"&gt;\nlink to “page.html”\n\n\n&lt;table&gt;,&lt;tr&gt;,&lt;td&gt;\ntable, table row, table item\n\n\n&lt;div&gt;,&lt;span&gt;\ngeneral containers"
+  },
+  {
+    "objectID": "2023/weeks/week07/slides7.html#html---attributes",
+    "href": "2023/weeks/week07/slides7.html#html---attributes",
+    "title": "🗓️ Week 07Automated Data Collection I",
+    "section": "HTML - attributes",
+    "text": "HTML - attributes\n\nAll HTML elements can have attributes\nattributes provide additional information about an element\nthey are included inside the tag\nExamples:\n\n&lt;img src=\"no_smiley.jpg\" alt=\"Image that does not exist.\"&gt; &lt;p style=\"color:red\"&gt;This is a paragraph.&lt;/p&gt;"
+  },
+  {
+    "objectID": "2023/weeks/week07/slides7.html#html---basics",
+    "href": "2023/weeks/week07/slides7.html#html---basics",
+    "title": "🗓️ Week 07Automated Data Collection I",
+    "section": "HTML - basics",
+    "text": "HTML - basics\n\nThe core of a website is HTML (Hyper Text Markup Language)\nHTML defines the structure of a webpage using a series of elements. HTML elements tell the browser how to display the page by labeling pieces of content: “This is a heading,” “this is a paragraph,” “this is a link,” etc.\n\n&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n    &lt;head&gt;\n        &lt;title&gt;Page title&lt;/title&gt;\n    &lt;/head&gt;\n    &lt;body&gt;\n        &lt;p&gt;Hello world!&lt;/p&gt;\n    &lt;/body&gt;\n&lt;/html&gt;"
+  },
+  {
+    "objectID": "2023/weeks/week07/slides7.html#what-is-webscraping-1",
+    "href": "2023/weeks/week07/slides7.html#what-is-webscraping-1",
+    "title": "🗓️ Week 07Automated Data Collection I",
+    "section": "What is webscraping?",
+    "text": "What is webscraping?"
+  },
+  {
+    "objectID": "2023/weeks/week07/slides7.html#data-revolution",
+    "href": "2023/weeks/week07/slides7.html#data-revolution",
+    "title": "🗓️ Week 07Automated Data Collection I",
+    "section": "Data revolution",
+    "text": "Data revolution"
+  },
+  {
+    "objectID": "2023/weeks/week07/slides7.html#html---attributes-1",
+    "href": "2023/weeks/week07/slides7.html#html---attributes-1",
+    "title": "🗓️ Week 07Automated Data Collection I",
+    "section": "HTML - attributes",
+    "text": "HTML - attributes"
+  },
+  {
+    "objectID": "2023/weeks/week07/slides7.html#css-anatomy-1",
+    "href": "2023/weeks/week07/slides7.html#css-anatomy-1",
+    "title": "🗓️ Week 07Automated Data Collection I",
+    "section": "CSS anatomy",
+    "text": "CSS anatomy"
+  },
+  {
+    "objectID": "2023/weeks/week07/slides7.html#html---attributes-cont",
+    "href": "2023/weeks/week07/slides7.html#html---attributes-cont",
+    "title": "🗓️ Week 07Automated Data Collection I",
+    "section": "HTML - attributes con’t",
+    "text": "HTML - attributes con’t"
+  },
+  {
+    "objectID": "2023/weeks/week07/slides7.html#css-anatomy-cont",
+    "href": "2023/weeks/week07/slides7.html#css-anatomy-cont",
+    "title": "🗓️ Week 07Automated Data Collection I",
+    "section": "CSS anatomy con’t",
+    "text": "CSS anatomy con’t"
+  },
+  {
+    "objectID": "2023/weeks/week07/slides7.html#html---attributes-ii",
+    "href": "2023/weeks/week07/slides7.html#html---attributes-ii",
+    "title": "🗓️ Week 07Automated Data Collection I",
+    "section": "HTML - attributes II",
+    "text": "HTML - attributes II"
+  },
+  {
+    "objectID": "2023/weeks/week07/slides7.html#css-anatomy-ii",
+    "href": "2023/weeks/week07/slides7.html#css-anatomy-ii",
+    "title": "🗓️ Week 07Automated Data Collection I",
+    "section": "CSS anatomy II",
+    "text": "CSS anatomy II"
   }
 ]

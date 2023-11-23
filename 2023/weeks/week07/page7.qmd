@@ -1,0 +1,27 @@
+---
+title: "🗓️ Week 07 ->>Automated Data Collection I"
+---
+
+Introduction to automated data collection with R (rvest package). This week students will be introduced the concepts of ethical Webscraping and semi-structured data in detail, such as HTML (e.g., websites) and XML (e.g., government data).
+
+## 👨‍🏫 Lecture Slides
+
+Either click on the slide area below or click [here](slides7.qmd) to view it in fullscreen. Use your keypad to navigate the slides.
+
+::: {.container style="position: relative;overflow: hidden;width: 100%;min-height:600px;"}
+<iframe src="slides7.html" style="position=absolute;top: 0;left: 0;bottom: 0;right: 0;width: 100%;min-height:600px;">
+
+</iframe>
+:::
+
+🎥 Looking for lecture recordings? You can only find those on Moodle.
+
+## ✍️ Lab Materials
+
+🚧 Students will extract some texts, links, and tables from static webpages.🚧
+
+## 📚 Required Reading
+
+- [Halavais, A. (2019). Overcoming terms of service: a proposal for ethical distributed research. Information, Communication & Society, 22(11), 1567-1581.](https://doi.org/10.1080/1369118X.2019.1627386) 
+
+- [Wickham, H. (2019). rvest: Easily harvest (scrape) web pages. Retrieved from https://CRAN.R-project.org/package=rvest.](https://rvest.tidyverse.org/)
