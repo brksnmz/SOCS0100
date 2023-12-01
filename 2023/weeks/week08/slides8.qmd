@@ -350,11 +350,13 @@ webElem <- remDr$findElements(using = "class", value="results")
 values <- webElem[[1]]$getElementText()
 ```
 
-# Lab Example -- Scraping the real-time list of billionaires {.smaller}
+# Lab Example {.smaller}
 
-<img src="/figures/images/dynamic2.png" alt="Source:" width="600" height="500" style="display: block; margin: 0 auto;"/>
+Scraping the real-time list of billionaires 
 
-## Setup 
+<img src="/figures/images/dynamic2.png" alt="Source:" width="400" height="300" style="display: block; margin: 0 auto;"/>
+
+## Setup {.smaller}
 
 ```r
 if (!requireNamespace("pacman", quietly = TRUE)) install.packages("pacman")
@@ -461,7 +463,7 @@ html <- read_html(table)
 data <- html %>% html_nodes(xpath = "//tr[@class='base ng-scope']")
 ```
 
-## Extracting data from the table 
+## Extracting data from the table {.smaller}
 
 - Forming the data frame:
 
@@ -487,7 +489,7 @@ forbes2023 <- forbes2023 %>% mutate_all(~ ifelse(. == "", NA, .))
 forbes2023$money <- as.numeric(gsub("\\$|B", "", forbes2023$money))
 ```
 
-## Bonus material (DataViz)
+## Bonus material (DataViz) {.smaller}
 
 - Let's create a choropleth map to visualise billionaires' wealth distribution by country
 
@@ -515,7 +517,7 @@ plot_ly(
   )
 ```
 
-## Billionaires' Wealth Distribution by Country
+## Billionaires' Wealth Distribution by Country {.smaller}
 
 <img src="/figures/images/forbes2023.png" alt="Source:" width="550" height="400" style="display: block; margin: 0 auto;"/>
 

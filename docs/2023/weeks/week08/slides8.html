@@ -420,7 +420,7 @@ Dr <a href="#/">Burak Sonmez</a>
 <h2 id="toc-title">What we will cover today:</h2>
 <ul>
 <li><a href="#/scraping-dynamic-webpages" id="/toc-scraping-dynamic-webpages">Scraping Dynamic Webpages</a></li>
-<li><a href="#/lab-example-scraping-the-real-time-list-of-billionaires" id="/toc-lab-example-scraping-the-real-time-list-of-billionaires">Lab Example – Scraping the real-time list of billionaires</a></li>
+<li><a href="#/lab-example" id="/toc-lab-example">Lab Example</a></li>
 </ul>
 </nav>
 </section>
@@ -704,12 +704,12 @@ displayed</td>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 The downloaded binary packages are in
-    /var/folders/f6/gb9b_pqd0yg5tl9h5791zmjr0000gp/T//Rtmpr50llQ/downloaded_packages</code></pre>
+    /var/folders/f6/gb9b_pqd0yg5tl9h5791zmjr0000gp/T//RtmpzV1N2H/downloaded_packages</code></pre>
 </div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 The downloaded binary packages are in
-    /var/folders/f6/gb9b_pqd0yg5tl9h5791zmjr0000gp/T//Rtmpr50llQ/downloaded_packages</code></pre>
+    /var/folders/f6/gb9b_pqd0yg5tl9h5791zmjr0000gp/T//RtmpzV1N2H/downloaded_packages</code></pre>
 </div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] "null"         "cancel"       "help"         "backspace"    "tab"         
@@ -768,11 +768,12 @@ The downloaded binary packages are in
 <span id="cb18-7"><a href="#cb18-7"></a>values <span class="ot">&lt;-</span> webElem[[<span class="dv">1</span>]]<span class="sc">$</span><span class="fu">getElementText</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section></section>
 <section>
-<section id="lab-example-scraping-the-real-time-list-of-billionaires" class="title-slide slide level1 smaller">
-<h1>Lab Example – Scraping the real-time list of billionaires</h1>
-<p><img src="../../../figures/images/dynamic2.png" alt="Source:" width="600" height="500" style="display: block; margin: 0 auto;"></p>
+<section id="lab-example" class="title-slide slide level1 smaller">
+<h1>Lab Example</h1>
+<p>Scraping the real-time list of billionaires</p>
+<p><img src="../../../figures/images/dynamic2.png" alt="Source:" width="400" height="300" style="display: block; margin: 0 auto;"></p>
 </section>
-<section id="setup" class="slide level2">
+<section id="setup" class="slide level2 smaller">
 <h2>Setup</h2>
 <div class="sourceCode" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">requireNamespace</span>(<span class="st">"pacman"</span>, <span class="at">quietly =</span> <span class="cn">TRUE</span>)) <span class="fu">install.packages</span>(<span class="st">"pacman"</span>)</span>
 <span id="cb19-2"><a href="#cb19-2"></a></span>
@@ -868,7 +869,7 @@ The downloaded binary packages are in
 <span id="cb27-8"><a href="#cb27-8"></a><span class="co"># Select the rows with class 'base ng-scope'</span></span>
 <span id="cb27-9"><a href="#cb27-9"></a>data <span class="ot">&lt;-</span> html <span class="sc">%&gt;%</span> <span class="fu">html_nodes</span>(<span class="at">xpath =</span> <span class="st">"//tr[@class='base ng-scope']"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="extracting-data-from-the-table" class="slide level2">
+<section id="extracting-data-from-the-table" class="slide level2 smaller">
 <h2>Extracting data from the table</h2>
 <ul>
 <li>Forming the data frame:</li>
@@ -891,7 +892,7 @@ The downloaded binary packages are in
 <span id="cb29-4"><a href="#cb29-4"></a><span class="co"># Clean and convert 'money' to numeric</span></span>
 <span id="cb29-5"><a href="#cb29-5"></a>forbes2023<span class="sc">$</span>money <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(<span class="fu">gsub</span>(<span class="st">"</span><span class="sc">\\</span><span class="st">$|B"</span>, <span class="st">""</span>, forbes2023<span class="sc">$</span>money))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="bonus-material-dataviz" class="slide level2">
+<section id="bonus-material-dataviz" class="slide level2 smaller">
 <h2>Bonus material (DataViz)</h2>
 <ul>
 <li>Let’s create a choropleth map to visualise billionaires’ wealth distribution by country</li>
@@ -918,7 +919,7 @@ The downloaded binary packages are in
 <span id="cb30-20"><a href="#cb30-20"></a>    )</span>
 <span id="cb30-21"><a href="#cb30-21"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="billionaires-wealth-distribution-by-country" class="slide level2">
+<section id="billionaires-wealth-distribution-by-country" class="slide level2 smaller">
 <h2>Billionaires’ Wealth Distribution by Country</h2>
 <p><img src="../../../figures/images/forbes2023.png" alt="Source:" width="550" height="400" style="display: block; margin: 0 auto;"></p>
 </section>
