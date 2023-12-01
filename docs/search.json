@@ -11,7 +11,7 @@
     "href": "2023/index.html",
     "title": "SOCS0100 - Computational Tools for Reproducible Social Science",
     "section": "",
-    "text": "📢 Important\n\n\n\n\n\n(23/11/2023)\n\n🗓️ Week 07 lecture material is now available!\n\n\n\n\n\n🧑🏻‍🏫 Module Team\n\nModule Convenor\n\n\n\nBurak Sonmez  Lecturer in Quantitative Social Science  University College London 📧 b.sonmez@ucl.ac.uk ( at )\nOffice Hours:\n\nWhen:Fridays 16:00-18:00\nWhere:55-59 Gordon Square, 416\nHow to book: Please email me in advance\n\n\n\n\n\n\n📍 Lectures\nFridays 10:00-12:00 at Roberts Building 309\n\n\n💻 Practical Session Groups\n\nGroup 01\n\n📆 Fridays\n⌚ 12:00 - 13:00\n📍 Bedford Way (20) W 2.08\n🧑‍🏫 Burak Sonmez\n\n\n\nGroup 02\n\n📆 Fridays\n⌚ 15:00 - 16:00\n📍 Bedford Way (20) 828\n🧑‍🏫 Burak Sonmez"
+    "text": "📢 Important\n\n\n\n\n\n(30/11/2023)\n\n🗓️ Week 08 lecture material is now available!\n\n\n\n\n\n🧑🏻‍🏫 Module Team\n\nModule Convenor\n\n\n\nBurak Sonmez  Lecturer in Quantitative Social Science  University College London 📧 b.sonmez@ucl.ac.uk ( at )\nOffice Hours:\n\nWhen:Fridays 16:00-18:00\nWhere:55-59 Gordon Square, 416\nHow to book: Please email me in advance\n\n\n\n\n\n\n📍 Lectures\nFridays 10:00-12:00 at Roberts Building 309\n\n\n💻 Practical Session Groups\n\nGroup 01\n\n📆 Fridays\n⌚ 12:00 - 13:00\n📍 Bedford Way (20) W 2.08\n🧑‍🏫 Burak Sonmez\n\n\n\nGroup 02\n\n📆 Fridays\n⌚ 15:00 - 16:00\n📍 Bedford Way (20) 828\n🧑‍🏫 Burak Sonmez"
   },
   {
     "objectID": "index.html",
@@ -2077,5 +2077,236 @@
     "title": "🗓️ Week 07Automated Data Collection I",
     "section": "CSS anatomy II",
     "text": "CSS anatomy II"
+  },
+  {
+    "objectID": "2023/weeks/week08/slides8.html#what-is-a-dynamic-webpage",
+    "href": "2023/weeks/week08/slides8.html#what-is-a-dynamic-webpage",
+    "title": "🗓️ Week 08Automated Data Collection II",
+    "section": "What is a dynamic webpage",
+    "text": "What is a dynamic webpage\n\nDynamic pages are the ones that display custom content\n\ndifferent visitors might see different content on the same page at the same URL\ndepending on their own input (e.g. clicks, scrolls)\n\nDifficult to scrape as page content changes without the URL changing!!\nDynamic pages are scraped typically in three steps\n\nuse an additional package, RSelenium"
+  },
+  {
+    "objectID": "2023/weeks/week08/slides8.html#three-steps-to-dynamically-scrape",
+    "href": "2023/weeks/week08/slides8.html#three-steps-to-dynamically-scrape",
+    "title": "🗓️ Week 08Automated Data Collection II",
+    "section": "Three steps to dynamically scrape",
+    "text": "Three steps to dynamically scrape\n\nCreate the desired instance of the dynamic page with the RSelenium package\n\nclicking, scrolling, filling in forms, from within R\n\nGet the source code into R\n\nRSelenium downloads XML\nrvest turns it into HTML\n\nExtract the exact information needed from the source code with the the rvest package"
+  },
+  {
+    "objectID": "2023/weeks/week08/slides8.html#r-selenium",
+    "href": "2023/weeks/week08/slides8.html#r-selenium",
+    "title": "🗓️ Week 08Automated Data Collection II",
+    "section": "R Selenium",
+    "text": "R Selenium\n\nUse R as browser control to simulate your behavior\n\nscrape dynamically rendered web pages\n\nOriginally developed for web testing purposes\n\nautomates browsing across platforms\n\n\nIt allows interacting with two things: - with browsers on your computer (e.g. opening a browser and navigating to a page) - with elements on a webpage (e.g. opening and clicking on a drop-down menu)"
+  },
+  {
+    "objectID": "2023/weeks/week08/slides8.html#how-rselenium-works",
+    "href": "2023/weeks/week08/slides8.html#how-rselenium-works",
+    "title": "🗓️ Week 08Automated Data Collection II",
+    "section": "How RSelenium works",
+    "text": "How RSelenium works\n\nStarting server and browser session\nNavigating to page\nFinding elements\nSending events to elements\nGetting the source code and extracting information"
+  },
+  {
+    "objectID": "2023/weeks/week08/slides8.html#key-examples-of-what-you-can-do-with-selenium",
+    "href": "2023/weeks/week08/slides8.html#key-examples-of-what-you-can-do-with-selenium",
+    "title": "🗓️ Week 08Automated Data Collection II",
+    "section": "Key examples of what you can do with Selenium",
+    "text": "Key examples of what you can do with Selenium\n\n\n\n\n\n\n\nAction\nCode\n\n\n\n\nOpen a browser\nopen() / navigate()\n\n\nClick on something\nclickElement()\n\n\nEnter values\nsendKeysToElement()\n\n\nGo to previous/next page\ngoBack() / goForward()\n\n\nRefresh the page\nrefresh()\n\n\nGet all the HTML that is currently\ndisplayed\ngetPageSource()"
+  },
+  {
+    "objectID": "2023/weeks/week08/slides8.html#installation-issues",
+    "href": "2023/weeks/week08/slides8.html#installation-issues",
+    "title": "🗓️ Week 08Automated Data Collection II",
+    "section": "Installation issues",
+    "text": "Installation issues\n\nJava not installed\n\n\nIf you have a message saying that “Java is not found” (or similar), you need to install Java:\n\nYou can download Java here\n\n\n\nFirefox not installed/found\n\n\nIf you have a message saying “Could not open firefox browser”, two possible explanations:\n\nif Firefox is not installed, install it the same way as Java on the previous slide\nif Firefox is installed but not found, it probably means that it wasn’t installed with admin rights, so you need to manually specify the location of the file:\n\n\ndriver &lt;- rsDriver(\n  browser = \"firefox\", \n  extraCapabilities = list(\n    `moz:firefoxOptions` = list(\n      binary = \"C:\\\\Users\\\\&lt;USERNAME&gt;\\\\AppData\\\\Local\\\\Mozilla Firefox\\\\firefox.exe\"\n    )\n  )\n)"
+  },
+  {
+    "objectID": "2023/weeks/week08/slides8.html#stopping-selenium",
+    "href": "2023/weeks/week08/slides8.html#stopping-selenium",
+    "title": "🗓️ Week 08Automated Data Collection II",
+    "section": "Stopping Selenium",
+    "text": "Stopping Selenium\n\nThe clean way to stop Selenium is to run driver$server$stop()\nIf you close the browser by hand and try to re-run the script, you may receive the following error:\n\n\"Error in wdman::selenium(port = port, verbose = verbose, version = version,: \nSelenium server signals port = 4567 is already in use.\"\n\nTo avoid this error, you also need to run driver$server$stop()"
+  },
+  {
+    "objectID": "2023/weeks/week08/slides8.html#browsers-starting-a-server",
+    "href": "2023/weeks/week08/slides8.html#browsers-starting-a-server",
+    "title": "🗓️ Week 08Automated Data Collection II",
+    "section": "Browsers (starting a server)",
+    "text": "Browsers (starting a server)\n\n\n\nUse the rsDriver function to start a server, so that you can control a web browser from within R\nNote that the defaults can cause errors, such as trying to start two servers from the same port\nNote that rsDriver() creates a client and a server the code singles out the client, with which our code will interact client is best thought as the browser itself it has the class of remoteDriver\n\n\nConnecting to browser\ndriver &lt;- rsDriver(port = 4567L, browser = \"firefox\")\nremDr &lt;- driver$client"
+  },
+  {
+    "objectID": "2023/weeks/week08/slides8.html#navigating-to-page",
+    "href": "2023/weeks/week08/slides8.html#navigating-to-page",
+    "title": "🗓️ Week 08Automated Data Collection II",
+    "section": "Navigating to page",
+    "text": "Navigating to page\n\nSimplest way to navigate is to use URL of page, but we can also refresh, navigate forward and backward\nNavigate is called a method, not a function. Hence, it cannot be piped %&gt;% into remDr. Please use the dollar sign $ notation instead\n\nremDr$Navigate(\"http://somewhere.com\")\n\n# Other commands\nremDr$goBack() #Go back to the previous URL\nremDr$goForward() #Go forward\nremDr$refresh() #Refresh the page\nremDr$getCurrentUrl() #Get the URL of the current page\nremDr$getTitle() #Get the title of the current page"
+  },
+  {
+    "objectID": "2023/weeks/week08/slides8.html#browser-closing-and-opening",
+    "href": "2023/weeks/week08/slides8.html#browser-closing-and-opening",
+    "title": "🗓️ Week 08Automated Data Collection II",
+    "section": "Browser closing and opening",
+    "text": "Browser closing and opening\n\nClose the browser\n\nwhich won’t close the session on the server\nrecall that we have singled the client out\n\n\nremDr$close()\n\nOpen a new browser\n\nwhich doesn’t require the rsDriver function because the server is still running\n\n\nbrowser$open()"
+  },
+  {
+    "objectID": "2023/weeks/week08/slides8.html#finding-elements",
+    "href": "2023/weeks/week08/slides8.html#finding-elements",
+    "title": "🗓️ Week 08Automated Data Collection II",
+    "section": "Finding elements",
+    "text": "Finding elements\n\n\n\nIf you want to use elements (e.g. clicking on the element), you need to find & assign them to an object\n\nall commands to this element will be performed using that environment, not the remoteDriver environment\nyou should name it well! – webElem is a common name\n\nNote that\n\nthe default selector is xpath\nrequires entering the xpath value\n\n\n\nfindElement(using = \"xpath\", \n            value\n            )\n\nObjects can be found by css selector, x-path, id or class, by name, by (partial) link text (anchor elements / links)"
+  },
+  {
+    "objectID": "2023/weeks/week08/slides8.html#find-selectors",
+    "href": "2023/weeks/week08/slides8.html#find-selectors",
+    "title": "🗓️ Week 08Automated Data Collection II",
+    "section": "Find selectors",
+    "text": "Find selectors\n\nIf there were a button created by the following code,\n\n&lt;button class=\"big-button\" id=\"only-button\" name=\"clickable\"&gt;Click Me&lt;/button&gt;\n\nany of those lines below would find it\n\nremDr$findElement(using = \"xpath\", value = '//*[(@id = \"only-button\")]')\nremDr$findElement(using = \"css selector\", value = \".big-button\")\nremDr$findElement(using = \"css\", value = \"#only-button\")\nremDr$findElement(using = \"id\", value = \"only-button\")\nremDr$findElement(using = \"name\", value = \"clickable\")\n\nSave elements as R objects to be interacted later on\n\nWebElem &lt;- remDr$findElement(using = ..., value = ...)"
+  },
+  {
+    "objectID": "2023/weeks/week08/slides8.html#highlighting-elements-you-find",
+    "href": "2023/weeks/week08/slides8.html#highlighting-elements-you-find",
+    "title": "🗓️ Week 08Automated Data Collection II",
+    "section": "Highlighting elements you find",
+    "text": "Highlighting elements you find\nHighlight the element found in the previous step, with the highlightElement method\n# navigate to a page\nremDr$navigate(\"https://r-project.org\")\n# find the element\nContributors &lt;- remDr$findElement(using = \"link text\", value = \"Contributors\")\n# highlight it to see if we found the correct element\nContributors$highlightElement()"
+  },
+  {
+    "objectID": "2023/weeks/week08/slides8.html#clicking-on-the-element",
+    "href": "2023/weeks/week08/slides8.html#clicking-on-the-element",
+    "title": "🗓️ Week 08Automated Data Collection II",
+    "section": "Clicking on the element",
+    "text": "Clicking on the element\n\nClick on the element found in the previous step, with the clickElement method\n\n# navigate to a page\nremDr$navigate(\"http://example.com\")\n# find an element\nsearch_icon &lt;- remDr$findElement(using = \"css\", value = \".fa-search\")\n# click on it\nsearch_icon$clickElement()"
+  },
+  {
+    "objectID": "2023/weeks/week08/slides8.html#providing-inputs-to-elements",
+    "href": "2023/weeks/week08/slides8.html#providing-inputs-to-elements",
+    "title": "🗓️ Week 08Automated Data Collection II",
+    "section": "Providing input(s) to element(s)",
+    "text": "Providing input(s) to element(s)\n\nYou can provide input to elements, such as text, with the value argument; keyboard presses; or mouse gestures, with the key argument\nNote that user provides values while the selenium keys are pre-defined\n\nsendKeysToElement(list(value, key))\n# scrolling a bit\nwebElem$sendKeysToElement(list(key = \"down_arrow\"))\n# scrolling to end of page\nwebElem &lt;- remDr$findElement(\"css\", \"body\")\nwebElem$sendKeysToElement(list(key = \"end\"))"
+  },
+  {
+    "objectID": "2023/weeks/week08/slides8.html#selenium-keys",
+    "href": "2023/weeks/week08/slides8.html#selenium-keys",
+    "title": "🗓️ Week 08Automated Data Collection II",
+    "section": "Selenium keys",
+    "text": "Selenium keys\nHere is the list of Selenium keys:\n\n\n\nThe downloaded binary packages are in\n    /var/folders/f6/gb9b_pqd0yg5tl9h5791zmjr0000gp/T//Rtmpr50llQ/downloaded_packages\n\n\n\nThe downloaded binary packages are in\n    /var/folders/f6/gb9b_pqd0yg5tl9h5791zmjr0000gp/T//Rtmpr50llQ/downloaded_packages\n\n\n [1] \"null\"         \"cancel\"       \"help\"         \"backspace\"    \"tab\"         \n [6] \"clear\"        \"return\"       \"enter\"        \"shift\"        \"control\"     \n[11] \"alt\"          \"pause\"        \"escape\"       \"space\"        \"page_up\"     \n[16] \"page_down\"    \"end\"          \"home\"         \"left_arrow\"   \"up_arrow\"    \n[21] \"right_arrow\"  \"down_arrow\"   \"insert\"       \"delete\"       \"semicolon\"   \n[26] \"equals\"       \"numpad_0\"     \"numpad_1\"     \"numpad_2\"     \"numpad_3\"    \n[31] \"numpad_4\"     \"numpad_5\"     \"numpad_6\"     \"numpad_7\"     \"numpad_8\"    \n[36] \"numpad_9\"     \"multiply\"     \"add\"          \"separator\"    \"subtract\"    \n[41] \"decimal\"      \"divide\"       \"f1\"           \"f2\"           \"f3\"          \n[46] \"f4\"           \"f5\"           \"f6\"           \"f7\"           \"f8\"          \n[51] \"f9\"           \"f10\"          \"f11\"          \"f12\"          \"command_meta\""
+  },
+  {
+    "objectID": "2023/weeks/week08/slides8.html#searching-a-keyword-example",
+    "href": "2023/weeks/week08/slides8.html#searching-a-keyword-example",
+    "title": "🗓️ Week 08Automated Data Collection II",
+    "section": "Searching a keyword (example)",
+    "text": "Searching a keyword (example)\n# navigate to the home page\nremDr$navigate(\"http://example.com/\")\n\n# find the search icon and click on it\nsearch_icon &lt;- remDr$findElement(using = \"css\", value = \".fa-search\")\nsearch_icon$clickElement()\n\n# find the search bar on the new page and click on it\nsearch_bar &lt;- browser$findElement(using = \"css\", value = \"#search-query\")\nsearch_bar$clickElement()\n\n# search for the keyword \"R Package\" and click enter\nsearch_bar$sendKeysToElement(list(value = \"R Package\", key = \"enter\"))"
+  },
+  {
+    "objectID": "2023/weeks/week08/slides8.html#source-code-and-extracting-information",
+    "href": "2023/weeks/week08/slides8.html#source-code-and-extracting-information",
+    "title": "🗓️ Week 08Automated Data Collection II",
+    "section": "Source code and extracting information",
+    "text": "Source code and extracting information\n\nScreenshots\n\ncentral to working with headless browsers\n\nGetting source code\n\npreferable option: download HTML page source and save it for extraction\n\ndirectly extracting elements from RSelenium session\n\nfindElements() / findElement() for selection of nodes\ngetElementText() for extracting text from individual nodes\n\n\n# screen shots\nremDr$screenshot(display = TRUE)\n# getting source code\nremDr$getPageSource()\n# directly extracting elements\nwebElem &lt;- remDr$findElements(using = \"class\", value=\"results\")\nvalues &lt;- webElem[[1]]$getElementText()"
+  },
+  {
+    "objectID": "2023/weeks/week08/slides8.html#setup",
+    "href": "2023/weeks/week08/slides8.html#setup",
+    "title": "🗓️ Week 08Automated Data Collection II",
+    "section": "Setup",
+    "text": "Setup\nif (!requireNamespace(\"pacman\", quietly = TRUE)) install.packages(\"pacman\")\n\npacman::p_load(\n  RSelenium,\n  rvest,\n  purrr,\n  dplyr,\n  ggplot2,\n  plotly,\n  countrycode\n)"
+  },
+  {
+    "objectID": "2023/weeks/week08/slides8.html#scraping-step-by-step",
+    "href": "2023/weeks/week08/slides8.html#scraping-step-by-step",
+    "title": "🗓️ Week 08Automated Data Collection II",
+    "section": "Scraping step by step",
+    "text": "Scraping step by step\n\nUsing the element inspector, we see that the table is a dynamic table\n\nthe data of interest are in table rows &lt;tr&gt; of class base ng-scope\n\nConnecting to browser\n\ndriver &lt;- rsDriver(browser = \"firefox\")\nremote_driver &lt;- driver$client\n\nNavigating to the page\n\nurl &lt;- \"https://www.forbes.com/real-time-billionaires\"\nremote_driver$navigate(url)"
+  },
+  {
+    "objectID": "2023/weeks/week08/slides8.html#clicking-on-the-accept-cookies-element",
+    "href": "2023/weeks/week08/slides8.html#clicking-on-the-accept-cookies-element",
+    "title": "🗓️ Week 08Automated Data Collection II",
+    "section": "Clicking on the “accept cookies” element",
+    "text": "Clicking on the “accept cookies” element\n\nwebElems &lt;- remote_driver$findElements(using = \"xpath\", '/html/body/div/div/div/div/div[2]/button[2]')\n\nwebElems[[1]]$clickElement()\n\nSys.sleep(5) # wait for page loading\n\nSlow down the code where necessary, with the Sys.sleep\n\nfor ethical reasons\nbecause R might be faster than the browser"
+  },
+  {
+    "objectID": "2023/weeks/week08/slides8.html#lets-get-the-table-from-the-browser",
+    "href": "2023/weeks/week08/slides8.html#lets-get-the-table-from-the-browser",
+    "title": "🗓️ Week 08Automated Data Collection II",
+    "section": "Let’s get the table from the browser",
+    "text": "Let’s get the table from the browser\nmain &lt;- remote_driver$findElements(using = \"css\", value = \".fbs-table\")\ntable &lt;- read_html(main[[1]]$getElementAttribute(\"outerHTML\")[[1]]) # get html\n\nAnd use rvest to extract the lines of the table:\n\ntable  %&gt;% html_nodes(xpath = \"//tr[@class='base ng-scope']\")\n\nAs this is a dynamic table, we need to scroll it down to get more results"
+  },
+  {
+    "objectID": "2023/weeks/week08/slides8.html#scrolling-all-the-way-down",
+    "href": "2023/weeks/week08/slides8.html#scrolling-all-the-way-down",
+    "title": "🗓️ Week 08Automated Data Collection II",
+    "section": "Scrolling all the way down",
+    "text": "Scrolling all the way down\n\nUse sendKeysToElement\n\nwebElem &lt;- remote_driver$findElement(\"css\", \".scrolly-table\")\nwebElem$sendKeysToElement(list(key = \"end\"))\n\nmain &lt;- remote_driver$findElements(using = \"css\", value = \".fbs-table\")\nSys.sleep(1)\ntable &lt;- read_html(main[[1]]$getElementAttribute(\"outerHTML\")[[1]]) # get html\ntable  %&gt;% html_nodes(xpath = \"//tr[@class='base ng-scope']\")"
+  },
+  {
+    "objectID": "2023/weeks/week08/slides8.html#automating-the-scrolling-task",
+    "href": "2023/weeks/week08/slides8.html#automating-the-scrolling-task",
+    "title": "🗓️ Week 08Automated Data Collection II",
+    "section": "Automating the scrolling task",
+    "text": "Automating the scrolling task\n\nWe get 50 more lines each time we scroll down. Let’s scroll down 50 times:\n\nwebElem &lt;- remote_driver$findElement(\"css\", \".scrolly-table\")\nfor (i in 1:50) {\n  cat(\"Scroll\", i, \"\\n\")\n  webElem$sendKeysToElement(list(key = \"end\"))\n  Sys.sleep(3)\n}"
+  },
+  {
+    "objectID": "2023/weeks/week08/slides8.html#parsing-the-html-of-the-table-to-get-all-the-lines",
+    "href": "2023/weeks/week08/slides8.html#parsing-the-html-of-the-table-to-get-all-the-lines",
+    "title": "🗓️ Week 08Automated Data Collection II",
+    "section": "Parsing the html of the table to get all the lines:",
+    "text": "Parsing the html of the table to get all the lines:\nmain &lt;- remote_driver$findElements(using = \"css\", value = \".fbs-table\")\ntable &lt;- main[[1]]$getElementAttribute(\"outerHTML\")[[1]] # get html\n# get all lines with attributes\n\n# Assuming 'table' is the HTML content\nhtml &lt;- read_html(table)\n\n# Select the rows with class 'base ng-scope'\ndata &lt;- html %&gt;% html_nodes(xpath = \"//tr[@class='base ng-scope']\")"
+  },
+  {
+    "objectID": "2023/weeks/week08/slides8.html#extracting-data-from-the-table",
+    "href": "2023/weeks/week08/slides8.html#extracting-data-from-the-table",
+    "title": "🗓️ Week 08Automated Data Collection II",
+    "section": "Extracting data from the table",
+    "text": "Extracting data from the table\n\nForming the data frame:\n\n# Extract data from each column and create a data-frame with all columns\nforbes2023 &lt;- tibble(\n  name &lt;- data %&gt;% html_nodes(xpath = \"//td[@class='name']\") %&gt;% html_text(),\n  rank &lt;- data %&gt;% html_nodes(xpath = \"//td[@class='rank']\") %&gt;% html_text(),\n  money &lt;- data %&gt;% html_nodes(xpath = \"//td[@class='Net Worth']\") %&gt;% html_text(),\n  age &lt;- data %&gt;% html_nodes(xpath = \"//td[@class='age']\") %&gt;% html_text(),\n  source &lt;- data %&gt;% html_nodes(xpath = \"//td[@class='source']\") %&gt;% html_text(),\n  country &lt;- data %&gt;% html_nodes(xpath = \"//td[@class='Country/Territory']\") %&gt;% html_text() \n)\n\nTidying the data frame\n\n# Replace empty cells with NA for the entire data frame\nforbes2023 &lt;- forbes2023 %&gt;% mutate_all(~ ifelse(. == \"\", NA, .))\n\n# Clean and convert 'money' to numeric\nforbes2023$money &lt;- as.numeric(gsub(\"\\\\$|B\", \"\", forbes2023$money))"
+  },
+  {
+    "objectID": "2023/weeks/week08/slides8.html#bonus-material-dataviz",
+    "href": "2023/weeks/week08/slides8.html#bonus-material-dataviz",
+    "title": "🗓️ Week 08Automated Data Collection II",
+    "section": "Bonus material (DataViz)",
+    "text": "Bonus material (DataViz)\n\nLet’s create a choropleth map to visualise billionaires’ wealth distribution by country\n\n# Aggregate money by country\ntotal_money_by_country &lt;- aggregate(money ~ country, data = forbes2023, sum)\n\n# Convert country names to ISO codes for mapping\niso_country &lt;- countrycode(total_money_by_country$country, \"country.name\", \"iso3c\")\n\n# Create an interactive choropleth map\nplot_ly(\n  locations = iso_country,\n  z = total_money_by_country$money,\n  text = paste(\"Country: \", total_money_by_country$country, \"&lt;br&gt;Net Worth: $\", total_money_by_country$money, \"B\"),\n  type = \"choropleth\",\n  colorscale = \"Viridis\"\n) %&gt;%\n  layout(\n    title = \"Billionaires' Wealth Distribution by Country\",\n    geo = list(\n      showframe = FALSE,\n      projection = list(type = 'mercator')\n    )\n  )"
+  },
+  {
+    "objectID": "2023/weeks/week08/slides8.html#billionaires-wealth-distribution-by-country",
+    "href": "2023/weeks/week08/slides8.html#billionaires-wealth-distribution-by-country",
+    "title": "🗓️ Week 08Automated Data Collection II",
+    "section": "Billionaires’ Wealth Distribution by Country",
+    "text": "Billionaires’ Wealth Distribution by Country"
+  },
+  {
+    "objectID": "2023/weeks/week08/slides8.html#further-materials",
+    "href": "2023/weeks/week08/slides8.html#further-materials",
+    "title": "🗓️ Week 08Automated Data Collection II",
+    "section": "Further materials",
+    "text": "Further materials\nFurther texts:\n\nAutomated data collection with R\n\nTutorials:\n\nRSelenium\n\n\n\n\n\nSOCS0100 – Computational Tools for Reproducible Social Science"
+  },
+  {
+    "objectID": "2023/weeks/week08/page8.html",
+    "href": "2023/weeks/week08/page8.html",
+    "title": "🗓️ Week 08 ->>Automated Data Collection II",
+    "section": "",
+    "text": "Webscraping part 2 with RSelenium library. Students will learn how to scrape dynamic webpages that pull data from databases using Javascript. They will simulate web browsing rather than parsing static pages."
+  },
+  {
+    "objectID": "2023/weeks/week08/page8.html#lecture-slides",
+    "href": "2023/weeks/week08/page8.html#lecture-slides",
+    "title": "🗓️ Week 08 ->>Automated Data Collection II",
+    "section": "👨‍🏫 Lecture Slides",
+    "text": "👨‍🏫 Lecture Slides\nEither click on the slide area below or click here to view it in fullscreen. Use your keypad to navigate the slides.\n\n\n\n\n🎥 Looking for lecture recordings? You can only find those on Moodle."
+  },
+  {
+    "objectID": "2023/weeks/week08/page8.html#lab-materials",
+    "href": "2023/weeks/week08/page8.html#lab-materials",
+    "title": "🗓️ Week 08 ->>Automated Data Collection II",
+    "section": "✍️ Lab Materials",
+    "text": "✍️ Lab Materials\n🚧 They will extract various types of data from a dynamic webpage.🚧"
+  },
+  {
+    "objectID": "2023/weeks/week08/page8.html#required-reading",
+    "href": "2023/weeks/week08/page8.html#required-reading",
+    "title": "🗓️ Week 08 ->>Automated Data Collection II",
+    "section": "📚 Required Reading",
+    "text": "📚 Required Reading\n\nBreuer, J., Bishop, L., & Kinder-Kurlanda, K. (2020). The practical and ethical challenges in acquiring and sharing digital trace data: Negotiating public-private partnerships. New Media & Society, 22(11), 2058-2080.\nHarrison J (2022). RSelenium: R Bindings for ‘Selenium WebDriver’. R package version 1.7.9, https://docs.ropensci.org/RSelenium/."
   }
 ]

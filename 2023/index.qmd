@@ -7,9 +7,9 @@ format: html
 ::: {.callout-important collapse=false}
 ## 📢 Important
 
-(23/11/2023)
+(30/11/2023)
 
-- [🗓️ Week 07 lecture material](/2023/weeks/week07/page7.qmd) is now available!
+- [🗓️ Week 08 lecture material](/2023/weeks/week08/page8.qmd) is now available!
 
 :::
 

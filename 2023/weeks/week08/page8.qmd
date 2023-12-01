@@ -1,0 +1,27 @@
+---
+title: "🗓️ Week 08 ->>Automated Data Collection II"
+---
+
+Webscraping part 2 with RSelenium library. Students will learn how to scrape dynamic webpages that pull data from databases using Javascript. They will simulate web browsing rather than parsing static pages.
+
+## 👨‍🏫 Lecture Slides
+
+Either click on the slide area below or click [here](slides8.qmd) to view it in fullscreen. Use your keypad to navigate the slides.
+
+::: {.container style="position: relative;overflow: hidden;width: 100%;min-height:600px;"}
+<iframe src="slides8.html" style="position=absolute;top: 0;left: 0;bottom: 0;right: 0;width: 100%;min-height:600px;">
+
+</iframe>
+:::
+
+🎥 Looking for lecture recordings? You can only find those on Moodle.
+
+## ✍️ Lab Materials
+
+🚧 They will extract various types of data from a dynamic webpage.🚧
+
+## 📚 Required Reading
+
+- [Breuer, J., Bishop, L., & Kinder-Kurlanda, K. (2020). The practical and ethical challenges in acquiring and sharing digital trace data: Negotiating public-private partnerships. New Media & Society, 22(11), 2058-2080.](https://journals.sagepub.com/doi/abs/10.1177/1461444820924622) 
+
+- [Harrison J (2022). RSelenium: R Bindings for 'Selenium WebDriver'. R package version 1.7.9, https://docs.ropensci.org/RSelenium/.](https://cran.r-project.org/web/packages/RSelenium/RSelenium.pdf)
