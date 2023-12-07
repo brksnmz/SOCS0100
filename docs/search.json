@@ -11,7 +11,7 @@
     "href": "2023/index.html",
     "title": "SOCS0100 - Computational Tools for Reproducible Social Science",
     "section": "",
-    "text": "📢 Important\n\n\n\n\n\n(30/11/2023)\n\n🗓️ Week 08 lecture material is now available!\n\n\n\n\n\n🧑🏻‍🏫 Module Team\n\nModule Convenor\n\n\n\nBurak Sonmez  Lecturer in Quantitative Social Science  University College London 📧 b.sonmez@ucl.ac.uk ( at )\nOffice Hours:\n\nWhen:Fridays 16:00-18:00\nWhere:55-59 Gordon Square, 416\nHow to book: Please email me in advance\n\n\n\n\n\n\n📍 Lectures\nFridays 10:00-12:00 at Roberts Building 309\n\n\n💻 Practical Session Groups\n\nGroup 01\n\n📆 Fridays\n⌚ 12:00 - 13:00\n📍 Bedford Way (20) W 2.08\n🧑‍🏫 Burak Sonmez\n\n\n\nGroup 02\n\n📆 Fridays\n⌚ 15:00 - 16:00\n📍 Bedford Way (20) 828\n🧑‍🏫 Burak Sonmez"
+    "text": "📢 Important\n\n\n\n\n\n(07/12/2023)\n\n🗓️ Week 09 lecture material is now available!\n\n\n\n\n\n🧑🏻‍🏫 Module Team\n\nModule Convenor\n\n\n\nBurak Sonmez  Lecturer in Quantitative Social Science  University College London 📧 b.sonmez@ucl.ac.uk ( at )\nOffice Hours:\n\nWhen:Fridays 16:00-18:00\nWhere:55-59 Gordon Square, 416\nHow to book: Please email me in advance\n\n\n\n\n\n\n📍 Lectures\nFridays 10:00-12:00 at Roberts Building 309\n\n\n💻 Practical Session Groups\n\nGroup 01\n\n📆 Fridays\n⌚ 12:00 - 13:00\n📍 Bedford Way (20) W 2.08\n🧑‍🏫 Burak Sonmez\n\n\n\nGroup 02\n\n📆 Fridays\n⌚ 15:00 - 16:00\n📍 Bedford Way (20) 828\n🧑‍🏫 Burak Sonmez"
   },
   {
     "objectID": "index.html",
@@ -2308,5 +2308,201 @@
     "title": "🗓️ Week 08 ->>Automated Data Collection II",
     "section": "📚 Required Reading",
     "text": "📚 Required Reading\n\nBreuer, J., Bishop, L., & Kinder-Kurlanda, K. (2020). The practical and ethical challenges in acquiring and sharing digital trace data: Negotiating public-private partnerships. New Media & Society, 22(11), 2058-2080.\nHarrison J (2022). RSelenium: R Bindings for ‘Selenium WebDriver’. R package version 1.7.9, https://docs.ropensci.org/RSelenium/."
+  },
+  {
+    "objectID": "2023/weeks/week09/slides9.html#what-is-an-api",
+    "href": "2023/weeks/week09/slides9.html#what-is-an-api",
+    "title": "🗓️ Week 09Working with APIs",
+    "section": "What is an API?",
+    "text": "What is an API?\n\nAPI stands for Application Programming Interface.\n\na set of rules and procedures that facilitate interactions between computers and their applications\n\nA very common type of API is the Web API\n\nallows users to query a remote database over the internet\n\nWeb APIs take on a variety of formats\n\nRepresentational State Transfer or REST\nwe can use them to query databases using URLs"
+  },
+  {
+    "objectID": "2023/weeks/week09/slides9.html#restful-web-apis",
+    "href": "2023/weeks/week09/slides9.html#restful-web-apis",
+    "title": "🗓️ Week 09Working with APIs",
+    "section": "RESTful Web APIs",
+    "text": "RESTful Web APIs\n\nThey are all around you\n\nconsider a simple Google search:\n\n\n\n\nEver wonder what all that extra stuff in the address bar was all about?\n\nthe full address is Google’s way of sending a query to its databases requesting information related to the search term “university college london”"
+  },
+  {
+    "objectID": "2023/weeks/week09/slides9.html#anatomy-of-api",
+    "href": "2023/weeks/week09/slides9.html#anatomy-of-api",
+    "title": "🗓️ Week 09Working with APIs",
+    "section": "Anatomy of API",
+    "text": "Anatomy of API\n\n\nAPI = Application Programming Interface\n\na set of structured http requests that return data in a lightweight format\n\nHTTP = Hypertext Transfer Protocol\n\nhow browsers and e-mail clients communicate with servers"
+  },
+  {
+    "objectID": "2023/weeks/week09/slides9.html#when-or-why-we-should-use-apis",
+    "href": "2023/weeks/week09/slides9.html#when-or-why-we-should-use-apis",
+    "title": "🗓️ Week 09Working with APIs",
+    "section": "When or why we should use APIs",
+    "text": "When or why we should use APIs\nAdvantages:\n\nPure data collection: avoid malformed HTML, no legal issues, clear data structures\nStandardised data access procedures: transparency, replicability\nRobustness: benefits from wisdom of the crowds\n\nDisadvantages:\n\nThey’re not always available\nDependency on API providers\nLack of natural connection to R"
+  },
+  {
+    "objectID": "2023/weeks/week09/slides9.html#decision-in-scraping",
+    "href": "2023/weeks/week09/slides9.html#decision-in-scraping",
+    "title": "🗓️ Week 09Working with APIs",
+    "section": "Decision in scraping",
+    "text": "Decision in scraping"
+  },
+  {
+    "objectID": "2023/weeks/week09/slides9.html#types-of-apis",
+    "href": "2023/weeks/week09/slides9.html#types-of-apis",
+    "title": "🗓️ Week 09Working with APIs",
+    "section": "Types of APIs",
+    "text": "Types of APIs\n\nRESTful APIs: queries for static information at current moment (e.g. user profiles, posts, etc.)\nStreaming APIs: real time data (e.g. new tweets, weather alerts)\nAPIs often have extensive documentation:\nwritten for developers, what to look for: endpoints and parameters: API Documentation\nmost APIs are rate-limited: restrictions on number of API calls by user/IP address and period of time\ncommercial APIs may impose a monthly fee\nList of APIs in case you need inspiration\nRate-limit your requests (sys.sleep() in loop"
+  },
+  {
+    "objectID": "2023/weeks/week09/slides9.html#reponse-formats-json",
+    "href": "2023/weeks/week09/slides9.html#reponse-formats-json",
+    "title": "🗓️ Week 09Working with APIs",
+    "section": "(Reponse) Formats: JSON",
+    "text": "(Reponse) Formats: JSON\n\nResponse often in JSON or XML format\n\n‘http_type(#)’: Check format\n\nJSON (Javascript Object Notation, *.json)\n\nStructure: Data stored in key-value pairs. Why? Lightweight, more flexible than traditional table format\nvarious data types possible (strings, numbers etc.)\ncurly brackets embrace objects; square brackets enclose arrays (vectors)\n\nobjects ({“name”: “peter”,“phone”:“397483”})\narrays ([1910, 1911])\n\n\n‘jsonlite’ package: Use fromJSON function to read JSON data into R\n\nmany packages have their own specific functions to read data in JSON format"
+  },
+  {
+    "objectID": "2023/weeks/week09/slides9.html#reponse-formats-xml",
+    "href": "2023/weeks/week09/slides9.html#reponse-formats-xml",
+    "title": "🗓️ Week 09Working with APIs",
+    "section": "(Reponse) Formats: XML",
+    "text": "(Reponse) Formats: XML\n\nXML (eXtensibleMarkupLanguage, *.xml)\n\nplain text format like JSON\nsyntax of choice for many newly designed document formats (Word documents!)\nlooks like HTML but has purpose to store data: Markup (mostly tags) & content\n\n\nJson vs XML:"
+  },
+  {
+    "objectID": "2023/weeks/week09/slides9.html#getting-api-access",
+    "href": "2023/weeks/week09/slides9.html#getting-api-access",
+    "title": "🗓️ Week 09Working with APIs",
+    "section": "Getting API Access",
+    "text": "Getting API Access\n\nMost APIs requires a key or other user credentials before you can query their database\nGetting credentialised with a API requires that you register with the organization\nMost APIs are set up for developers, so you will likely be asked to register an application\nOnce you have successfully registered, you will be assigned one or more keys, tokens, or other credentials that must be supplied to the server as part of any API call you make"
+  },
+  {
+    "objectID": "2023/weeks/week09/slides9.html#using-apis-in-r",
+    "href": "2023/weeks/week09/slides9.html#using-apis-in-r",
+    "title": "🗓️ Week 09Working with APIs",
+    "section": "Using APIs in R",
+    "text": "Using APIs in R\nThere are two ways to collect data through APIs in R:\n\nPlug-n-play packages:\n\nMany common APIs are available through user-written R Packages. These packages offer functions that “wrap” API queries and format the response. These packages are usually much more convenient than writing our own query\n\nWriting our own API request\n\nIf no wrapper function is available, we have to write our own API request and format the response ourselves using R. This is trickier, but definitely doable"
+  },
+  {
+    "objectID": "2023/weeks/week09/slides9.html#example-collecting-google-trends",
+    "href": "2023/weeks/week09/slides9.html#example-collecting-google-trends",
+    "title": "🗓️ Week 09Working with APIs",
+    "section": "Example: Collecting Google Trends",
+    "text": "Example: Collecting Google Trends\nSetup:\nlibrary(pacman)\npacman::p_load('httr', 'gtrendsR', 'ggplot2',\n'dplyr', 'ggmap')\n\nThe API is provided by Google\n\nwith Google Trends, one gets access to a largely unfiltered sample of actual search topics (up to 36h before your search) and a filtered and representative sample for search topics older than 36 hours starting from the year 2004\n\nThe data is anonymised\n\ncan be obtained from different Google products like “Web search”, “News”, “Images”, “Shopping” and “Youtube”\ncan be filtered by different categories to get the data for the correct meaning of the word\naggregated, which means that the searches of all cities/regions are aggregated to the federal state level, country level or world level"
+  },
+  {
+    "objectID": "2023/weeks/week09/slides9.html#google-trends-data",
+    "href": "2023/weeks/week09/slides9.html#google-trends-data",
+    "title": "🗓️ Week 09Working with APIs",
+    "section": "Google Trends Data",
+    "text": "Google Trends Data\n\nThe results you get are a standardised measure of search volume for single search terms, a combination of search terms using operators (see below), or comparisons (one input in relation to the other inputs) over a selected time period\nGoogle calculates how much search volume in each region a search term or query had, relative to all searches in that region. Using this information, Google assigns a measure of popularity to search terms (scale of 0 - 100), leaving out repeated searches from the same person over a short period of time and searches with apostrophes and other special characters]\n\n\n\n\n\n\n\nNo quotation marks (e.g. Humanitarian crisis)\nYou get results for each word in your query\n\n\nQuotation marks (e.g. “Humanitarian crisis”)\nYou get results for the coherent search phrase\n\n\nPlus sign (e.g. humanitarian +crisis)\nServes as function of an OR-operator\n\n\nMinus sign (e.g. humanitarian -crisis)\nExcludes word after the operator"
+  },
+  {
+    "objectID": "2023/weeks/week09/slides9.html#api-access-in-r",
+    "href": "2023/weeks/week09/slides9.html#api-access-in-r",
+    "title": "🗓️ Week 09Working with APIs",
+    "section": "API access in R",
+    "text": "API access in R\n\nIt can be used without an API key by anyone for free directly in the internet browser\n\nExample using httr package:\nlibrary(httr)\nGET(\"https://trends.google.com/trends/explore\",\n    query=list(q = \"Humanitarian\",geo = \"GB\"))\n\nbut just html-output, I recommend to use the gtrendsR package"
+  },
+  {
+    "objectID": "2023/weeks/week09/slides9.html#using-gtrendsr-package",
+    "href": "2023/weeks/week09/slides9.html#using-gtrendsr-package",
+    "title": "🗓️ Week 09Working with APIs",
+    "section": "Using gtrendsR Package",
+    "text": "Using gtrendsR Package\n\n\n\nVisualising google search activity for the word “vaccine fraud” and “vaccine danger” in UK\n\n\n\ndata(\"countries\") # get abbreviations of all countries to filter data \ndata(\"categories\") # get numbers of all categories to filter data \n\n#Combination using dplyr and ggplot\ntrend &lt;- gtrends(keyword=\"vaccine\", geo=c(\"GB\"), time = \"2021-01-01 2021-12-30\", gprop=\"web\") \n\ntrend_df &lt;- trend$interest_over_time\n\ntrend_df &lt;- trend_df %&gt;%\n    mutate(hits = as.numeric(hits), date = as.Date(date)) %&gt;%\n    replace(is.na(.), 0)\n\nggplot(trend_df, aes(x=date, y=hits, group=geo, col=geo)) + geom_line(size=2) +\nscale_x_date(date_breaks = \"2 months\" , date_labels = \"%b-%y\") +\nlabs(color= \"Countries\") +\nggtitle(\"Frequencies for the query -vaccine harm- in the period: 2021-01-01 - 2021-12-3\")\n\n#if gtrendsR package doesn't work, try trendecon package \nlibrary(trendecon)\nx &lt;- ts_gtrends(keyword = c(\"vaccine fraud\", \"vaccine danger\"), geo = c(\"GB\"), time = \"today+5-y\",\n  retry = 5,\n  wait = 10)\n\ntsbox::ts_plot(x)"
+  },
+  {
+    "objectID": "2023/weeks/week09/slides9.html#using-google-maps-api",
+    "href": "2023/weeks/week09/slides9.html#using-google-maps-api",
+    "title": "🗓️ Week 09Working with APIs",
+    "section": "Using Google Maps API",
+    "text": "Using Google Maps API\n\nggmap uses Google Maps behind the scenes, so you’ll need an active Google Cloud Platform account (see here if you cannot figure out)\n\nenable the following APIs under APIs and Services – Library:\n\nMaps JavaScript API\nMaps Static API\nGeocoding API"
+  },
+  {
+    "objectID": "2023/weeks/week09/slides9.html#how-to-use-ggmap-with-google-maps-api-example",
+    "href": "2023/weeks/week09/slides9.html#how-to-use-ggmap-with-google-maps-api-example",
+    "title": "🗓️ Week 09Working with APIs",
+    "section": "How to use ggmap with Google Maps API (example)",
+    "text": "How to use ggmap with Google Maps API (example)\n\n\n#Authorisation with API Key\nkey &lt;-\"yourAPIkey\"\nregister_google(key = key)\n\n#Drawing the route \nroute_data &lt;- trek(\"washington\", \"las vegas\", structure = \"route\")\nhead(route_data)\n\n#Mapping\nqmap(zoom = 4) + \n  geom_path(\n    aes(x = lon, y = lat), color = \"blue\", size = 1, data = route_data\n  )"
+  },
+  {
+    "objectID": "2023/weeks/week09/slides9.html#using-openstreetmap-api-another-example",
+    "href": "2023/weeks/week09/slides9.html#using-openstreetmap-api-another-example",
+    "title": "🗓️ Week 09Working with APIs",
+    "section": "Using OpenStreetMap API (another example)",
+    "text": "Using OpenStreetMap API (another example)\n\nOpenstreetMap (OSM) is a free and open map of the world created largely by voluntary contribution of millions of people around the world\nOSM serves two APIs, namely Main API for editing OSM, and Overpass API for providing OSM data\nOSM data is stored as a list of attributes tagged in key - value pairs of geospatial objects (points, lines or polygons)\nFor example, for charities, the key is “office”, and the value is “charity”\n\naccess an extensive list of key-value pairs through OSM Wiki Map features"
+  },
+  {
+    "objectID": "2023/weeks/week09/slides9.html#mapping-charities-in-london-through-osm",
+    "href": "2023/weeks/week09/slides9.html#mapping-charities-in-london-through-osm",
+    "title": "🗓️ Week 09Working with APIs",
+    "section": "Mapping charities in London through OSM",
+    "text": "Mapping charities in London through OSM\n#Setup\npacman::p_load('osmdata', 'sf', 'tidyverse', 'leaflet') \nThe first step is to define a bounding box of the geographical area we are interested in. It is defined by four geographic coordinates, representing the minimum and maximum latitude and longitude of the area\nbb &lt;- getbb (\"london uk\")\nlondon_rst &lt;- opq(bb) %&gt;% #gets bounding box\nadd_osm_feature(key = \"office\", value = \"charity\") %&gt;% #searches for charities\nosmdata_sf() #download OSM data as sf (simple features -- spatial data format in R)"
+  },
+  {
+    "objectID": "2023/weeks/week09/slides9.html#looking-into-the-osmdata-object",
+    "href": "2023/weeks/week09/slides9.html#looking-into-the-osmdata-object",
+    "title": "🗓️ Week 09Working with APIs",
+    "section": "Looking into the osmdata object",
+    "text": "Looking into the osmdata object\n\nIn osm_points and osm_polygons you see various information related to charities. It’s because the information about restaurants are entered either as restaurants and polygons\n\nhead(london_rst$osm_polygons)$name\n\n#select name and geometry for charities\nrst_osm_points &lt;- london_rst$osm_points %&gt;% #select point data from downloaded OSM data\n  select(name, geometry) #for now just selecting the name and geometry to plot\n\nrst_osm_polygons &lt;- london_rst$osm_polygons %&gt;%\n  select(name, geometry)\n\nlondon_charities &lt;- rbind(rst_osm_points, rst_osm_polygons)\n\nOpenStreetMap found 729 observations as charities"
+  },
+  {
+    "objectID": "2023/weeks/week09/slides9.html#visualising-locations-of-charities",
+    "href": "2023/weeks/week09/slides9.html#visualising-locations-of-charities",
+    "title": "🗓️ Week 09Working with APIs",
+    "section": "Visualising locations of charities",
+    "text": "Visualising locations of charities\n\n\nleaflet() %&gt;%\n  addPolygons(\n    data = london_rst$osm_polygons,\n    label = london_rst$osm_polygons$name\n  ) %&gt;% \n  addCircles(\n    data = london_rst$osm_points,\n    label = london_rst$osm_points$name\n  ) %&gt;% \n  addProviderTiles(\"CartoDB.Positron\")"
+  },
+  {
+    "objectID": "2023/weeks/week09/slides9.html#lab-exercise-and-further-materials",
+    "href": "2023/weeks/week09/slides9.html#lab-exercise-and-further-materials",
+    "title": "🗓️ Week 09Working with APIs",
+    "section": "Lab exercise and further materials",
+    "text": "Lab exercise and further materials\n\nVisualise location of pubs in Greater London, using OpenStreetMap API\n\nFurther texts:\n\nAutomated data collection with R\n\nBonus Tutorial: Spotify API:\n\n\n\n\nSOCS0100 – Computational Tools for Reproducible Social Science"
+  },
+  {
+    "objectID": "2023/weeks/week09/slides9.html#collecting-google-trends",
+    "href": "2023/weeks/week09/slides9.html#collecting-google-trends",
+    "title": "🗓️ Week 09Working with APIs",
+    "section": "Collecting Google Trends",
+    "text": "Collecting Google Trends\nSetup:\nlibrary(pacman)\npacman::p_load('httr', 'gtrendsR', 'ggplot2',\n'dplyr', 'ggmap')\n\nThe API is provided by Google\n\nwith Google Trends, one gets access to a largely unfiltered sample of actual search topics (up to 36h before your search) and a filtered and representative sample for search topics older than 36 hours starting from the year 2004\n\nThe data is anonymised\n\ncan be obtained from different Google products like “Web search”, “News”, “Images”, “Shopping” and “Youtube”\ncan be filtered by different categories to get the data for the correct meaning of the word\naggregated, which means that the searches of all cities/regions are aggregated to the federal state level, country level or world level"
+  },
+  {
+    "objectID": "2023/weeks/week09/slides9.html#how-to-use-ggmap-with-google-maps-api",
+    "href": "2023/weeks/week09/slides9.html#how-to-use-ggmap-with-google-maps-api",
+    "title": "🗓️ Week 09Working with APIs",
+    "section": "How to use ggmap with Google Maps API",
+    "text": "How to use ggmap with Google Maps API\n\n\n#Authorisation with API Key\nkey &lt;-\"yourAPIkey\"\nregister_google(key = key)\n\n#Drawing the route \nroute_data &lt;- trek(\"washington\", \"las vegas\", structure = \"route\")\nhead(route_data)\n\n#Mapping\nqmap(zoom = 4) + \n  geom_path(\n    aes(x = lon, y = lat), color = \"blue\", size = 1, data = route_data\n  )"
+  },
+  {
+    "objectID": "2023/weeks/week09/slides9.html#using-openstreetmap-api",
+    "href": "2023/weeks/week09/slides9.html#using-openstreetmap-api",
+    "title": "🗓️ Week 09Working with APIs",
+    "section": "Using OpenStreetMap API",
+    "text": "Using OpenStreetMap API\n\nOpenstreetMap (OSM) is a free and open map of the world created largely by voluntary contribution of millions of people around the world\nOSM serves two APIs, namely Main API for editing OSM, and Overpass API for providing OSM data\nOSM data is stored as a list of attributes tagged in key - value pairs of geospatial objects (points, lines or polygons)\nFor example, for charities, the key is “office”, and the value is “charity”\n\naccess an extensive list of key-value pairs through OSM Wiki Map features"
+  },
+  {
+    "objectID": "2023/weeks/week09/page9.html",
+    "href": "2023/weeks/week09/page9.html",
+    "title": "🗓️ Week 09 ->>Working with APIs",
+    "section": "",
+    "text": "Students will be introduced multiple APIs to collect data from digital platforms and how they can access them through R."
+  },
+  {
+    "objectID": "2023/weeks/week09/page9.html#lecture-slides",
+    "href": "2023/weeks/week09/page9.html#lecture-slides",
+    "title": "🗓️ Week 09 ->>Working with APIs",
+    "section": "👨‍🏫 Lecture Slides",
+    "text": "👨‍🏫 Lecture Slides\nEither click on the slide area below or click here to view it in fullscreen. Use your keypad to navigate the slides.\n\n\n\n\n🎥 Looking for lecture recordings? You can only find those on Moodle."
+  },
+  {
+    "objectID": "2023/weeks/week09/page9.html#lab-materials",
+    "href": "2023/weeks/week09/page9.html#lab-materials",
+    "title": "🗓️ Week 09 ->>Working with APIs",
+    "section": "✍️ Lab Materials",
+    "text": "✍️ Lab Materials\n🚧 They will set up a developer account to access APIs to pull data from the platforms.🚧"
+  },
+  {
+    "objectID": "2023/weeks/week09/page9.html#required-reading",
+    "href": "2023/weeks/week09/page9.html#required-reading",
+    "title": "🗓️ Week 09 ->>Working with APIs",
+    "section": "📚 Required Reading",
+    "text": "📚 Required Reading\n\nBruns, A. (2019). After the ‘APIcalypse’: Social media platforms and their fight against critical scholarly research. Information, Communication & Society, 22(11), 1544-1566.\nPrado-Román, C., Gómez-Martínez, R., & Orden-Cruz, C. (2021). Google Trends as a predictor of presidential elections: The United States versus Canada. American Behavioral Scientist, 65(4), 666-680."
   }
 ]
