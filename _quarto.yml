@@ -15,6 +15,7 @@ project:
     - "2023/weeks/week08/*.qmd"
     - "2023/weeks/week09/*.qmd"
     - "2023/workshop/rworkshop/*.qmd"
+    - "2023/syllabus/rsyllabus/*.qmd"
 
 website:
   title: "Computational Tools for Reproducible Social Science 2023/24"
@@ -33,8 +34,11 @@ website:
     contents:
       - href: 2023/index.qmd
         text: "🏠 Home"
-      # - href: 2023/syllabus.qmd
-      #   text: "📓 Syllabus" 
+      - section: "📓 Syllabus"
+        contents:
+        - href: 2023/syllabus/rsyllabus/syllabus.qmd
+          text: "📓 Syllabus" 
+          contents:
       - section: "📟 R Workshop"
         contents:
          - href: 2023/workshop/rworkshop/page.qmd
