@@ -312,7 +312,7 @@
     "href": "2025/weeks/week08/slides8.html#selenium-keys",
     "title": "🗓️ Week 08Automated Data Collection II",
     "section": "Selenium keys",
-    "text": "Selenium keys\nHere is the list of Selenium keys:\n\n\n\nThe downloaded binary packages are in\n    /var/folders/3b/f__hzkkn7h187ymsbptz__mw0000gn/T//RtmpAWLS9k/downloaded_packages\n\n\n\nThe downloaded binary packages are in\n    /var/folders/3b/f__hzkkn7h187ymsbptz__mw0000gn/T//RtmpAWLS9k/downloaded_packages\n\n\n [1] \"null\"         \"cancel\"       \"help\"         \"backspace\"    \"tab\"         \n [6] \"clear\"        \"return\"       \"enter\"        \"shift\"        \"control\"     \n[11] \"alt\"          \"pause\"        \"escape\"       \"space\"        \"page_up\"     \n[16] \"page_down\"    \"end\"          \"home\"         \"left_arrow\"   \"up_arrow\"    \n[21] \"right_arrow\"  \"down_arrow\"   \"insert\"       \"delete\"       \"semicolon\"   \n[26] \"equals\"       \"numpad_0\"     \"numpad_1\"     \"numpad_2\"     \"numpad_3\"    \n[31] \"numpad_4\"     \"numpad_5\"     \"numpad_6\"     \"numpad_7\"     \"numpad_8\"    \n[36] \"numpad_9\"     \"multiply\"     \"add\"          \"separator\"    \"subtract\"    \n[41] \"decimal\"      \"divide\"       \"f1\"           \"f2\"           \"f3\"          \n[46] \"f4\"           \"f5\"           \"f6\"           \"f7\"           \"f8\"          \n[51] \"f9\"           \"f10\"          \"f11\"          \"f12\"          \"command_meta\""
+    "text": "Selenium keys\nHere is the list of Selenium keys:\n\n\n\nThe downloaded binary packages are in\n    /var/folders/3b/f__hzkkn7h187ymsbptz__mw0000gn/T//Rtmpa7ovbS/downloaded_packages\n\n\n\nThe downloaded binary packages are in\n    /var/folders/3b/f__hzkkn7h187ymsbptz__mw0000gn/T//Rtmpa7ovbS/downloaded_packages\n\n\n [1] \"null\"         \"cancel\"       \"help\"         \"backspace\"    \"tab\"         \n [6] \"clear\"        \"return\"       \"enter\"        \"shift\"        \"control\"     \n[11] \"alt\"          \"pause\"        \"escape\"       \"space\"        \"page_up\"     \n[16] \"page_down\"    \"end\"          \"home\"         \"left_arrow\"   \"up_arrow\"    \n[21] \"right_arrow\"  \"down_arrow\"   \"insert\"       \"delete\"       \"semicolon\"   \n[26] \"equals\"       \"numpad_0\"     \"numpad_1\"     \"numpad_2\"     \"numpad_3\"    \n[31] \"numpad_4\"     \"numpad_5\"     \"numpad_6\"     \"numpad_7\"     \"numpad_8\"    \n[36] \"numpad_9\"     \"multiply\"     \"add\"          \"separator\"    \"subtract\"    \n[41] \"decimal\"      \"divide\"       \"f1\"           \"f2\"           \"f3\"          \n[46] \"f4\"           \"f5\"           \"f6\"           \"f7\"           \"f8\"          \n[51] \"f9\"           \"f10\"          \"f11\"          \"f12\"          \"command_meta\""
   },
   {
     "objectID": "2025/weeks/week08/slides8.html#searching-a-keyword-example",
@@ -1005,7 +1005,7 @@
     "href": "2025/weeks/week04/slides4.html#setup",
     "title": "🗓️ Week 04Automating – Functional Programming",
     "section": "Setup",
-    "text": "Setup\n\n# Install packages\nif (!require(\"pacman\")) {\n  install.packages(\"pacman\")\n}\n\npacman::p_load(\n  tidyverse, # tidyverse pkgs including purrr\n  glue, #combining strings and objects\n  gapminder, # dataset\n  ggplot2, #plotting\n  gridExtra #arranging plots\n  ) \n\n\nThe downloaded binary packages are in\n    /var/folders/3b/f__hzkkn7h187ymsbptz__mw0000gn/T//RtmpdblMGK/downloaded_packages\n\n\n\nThe downloaded binary packages are in\n    /var/folders/3b/f__hzkkn7h187ymsbptz__mw0000gn/T//RtmpdblMGK/downloaded_packages"
+    "text": "Setup\n\n# Install packages\nif (!require(\"pacman\")) {\n  install.packages(\"pacman\")\n}\n\npacman::p_load(\n  tidyverse, # tidyverse pkgs including purrr\n  glue, #combining strings and objects\n  gapminder, # dataset\n  ggplot2, #plotting\n  gridExtra #arranging plots\n  )"
   },
   {
     "objectID": "2025/weeks/week04/slides4.html#flow-control",
@@ -1229,7 +1229,7 @@
     "href": "2025/weeks/week03/slides3.html#loading-required-packages",
     "title": "🗓️ Week 03Wrangling and Tidying Data",
     "section": "Loading required packages",
-    "text": "Loading required packages\n\npacman::p_load(\n  tidyverse, # the tidyverse framework\n  skimr# quickly providing a broad overview of a data frame\n)\n\n\nThe downloaded binary packages are in\n    /var/folders/3b/f__hzkkn7h187ymsbptz__mw0000gn/T//RtmpFBCVhH/downloaded_packages\n\n\n\nThe downloaded binary packages are in\n    /var/folders/3b/f__hzkkn7h187ymsbptz__mw0000gn/T//RtmpFBCVhH/downloaded_packages"
+    "text": "Loading required packages\n\npacman::p_load(\n  tidyverse, # the tidyverse framework\n  skimr# quickly providing a broad overview of a data frame\n)"
   },
   {
     "objectID": "2025/weeks/week03/slides3.html#displaying-and-summarising-data-i",
@@ -1390,7 +1390,7 @@
     "href": "2025/weeks/week03/slides3.html#additional-tips",
     "title": "🗓️ Week 03Wrangling and Tidying Data",
     "section": "Additional tips",
-    "text": "Additional tips\nReal-world data are usually messier. The janitor package is useful to fix this kind of problem\n\nmessy_data &lt;- tibble::tribble(\n  ~\"ColNum1\", ~\"COLNUM2\", ~\"COL & NUM3\",\n  1, 2, 3\n)\n\nmessy_data\n\n# A tibble: 1 × 3\n  ColNum1 COLNUM2 `COL & NUM3`\n    &lt;dbl&gt;   &lt;dbl&gt;        &lt;dbl&gt;\n1       1       2            3\n\n\n\npacman::p_load(janitor)\n\n\nThe downloaded binary packages are in\n    /var/folders/3b/f__hzkkn7h187ymsbptz__mw0000gn/T//RtmpFBCVhH/downloaded_packages\n\njanitor::clean_names(messy_data)\n\n# A tibble: 1 × 3\n  col_num1 colnum2 col_num3\n     &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;\n1        1       2        3"
+    "text": "Additional tips\nReal-world data are usually messier. The janitor package is useful to fix this kind of problem\n\nmessy_data &lt;- tibble::tribble(\n  ~\"ColNum1\", ~\"COLNUM2\", ~\"COL & NUM3\",\n  1, 2, 3\n)\n\nmessy_data\n\n# A tibble: 1 × 3\n  ColNum1 COLNUM2 `COL & NUM3`\n    &lt;dbl&gt;   &lt;dbl&gt;        &lt;dbl&gt;\n1       1       2            3\n\n\n\npacman::p_load(janitor)\n\njanitor::clean_names(messy_data)\n\n# A tibble: 1 × 3\n  col_num1 colnum2 col_num3\n     &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;\n1        1       2        3"
   },
   {
     "objectID": "2025/weeks/week03/slides3.html#creating-new-columns",
@@ -1411,14 +1411,14 @@
     "href": "2025/weeks/week03/slides3.html#producing-tables",
     "title": "🗓️ Week 03Wrangling and Tidying Data",
     "section": "Producing tables",
-    "text": "Producing tables\n\npacman::p_load(\n  kableExtra,\n  flextable\n)"
+    "text": "Producing tables\n\npacman::p_load(\n  kableExtra,\n  flextable\n)\n\n# For HTML and LaTeX\ntablea %&gt;% kableExtra::kable()"
   },
   {
     "objectID": "2025/weeks/week03/slides3.html#producing-tables-output",
     "href": "2025/weeks/week03/slides3.html#producing-tables-output",
     "title": "🗓️ Week 03Wrangling and Tidying Data",
     "section": "Producing tables",
-    "text": "Producing tables\n\n\nThe downloaded binary packages are in\n    /var/folders/3b/f__hzkkn7h187ymsbptz__mw0000gn/T//RtmpFBCVhH/downloaded_packages\n\n\n\nThe downloaded binary packages are in\n    /var/folders/3b/f__hzkkn7h187ymsbptz__mw0000gn/T//RtmpFBCVhH/downloaded_packages\n\n# For HTML and LaTeX\ntablea %&gt;% kableExtra::kable()\n\n\n\n\norder\nn\nmean_sleep\nsd_sleep\n\n\n\n\nAfrosoricida\n1\n15.600000\nNA\n\n\nArtiodactyla\n6\n4.516667\n2.5119050\n\n\nCarnivora\n12\n10.116667\n3.5021638\n\n\nCetacea\n3\n4.500000\n1.5716234\n\n\nChiroptera\n2\n19.800000\n0.1414214\n\n\nCingulata\n2\n17.750000\n0.4949747\n\n\nDidelphimorphia\n2\n18.700000\n0.9899495\n\n\nDiprotodontia\n2\n12.400000\n1.8384776\n\n\nErinaceomorpha\n2\n10.200000\n0.1414214\n\n\nHyracoidea\n3\n5.666667\n0.5507571\n\n\nLagomorpha\n1\n8.400000\nNA\n\n\nMonotremata\n1\n8.600000\nNA\n\n\nPerissodactyla\n3\n3.466667\n0.8144528\n\n\nPilosa\n1\n14.400000\nNA\n\n\nPrimates\n12\n10.500000\n2.2098951\n\n\nProboscidea\n2\n3.600000\n0.4242641\n\n\nRodentia\n22\n12.468182\n2.8132994\n\n\nScandentia\n1\n8.900000\nNA\n\n\nSoricomorpha\n5\n11.100000\n2.7046257"
+    "text": "Producing tables\n\n\n\n\norder\nn\nmean_sleep\nsd_sleep\n\n\n\n\nAfrosoricida\n1\n15.600000\nNA\n\n\nArtiodactyla\n6\n4.516667\n2.5119050\n\n\nCarnivora\n12\n10.116667\n3.5021638\n\n\nCetacea\n3\n4.500000\n1.5716234\n\n\nChiroptera\n2\n19.800000\n0.1414214\n\n\nCingulata\n2\n17.750000\n0.4949747\n\n\nDidelphimorphia\n2\n18.700000\n0.9899495\n\n\nDiprotodontia\n2\n12.400000\n1.8384776\n\n\nErinaceomorpha\n2\n10.200000\n0.1414214\n\n\nHyracoidea\n3\n5.666667\n0.5507571\n\n\nLagomorpha\n1\n8.400000\nNA\n\n\nMonotremata\n1\n8.600000\nNA\n\n\nPerissodactyla\n3\n3.466667\n0.8144528\n\n\nPilosa\n1\n14.400000\nNA\n\n\nPrimates\n12\n10.500000\n2.2098951\n\n\nProboscidea\n2\n3.600000\n0.4242641\n\n\nRodentia\n22\n12.468182\n2.8132994\n\n\nScandentia\n1\n8.900000\nNA\n\n\nSoricomorpha\n5\n11.100000\n2.7046257"
   },
   {
     "objectID": "2025/weeks/week03/slides3.html#grouped-summaries",

@@ -453,16 +453,6 @@ Dr <a href="#/">Burak Sonmez</a>
 <span id="cb1-10"><a href="#cb1-10"></a>  ggplot2, <span class="co">#plotting</span></span>
 <span id="cb1-11"><a href="#cb1-11"></a>  gridExtra <span class="co">#arranging plots</span></span>
 <span id="cb1-12"><a href="#cb1-12"></a>  ) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-The downloaded binary packages are in
-    /var/folders/3b/f__hzkkn7h187ymsbptz__mw0000gn/T//RtmpdblMGK/downloaded_packages</code></pre>
-</div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-The downloaded binary packages are in
-    /var/folders/3b/f__hzkkn7h187ymsbptz__mw0000gn/T//RtmpdblMGK/downloaded_packages</code></pre>
-</div>
 </div>
 </section>
 <section id="flow-control" class="slide level2 smaller">
@@ -470,11 +460,11 @@ The downloaded binary packages are in
 <ul>
 <li>Sometimes you only want to execute code if a certain condition is met (<em>if-else statement</em>)</li>
 </ul>
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="cf">if</span> (condition) {</span>
-<span id="cb4-2"><a href="#cb4-2"></a>  <span class="co"># Code executed when condition is TRUE</span></span>
-<span id="cb4-3"><a href="#cb4-3"></a>} <span class="cf">else</span> {</span>
-<span id="cb4-4"><a href="#cb4-4"></a>  <span class="co"># Code executed when condition is FALSE</span></span>
-<span id="cb4-5"><a href="#cb4-5"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="cf">if</span> (condition) {</span>
+<span id="cb2-2"><a href="#cb2-2"></a>  <span class="co"># Code executed when condition is TRUE</span></span>
+<span id="cb2-3"><a href="#cb2-3"></a>} <span class="cf">else</span> {</span>
+<span id="cb2-4"><a href="#cb2-4"></a>  <span class="co"># Code executed when condition is FALSE</span></span>
+<span id="cb2-5"><a href="#cb2-5"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
 <li>Condition is a statement that must always evaluate to either <strong>TRUE</strong> or <strong>FALSE</strong> (i.e.&nbsp;a vector of length 1)</li>
 </ul>
@@ -483,23 +473,23 @@ The downloaded binary packages are in
 <section id="flow-control-examples" class="slide level2 smaller">
 <h2>Flow control (examples)</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>average <span class="ot">=</span> <span class="dv">72</span></span>
-<span id="cb5-2"><a href="#cb5-2"></a><span class="cf">if</span> (average <span class="sc">&gt;</span> <span class="dv">69</span>) {</span>
-<span id="cb5-3"><a href="#cb5-3"></a>    <span class="fu">print</span>(<span class="st">"First-class honours"</span>)</span>
-<span id="cb5-4"><a href="#cb5-4"></a>} <span class="cf">else</span> {</span>
-<span id="cb5-5"><a href="#cb5-5"></a>    <span class="fu">print</span>(<span class="st">"Second-class honours"</span>)</span>
-<span id="cb5-6"><a href="#cb5-6"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>average <span class="ot">=</span> <span class="dv">72</span></span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="cf">if</span> (average <span class="sc">&gt;</span> <span class="dv">69</span>) {</span>
+<span id="cb3-3"><a href="#cb3-3"></a>    <span class="fu">print</span>(<span class="st">"First-class honours"</span>)</span>
+<span id="cb3-4"><a href="#cb3-4"></a>} <span class="cf">else</span> {</span>
+<span id="cb3-5"><a href="#cb3-5"></a>    <span class="fu">print</span>(<span class="st">"Second-class honours"</span>)</span>
+<span id="cb3-6"><a href="#cb3-6"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "First-class honours"</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>average <span class="ot">=</span> <span class="dv">69</span></span>
-<span id="cb7-2"><a href="#cb7-2"></a><span class="cf">if</span> (average <span class="sc">&gt;</span> <span class="dv">69</span>) {</span>
-<span id="cb7-3"><a href="#cb7-3"></a>    <span class="fu">print</span>(<span class="st">"First-class honours"</span>)</span>
-<span id="cb7-4"><a href="#cb7-4"></a>} <span class="cf">else</span> {</span>
-<span id="cb7-5"><a href="#cb7-5"></a>    <span class="fu">print</span>(<span class="st">"Second-class honours"</span>)</span>
-<span id="cb7-6"><a href="#cb7-6"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>average <span class="ot">=</span> <span class="dv">69</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="cf">if</span> (average <span class="sc">&gt;</span> <span class="dv">69</span>) {</span>
+<span id="cb5-3"><a href="#cb5-3"></a>    <span class="fu">print</span>(<span class="st">"First-class honours"</span>)</span>
+<span id="cb5-4"><a href="#cb5-4"></a>} <span class="cf">else</span> {</span>
+<span id="cb5-5"><a href="#cb5-5"></a>    <span class="fu">print</span>(<span class="st">"Second-class honours"</span>)</span>
+<span id="cb5-6"><a href="#cb5-6"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "Second-class honours"</code></pre>
 </div>
@@ -507,13 +497,13 @@ The downloaded binary packages are in
 </section>
 <section id="what-would-you-do-with-multiple-conditions" class="slide level2 smaller">
 <h2>What would you do with multiple conditions?</h2>
-<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="cf">if</span> (this) {</span>
-<span id="cb9-2"><a href="#cb9-2"></a>  <span class="co"># Do that</span></span>
-<span id="cb9-3"><a href="#cb9-3"></a>} <span class="cf">else</span> <span class="cf">if</span> (that) {</span>
-<span id="cb9-4"><a href="#cb9-4"></a>  <span class="co"># Do something else</span></span>
-<span id="cb9-5"><a href="#cb9-5"></a>} <span class="cf">else</span> {</span>
-<span id="cb9-6"><a href="#cb9-6"></a>  <span class="co"># Do something completely different</span></span>
-<span id="cb9-7"><a href="#cb9-7"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="cf">if</span> (this) {</span>
+<span id="cb7-2"><a href="#cb7-2"></a>  <span class="co"># Do that</span></span>
+<span id="cb7-3"><a href="#cb7-3"></a>} <span class="cf">else</span> <span class="cf">if</span> (that) {</span>
+<span id="cb7-4"><a href="#cb7-4"></a>  <span class="co"># Do something else</span></span>
+<span id="cb7-5"><a href="#cb7-5"></a>} <span class="cf">else</span> {</span>
+<span id="cb7-6"><a href="#cb7-6"></a>  <span class="co"># Do something completely different</span></span>
+<span id="cb7-7"><a href="#cb7-7"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="going-back-to-earlier-one-condition-example" class="slide level2 smaller">
 <h2>Going back to earlier one-condition example</h2>
@@ -521,15 +511,15 @@ The downloaded binary packages are in
 <li>You can generate more complex conditional statements with Boolean operators like &amp; and |:</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a>average <span class="ot">=</span> <span class="dv">50</span> </span>
-<span id="cb10-2"><a href="#cb10-2"></a></span>
-<span id="cb10-3"><a href="#cb10-3"></a><span class="cf">if</span> (average <span class="sc">&gt;</span> <span class="dv">69</span>) {</span>
-<span id="cb10-4"><a href="#cb10-4"></a>    <span class="fu">print</span>(<span class="st">"Firs-class honours"</span>)</span>
-<span id="cb10-5"><a href="#cb10-5"></a>} <span class="cf">else</span> <span class="cf">if</span> (average <span class="sc">&lt;</span> <span class="dv">70</span> <span class="sc">&amp;</span> average <span class="sc">&gt;</span> <span class="dv">59</span>) {</span>
-<span id="cb10-6"><a href="#cb10-6"></a>    <span class="fu">print</span>(<span class="st">"Second-class honours"</span>)</span>
-<span id="cb10-7"><a href="#cb10-7"></a>} <span class="cf">else</span> {</span>
-<span id="cb10-8"><a href="#cb10-8"></a>    <span class="fu">print</span>(<span class="st">"Third-class honours"</span>)</span>
-<span id="cb10-9"><a href="#cb10-9"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a>average <span class="ot">=</span> <span class="dv">50</span> </span>
+<span id="cb8-2"><a href="#cb8-2"></a></span>
+<span id="cb8-3"><a href="#cb8-3"></a><span class="cf">if</span> (average <span class="sc">&gt;</span> <span class="dv">69</span>) {</span>
+<span id="cb8-4"><a href="#cb8-4"></a>    <span class="fu">print</span>(<span class="st">"Firs-class honours"</span>)</span>
+<span id="cb8-5"><a href="#cb8-5"></a>} <span class="cf">else</span> <span class="cf">if</span> (average <span class="sc">&lt;</span> <span class="dv">70</span> <span class="sc">&amp;</span> average <span class="sc">&gt;</span> <span class="dv">59</span>) {</span>
+<span id="cb8-6"><a href="#cb8-6"></a>    <span class="fu">print</span>(<span class="st">"Second-class honours"</span>)</span>
+<span id="cb8-7"><a href="#cb8-7"></a>} <span class="cf">else</span> {</span>
+<span id="cb8-8"><a href="#cb8-8"></a>    <span class="fu">print</span>(<span class="st">"Third-class honours"</span>)</span>
+<span id="cb8-9"><a href="#cb8-9"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "Third-class honours"</code></pre>
 </div>
@@ -544,27 +534,27 @@ The downloaded binary packages are in
 <ul>
 <li>Both the “if” and “function” statements should almost always be accompanied by curly braces <code>{},</code> and the code within them should be indented. Start opening curly braces on a new line, close them on their own line, except when followed by “else,” and maintain code indentation inside them</li>
 </ul>
-<div class="sourceCode" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="co"># Bad example</span></span>
-<span id="cb12-2"><a href="#cb12-2"></a><span class="cf">if</span> (y <span class="sc">&lt;</span> <span class="dv">0</span> <span class="sc">&amp;&amp;</span> debug)</span>
-<span id="cb12-3"><a href="#cb12-3"></a><span class="fu">message</span>(<span class="st">"Y is negative"</span>)</span>
-<span id="cb12-4"><a href="#cb12-4"></a></span>
-<span id="cb12-5"><a href="#cb12-5"></a><span class="cf">if</span> (y <span class="sc">==</span> <span class="dv">0</span>) {</span>
-<span id="cb12-6"><a href="#cb12-6"></a>  <span class="fu">log</span>(x)</span>
-<span id="cb12-7"><a href="#cb12-7"></a>} </span>
-<span id="cb12-8"><a href="#cb12-8"></a><span class="cf">else</span> {</span>
-<span id="cb12-9"><a href="#cb12-9"></a>  y <span class="sc">^</span> x</span>
-<span id="cb12-10"><a href="#cb12-10"></a>}</span>
-<span id="cb12-11"><a href="#cb12-11"></a></span>
-<span id="cb12-12"><a href="#cb12-12"></a><span class="co"># Good example</span></span>
-<span id="cb12-13"><a href="#cb12-13"></a><span class="cf">if</span> (y <span class="sc">&lt;</span> <span class="dv">0</span> <span class="sc">&amp;&amp;</span> debug) {</span>
-<span id="cb12-14"><a href="#cb12-14"></a>  <span class="fu">message</span>(<span class="st">"Y is negative"</span>)</span>
-<span id="cb12-15"><a href="#cb12-15"></a>}</span>
-<span id="cb12-16"><a href="#cb12-16"></a></span>
-<span id="cb12-17"><a href="#cb12-17"></a><span class="cf">if</span> (y <span class="sc">==</span> <span class="dv">0</span>) {</span>
-<span id="cb12-18"><a href="#cb12-18"></a>  <span class="fu">log</span>(x)</span>
-<span id="cb12-19"><a href="#cb12-19"></a>} <span class="cf">else</span> {</span>
-<span id="cb12-20"><a href="#cb12-20"></a>  y <span class="sc">^</span> x</span>
-<span id="cb12-21"><a href="#cb12-21"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="co"># Bad example</span></span>
+<span id="cb10-2"><a href="#cb10-2"></a><span class="cf">if</span> (y <span class="sc">&lt;</span> <span class="dv">0</span> <span class="sc">&amp;&amp;</span> debug)</span>
+<span id="cb10-3"><a href="#cb10-3"></a><span class="fu">message</span>(<span class="st">"Y is negative"</span>)</span>
+<span id="cb10-4"><a href="#cb10-4"></a></span>
+<span id="cb10-5"><a href="#cb10-5"></a><span class="cf">if</span> (y <span class="sc">==</span> <span class="dv">0</span>) {</span>
+<span id="cb10-6"><a href="#cb10-6"></a>  <span class="fu">log</span>(x)</span>
+<span id="cb10-7"><a href="#cb10-7"></a>} </span>
+<span id="cb10-8"><a href="#cb10-8"></a><span class="cf">else</span> {</span>
+<span id="cb10-9"><a href="#cb10-9"></a>  y <span class="sc">^</span> x</span>
+<span id="cb10-10"><a href="#cb10-10"></a>}</span>
+<span id="cb10-11"><a href="#cb10-11"></a></span>
+<span id="cb10-12"><a href="#cb10-12"></a><span class="co"># Good example</span></span>
+<span id="cb10-13"><a href="#cb10-13"></a><span class="cf">if</span> (y <span class="sc">&lt;</span> <span class="dv">0</span> <span class="sc">&amp;&amp;</span> debug) {</span>
+<span id="cb10-14"><a href="#cb10-14"></a>  <span class="fu">message</span>(<span class="st">"Y is negative"</span>)</span>
+<span id="cb10-15"><a href="#cb10-15"></a>}</span>
+<span id="cb10-16"><a href="#cb10-16"></a></span>
+<span id="cb10-17"><a href="#cb10-17"></a><span class="cf">if</span> (y <span class="sc">==</span> <span class="dv">0</span>) {</span>
+<span id="cb10-18"><a href="#cb10-18"></a>  <span class="fu">log</span>(x)</span>
+<span id="cb10-19"><a href="#cb10-19"></a>} <span class="cf">else</span> {</span>
+<span id="cb10-20"><a href="#cb10-20"></a>  y <span class="sc">^</span> x</span>
+<span id="cb10-21"><a href="#cb10-21"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="if-vs-if_else" class="slide level2 smaller">
 <h2>if vs if_else</h2>
@@ -573,8 +563,8 @@ The downloaded binary packages are in
 <li><p>Imagine you wanted to create a new column identifying whether or not a country-year observation has a life expectancy of at least 35</p></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a>gap <span class="ot">&lt;-</span> gapminder</span>
-<span id="cb13-2"><a href="#cb13-2"></a><span class="fu">head</span>(gap)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a>gap <span class="ot">&lt;-</span> gapminder</span>
+<span id="cb11-2"><a href="#cb11-2"></a><span class="fu">head</span>(gap)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 6
   country     continent  year lifeExp      pop gdpPercap
@@ -587,13 +577,13 @@ The downloaded binary packages are in
 6 Afghanistan Asia       1977    38.4 14880372      786.</code></pre>
 </div>
 </div>
-<div class="sourceCode" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a>gap_if <span class="ot">&lt;-</span> gap <span class="sc">%&gt;%</span></span>
-<span id="cb15-2"><a href="#cb15-2"></a>   <span class="fu">mutate</span>(<span class="at">life.35 =</span> <span class="cf">if</span>(lifeExp <span class="sc">&gt;=</span> <span class="dv">35</span>){</span>
-<span id="cb15-3"><a href="#cb15-3"></a>     <span class="dv">1</span></span>
-<span id="cb15-4"><a href="#cb15-4"></a>   } <span class="cf">else</span> {</span>
-<span id="cb15-5"><a href="#cb15-5"></a>     <span class="dv">0</span></span>
-<span id="cb15-6"><a href="#cb15-6"></a>   })</span>
-<span id="cb15-7"><a href="#cb15-7"></a><span class="fu">head</span>(gap_if)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a>gap_if <span class="ot">&lt;-</span> gap <span class="sc">%&gt;%</span></span>
+<span id="cb13-2"><a href="#cb13-2"></a>   <span class="fu">mutate</span>(<span class="at">life.35 =</span> <span class="cf">if</span>(lifeExp <span class="sc">&gt;=</span> <span class="dv">35</span>){</span>
+<span id="cb13-3"><a href="#cb13-3"></a>     <span class="dv">1</span></span>
+<span id="cb13-4"><a href="#cb13-4"></a>   } <span class="cf">else</span> {</span>
+<span id="cb13-5"><a href="#cb13-5"></a>     <span class="dv">0</span></span>
+<span id="cb13-6"><a href="#cb13-6"></a>   })</span>
+<span id="cb13-7"><a href="#cb13-7"></a><span class="fu">head</span>(gap_if)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
 <li>Try this code and tell us what you think it’s wrong</li>
 </ul>
@@ -604,10 +594,10 @@ The downloaded binary packages are in
 <li>This vectorises the if-else comparison and makes a separate comparison for each row of the data frame</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a>gap_ifelse <span class="ot">&lt;-</span> gap <span class="sc">%&gt;%</span></span>
-<span id="cb16-2"><a href="#cb16-2"></a>  <span class="fu">mutate</span>(<span class="at">life.35 =</span> <span class="fu">if_else</span>(lifeExp <span class="sc">&gt;=</span> <span class="dv">35</span>, <span class="dv">1</span>, <span class="dv">0</span>))</span>
-<span id="cb16-3"><a href="#cb16-3"></a></span>
-<span id="cb16-4"><a href="#cb16-4"></a>gap_ifelse</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a>gap_ifelse <span class="ot">&lt;-</span> gap <span class="sc">%&gt;%</span></span>
+<span id="cb14-2"><a href="#cb14-2"></a>  <span class="fu">mutate</span>(<span class="at">life.35 =</span> <span class="fu">if_else</span>(lifeExp <span class="sc">&gt;=</span> <span class="dv">35</span>, <span class="dv">1</span>, <span class="dv">0</span>))</span>
+<span id="cb14-3"><a href="#cb14-3"></a></span>
+<span id="cb14-4"><a href="#cb14-4"></a>gap_ifelse</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1,704 × 7
    country     continent  year lifeExp      pop gdpPercap life.35
@@ -645,14 +635,14 @@ The downloaded binary packages are in
 <ul>
 <li>Functions allow you to automate common tasks in a more powerful and general way than copy-and-pasting</li>
 </ul>
-<div class="sourceCode" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a>gap <span class="ot">&lt;-</span> gapminder</span>
-<span id="cb18-2"><a href="#cb18-2"></a></span>
-<span id="cb18-3"><a href="#cb18-3"></a>gap_norm <span class="ot">&lt;-</span> gap <span class="sc">%&gt;%</span></span>
-<span id="cb18-4"><a href="#cb18-4"></a>  <span class="fu">mutate</span>(<span class="at">pop_norm =</span> (pop <span class="sc">-</span> <span class="fu">min</span>(pop)) <span class="sc">/</span> (<span class="fu">max</span>(pop) <span class="sc">-</span> <span class="fu">min</span> (pop)),</span>
-<span id="cb18-5"><a href="#cb18-5"></a>         <span class="at">gdp_norm =</span> (gdpPercap <span class="sc">-</span> <span class="fu">min</span>(gdpPercap)) <span class="sc">/</span> (<span class="fu">max</span>(gdpPercap) <span class="sc">-</span> <span class="fu">min</span> (gdpPercap)),</span>
-<span id="cb18-6"><a href="#cb18-6"></a>         <span class="at">life_norm =</span> (lifeExp <span class="sc">-</span> <span class="fu">min</span>(lifeExp) <span class="sc">/</span> (<span class="fu">max</span>(pop)) <span class="sc">-</span> <span class="fu">min</span> (lifeExp)))</span>
-<span id="cb18-7"><a href="#cb18-7"></a></span>
-<span id="cb18-8"><a href="#cb18-8"></a><span class="fu">summary</span>(gap_norm<span class="sc">$</span>pop_norm)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a>gap <span class="ot">&lt;-</span> gapminder</span>
+<span id="cb16-2"><a href="#cb16-2"></a></span>
+<span id="cb16-3"><a href="#cb16-3"></a>gap_norm <span class="ot">&lt;-</span> gap <span class="sc">%&gt;%</span></span>
+<span id="cb16-4"><a href="#cb16-4"></a>  <span class="fu">mutate</span>(<span class="at">pop_norm =</span> (pop <span class="sc">-</span> <span class="fu">min</span>(pop)) <span class="sc">/</span> (<span class="fu">max</span>(pop) <span class="sc">-</span> <span class="fu">min</span> (pop)),</span>
+<span id="cb16-5"><a href="#cb16-5"></a>         <span class="at">gdp_norm =</span> (gdpPercap <span class="sc">-</span> <span class="fu">min</span>(gdpPercap)) <span class="sc">/</span> (<span class="fu">max</span>(gdpPercap) <span class="sc">-</span> <span class="fu">min</span> (gdpPercap)),</span>
+<span id="cb16-6"><a href="#cb16-6"></a>         <span class="at">life_norm =</span> (lifeExp <span class="sc">-</span> <span class="fu">min</span>(lifeExp) <span class="sc">/</span> (<span class="fu">max</span>(pop)) <span class="sc">-</span> <span class="fu">min</span> (lifeExp)))</span>
+<span id="cb16-7"><a href="#cb16-7"></a></span>
+<span id="cb16-8"><a href="#cb16-8"></a><span class="fu">summary</span>(gap_norm<span class="sc">$</span>pop_norm)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
 <li>Take a look at the code above and spot the mistake?</li>
 </ul>
@@ -664,21 +654,21 @@ The downloaded binary packages are in
 <li><p><strong>Arguments:</strong> or list of inputs, to the function. They go inside the parentheses in <code>function()</code></p></li>
 <li><p><strong>The body:</strong> This is the block of code within <code>{}</code> that immediately follows function(…), and it is the code that you develop to perform the action described in the name using the arguments you provide</p></li>
 </ul>
-<div class="sourceCode" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a>my_function <span class="ot">&lt;-</span> <span class="cf">function</span>(x, y){</span>
-<span id="cb19-2"><a href="#cb19-2"></a>  <span class="co"># do</span></span>
-<span id="cb19-3"><a href="#cb19-3"></a>  <span class="co"># something</span></span>
-<span id="cb19-4"><a href="#cb19-4"></a>  <span class="co"># here</span></span>
-<span id="cb19-5"><a href="#cb19-5"></a>  <span class="fu">return</span>(result)</span>
-<span id="cb19-6"><a href="#cb19-6"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a>my_function <span class="ot">&lt;-</span> <span class="cf">function</span>(x, y){</span>
+<span id="cb17-2"><a href="#cb17-2"></a>  <span class="co"># do</span></span>
+<span id="cb17-3"><a href="#cb17-3"></a>  <span class="co"># something</span></span>
+<span id="cb17-4"><a href="#cb17-4"></a>  <span class="co"># here</span></span>
+<span id="cb17-5"><a href="#cb17-5"></a>  <span class="fu">return</span>(result)</span>
+<span id="cb17-6"><a href="#cb17-6"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="writing-a-function" class="slide level2 smaller">
 <h2>Writing a function</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a>simple.function <span class="ot">&lt;-</span> <span class="cf">function</span>(x, y){</span>
-<span id="cb20-2"><a href="#cb20-2"></a>  <span class="fu">print</span>(x <span class="sc">-</span> y <span class="sc">+</span> <span class="dv">1</span>)</span>
-<span id="cb20-3"><a href="#cb20-3"></a>}</span>
-<span id="cb20-4"><a href="#cb20-4"></a></span>
-<span id="cb20-5"><a href="#cb20-5"></a><span class="fu">simple.function</span>(<span class="at">x =</span> <span class="dv">2</span>, <span class="at">y =</span> <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a>simple.function <span class="ot">&lt;-</span> <span class="cf">function</span>(x, y){</span>
+<span id="cb18-2"><a href="#cb18-2"></a>  <span class="fu">print</span>(x <span class="sc">-</span> y <span class="sc">+</span> <span class="dv">1</span>)</span>
+<span id="cb18-3"><a href="#cb18-3"></a>}</span>
+<span id="cb18-4"><a href="#cb18-4"></a></span>
+<span id="cb18-5"><a href="#cb18-5"></a><span class="fu">simple.function</span>(<span class="at">x =</span> <span class="dv">2</span>, <span class="at">y =</span> <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] -7</code></pre>
 </div>
@@ -687,13 +677,13 @@ The downloaded binary packages are in
 <li>Note that <code>return()</code> will only process a single object, so multiple items must usually be returned as a list</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a>multiple.items <span class="ot">&lt;-</span> <span class="cf">function</span>(x,y){</span>
-<span id="cb22-2"><a href="#cb22-2"></a>  thing1 <span class="ot">&lt;-</span> x</span>
-<span id="cb22-3"><a href="#cb22-3"></a>  thing2 <span class="ot">&lt;-</span> y</span>
-<span id="cb22-4"><a href="#cb22-4"></a>  <span class="fu">return</span>(<span class="fu">list</span>(thing1, thing2))</span>
-<span id="cb22-5"><a href="#cb22-5"></a>}</span>
-<span id="cb22-6"><a href="#cb22-6"></a></span>
-<span id="cb22-7"><a href="#cb22-7"></a><span class="fu">multiple.items</span>(<span class="at">x =</span> <span class="st">"some text"</span>, <span class="at">y =</span> <span class="st">"some data"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a>multiple.items <span class="ot">&lt;-</span> <span class="cf">function</span>(x,y){</span>
+<span id="cb20-2"><a href="#cb20-2"></a>  thing1 <span class="ot">&lt;-</span> x</span>
+<span id="cb20-3"><a href="#cb20-3"></a>  thing2 <span class="ot">&lt;-</span> y</span>
+<span id="cb20-4"><a href="#cb20-4"></a>  <span class="fu">return</span>(<span class="fu">list</span>(thing1, thing2))</span>
+<span id="cb20-5"><a href="#cb20-5"></a>}</span>
+<span id="cb20-6"><a href="#cb20-6"></a></span>
+<span id="cb20-7"><a href="#cb20-7"></a><span class="fu">multiple.items</span>(<span class="at">x =</span> <span class="st">"some text"</span>, <span class="at">y =</span> <span class="st">"some data"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[[1]]
 [1] "some text"
@@ -720,28 +710,28 @@ The downloaded binary packages are in
 <li><p>-99: missing responses</p></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1"></a><span class="co"># Data</span></span>
-<span id="cb24-2"><a href="#cb24-2"></a></span>
-<span id="cb24-3"><a href="#cb24-3"></a><span class="fu">set.seed</span>(<span class="dv">1234</span>) <span class="co"># for reproducibility</span></span>
-<span id="cb24-4"><a href="#cb24-4"></a></span>
-<span id="cb24-5"><a href="#cb24-5"></a>df <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
-<span id="cb24-6"><a href="#cb24-6"></a>  <span class="st">"a"</span> <span class="ot">=</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="sc">-</span><span class="dv">99</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>), <span class="at">size =</span> <span class="dv">5</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb24-7"><a href="#cb24-7"></a>  <span class="st">"b"</span> <span class="ot">=</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="sc">-</span><span class="dv">99</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>), <span class="at">size =</span> <span class="dv">5</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb24-8"><a href="#cb24-8"></a>  <span class="st">"c"</span> <span class="ot">=</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="sc">-</span><span class="dv">99</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>), <span class="at">size =</span> <span class="dv">5</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb24-9"><a href="#cb24-9"></a>  <span class="st">"d"</span> <span class="ot">=</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="sc">-</span><span class="dv">99</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>), <span class="at">size =</span> <span class="dv">5</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb24-10"><a href="#cb24-10"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a><span class="co"># Data</span></span>
+<span id="cb22-2"><a href="#cb22-2"></a></span>
+<span id="cb22-3"><a href="#cb22-3"></a><span class="fu">set.seed</span>(<span class="dv">1234</span>) <span class="co"># for reproducibility</span></span>
+<span id="cb22-4"><a href="#cb22-4"></a></span>
+<span id="cb22-5"><a href="#cb22-5"></a>df <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb22-6"><a href="#cb22-6"></a>  <span class="st">"a"</span> <span class="ot">=</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="sc">-</span><span class="dv">99</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>), <span class="at">size =</span> <span class="dv">5</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb22-7"><a href="#cb22-7"></a>  <span class="st">"b"</span> <span class="ot">=</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="sc">-</span><span class="dv">99</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>), <span class="at">size =</span> <span class="dv">5</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb22-8"><a href="#cb22-8"></a>  <span class="st">"c"</span> <span class="ot">=</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="sc">-</span><span class="dv">99</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>), <span class="at">size =</span> <span class="dv">5</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb22-9"><a href="#cb22-9"></a>  <span class="st">"d"</span> <span class="ot">=</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="sc">-</span><span class="dv">99</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>), <span class="at">size =</span> <span class="dv">5</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb22-10"><a href="#cb22-10"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="how-would-you-replace--99-with-na-by-copy-and-pasting" class="slide level2 smaller">
 <h2>How would you replace -99 with NA by copy-and-pasting?</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1"></a><span class="co"># Copy and paste</span></span>
-<span id="cb25-2"><a href="#cb25-2"></a>df<span class="sc">$</span>a[df<span class="sc">$</span>a <span class="sc">==</span> <span class="sc">-</span><span class="dv">99</span>] <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
-<span id="cb25-3"><a href="#cb25-3"></a>df<span class="sc">$</span>b[df<span class="sc">$</span>b <span class="sc">==</span> <span class="sc">-</span><span class="dv">99</span>] <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
-<span id="cb25-4"><a href="#cb25-4"></a>df<span class="sc">$</span>c[df<span class="sc">$</span>c <span class="sc">==</span> <span class="sc">-</span><span class="dv">99</span>] <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
-<span id="cb25-5"><a href="#cb25-5"></a>df<span class="sc">$</span>d[df<span class="sc">$</span>d <span class="sc">==</span> <span class="sc">-</span><span class="dv">99</span>] <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
-<span id="cb25-6"><a href="#cb25-6"></a></span>
-<span id="cb25-7"><a href="#cb25-7"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a><span class="co"># Copy and paste</span></span>
+<span id="cb23-2"><a href="#cb23-2"></a>df<span class="sc">$</span>a[df<span class="sc">$</span>a <span class="sc">==</span> <span class="sc">-</span><span class="dv">99</span>] <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
+<span id="cb23-3"><a href="#cb23-3"></a>df<span class="sc">$</span>b[df<span class="sc">$</span>b <span class="sc">==</span> <span class="sc">-</span><span class="dv">99</span>] <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
+<span id="cb23-4"><a href="#cb23-4"></a>df<span class="sc">$</span>c[df<span class="sc">$</span>c <span class="sc">==</span> <span class="sc">-</span><span class="dv">99</span>] <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
+<span id="cb23-5"><a href="#cb23-5"></a>df<span class="sc">$</span>d[df<span class="sc">$</span>d <span class="sc">==</span> <span class="sc">-</span><span class="dv">99</span>] <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
+<span id="cb23-6"><a href="#cb23-6"></a></span>
+<span id="cb23-7"><a href="#cb23-7"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 5 × 4
       a     b     c     d
@@ -760,19 +750,19 @@ The downloaded binary packages are in
 <li>If you write a function, you gain efficiency because you don’t need to copy and paste the computation part</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1"></a>fix_missing <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
-<span id="cb27-2"><a href="#cb27-2"></a>  x[x <span class="sc">==</span> <span class="sc">-</span><span class="dv">99</span>] <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
-<span id="cb27-3"><a href="#cb27-3"></a>  x</span>
-<span id="cb27-4"><a href="#cb27-4"></a>}</span>
-<span id="cb27-5"><a href="#cb27-5"></a></span>
-<span id="cb27-6"><a href="#cb27-6"></a><span class="co"># Apply function to each column (vector)</span></span>
-<span id="cb27-7"><a href="#cb27-7"></a></span>
-<span id="cb27-8"><a href="#cb27-8"></a>df<span class="sc">$</span>a <span class="ot">&lt;-</span> <span class="fu">fix_missing</span>(df<span class="sc">$</span>a)</span>
-<span id="cb27-9"><a href="#cb27-9"></a>df<span class="sc">$</span>b <span class="ot">&lt;-</span> <span class="fu">fix_missing</span>(df<span class="sc">$</span>b)</span>
-<span id="cb27-10"><a href="#cb27-10"></a>df<span class="sc">$</span>c <span class="ot">&lt;-</span> <span class="fu">fix_missing</span>(df<span class="sc">$</span>c)</span>
-<span id="cb27-11"><a href="#cb27-11"></a>df<span class="sc">$</span>d <span class="ot">&lt;-</span> <span class="fu">fix_missing</span>(df<span class="sc">$</span>d)</span>
-<span id="cb27-12"><a href="#cb27-12"></a></span>
-<span id="cb27-13"><a href="#cb27-13"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1"></a>fix_missing <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
+<span id="cb25-2"><a href="#cb25-2"></a>  x[x <span class="sc">==</span> <span class="sc">-</span><span class="dv">99</span>] <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
+<span id="cb25-3"><a href="#cb25-3"></a>  x</span>
+<span id="cb25-4"><a href="#cb25-4"></a>}</span>
+<span id="cb25-5"><a href="#cb25-5"></a></span>
+<span id="cb25-6"><a href="#cb25-6"></a><span class="co"># Apply function to each column (vector)</span></span>
+<span id="cb25-7"><a href="#cb25-7"></a></span>
+<span id="cb25-8"><a href="#cb25-8"></a>df<span class="sc">$</span>a <span class="ot">&lt;-</span> <span class="fu">fix_missing</span>(df<span class="sc">$</span>a)</span>
+<span id="cb25-9"><a href="#cb25-9"></a>df<span class="sc">$</span>b <span class="ot">&lt;-</span> <span class="fu">fix_missing</span>(df<span class="sc">$</span>b)</span>
+<span id="cb25-10"><a href="#cb25-10"></a>df<span class="sc">$</span>c <span class="ot">&lt;-</span> <span class="fu">fix_missing</span>(df<span class="sc">$</span>c)</span>
+<span id="cb25-11"><a href="#cb25-11"></a>df<span class="sc">$</span>d <span class="ot">&lt;-</span> <span class="fu">fix_missing</span>(df<span class="sc">$</span>d)</span>
+<span id="cb25-12"><a href="#cb25-12"></a></span>
+<span id="cb25-13"><a href="#cb25-13"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 5 × 4
       a     b     c     d
@@ -791,9 +781,9 @@ The downloaded binary packages are in
 <li><code>map()</code> is a good alternative to for loop</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1"></a>df <span class="ot">&lt;-</span> purrr<span class="sc">::</span><span class="fu">map_df</span>(df, fix_missing)</span>
-<span id="cb29-2"><a href="#cb29-2"></a></span>
-<span id="cb29-3"><a href="#cb29-3"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1"></a>df <span class="ot">&lt;-</span> purrr<span class="sc">::</span><span class="fu">map_df</span>(df, fix_missing)</span>
+<span id="cb27-2"><a href="#cb27-2"></a></span>
+<span id="cb27-3"><a href="#cb27-3"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 5 × 4
       a     b     c     d
@@ -817,21 +807,21 @@ The downloaded binary packages are in
 <section id="illustrating-why-map-can-be-more-efficient-than-loops" class="slide level2 smaller">
 <h2>Illustrating why <code>map()</code> can be more efficient than loops</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1"></a><span class="fu">data</span>(<span class="st">"airquality"</span>)</span>
-<span id="cb31-2"><a href="#cb31-2"></a></span>
-<span id="cb31-3"><a href="#cb31-3"></a><span class="co"># Placeholder</span></span>
-<span id="cb31-4"><a href="#cb31-4"></a>out1 <span class="ot">&lt;-</span> <span class="fu">vector</span>(<span class="st">"double"</span>, <span class="fu">ncol</span>(airquality))</span>
-<span id="cb31-5"><a href="#cb31-5"></a></span>
-<span id="cb31-6"><a href="#cb31-6"></a><span class="co"># Sequence variable</span></span>
-<span id="cb31-7"><a href="#cb31-7"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="fu">seq_along</span>(airquality)) { </span>
-<span id="cb31-8"><a href="#cb31-8"></a></span>
-<span id="cb31-9"><a href="#cb31-9"></a>  <span class="co"># Assign an iteration result to each element of the placeholder list </span></span>
-<span id="cb31-10"><a href="#cb31-10"></a>  out1[[i]] <span class="ot">&lt;-</span> <span class="fu">mean</span>(airquality[[i]], <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb31-11"><a href="#cb31-11"></a>}</span>
-<span id="cb31-12"><a href="#cb31-12"></a></span>
-<span id="cb31-13"><a href="#cb31-13"></a><span class="co">#vs one-liner map()</span></span>
-<span id="cb31-14"><a href="#cb31-14"></a>out1 <span class="ot">&lt;-</span> airquality <span class="sc">%&gt;%</span> <span class="fu">map_dbl</span>(mean, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb31-15"><a href="#cb31-15"></a>out1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1"></a><span class="fu">data</span>(<span class="st">"airquality"</span>)</span>
+<span id="cb29-2"><a href="#cb29-2"></a></span>
+<span id="cb29-3"><a href="#cb29-3"></a><span class="co"># Placeholder</span></span>
+<span id="cb29-4"><a href="#cb29-4"></a>out1 <span class="ot">&lt;-</span> <span class="fu">vector</span>(<span class="st">"double"</span>, <span class="fu">ncol</span>(airquality))</span>
+<span id="cb29-5"><a href="#cb29-5"></a></span>
+<span id="cb29-6"><a href="#cb29-6"></a><span class="co"># Sequence variable</span></span>
+<span id="cb29-7"><a href="#cb29-7"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="fu">seq_along</span>(airquality)) { </span>
+<span id="cb29-8"><a href="#cb29-8"></a></span>
+<span id="cb29-9"><a href="#cb29-9"></a>  <span class="co"># Assign an iteration result to each element of the placeholder list </span></span>
+<span id="cb29-10"><a href="#cb29-10"></a>  out1[[i]] <span class="ot">&lt;-</span> <span class="fu">mean</span>(airquality[[i]], <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb29-11"><a href="#cb29-11"></a>}</span>
+<span id="cb29-12"><a href="#cb29-12"></a></span>
+<span id="cb29-13"><a href="#cb29-13"></a><span class="co">#vs one-liner map()</span></span>
+<span id="cb29-14"><a href="#cb29-14"></a>out1 <span class="ot">&lt;-</span> airquality <span class="sc">%&gt;%</span> <span class="fu">map_dbl</span>(mean, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb29-15"><a href="#cb29-15"></a>out1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>     Ozone    Solar.R       Wind       Temp      Month        Day 
  42.129310 185.931507   9.957516  77.882353   6.993464  15.803922 </code></pre>
@@ -859,20 +849,20 @@ The downloaded binary packages are in
 <li><strong>Filtering:</strong></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1"></a><span class="co"># Create a list of data frames with England's biggest cities and their populations</span></span>
-<span id="cb33-2"><a href="#cb33-2"></a>data_list <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
-<span id="cb33-3"><a href="#cb33-3"></a>  <span class="fu">data.frame</span>(<span class="at">City =</span> <span class="fu">c</span>(<span class="st">"London"</span>, <span class="st">"Birmingham"</span>, <span class="st">"Manchester"</span>),</span>
-<span id="cb33-4"><a href="#cb33-4"></a>             <span class="at">Population =</span> <span class="fu">c</span>(<span class="dv">8961989</span>, <span class="dv">1141816</span>, <span class="dv">547627</span>)),</span>
-<span id="cb33-5"><a href="#cb33-5"></a>  <span class="fu">data.frame</span>(<span class="at">City =</span> <span class="fu">c</span>(<span class="st">"Leeds"</span>, <span class="st">"Liverpool"</span>, <span class="st">"Newcastle"</span>),</span>
-<span id="cb33-6"><a href="#cb33-6"></a>             <span class="at">Population =</span> <span class="fu">c</span>(<span class="dv">793139</span>, <span class="dv">494814</span>, <span class="dv">148190</span>))</span>
-<span id="cb33-7"><a href="#cb33-7"></a>)</span>
-<span id="cb33-8"><a href="#cb33-8"></a></span>
-<span id="cb33-9"><a href="#cb33-9"></a><span class="co"># Define the condition for filtering data frames</span></span>
-<span id="cb33-10"><a href="#cb33-10"></a>population_threshold <span class="ot">&lt;-</span> <span class="dv">500000</span></span>
-<span id="cb33-11"><a href="#cb33-11"></a></span>
-<span id="cb33-12"><a href="#cb33-12"></a>filtered_data <span class="ot">&lt;-</span> <span class="fu">map</span>(data_list, <span class="sc">~</span> <span class="fu">filter</span>(.x, Population <span class="sc">&gt;=</span> population_threshold))</span>
-<span id="cb33-13"><a href="#cb33-13"></a></span>
-<span id="cb33-14"><a href="#cb33-14"></a>filtered_data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1"></a><span class="co"># Create a list of data frames with England's biggest cities and their populations</span></span>
+<span id="cb31-2"><a href="#cb31-2"></a>data_list <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb31-3"><a href="#cb31-3"></a>  <span class="fu">data.frame</span>(<span class="at">City =</span> <span class="fu">c</span>(<span class="st">"London"</span>, <span class="st">"Birmingham"</span>, <span class="st">"Manchester"</span>),</span>
+<span id="cb31-4"><a href="#cb31-4"></a>             <span class="at">Population =</span> <span class="fu">c</span>(<span class="dv">8961989</span>, <span class="dv">1141816</span>, <span class="dv">547627</span>)),</span>
+<span id="cb31-5"><a href="#cb31-5"></a>  <span class="fu">data.frame</span>(<span class="at">City =</span> <span class="fu">c</span>(<span class="st">"Leeds"</span>, <span class="st">"Liverpool"</span>, <span class="st">"Newcastle"</span>),</span>
+<span id="cb31-6"><a href="#cb31-6"></a>             <span class="at">Population =</span> <span class="fu">c</span>(<span class="dv">793139</span>, <span class="dv">494814</span>, <span class="dv">148190</span>))</span>
+<span id="cb31-7"><a href="#cb31-7"></a>)</span>
+<span id="cb31-8"><a href="#cb31-8"></a></span>
+<span id="cb31-9"><a href="#cb31-9"></a><span class="co"># Define the condition for filtering data frames</span></span>
+<span id="cb31-10"><a href="#cb31-10"></a>population_threshold <span class="ot">&lt;-</span> <span class="dv">500000</span></span>
+<span id="cb31-11"><a href="#cb31-11"></a></span>
+<span id="cb31-12"><a href="#cb31-12"></a>filtered_data <span class="ot">&lt;-</span> <span class="fu">map</span>(data_list, <span class="sc">~</span> <span class="fu">filter</span>(.x, Population <span class="sc">&gt;=</span> population_threshold))</span>
+<span id="cb31-13"><a href="#cb31-13"></a></span>
+<span id="cb31-14"><a href="#cb31-14"></a>filtered_data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[[1]]
         City Population
@@ -892,9 +882,9 @@ The downloaded binary packages are in
 <li><strong>Combining data frames:</strong></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1"></a><span class="co"># Combine the filtered data frames into a single data frame</span></span>
-<span id="cb35-2"><a href="#cb35-2"></a>combined_data <span class="ot">&lt;-</span> <span class="fu">reduce</span>(filtered_data, bind_rows)</span>
-<span id="cb35-3"><a href="#cb35-3"></a>combined_data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1"></a><span class="co"># Combine the filtered data frames into a single data frame</span></span>
+<span id="cb33-2"><a href="#cb33-2"></a>combined_data <span class="ot">&lt;-</span> <span class="fu">reduce</span>(filtered_data, bind_rows)</span>
+<span id="cb33-3"><a href="#cb33-3"></a>combined_data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>        City Population
 1     London    8961989
@@ -910,29 +900,29 @@ The downloaded binary packages are in
 <li><p>We will how to use <code>map()</code> and <code>glue()</code> to automate creating multiple plots</p></li>
 <li><p>Task: making the following data visualisation process more efficient</p></li>
 </ul>
-<div class="sourceCode" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1"></a><span class="fu">data</span>(<span class="st">"airquality"</span>)</span>
-<span id="cb37-2"><a href="#cb37-2"></a></span>
-<span id="cb37-3"><a href="#cb37-3"></a>airquality <span class="sc">%&gt;%</span></span>
-<span id="cb37-4"><a href="#cb37-4"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> Ozone, <span class="at">y =</span> Solar.R)) <span class="sc">+</span></span>
-<span id="cb37-5"><a href="#cb37-5"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb37-6"><a href="#cb37-6"></a>  <span class="fu">labs</span>(</span>
-<span id="cb37-7"><a href="#cb37-7"></a>    <span class="at">title =</span> <span class="st">"Relationship between Ozone and Solar.R"</span>,</span>
-<span id="cb37-8"><a href="#cb37-8"></a>    <span class="at">y =</span> <span class="st">"Solar.R"</span></span>
-<span id="cb37-9"><a href="#cb37-9"></a>  )</span>
-<span id="cb37-10"><a href="#cb37-10"></a>airquality <span class="sc">%&gt;%</span></span>
-<span id="cb37-11"><a href="#cb37-11"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> Ozone, <span class="at">y =</span> Wind)) <span class="sc">+</span></span>
-<span id="cb37-12"><a href="#cb37-12"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb37-13"><a href="#cb37-13"></a>  <span class="fu">labs</span>(</span>
-<span id="cb37-14"><a href="#cb37-14"></a>    <span class="at">title =</span> <span class="st">"Relationship between Ozone and Wind"</span>,</span>
-<span id="cb37-15"><a href="#cb37-15"></a>    <span class="at">y =</span> <span class="st">"Wind"</span></span>
-<span id="cb37-16"><a href="#cb37-16"></a>  )</span>
-<span id="cb37-17"><a href="#cb37-17"></a>airquality <span class="sc">%&gt;%</span></span>
-<span id="cb37-18"><a href="#cb37-18"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> Ozone, <span class="at">y =</span> Temp)) <span class="sc">+</span></span>
-<span id="cb37-19"><a href="#cb37-19"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb37-20"><a href="#cb37-20"></a>  <span class="fu">labs</span>(</span>
-<span id="cb37-21"><a href="#cb37-21"></a>    <span class="at">title =</span> <span class="st">"Relationship between Ozone and Temp"</span>,</span>
-<span id="cb37-22"><a href="#cb37-22"></a>    <span class="at">y =</span> <span class="st">"Temp"</span></span>
-<span id="cb37-23"><a href="#cb37-23"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1"></a><span class="fu">data</span>(<span class="st">"airquality"</span>)</span>
+<span id="cb35-2"><a href="#cb35-2"></a></span>
+<span id="cb35-3"><a href="#cb35-3"></a>airquality <span class="sc">%&gt;%</span></span>
+<span id="cb35-4"><a href="#cb35-4"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> Ozone, <span class="at">y =</span> Solar.R)) <span class="sc">+</span></span>
+<span id="cb35-5"><a href="#cb35-5"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb35-6"><a href="#cb35-6"></a>  <span class="fu">labs</span>(</span>
+<span id="cb35-7"><a href="#cb35-7"></a>    <span class="at">title =</span> <span class="st">"Relationship between Ozone and Solar.R"</span>,</span>
+<span id="cb35-8"><a href="#cb35-8"></a>    <span class="at">y =</span> <span class="st">"Solar.R"</span></span>
+<span id="cb35-9"><a href="#cb35-9"></a>  )</span>
+<span id="cb35-10"><a href="#cb35-10"></a>airquality <span class="sc">%&gt;%</span></span>
+<span id="cb35-11"><a href="#cb35-11"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> Ozone, <span class="at">y =</span> Wind)) <span class="sc">+</span></span>
+<span id="cb35-12"><a href="#cb35-12"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb35-13"><a href="#cb35-13"></a>  <span class="fu">labs</span>(</span>
+<span id="cb35-14"><a href="#cb35-14"></a>    <span class="at">title =</span> <span class="st">"Relationship between Ozone and Wind"</span>,</span>
+<span id="cb35-15"><a href="#cb35-15"></a>    <span class="at">y =</span> <span class="st">"Wind"</span></span>
+<span id="cb35-16"><a href="#cb35-16"></a>  )</span>
+<span id="cb35-17"><a href="#cb35-17"></a>airquality <span class="sc">%&gt;%</span></span>
+<span id="cb35-18"><a href="#cb35-18"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> Ozone, <span class="at">y =</span> Temp)) <span class="sc">+</span></span>
+<span id="cb35-19"><a href="#cb35-19"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb35-20"><a href="#cb35-20"></a>  <span class="fu">labs</span>(</span>
+<span id="cb35-21"><a href="#cb35-21"></a>    <span class="at">title =</span> <span class="st">"Relationship between Ozone and Temp"</span>,</span>
+<span id="cb35-22"><a href="#cb35-22"></a>    <span class="at">y =</span> <span class="st">"Temp"</span></span>
+<span id="cb35-23"><a href="#cb35-23"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="solution-to-the-automation-problem" class="slide level2 smaller">
 <h2>Solution to the automation problem</h2>
@@ -941,11 +931,11 @@ The downloaded binary packages are in
 </ul>
 <p>For instance:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1"></a>names <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Nikki"</span>, <span class="st">"Maria"</span>, <span class="st">"Ozan"</span>)</span>
-<span id="cb38-2"><a href="#cb38-2"></a></span>
-<span id="cb38-3"><a href="#cb38-3"></a>fields <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Economics"</span>, <span class="st">"Demography"</span>, <span class="st">"Sociology"</span>)</span>
-<span id="cb38-4"><a href="#cb38-4"></a></span>
-<span id="cb38-5"><a href="#cb38-5"></a><span class="fu">glue</span>(<span class="st">"{names} is interested in {fields}."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1"></a>names <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Nikki"</span>, <span class="st">"Maria"</span>, <span class="st">"Ozan"</span>)</span>
+<span id="cb36-2"><a href="#cb36-2"></a></span>
+<span id="cb36-3"><a href="#cb36-3"></a>fields <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Economics"</span>, <span class="st">"Demography"</span>, <span class="st">"Sociology"</span>)</span>
+<span id="cb36-4"><a href="#cb36-4"></a></span>
+<span id="cb36-5"><a href="#cb36-5"></a><span class="fu">glue</span>(<span class="st">"{names} is interested in {fields}."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Nikki is interested in Economics.
 Maria is interested in Demography.
@@ -959,22 +949,22 @@ Ozan is interested in Sociology.</code></pre>
 <section id="automatic-plotting-function" class="slide level2 smaller">
 <h2>Automatic plotting function</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1"></a>create_point_plot <span class="ot">&lt;-</span> <span class="cf">function</span>(i) {</span>
-<span id="cb40-2"><a href="#cb40-2"></a>  airquality <span class="sc">%&gt;%</span></span>
-<span id="cb40-3"><a href="#cb40-3"></a>    <span class="fu">ggplot</span>(<span class="fu">aes_string</span>(<span class="at">x =</span> <span class="fu">names</span>(airquality)[<span class="dv">1</span>], <span class="at">y =</span> <span class="fu">names</span>(airquality)[i])) <span class="sc">+</span></span>
-<span id="cb40-4"><a href="#cb40-4"></a>    <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb40-5"><a href="#cb40-5"></a>    <span class="fu">labs</span>(</span>
-<span id="cb40-6"><a href="#cb40-6"></a>      <span class="at">title =</span> <span class="fu">glue</span>(<span class="st">"Relationship between Ozone and {names(airquality)[i]}"</span>),</span>
-<span id="cb40-7"><a href="#cb40-7"></a>      <span class="at">y =</span> <span class="fu">glue</span>(<span class="st">"{names(airquality)[i]}"</span>)</span>
-<span id="cb40-8"><a href="#cb40-8"></a>    )</span>
-<span id="cb40-9"><a href="#cb40-9"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1"></a>create_point_plot <span class="ot">&lt;-</span> <span class="cf">function</span>(i) {</span>
+<span id="cb38-2"><a href="#cb38-2"></a>  airquality <span class="sc">%&gt;%</span></span>
+<span id="cb38-3"><a href="#cb38-3"></a>    <span class="fu">ggplot</span>(<span class="fu">aes_string</span>(<span class="at">x =</span> <span class="fu">names</span>(airquality)[<span class="dv">1</span>], <span class="at">y =</span> <span class="fu">names</span>(airquality)[i])) <span class="sc">+</span></span>
+<span id="cb38-4"><a href="#cb38-4"></a>    <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb38-5"><a href="#cb38-5"></a>    <span class="fu">labs</span>(</span>
+<span id="cb38-6"><a href="#cb38-6"></a>      <span class="at">title =</span> <span class="fu">glue</span>(<span class="st">"Relationship between Ozone and {names(airquality)[i]}"</span>),</span>
+<span id="cb38-7"><a href="#cb38-7"></a>      <span class="at">y =</span> <span class="fu">glue</span>(<span class="st">"{names(airquality)[i]}"</span>)</span>
+<span id="cb38-8"><a href="#cb38-8"></a>    )</span>
+<span id="cb38-9"><a href="#cb38-9"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li>The final step is to put the function in <code>map()</code></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1"></a>plots_list <span class="ot">&lt;-</span> <span class="fu">map</span>(<span class="dv">2</span><span class="sc">:</span><span class="fu">ncol</span>(airquality), create_point_plot)</span>
-<span id="cb41-2"><a href="#cb41-2"></a>plots_grid <span class="ot">&lt;-</span> gridExtra<span class="sc">::</span><span class="fu">grid.arrange</span>(<span class="at">grobs =</span> plots_list, <span class="at">ncol =</span> <span class="dv">2</span>) <span class="co"># Adjust ncol as needed</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1"></a>plots_list <span class="ot">&lt;-</span> <span class="fu">map</span>(<span class="dv">2</span><span class="sc">:</span><span class="fu">ncol</span>(airquality), create_point_plot)</span>
+<span id="cb39-2"><a href="#cb39-2"></a>plots_grid <span class="ot">&lt;-</span> gridExtra<span class="sc">::</span><span class="fu">grid.arrange</span>(<span class="at">grobs =</span> plots_list, <span class="at">ncol =</span> <span class="dv">2</span>) <span class="co"># Adjust ncol as needed</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 </section>
@@ -982,7 +972,7 @@ Ozan is interested in Sociology.</code></pre>
 <div class="cell-output-display">
 <p><img data-src="slides4_files/figure-revealjs/unnamed-chunk-18-1.png" class="img-fluid" width="960"></p>
 </div>
-<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1"></a>plots_grid</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1"></a>plots_grid</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>TableGrob (3 x 2) "arrange": 5 grobs
   z     cells    name           grob
