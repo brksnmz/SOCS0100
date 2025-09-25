@@ -1,0 +1,15 @@
+---
+title: "🗓️ A Gentle Introduction to R"
+---
+
+In preparation for the module you should begin completing the introductory R workshop. This workshop is designed for those who have no prior knowledge in R. Hence, please feel free to skip the parts if you feel confident about the introductory knowledge.
+
+## 👨‍🏫 Workshop Slides
+
+Either click on the slide area below or click [here](https://github.com/brksnmz/SOCS0100/blob/master/2024/workshop/rworkshop/rworkshop.pdf) to view it in fullscreen. Use your keypad to navigate the slides.
+
+::: {.container style="position: relative;overflow: hidden;width: 100%;min-height:600px;"}
+<iframe src="/2024/workshop/rworkshop/rworkshop.pdf" style="position=absolute;top: 0;left: 0;bottom: 0;right: 0;width: 100%;min-height:600px;"></iframe>
+:::
+
+🎥 Looking for the workshop recording? You can only find those on Moodle.

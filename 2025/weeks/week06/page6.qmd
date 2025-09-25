@@ -1,0 +1,26 @@
+---
+title: "🗓️ Week 06 ->From Reproducibility to Interactivity"
+---
+
+Students will learn advanced data visualisation tools. They will specifically learn how to build and deploy Shiny apps to create interactive data visualisations. This will help students create interactive dashboards to disseminate their data in the projects.
+
+## 👨‍🏫 Lecture Slides
+
+Either click on the slide area below or click [here](slides6.qmd) to view it in fullscreen. Use your keypad to navigate the slides.
+
+::: {.container style="position: relative;overflow: hidden;width: 100%;min-height:600px;"}
+<iframe src="slides6.html" style="position=absolute;top: 0;left: 0;bottom: 0;right: 0;width: 100%;min-height:600px;">
+
+</iframe>
+:::
+
+🎥 Looking for lecture recordings? You can only find those on Moodle.
+
+## ✍️ Lab Materials
+
+🚧 Students will build their own interactive dashboards through Shiny apps.🚧
+
+## 📚 Required Reading
+
+-   [Wickham, H. (2021). Mastering shiny. " O'Reilly Media, Inc.". (Chapter 1, 2, 3, and 7).](https://mastering-shiny.org/index.html)
+

@@ -1,0 +1,27 @@
+---
+title: "SOCS0100 - Computational Social Science"
+format:
+  html:
+    include-before-body: helpers/remove-nav.html
+    include-after-body: helpers/remove-title.html
+---
+
+# 📑 Module Brief
+
+This module will provide students with computational and reproducible research tools that are frequently used in social data science. More specifically, it will first introduce students to how to use R Studio and GitHub together as a toolkit for reproducible social science research, illustrating key features of R packages to manage databases and conduct data analysis. Second, students will learn the fundamentals of functional programming, such as familiarity with conditional flow (e.g. if-else conditionals) and creating functions to automate some common tasks for data wrangling and visualisation. Students will also be shown how they can use these functions in data science projects to make their project workflow more efficient. Third, students will be introduced the concepts of ethical Web-scraping, as well as learning how to scrap both static and dynamic webpages. Forth, students will learn how to build and deploy Shiny apps to create interactive data visualisation. Finally, working with different APIs will be introduced.
+
+# 🎯 Learning Objectives
+
+After completing the module students should be able to: - Familiarised with foundations and applications of social data science
+
+-   Equipped with the skills to understand computational tools for reproducible research
+
+-   Aware of the potential and pitfalls of social data science
+
+-   Able to collaborate in reproducible research projects, using a source-code repository
+
+------------------------------------------------------------------------
+
+**Select Academic Year/Term:**
+
+<a href="2025/index.qmd"> <button class="button-61">2025/26</button> </a>

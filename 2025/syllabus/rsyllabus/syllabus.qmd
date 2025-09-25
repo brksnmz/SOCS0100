@@ -1,0 +1,208 @@
+---
+title: "Syllabus"
+---
+
+## Module info
+
+|         | Day     | Time          | Location             |
+|---------|---------|---------------|----------------------|
+| Lecture | Fridays | 10:00 - 12:00 | IOE Bedford Way (20) - 642 |
+| Lab A   | Fridays | 12:00 - 13:00 | IOE Bedford Way (20) - 642 |
+
+
+## Learning objectives
+
+After completing the module students should be able to:
+
+-   Familiarised with foundations and applications of social data science.
+-   Equipped with the skills to understand computational tools for reproducible research.
+-   Aware of the potential and pitfalls of social data science.
+
+## Where to get help
+
+-   If you have a question during lecture, feel free to ask it!
+-   Outside of class, any general questions about course content or assignments should be posted on the Moodle course forum.
+-   Emails should be reserved for questions not appropriate for the public forum. **If you email me, please include the name of our course in the subject line.**
+
+## Weekly topics
+
+🗓️ **Week 1: Introduction to Computational Social Science**
+
+Introduction to computational social science and open science: data and code sharing, project management, and collaborations -- the use of git and GitHub. This week students will be introduced how they can set up their own GitHub account and subscribe to the module organisation to engage with both individual and group assignments throughout the module.
+
+📚 **Required readings:**
+
+Edelman, A., Wolff, T., Montagne, D. & Bail, C. A. (2020). Computational Social Science and Sociology, Annual Review of Sociology.
+
+Bryan, J. (2018), Happy Git and GitHub for the useR, GitHub. URL: https://happygitwithr.com.
+
+💻 **Problem set:**
+
+Students will be shown the features of version control system through R and GitHub, and we will discuss their advantages in social data science.
+
+🗓️ **Week2: Computational Thinking and Reproducibility**
+
+This week will introduce students to how to think computationally, data structures, and project workflow (linking R projects to GitHub), focusing on reproducibility. Students will also be shown how to load and update relevant data science libraries into R.
+
+📚 **Required readings:**
+
+Christensen, G., Freese, J., & Miguel, E. (2019). Transparent and Reproducible Social Science Research: How to Do Open Science. University of California Press. (Chapter 10 & 11).
+
+Wickham, H., Çetinkaya-Rundel, M., & Grolemund, G. (2023). R for data science. " O'Reilly Media, Inc.". (Chapter 6).
+
+💻 **Problem set:**
+
+Students will create an RStudio project with a solid workflow, while practicing the principles of reproducibility.
+
+🗓️ **Week3: Wrangling and Tidying Data**
+
+How to effectively use Tidyverse -- the key R functions for data wrangling. This week will introduce students to tidying data in R. This will include learning about transforming data frames; tidying data in a specific format; merging and appending multiple datasets; and other aspects of data manipulation.
+
+📚 **Required readings:**
+
+Wickham, H., Çetinkaya-Rundel, M., & Grolemund, G. (2023). R for data science. " O'Reilly Media, Inc.". (Chapter 7, 9, and 10).
+
+Wickham, H., Averick, M., Bryan, J., Chang, W., McGowan, L. D. A., François, R., ... & Yutani, H. (2019). Welcome to the Tidyverse. Journal of open source software, 4(43), 1686.
+
+💻 **Problem set:**
+
+Students will be working with real world datasets to complete a series of data wrangling tasks through Tidyverse packages.
+
+🗓️ **Week4: Automating (functional programming)**
+
+The aim of this week is to introduce students to more advanced programming, such as familiarity with conditional flow (e.g. if-else conditionals) and creating functions to automate some common tasks for data wrangling and plotting. Students will be shown how they can use these functions in data science projects to make their project workflow more efficient.
+
+📚 **Required readings:**
+
+Wickham, H., Çetinkaya-Rundel, M., & Grolemund, G. (2023). R for data science. " O'Reilly Media, Inc.". (Chapter 15 & 17).
+
+💻 **Problem set:**
+
+Students will be asked to use computational tools to automate repeated things in their entire R workflow (e.g., wrangling, visualisation).
+
+🗓️ **Week5: Improving Workflow for Reproducible Social Science**
+
+Student will learn how to combine code, output, and analysis into a single reproducible document through Quarto. They will also learn how to customise appearance and style in reproducible documents. This will help students deliver their assessments in different reproducible output formats.
+
+📚 **Required readings:**
+
+Bauer, P. C., & Landesvatter, C. (2023). Writing a reproducible paper with RStudio and Quarto.
+
+💻 **Problem set:**
+
+Students will complete certain tasks to create a single reproducible document through Quarto.
+
+🗓️ **Week6: From Reproducibility to Interactivity**
+
+Students will learn advanced data visualisation tools. They will specifically learn how to build and deploy Shiny apps to create interactive data visualisations. This will help students create interactive dashboards to disseminate their data in the projects.
+
+📚 **Required readings:**
+
+Wickham, H. (2021). Mastering shiny. " O'Reilly Media, Inc.". (Chapter 1, 2, 3, and 7).
+
+💻 **Problem set:**
+
+Students will build their own interactive dashboards through Shiny apps.
+
+🗓️ **Week7: Automated Data Collection I**
+
+Introduction to automated data collection with R (rvest package). This week students will be introduced the concepts of ethical Webscraping and semi-structured data in detail, such as HTML (e.g., websites) and XML (e.g., government data).
+
+📚 **Required readings:**
+
+Halavais, A. (2019). Overcoming terms of service: a proposal for ethical distributed research. Information, Communication & Society, 22(11), 1567-1581.
+
+Wickham, H. (2019). rvest: Easily harvest (scrape) web pages. Retrieved from https://CRAN.Rproject.org/package=rvest.
+
+💻 **Problem set:**
+
+Students will extract some texts, links, and tables from static webpages.
+
+🗓️ **Week8: Automated Data Collection II**
+
+Webscraping part 2 with RSelenium library. Students will learn how to scrape dynamic webpages that pull data from databases using Javascript. They will simulate web browsing rather than parsing static pages.
+
+📚 **Required readings:**
+
+Breuer, J., Bishop, L., & Kinder-Kurlanda, K. (2020). The practical and ethical challenges in acquiring and sharing digital trace data: Negotiating public-private partnerships. New Media & Society, 22(11), 2058-2080.
+
+Harrison J (2022). RSelenium: R Bindings for 'Selenium WebDriver'. R package version 1.7.9, https://docs.ropensci.org/RSelenium/.
+
+💻 **Problem set:**
+
+Students will extract various types of data from a dynamic webpage.
+
+🗓️ **Week9: Working with APIs**
+
+Students will be introduced multiple APIs to collect data from digital platforms and how they can access them through R.
+
+📚 **Required readings:**
+
+Bruns, A. (2019). After the 'APIcalypse': Social media platforms and their fight against critical scholarly research. Information, Communication & Society, 22(11), 1544-1566.
+
+Prado-Román, C., Gómez-Martínez, R., & Orden-Cruz, C. (2021). Google Trends as a predictor of presidential elections: The United States versus Canada. American Behavioral Scientist, 65(4), 666- 680.
+
+💻 **Problem set:**
+
+Students will set up a developer account to access APIs to pull data from the platforms.
+
+🗓️ **Week10: Overview and Review**
+
+We will discuss the extent to which the methods we cover on the module and how they can further practice these computational methods with real-world data alongside acquired project management skills. We will have a Q&A session on the final assessment.
+
+## Teams
+
+You will be assigned to a team at the beginning of the term.
+
+All team members are expected to contribute to the completion of the lab practicals.You are expected to make use of the provided GitHub repository as the central collaborative platform.
+
+## Assessment
+
+You will be assessed for this module through two assessments each worth 50%. The details of the assessments are below. The assessment briefs will be released in due time with detailed instructions and tasks.
+
+| Assessment   | Length     | \% Final grade | Deadline       |
+|--------------|------------|----------------|----------------|
+| Assignment 1 | 1500 words | 50             | 4 Nov 25, 1pm  |
+| Assignment 2 | 1500 words | 50             | 12 Jan 26, 1pm |
+
+Planning, time-management and the meeting of deadlines are part of the personal and professional skills expected of all students. For this reason, UCL expects students to submit all coursework by the published deadline date and time.
+
+If a student experiences something, which prevents them from meeting a deadline that is sudden, unexpected, significantly disruptive and beyond their control, they should apply for an Extenuating Circumstances (EC) on Portico. If the request is accepted, the student may be granted an extension.
+
+## Course policies
+
+### Academic integrity
+
+Writing assignments can be both an enjoyable and challenging experience. One aspect of writing that students often struggle with is plagiarism: the unacknowledged presentation of a person's thoughts, words, artefacts or software as though they were their own original work. It is even possible to plagiarise yourself if you are citing a work you submitted elsewhere. Direct quotations from published or unpublished works (including internet sources) must always be clearly identified as such by being placed inside quotation marks, and a full reference to their source must be provided in the proper form, including the page reference. Equally, if a student summarises another person's ideas or judgements, they must refer to that person in the text, and include the work to which they have referred in the bibliography. Failure to observe these rules may result in an allegation of plagiarism.
+
+### Collaboration policy
+
+Only work that is clearly assigned as team work should be completed collaboratively.
+
+-   The *summative* assessments must be completed individually and you are welcome to discuss the assignment with classmates at a high level (e.g., discuss what's the best way for approaching a problem, what functions are useful for accomplishing a particular task, etc.). However, you should not directly share answers (including any code) with anyone other than myself.
+
+### AI-usage policy
+
+In this module/assignment, students are permitted to use ChatGPT for specific defined processes within the assessment.
+
+This can be utilised to enhance and support the development of specific skills in specific ways, as specified by the module leader and required by the assessment. As per the requirements, for instance, students are asked to use ChatGPT for critically evaluating their code in automated data collection, data processing, and creating interactive dashboards in this assessment. In doing so, students are expected to highlight instances where ChatGPT offers insightful solutions, refined code, or worsens student's solutions and code.
+
+**Except critical engagement with ChatGPT through code refinement, this module prohibits all other use of artificial intelligence (AI)**, including large language models, to author or co-author formative or summative work. This prohibition includes the following practices and any practices similar to them:
+
+-   Writing parts or all of an assessment;
+-   Generating outlines, structures and high-level arguments for essays;
+-   Rewriting or paraphrasing text from other sources for use in written work.
+
+Language and writing review are not prohibited, defined as having a third-party or software check areas of academic writing such as structure, fluency, presentation, grammar, spelling, punctuation, and language translation. However, language review may be considered Academic Misconduct if substantive changes to content have been made by the reviewer or software or at their recommendation, which would suggest that the reviewer or software had either produced or determined the substantive content of the work.
+
+Including content generated by AI tools will not be considered academic misconduct only if it is clearly signposted (by, for example, quotation marks) and attributed (by including a reference to the tool and date of use). However, similarly to quoting Wikipedia, quoting an AI system is unlikely to be a valuable addition to your work and unless clearly relevant to an argument may negatively impact the perceived quality of your work.
+
+Suspected use of AI technologies other than specified one in the assessment may lead students to be subject to an Investigatory Viva.
+
+### Late submission policy
+
+The due dates for assignments are there to help you keep up with the course material. However, I understand that things come up periodically that could make it difficult to submit an assignment by the deadline. Here are the rules for late submissions:
+
+-   *Assignments* may be submitted up to 2 working days late. There will be a 10 percentage points deduction or one Letter Grade, yet no lower than 40% or Grade D. If it is submitted up to 2-5 working days late, mark is capped at 40% or Grade D. If it is submitted more than 5 working days late, you receive a mark of 1% or Grade E.
+
+If there are important circumstances that prevent you from completing an assignment by the stated due date, you should apply to an Extenuating Circumstances (EC) on Portico before the deadline.

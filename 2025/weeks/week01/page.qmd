@@ -1,0 +1,27 @@
+---
+title: "🗓️ Week 01 - Introduction to Computational Social Science"
+---
+
+Introduction to computational social science and open science: data and code sharing, project management, and collaborations -- the use of git and GitHub. This week students will be introduced how they can set up their own GitHub account and subscribe to the module organisation to engage with both individual and group assignments throughout the module.
+
+## 👨‍🏫 Lecture Slides
+
+Either click on the slide area below or click [here](slides.qmd) to view it in fullscreen. Use your keypad to navigate the slides.
+
+::: {.container style="position: relative;overflow: hidden;width: 100%;min-height:600px;"}
+<iframe src="slides.html" style="position=absolute;top: 0;left: 0;bottom: 0;right: 0;width: 100%;min-height:600px;">
+
+</iframe>
+:::
+
+🎥 Looking for lecture recordings? You can only find those on Moodle.
+
+## ✍️ Lab Materials
+
+🚧 Come back after the lecture to read the practicals for the week 🚧
+
+## 📚 Required Reading
+
+-   [Edelman, A., Wolff, T., Montagne, D. & Bail, C. A. (2020). Computational Social Science and Sociology, Annual Review of Sociology.](https://www.annualreviews.org/doi/10.1146/annurev-soc-121919-054621)
+
+-   [Bryan, J. (2018), Happy Git and GitHub for the useR, GitHub.](https://happygitwithr.com/)

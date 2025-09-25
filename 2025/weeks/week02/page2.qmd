@@ -1,0 +1,27 @@
+---
+title: "🗓️ Week 02 - Computational Thinking and Reproducibility"
+---
+
+This week will introduce students to how to think computationally, data structures, and project workflow (linking R projects to GitHub), focusing on reproducibility. Students will also be shown how to load and update relevant data science libraries into R.
+
+## 👨‍🏫 Lecture Slides
+
+Either click on the slide area below or click [here](slides2.qmd) to view it in fullscreen. Use your keypad to navigate the slides.
+
+::: {.container style="position: relative;overflow: hidden;width: 100%;min-height:600px;"}
+<iframe src="slides2.html" style="position=absolute;top: 0;left: 0;bottom: 0;right: 0;width: 100%;min-height:600px;">
+
+</iframe>
+:::
+
+🎥 Looking for lecture recordings? You can only find those on Moodle.
+
+## ✍️ Lab Materials
+
+🚧 Students will create an RStudio project with a solid workflow, while practicing the principles of reproducibility.🚧
+
+## 📚 Required Reading
+
+-   [Christensen, G., Freese, J., & Miguel, E. (2019). Transparent and Reproducible Social Science Research: How to Do Open Science. University of California Press. (Chapter 10 & 11).](https://ucl.primo.exlibrisgroup.com/discovery/fulldisplay?context=PC&vid=44UCL_INST:UCL_VU2&search_scope=MyInst_and_CI&tab=Everything&docid=cdi_proquest_ebookcentral_EBC5779690)
+
+-   [Wickham, H., Çetinkaya-Rundel, M., & Grolemund, G. (2023). R for data science. " O'Reilly Media, Inc.". (Chapter 7).](https://r4ds.hadley.nz/workflow-scripts)

@@ -1,0 +1,513 @@
+---
+subtitle: ""
+title: "<font style='font-size:0.75em;'>🗓️ Week 04<br/>Automating -- Functional Programming</font>"
+author: Dr [Burak Sonmez](#)
+institute: '[University College London](#)'
+date: 24 October 2025
+date-meta: 24 October 2025
+date-format: "DD MMM YYYY"
+toc: true
+toc-depth: 1
+toc-title: "What we will cover today:"
+center-title-slide: false
+from: markdown+emoji
+format:
+  revealjs: 
+    fig-responsive: true
+    theme: simple
+    slide-number: true
+    mouse-wheel: false
+    preview-links: auto
+    logo: /figures/icons/course_favicon.png
+    css: /css/styles_slides.css
+    footer: 'SOCS0100 -- Computational Social Science'
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+# Conditional Flow
+
+## Programming in R {.smaller}
+
+- Repeating yourself in code is dangerous because it can easily lead to errors and inconsistencies
+
+- While the syntax might vary, the basic idea of **flow**, **functions**, and **iteration** are common across all programming languages (e.g. Python)
+
+<img src="/figures/images/programming.png" alt="Source:R for Data Science" width="600" height="200" style="display: block; margin: 0 auto;"/>
+
+## Setup {.smaller}
+
+```{r}
+#| echo: true 
+#| warning: false
+# Install packages
+if (!require("pacman")) {
+  install.packages("pacman")
+}
+
+pacman::p_load(
+  tidyverse, # tidyverse pkgs including purrr
+  glue, #combining strings and objects
+  gapminder, # dataset
+  ggplot2, #plotting
+  gridExtra #arranging plots
+  ) 
+```
+
+## Flow control {.smaller}
+
+- Sometimes you only want to execute code if a certain condition is met (*if-else statement*)
+
+```r
+if (condition) {
+  # Code executed when condition is TRUE
+} else {
+  # Code executed when condition is FALSE
+}
+```
+
+- Condition is a statement that must always evaluate to either **TRUE** or **FALSE** (i.e. a vector of length 1)
+
+<img src="/figures/images/if.png" alt="Source:R for Data Science" width="400" height="200" style="display: block; margin: 0 auto;"/>
+
+## Flow control (examples) {.smaller}
+
+```{r}
+#| echo: true 
+#| warning: false
+average = 72
+if (average > 69) {
+    print("First-class honours")
+} else {
+    print("Second-class honours")
+}
+```
+
+```{r}
+#| echo: true 
+#| warning: false
+average = 69
+if (average > 69) {
+    print("First-class honours")
+} else {
+    print("Second-class honours")
+}
+```
+
+## What would you do with multiple conditions? {.smaller}
+
+```r
+if (this) {
+  # Do that
+} else if (that) {
+  # Do something else
+} else {
+  # Do something completely different
+}
+```
+
+## Going back to earlier one-condition example {.smaller}
+
+- You can generate more complex conditional statements with Boolean operators like & and |:
+
+```{r}
+#| echo: true 
+#| warning: false
+average = 50 
+
+if (average > 69) {
+    print("Firs-class honours")
+} else if (average < 70 & average > 59) {
+    print("Second-class honours")
+} else {
+    print("Third-class honours")
+}
+```
+
+- It’s not a good idea to write nested code (lots of `else_if()` or `ifelse()`) 
+
+- It is not easy to read or debug
+
+## Coding style MATTERS! {.smaller}
+
+- Both the "if" and "function" statements should almost always be accompanied by curly braces `{},` and the code within them should be indented. Start opening curly braces on a new line, close them on their own line, except when followed by "else," and maintain code indentation inside them
+
+```r
+# Bad example
+if (y < 0 && debug)
+message("Y is negative")
+
+if (y == 0) {
+  log(x)
+} 
+else {
+  y ^ x
+}
+
+# Good example
+if (y < 0 && debug) {
+  message("Y is negative")
+}
+
+if (y == 0) {
+  log(x)
+} else {
+  y ^ x
+}
+```
+
+## if vs if_else {.smaller}
+
+- Vector operations are where you make multiple comparisons simultaneously for each value stored inside a vector
+
+- Imagine you wanted to create a new column identifying whether or not a country-year observation has a life expectancy of at least 35
+
+```{r}
+#| echo: true 
+#| warning: false
+gap <- gapminder
+head(gap)
+```
+
+```r
+gap_if <- gap %>%
+   mutate(life.35 = if(lifeExp >= 35){
+     1
+   } else {
+     0
+   })
+head(gap_if)
+```
+
+- Try this code and tell us what you think it's wrong 
+
+## Use if_else() instead {.smaller}
+
+- This vectorises the if-else comparison and makes a separate comparison for each row of the data frame
+
+```{r}
+#| echo: true 
+#| warning: false
+gap_ifelse <- gap %>%
+  mutate(life.35 = if_else(lifeExp >= 35, 1, 0))
+
+gap_ifelse
+```
+
+# Functions 
+
+## Functions {.smaller}
+
+- Functions are the basic building blocks of programmes 
+
+- Think of them as **mini-scripts**. R provides many built-in functions and allows programmers to define their own functions. We have already used dozens of functions created by others (e.g. `filter()` and `sd()`)
+
+- You will learn how to write you own functions. The details are pretty simple, yet as usual it is good to **get lots of practice!**
+
+<img src="/figures/images/functions.png" alt="Source:https://www.learnbyexample.org/" width="500" height="400" style="display: block; margin: 0 auto;"/>
+
+## Why we need functions {.smaller}
+
+- Functions allow you to automate common tasks in a more powerful and general way than copy-and-pasting 
+
+```r
+gap <- gapminder
+
+gap_norm <- gap %>%
+  mutate(pop_norm = (pop - min(pop)) / (max(pop) - min (pop)),
+         gdp_norm = (gdpPercap - min(gdpPercap)) / (max(gdpPercap) - min (gdpPercap)),
+         life_norm = (lifeExp - min(lifeExp) / (max(pop)) - min (lifeExp)))
+
+summary(gap_norm$pop_norm)
+```
+
+- Take a look at the code above and spot the mistake?
+
+## Key components of functions {.smaller}
+
+- **Name:** This should be informative and describe what the function does
+
+- **Arguments:** or list of inputs, to the function. They go inside the parentheses in `function()`
+
+- **The body:** This is the block of code within `{}` that immediately follows function(...), and it is the code that you develop to perform the action described in the name using the arguments you provide
+
+```r
+my_function <- function(x, y){
+  # do
+  # something
+  # here
+  return(result)
+}
+```
+
+## Writing a function {.smaller}
+
+```{r}
+#| echo: true 
+#| warning: false
+simple.function <- function(x, y){
+  print(x - y + 1)
+}
+
+simple.function(x = 2, y = 10)
+```
+
+- Note that `return()` will only process a single object, so multiple items must usually be returned as a list
+
+```{r}
+#| echo: true 
+#| warning: false
+multiple.items <- function(x,y){
+  thing1 <- x
+  thing2 <- y
+  return(list(thing1, thing2))
+}
+
+multiple.items(x = "some text", y = "some data")
+```
+
+# Functional programming 
+
+## Functional programming {.smaller}
+
+- We will now learn how to use `purrr` to automate workflow in a cleaner, faster, and more extendable way
+
+Task: replacing -99 with NA
+
+- Let’s imagine df is a survey dataset.
+
+- a, b, c, d = Survey questions
+
+- -99: missing responses
+
+```{r}
+#| echo: true 
+#| warning: false
+# Data
+
+set.seed(1234) # for reproducibility
+
+df <- tibble(
+  "a" = sample(c(-99, 1:3), size = 5, replace = TRUE),
+  "b" = sample(c(-99, 1:3), size = 5, replace = TRUE),
+  "c" = sample(c(-99, 1:3), size = 5, replace = TRUE),
+  "d" = sample(c(-99, 1:3), size = 5, replace = TRUE)
+)
+```
+
+## How would you replace -99 with NA by copy-and-pasting? {.smaller}
+
+```{r}
+#| echo: true 
+#| warning: false
+# Copy and paste
+df$a[df$a == -99] <- NA
+df$b[df$b == -99] <- NA
+df$c[df$c == -99] <- NA
+df$d[df$d == -99] <- NA
+
+df
+```
+
+## Let's use a function for this operation {.smaller}
+
+- If you write a function, you gain efficiency because you don’t need to copy and paste the computation part
+
+
+```{r}
+#| echo: true 
+#| warning: false
+fix_missing <- function(x) {
+  x[x == -99] <- NA
+  x
+}
+
+# Apply function to each column (vector)
+
+df$a <- fix_missing(df$a)
+df$b <- fix_missing(df$b)
+df$c <- fix_missing(df$c)
+df$d <- fix_missing(df$d)
+
+df
+```
+
+## How about a tidy solution? (purrr) {.smaller}
+
+- `map()` is a good alternative to for loop
+
+```{r}
+#| echo: true 
+#| warning: false
+df <- purrr::map_df(df, fix_missing)
+
+df
+```
+
+## `map()` is a higher-order function {.smaller}
+
+- This is how `map()` works
+
+- It applies a given function to each element of a list/vector.
+
+<img src="/figures/images/map.png" alt="Source:Computational Thinking for Social Scientists" width="350" height="400" style="display: block; margin: 0 auto;"/>
+
+## Illustrating why `map()` can be more efficient than loops {.smaller}
+
+```{r}
+#| echo: true 
+#| warning: false
+data("airquality")
+
+# Placeholder
+out1 <- vector("double", ncol(airquality))
+
+# Sequence variable
+for (i in seq_along(airquality)) { 
+
+  # Assign an iteration result to each element of the placeholder list 
+  out1[[i]] <- mean(airquality[[i]], na.rm = TRUE)
+}
+
+#vs one-liner map()
+out1 <- airquality %>% map_dbl(mean, na.rm = TRUE)
+out1
+```
+
+## Main takeaways {.smaller}
+
+- `map()` is more readable, faster, and easily extendable with other data science tasks (e.g. wrangling and visualisation) using `%>%` 
+
+- `purrr::map()` is simpler to write
+
+- There is one function for each type of output:
+  - `map()` makes a list
+  - `map_lgl()` makes a logical vector
+  - `map_int()` makes an integer vector
+  - `map_dbl()` makes a double vector
+  - `map_chr()` makes a character vector
+  
+## Some data wrangling exercises using purrr {.smaller}
+
+- **Filtering:**
+
+```{r}
+#| echo: true 
+#| warning: false
+# Create a list of data frames with England's biggest cities and their populations
+data_list <- list(
+  data.frame(City = c("London", "Birmingham", "Manchester"),
+             Population = c(8961989, 1141816, 547627)),
+  data.frame(City = c("Leeds", "Liverpool", "Newcastle"),
+             Population = c(793139, 494814, 148190))
+)
+
+# Define the condition for filtering data frames
+population_threshold <- 500000
+
+filtered_data <- map(data_list, ~ filter(.x, Population >= population_threshold))
+
+filtered_data
+```
+
+## Some data wrangling exercises using purrr II {.smaller}
+
+- **Combining data frames:**
+
+```{r}
+#| echo: true 
+#| warning: false
+# Combine the filtered data frames into a single data frame
+combined_data <- reduce(filtered_data, bind_rows)
+combined_data
+```
+
+## Automate plotting {.smaller}
+
+- We will how to use `map()` and `glue()` to automate creating multiple plots
+
+- Task: making the following data visualisation process more efficient
+
+```r
+data("airquality")
+
+airquality %>%
+  ggplot(aes(x = Ozone, y = Solar.R)) +
+  geom_point() +
+  labs(
+    title = "Relationship between Ozone and Solar.R",
+    y = "Solar.R"
+  )
+airquality %>%
+  ggplot(aes(x = Ozone, y = Wind)) +
+  geom_point() +
+  labs(
+    title = "Relationship between Ozone and Wind",
+    y = "Wind"
+  )
+airquality %>%
+  ggplot(aes(x = Ozone, y = Temp)) +
+  geom_point() +
+  labs(
+    title = "Relationship between Ozone and Temp",
+    y = "Temp"
+  )
+```
+
+## Solution to the automation problem {.smaller}
+
+- `glue()` combines strings and objects 
+
+For instance: 
+
+```{r}
+#| echo: true 
+#| warning: false
+names <- c("Nikki", "Maria", "Ozan")
+
+fields <- c("Economics", "Demography", "Sociology")
+
+glue("{names} is interested in {fields}.")
+```
+
+- Hence, we can now combine `glue()` and `map()`
+
+## Automatic plotting function {.smaller}
+
+```{r}
+#| echo: true 
+#| warning: false
+create_point_plot <- function(i) {
+  airquality %>%
+    ggplot(aes_string(x = names(airquality)[1], y = names(airquality)[i])) +
+    geom_point() +
+    labs(
+      title = glue("Relationship between Ozone and {names(airquality)[i]}"),
+      y = glue("{names(airquality)[i]}")
+    )
+}
+```
+
+- The final step is to put the function in `map()`
+
+```{r}
+#| echo: true 
+#| warning: false
+#| output-location: slide
+plots_list <- map(2:ncol(airquality), create_point_plot)
+plots_grid <- gridExtra::grid.arrange(grobs = plots_list, ncol = 2) # Adjust ncol as needed
+plots_grid
+```
+
+## Lab exercise {.smaller}
+
+- Again import the dataset called “Natural disasters (EMDAT)”
+
+- Create a new public repository on GitHub for this week's project and add your collaborators 
+
+- Open a new R script and work on the following automating tasks
+
+- Using `purrr`, please automate at least one data wrangling task based on the dataset (e.g. summarising data)
+
+- Using `purrr` please automate plotting the trends of deaths, injuries, and homelessness caused by all disasters for 5 countries in the dataset 

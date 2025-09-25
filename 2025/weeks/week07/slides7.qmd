@@ -1,0 +1,481 @@
+---
+subtitle: ""
+title: "<font style='font-size:0.75em;'>🗓️ Week 07<br/>Automated Data Collection I</font>"
+author: Dr [Burak Sonmez](#)
+institute: '[University College London](#)'
+date: 21 November 2025
+date-meta: 21 November 2025
+date-format: "DD MMM YYYY"
+toc: true
+toc-depth: 1
+toc-title: "What we will cover today:"
+center-title-slide: false
+from: markdown+emoji
+format:
+  revealjs: 
+    fig-responsive: true
+    theme: simple
+    slide-number: true
+    mouse-wheel: false
+    preview-links: auto
+    logo: /figures/icons/course_favicon.png
+    css: /css/styles_slides.css
+    footer: 'SOCS0100 -- Computational Social Science'
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+# HTML-CSS: Webscraping
+
+## What is semi-structured data? {.smaller}
+
+-   It does not conform to a data model but has some structure
+
+-   It is not stored in rows and columns
+
+-   This type of data contains tags and elements (Metadata) which is
+    used to group data and describe how the data is stored
+
+-   Similar entities are grouped together and organised in a hierarchy
+
+**Examples:** HTML (e.g. websites), XML (e.g. government data), JSON
+(e.g. social media API)
+
+::: columns
+::: {.column width="50%"}
+<img src="/figures/images/semidata1.png" alt="Source:" width="200" height="150" style="display: block; margin: 0 auto;"/>
+:::
+
+::: {.column width="50%"}
+<img src="/figures/images/semidata2.png" alt="Source:" width="200" height="150" style="display: block; margin: 0 auto;"/>
+:::
+:::
+
+## What is webscraping? {.smaller}
+
+**Extracting data from webpages:**
+
+-   Increasing amount of data is available on websites:
+
+-   Speeches, sentences, biographical information
+
+-   Social media data, newspaper articles, forums
+
+-   Geographic information, conflict data, climate data
+
+-   process of extracting this information automatically and
+    transforming it into a structured dataset
+
+## Data revolution {.smaller}
+
+<img src="/figures/images/socialmedia.png" alt="Source:" width="600" height="450" style="display: block; margin: 0 auto;"/>
+
+## Webscraping benefits {.smaller}
+
+-   Any content that can be viewed on a webpage can be scraped
+
+-   No API needed
+
+-   No rate-limiting or authentication (usually)
+
+## Webscraping challenges {.smaller}
+
+-   Rarely tailored for researchers
+
+-   Messy, unstructured, inconsistent
+
+-   Entirely site-dependent
+
+-   Sites change their layout all the time
+
+## Ethics in webscraping {.smaller}
+
+-   Check a site's terms and conditions before scraping. Some websites
+    disallow scrapers on robots.txt file
+
+-   Consider non-intrusive ways to gather data. Don't exhaust the site's
+    server
+
+-   Data protection: data means traces of individuals
+
+-   Secure storage vs. deletion of data
+
+-   Anonymisation of users
+
+-   Review [these ethical webscraping
+    tips](https://towardsdatascience.com/ethics-in-web-scraping-b96b18136f01)
+
+## HTML - basics {.smaller}
+
+-   The core of a website is **HTML** (*Hyper Text Markup Language*)
+
+-   HTML defines the structure of a webpage using a series of elements.
+    HTML elements tell the browser how to display the page by labeling
+    pieces of content: "This is a heading," "this is a paragraph," "this
+    is a link," etc.
+
+``` r
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page title</title>
+    </head>
+    <body>
+        <p>Hello world!</p>
+    </body>
+</html>
+```
+
+## HTML - elements {.smaller}
+
+An *HTML element* is defined by a start tag, some content, and an end
+tag
+
+<img src="/figures/images/html1.png" alt="Source:" width="200" height="125" style="display: block; margin: 0 auto;"/>
+
+|           Tag           |                 Meaning                 |
+|:-----------------------:|:---------------------------------------:|
+|        `<head>`         |      page header (metadata, etc.)       |
+|        `<body>`         |        holds all of the content         |
+|          `<p>`          |        regular text (paragraph)         |
+|  `<h1>`,`<h2>`,`<h3>`   |       header text, levels 1, 2, 3       |
+|   `ol,`,`<ul>`,`<li>`   | ordered list, unordered list, list item |
+| `<a href="page.html">`  |           link to "page.html"           |
+| `<table>`,`<tr>`,`<td>` |      table, table row, table item       |
+|    `<div>`,`<span>`     |           general containers            |
+
+## HTML - attributes {.smaller}
+
+-   All HTML elements can have attributes
+
+-   attributes provide additional information about an element
+
+-   they are included inside the tag
+
+-   **Examples:**
+
+``` r
+<img src="no_smiley.jpg" alt="Image that does not exist."> <p style="color:red">This is a paragraph.</p>
+```
+
+## HTML - attributes II {.smaller}
+
+<img src="/figures/images/html2.png" alt="Source:" width="250" height="400" style="display: block; margin: 0 auto;"/>
+
+## CSS {.smaller}
+
+-   CSS stands for Cascading Style Sheet. CSS defines how HTML elements
+    are to be displayed
+
+-   HTML came first. But it was only meant to define content, not format
+    it. While HTML contains tags like `<font>` and `<color>`, this is a
+    very inefficient way to develop a website. Some websites can easily
+    contain 100+ individual pages, each with their own HTML code
+
+-   CSS was created specifically to display content on a webpage. Now,
+    one can change the look of an entire website just by changing one
+    file
+
+-   Most web designers litter the HTML markup with tons of classes and
+    ids to provide "hooks" for their CSS
+
+-   You can piggyback on these to jump to the parts of the markup that
+    contain the data you need
+
+## CSS anatomy {.smaller}
+
+-   **Selectors:**
+
+Element selector: `p`
+
+Class selector: `p class="blue"`
+
+I.D. selector: `p id="blue"`
+
+-   **Declarations:**
+
+Selector: `p`
+
+Property: `background-color`
+
+Value: `yellow`
+
+## CSS anatomy II {.smaller}
+
+<img src="/figures/images/css1.png" alt="Source:" width="350" height="500" style="display: block; margin: 0 auto;"/>
+
+## CSS + HTML {.smaller}
+
+``` r
+<body>
+    <table id="content">
+<tr class='name'>
+<td class='firstname'>
+Kurtis
+</td>
+<td class='lastname'>
+McCoy
+</td>
+</tr>
+<tr class='name'>
+<td class='firstname'>
+Leah
+</td>
+<td class='lastname'>
+Guerrero
+</td>
+</tr>
+</table>
+</body>
+```
+
+-   We can use CSS selectors (see
+    [example](https://www.w3schools.com/cssref/trysel.asp?selector=ul%20~%20table))
+
+-   [SelectorGadget](https://selectorgadget.com/) as Chrome Extension
+
+-   Inspect option in Chrome
+
+## Let's inspect a website {.smaller}
+
+-   Use inspect option to select table to copy `Xpath` --example:
+    `//*[@id="mw-content-text"]/div[1]/table[1]`
+
+::: columns
+::: {.column width="50%"}
+<img src="/figures/images/inspect1.png" alt="Source:" width="500" height="475" style="display: block; margin: 0 auto;"/>
+:::
+
+::: {.column width="50%"}
+<img src="/figures/images/inspect2.png" alt="Source:" width="500" height="475" style="display: block; margin: 0 auto;"/>
+:::
+:::
+
+# Using RVest to Read HTML
+
+## Overview of rvest {.smaller}
+
+The package rvest allows us to:
+
+-   Collect the HTML source code of a webpage
+
+-   Read the HTML of the page
+
+-   Select and keep certain elements of the page that are of interest
+
+-   Relatively simple: no dynamic webpages
+
+Main uses: Tables, texts, extracting links (downloading files)
+
+## Parsing HTML code {.smaller}
+
+First step in webscraping: read HTML code in R and parse it
+(understanding structure)
+
+-   `xml2` package
+
+-   `read_html`: parse HTML code into R (and )
+
+-   rvest package
+
+-   `html_text`: extract text from HTML code
+
+-   `html_table`: extract tables in HTML code
+
+-   `html_nodes`: extract components with CSS selector
+
+-   `html_attrs`: extract attributes of nodes
+
+## Setup {.smaller}
+
+``` r
+pacman::p_load(tidyverse, # tidyverse pkgs including purrr
+               purrr, # automating 
+               xml2L, # parsing XML
+               rvest, # parsing HTML
+               robotstxt) #checking path is permitted 
+```
+
+## Parsing the url of the website {.smaller}
+
+``` r
+library(rvest)
+library(xml2)
+url <- "https://en.wikipedia.org/wiki/University_College_London"
+parsed <- read_html(url)
+```
+
+This returns an xml object that contains all the information of the
+website
+
+## Extracting selected information {.smaller}
+
+-   Select the desired part
+
+``` r
+parsed.sub <- html_element(parsed, xpath = '//*[@id="mw-content-text"]/div[1]/table[1]')
+```
+
+-   Convert to table
+
+``` r
+table.df <- html_table(parsed.sub)   
+head(table.df)
+```
+
+<img src="/figures/images/extractucl.png" alt="Source:" width="500" height="125" style="display: block; margin: 0 auto;"/>
+
+## Tidying data is part of webscraping {.smaller}
+
+``` r
+library(janitor)
+# clean names
+names(table.df) <-  janitor::make_clean_names(names(table.df))
+
+# Delete empty rows
+empt <- apply(table.df, 1, FUN = function(x) all(is.na(x) | x == ""))
+table.df <- table.df[which(!empt), ]
+
+# Exclude empty columns 
+table.df <- table.df[,-3:-7]
+
+head(table.df)
+```
+
+## Automating the process {.smaller}
+
+The task is to scrap Wiki info-cards of three universities (UCL; Oxford;
+Cambridge)
+
+``` r
+#see whether path is allowed to be scraped 
+paths_allowed(paths="https://en.wikipedia.org/wiki/University_College_London")
+
+#creating url list for the websites to be scraped 
+url_list <- c(
+  "https://en.wikipedia.org/wiki/University_College_London",
+  "https://en.wikipedia.org/wiki/University_of_Cambridge",
+  "https://en.wikipedia.org/wiki/University_of_Oxford"
+)
+```
+
+<img src="/figures/images/oxfordcard.png" alt="Source:" width="450" height="350" style="display: block; margin: 0 auto;"/>
+
+## Inspection {.smaller}
+
+``` r
+url <- "https://en.wikipedia.org/wiki/University_College_London"
+
+download.file(url, destfile = "scraped_page.html", quiet = TRUE)
+
+target <- read_html("scraped_page.html")
+
+# If you want character vector output
+target1 <- target %>%
+  html_nodes(xpath = '//*[@id="mw-content-text"]/div[1]/table[1]') %>%
+  html_text() 
+
+# If you want table output 
+target2 <- target %>%
+  html_nodes(xpath = '//*[@id="mw-content-text"]/div[1]/table[1]') %>%
+  html_table()
+```
+
+## Writing a function {.smaller}
+
+``` r
+get_table_from_wiki <- function(url){
+  
+  download.file(url, destfile = "scraped_page.html", quiet = TRUE)
+  
+  target <- read_html("scraped_page.html")
+  
+  table <- target %>%
+    html_nodes(xpath = '//*[@id="mw-content-text"]/div[1]/table[1]') %>%
+    html_table() 
+  
+  return(table)
+}
+```
+
+## Automating data collection {.smaller}
+
+``` r
+#Testing
+get_table_from_wiki(url_list[[2]])
+
+#Automation
+library(purrr)
+map(url_list, get_table_from_wiki)
+```
+
+## Scraping tables {.smaller}
+
+``` r
+testlink <- read_html("https://en.wikipedia.org/wiki/University_College_London")
+table <- testlink %>%
+  html_nodes(xpath='//*[@id="mw-content-text"]/div[1]/table[2]') %>%
+  html_table()
+
+table <- data.frame(table)
+table
+```
+
+<img src="/figures/images/uclstat.png" alt="Source:" width="500" height="400" style="display: block; margin: 0 auto;"/>
+
+## Practical limitations to scraping
+
+-   Web-pages are complex with many different elements
+
+-   Dealing with the great amount of *unstructured* data
+
+-   APIs provided at least two advantages over scraping:
+
+-   The first is that they made it easier to get at the data. Rather
+    than effectively 'unbaking' the HTML-formatted data and user
+    interface, the API allowed for an ordered and predictable
+    transmission of information
+
+-   The second is that the API often provided information that was not
+    visible to the public through the web
+
+## Further materials {.smaller}
+
+**Further texts**:
+
+-   [Automated data collection with
+    R](https://ucl.primo.exlibrisgroup.com/permalink/44UCL_INST/18kagqf/cdi_skillsoft_books24x7_bks00072676)
+
+**Tutorials**:
+
+-   [rvest](https://rvest.tidyverse.org/)
+
+-   
+
+    {{< video https://youtu.be/9GR26Y4z_v4? width="600" height="300">}}
+
+## Lab exercise: Scraping global indicies table on Yahoo finance {.smaller}
+
+::: columns
+::: {.column width="50%"}
+
+-   Load required libraries
+
+-   Check whether scraping is permitted on Yahoo Finance
+    (https://finance.yahoo.com/world-indices/)
+
+-   Identify XPath for the table, read the path (read_html)
+
+-   Keep only the columns: (Name, Last Price, % Change)
+
+-   Save this information as a new data frame (yahoo_data)
+
+-   Use `plotly` to create a bar plot to visualise stock indicies prices
+    and changes
+:::
+
+::: {.column width="50%"}
+<img src="/figures/images/yahoo.png" alt="Source:" width="450" height="500" style="display: block; margin: 0 auto;"/>
+:::
+:::

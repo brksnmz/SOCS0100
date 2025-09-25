@@ -1,0 +1,26 @@
+---
+title: "🗓️ Week 04 -Automating (functional programming)"
+---
+
+The aim of this week is to introduce students to more advanced programming, such as familiarity with conditional flow (e.g. if-else conditionals) and creating functions to automate some common tasks for data wrangling and plotting. Students will be shown how they can use these functions in data science projects to make their project workflow more efficient.
+
+## 👨‍🏫 Lecture Slides
+
+Either click on the slide area below or click [here](slides4.qmd) to view it in fullscreen. Use your keypad to navigate the slides.
+
+::: {.container style="position: relative;overflow: hidden;width: 100%;min-height:600px;"}
+<iframe src="slides4.html" style="position=absolute;top: 0;left: 0;bottom: 0;right: 0;width: 100%;min-height:600px;">
+
+</iframe>
+:::
+
+🎥 Looking for lecture recordings? You can only find those on Moodle.
+
+## ✍️ Lab Materials
+
+🚧 Students will be asked to use computational tools to automate repeated things in their entire R workflow (e.g. wrangling, visualisation).🚧
+
+## 📚 Required Reading
+
+-   [Wickham, H., Çetinkaya-Rundel, M., & Grolemund, G. (2023). R for data science. " O'Reilly Media, Inc.". (Chapter 26 & 27).](https://r4ds.hadley.nz/data-tidy)
+

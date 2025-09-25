@@ -1,0 +1,27 @@
+---
+title: "🗓️ Week 09 ->>Working with APIs"
+---
+
+Students will be introduced multiple APIs to collect data from digital platforms and how they can access them through R.
+
+## 👨‍🏫 Lecture Slides
+
+Either click on the slide area below or click [here](slides9.qmd) to view it in fullscreen. Use your keypad to navigate the slides.
+
+::: {.container style="position: relative;overflow: hidden;width: 100%;min-height:600px;"}
+<iframe src="slides9.html" style="position=absolute;top: 0;left: 0;bottom: 0;right: 0;width: 100%;min-height:600px;">
+
+</iframe>
+:::
+
+🎥 Looking for lecture recordings? You can only find those on Moodle.
+
+## ✍️ Lab Materials
+
+🚧 They will set up a developer account to access APIs to pull data from the platforms.🚧
+
+## 📚 Required Reading
+
+- [Bruns, A. (2019). After the ‘APIcalypse’: Social media platforms and their fight against critical scholarly research. Information, Communication & Society, 22(11), 1544-1566.](https://doi.org/10.1080/1369118X.2019.1637447) 
+
+- [Prado-Román, C., Gómez-Martínez, R., & Orden-Cruz, C. (2021). Google Trends as a predictor of presidential elections: The United States versus Canada. American Behavioral Scientist, 65(4), 666-680.](https://doi.org/10.1177/0002764220975067)

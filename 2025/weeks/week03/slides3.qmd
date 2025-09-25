@@ -1,0 +1,441 @@
+---
+subtitle: ""
+title: "<font style='font-size:0.75em;'>🗓️ Week 03<br/>Wrangling and Tidying Data</font>"
+author: Dr [Burak Sonmez](#)
+institute: '[University College London](#)'
+date: 17 October 2025
+date-meta: 17 October 2025
+date-format: "DD MMM YYYY"
+toc: true
+toc-depth: 1
+toc-title: "What we will cover today:"
+center-title-slide: false
+from: markdown+emoji
+format:
+  revealjs: 
+    fig-responsive: true
+    theme: simple
+    slide-number: true
+    mouse-wheel: false
+    preview-links: auto
+    logo: /figures/icons/course_favicon.png
+    css: /css/styles_slides.css
+    footer: 'SOCS0100 -- Computational Social Science'
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+# Tidying data
+
+## Tidy data {.smaller}
+
+"In the space between chaos and shape, there was another chance." (C.S.
+Lewis)
+
+-   What makes data tidy:
+    -   Each variable should form a column
+    -   Each observation should form a row
+    -   Each value is a cell; each cell is a single value
+
+<img src="/figures/images/tidy1.png" alt="Source:R for Data Science" width="400" height="300" style="display: block; margin: 0 auto;"/>
+
+## Untidy data {.smaller}
+
+<img src="/figures/images/untidy.png" alt="Source: US Census Fact Finder, General Economic Characteristics, ACS 2017" width="450" height="300" style="display: block; margin: 0 auto;"/>
+
+## Rules for storing tidy data {.smaller}
+
+-   Be consistent
+-   Choose good names for things
+-   Write dates as YYYY-MM-DD
+-   No empty cells
+-   Put just one thing in a cell
+-   Don't use font color or highlighting as data
+
+## Why your data should be tidy {.smaller}
+
+-   Opting for a consistent method of data storage offers a broad
+    benefit. When you maintain a uniform data structure, it simplifies
+    the process of mastering tools that interact with it, as they
+    possess a foundational consistency
+
+-   A distinct advantage of arranging variables in columns is that it
+    leverages R's vectorized capabilities. As you discovered in the R
+    workshop, the majority of built-in R functions are designed to
+    operate on vectors of values, which enhances the seamless
+    transformation of tidy data
+
+## Overview of data {.smaller}
+
+<img src="/figures/images/data-types.png" alt="Source: Concept map for data types. By Meghan Sposato, Brendan Cullen, Monica Alonso" width="500" height="400" style="display: block; margin: 0 auto;"/>
+
+## Collection of R packages for tidy data {.smaller}
+
+If dataframes are tidy, it's easy to transform, visualise, model, and
+program them using tidyverse packages
+
+<img src="/figures/images/tidyverse.png" alt="Source: Tidyverse" width="500" height="300" style="display: block; margin: 0 auto;"/>
+
+## Loading required packages {.smaller}
+
+```{r}
+#| echo: true
+#| warning: false
+pacman::p_load(
+  tidyverse, # the tidyverse framework
+  skimr# quickly providing a broad overview of a data frame
+)
+```
+
+## Displaying and summarising data I {.smaller}
+
+There are so many different ways of looking at data in R
+
+```{r}
+#| echo: true
+str(table1)
+
+glimpse(table1)
+
+#skim(table1)
+```
+
+## Displaying and summarising data II {.smaller}
+
+```{r}
+#| echo: true
+starwars %>%
+  select(name, height, mass)
+
+starwars %>%
+  group_by(gender) %>%
+  summarize(
+    avg_height = mean(height, na.rm = TRUE) %>% round(2)
+  )
+```
+
+## Reshaping {.smaller}
+
+<img src="/figures/images/tidy4.png" alt="Source: R for Data Science" width="500" height="300" style="display: block; margin: 0 auto;"/>
+
+## Pivoting {.smaller}
+
+<img src="/figures/images/pivoting.png" alt="Source: Concept map for pivoting. By Florian Schmoll, Monica Alonso" width="400" height="400" style="display: block; margin: 0 auto;"/>
+
+## Pivot long {.smaller}
+
+-   `pivot_longer()` increases the number of rows (longer) and decreases
+    the number of columns. The inverse function is `pivot_wider()`
+
+-   The names of the ID### columns rotate into an index row (number),
+    and the measure values shift over to the corresponding number and
+    group
+
+<img src="/figures/images/pivot-longer.png" alt="Source: https://www.storybench.org" width="400" height="400" style="display: block; margin: 0 auto;"/>
+
+## Pivot longer {.smaller}
+
+```{r}
+#| echo: true
+table4a
+```
+
+```{r}
+#| echo: true
+table4a %>%
+  pivot_longer(
+    cols = c("1999", "2000"), # Selected columns
+    names_to = "year", # Shorter columns (the columns going to be in one column called year)
+    values_to = "cases"
+  ) # Longer rows (the values are going to be in a separate column called named cases)
+```
+
+## Pivot longer (another example) {.smaller}
+
+```{r}
+#| echo: true
+billboard
+```
+
+## Use pivot longer {.smaller}
+
+```{r}
+#| echo: true
+billboard %>%
+  pivot_longer(
+    cols = starts_with("wk"), # Use regular expressions
+    names_to = "week",
+    values_to = "rank",
+    values_drop_na = TRUE # Drop NAs
+  )
+```
+
+## Pivot wide {.smaller}
+
+Now the values in number become the new column names, and the measure
+values get inserted into the intersection of ID### columns and group
+
+<img src="/figures/images/pivot-wide.png" alt="Source: https://www.storybench.org" width="400" height="400" style="display: block; margin: 0 auto;"/>
+
+## Use pivot wider {.smaller}
+
+```{r}
+#| echo: true
+table2
+```
+
+```{r}
+#| echo: true
+table2 %>%
+  pivot_wider(
+    names_from = type, # first
+    values_from = count # second
+  )
+```
+
+## Further challenges (separating) {.smaller}
+
+```{r}
+#| echo: true
+table3
+```
+
+You can specify how to separate joined values
+
+```{r}
+#| echo: true
+table3 %>%
+  separate(rate,
+    into = c("cases", "population"),
+    sep = "/"
+  )
+```
+
+# Data wrangling 
+
+## Grammar of data wrangling {.smaller}
+
+There is a package specifically designed for helping you wrangle your
+data. This package is called `dplyr` and will allow you to easily
+accomplish many of the data wrangling tasks necessary
+
+-   `%>%` - pipe operator for chaining a sequence of operations
+-   glimpse() - get an overview of what's included in dataset
+-   filter() - filter rows
+-   select() - select, rename, and reorder columns
+-   rename() - rename columns
+-   arrange() - reorder rows
+-   mutate() - create a new column
+-   group_by() - group variables
+-   summarize() - summarize information within a dataset
+-   left_join() - combine data across data frame
+
+## Rearranging data {.smaller}
+
+```{r}
+#| echo: true
+glimpse(mtcars)
+```
+
+```{r}
+#| echo: true
+#| output-location: slide
+dplyr::arrange(mtcars, mpg) # Low to High (default)
+#dplyr::arrange(mtcars, desc(mpg)) # High to Row
+```
+
+## Renaming columns {.smaller}
+
+```{r}
+#| echo: true
+#| output-location: slide
+df <- mtcars %>% rename(milepergalon = mpg)
+glimpse(df)
+```
+
+## Subsetting observations (row) {.smaller}
+
+Adding single condition:
+
+```{r}
+#| echo: true
+starwars %>%
+  dplyr::filter(sex == "female") %>%
+  arrange(desc(height))
+```
+
+## Subsetting observations (row) {.smaller}
+
+Adding multiple condition:
+
+```{r}
+#| echo: true
+starwars %>%
+  dplyr::filter(height < 180 & height > 160) 
+```
+
+## Further examples {.smaller}
+
+Filter brown and black hair_color
+
+```{r}
+#| echo: true
+starwars %>%
+  dplyr::filter(hair_color %in% c("black", "brown"))
+```
+
+## Choose row by position {.smaller}
+
+```{r}
+#| echo: true
+starwars %>%
+  arrange(desc(height)) %>%
+  slice(1:6)
+```
+
+## Subsetting variables (columns) {.smaller}
+
+```{r}
+#| echo: true
+names(msleep)
+# Only numeric
+msleep %>%
+  dplyr::select(where(is.numeric))
+```
+
+## Subsetting variables (columns) by their names {.smaller}
+
+```{r}
+#| echo: true
+msleep %>%
+  dplyr::select(contains("sleep"))
+```
+
+## Additional tips {.smaller}
+
+Real-world data are usually messier. The `janitor` package is useful to
+fix this kind of problem
+
+```{r}
+#| echo: true
+messy_data <- tibble::tribble(
+  ~"ColNum1", ~"COLNUM2", ~"COL & NUM3",
+  1, 2, 3
+)
+
+messy_data
+```
+
+```{r}
+#| echo: true
+pacman::p_load(janitor)
+
+janitor::clean_names(messy_data)
+```
+
+## Creating new columns {.smaller}
+
+Returning to our msleep dataset, after filtering and re-ordering, we can
+create a new column with `mutate()`. Within `mutate()`, we will
+calculate the number of minutes each mammal sleeps by multiplying the
+number of hours each animal sleeps by 60 mins
+
+```{r}
+#| echo: true
+msleep %>%
+  filter(order == "Primates", sleep_total > 10) %>%
+  select(name, sleep_rem, sleep_cycle, sleep_total) %>%
+  arrange(name) %>%
+  mutate(sleep_total_min = sleep_total * 60)
+```
+
+## Summarising exercise {.smaller}
+
+```{r}
+#| echo: true
+tablea <- msleep %>%
+  group_by(order) %>%
+  summarise(
+    n = n(),
+    mean_sleep = mean(sleep_total),
+    sd_sleep = sd(sleep_total)
+  )
+tablea
+```
+
+## Producing tables {.smaller}
+
+```{r}
+#| echo: true
+#| output-location: slide
+#| warning: false
+pacman::p_load(
+  kableExtra,
+  flextable
+)
+
+# For HTML and LaTeX
+tablea %>% kableExtra::kable()
+```
+
+## Grouped summaries {.smaller}
+
+```{r}
+#| echo: true
+msleep %>%
+  group_by(order) %>%
+  summarise(mean_sleep = mean(sleep_total))
+```
+
+## Combining Data Across Data Frames {.smaller}
+
+There is often information stored in several separate data frames that
+you'll want in a single data frame. There are many different ways to
+join separate data frames. Here, we'll demonstrate how `left_join()`
+function works
+
+```{r}
+#| echo: true
+#create data frame
+df1 <- data.frame(a = c('a', 'b', 'c', 'd', 'e', 'f'),
+                  b = c(12, 14, 14, 18, 22, 23))
+
+df2 <- data.frame(a = c('a', 'a', 'a', 'b', 'b', 'b'),
+                  c = c(23, 24, 33, 34, 37, 41))
+
+df3 <- data.frame(a = c('d', 'e', 'f', 'g', 'h', 'i'),
+                  d = c(23, 24, 33, 34, 37, 41))
+combined_data <- df1 %>%
+              left_join(df2, by='a') %>%
+              left_join(df3, by='a')
+combined_data
+```
+
+## Lab exercise {.smaller}
+
+**Problem set:**
+
+-   Import the dataset called "Natural disasters (EMDAT)": This data has
+    been aggregated by Our World in Data by country and year based on
+    the raw database of disasters published by EM-DAT, CRED / UCLouvain,
+    Brussels, Belgium
+
+-   Create a new public repository for the project (e.g. README.md,
+    scripts)
+
+-   Inspect the data briefly and identify its structure
+
+-   Select the variables that capture the information related to deaths,
+    injuries, homelessness caused by all disasters. You can rename the
+    variables
+
+-   Create three tables showing the highest averages of deaths,
+    injuries, and homelessness (e.g. top 10)
+
+-   Create a new binary variable in the original dataset to show whether
+    the number of deaths by all disasters is higher than 500 in a given
+    year
+
+-   Reshape the dataset (selected version) and save it as a separate
+    dataset in your repository

@@ -1,0 +1,535 @@
+---
+subtitle: ""
+title: "<font style='font-size:0.75em;'>🗓️ Week 08<br/>Automated Data Collection II</font>"
+author: Dr [Burak Sonmez](#)
+institute: '[University College London](#)'
+date: 28 November 2025
+date-meta: 28 November 2025
+date-format: "DD MMM YYYY"
+toc: true
+toc-depth: 1
+toc-title: "What we will cover today:"
+center-title-slide: false
+from: markdown+emoji
+format:
+  revealjs: 
+    fig-responsive: true
+    theme: simple
+    slide-number: true
+    mouse-wheel: false
+    preview-links: auto
+    logo: /figures/icons/course_favicon.png
+    css: /css/styles_slides.css
+    footer: 'SOCS0100 -- Computational Social Science'
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+# Scraping Dynamic Webpages
+
+## What is a dynamic webpage {.smaller}
+
+-   Dynamic pages are the ones that display **custom** content
+
+    -   different visitors might see different content on the same page
+        at the same URL
+    -   depending on their own input (e.g. clicks, scrolls)
+
+-   Difficult to scrape as page content changes without the URL
+    changing!!
+
+-   Dynamic pages are scraped typically in **three steps**
+
+    -   use an additional package, `RSelenium`
+
+## Three steps to dynamically scrape {.smaller}
+
+-   Create the desired instance of the dynamic page with the RSelenium
+    package
+    -   clicking, scrolling, filling in forms, from within R
+-   Get the source code into R
+    -   RSelenium downloads `XML`
+    -   rvest turns it into `HTML`
+-   Extract the exact information needed from the source code with the
+    the rvest package
+
+## R Selenium {.smaller}
+
+-   Use R as browser control to simulate your behavior
+    -   scrape dynamically rendered web pages
+-   Originally developed for web testing purposes
+    -   automates browsing across platforms
+
+It allows interacting with two things: - with browsers on your computer
+(e.g. opening a browser and navigating to a page) - with elements on a
+webpage (e.g. opening and clicking on a drop-down menu)
+
+## How RSelenium works {.smaller}
+
+-   Starting server and browser session
+
+-   Navigating to page
+
+-   Finding elements
+
+-   Sending events to elements
+
+-   Getting the source code and extracting information
+
+## Key examples of what you can do with Selenium {.smaller}
+
++-----------------------------------+------------------------+
+| **Action**                        | **Code**               |
++:==================================+:=======================+
+| Open a browser                    | `open()` /             |
+|                                   | `navigate()`           |
++-----------------------------------+------------------------+
+| Click on something                | `clickElement()`       |
++-----------------------------------+------------------------+
+| Enter values                      | `sendKeysToElement()`  |
++-----------------------------------+------------------------+
+| Go to previous/next page          | `goBack()` /           |
+|                                   | `goForward()`          |
++-----------------------------------+------------------------+
+| Refresh the page                  | `refresh()`            |
++-----------------------------------+------------------------+
+| Get all the HTML that is          | `getPageSource()`      |
+| currently\                        |                        |
+| displayed                         |                        |
++-----------------------------------+------------------------+
+
+## Installation issues {.smaller}
+
+1.  Java not installed
+
+-   If you have a message saying that "Java is not found" (or similar),
+    you need to install Java:
+    -   You can [download Java here](https://www.java.com/en/download/)
+
+2.  Firefox not installed/found
+
+-   If you have a message saying "Could not open firefox browser", two
+    possible explanations:
+    -   if Firefox is not installed, install it the same way as Java on
+        the previous slide
+    -   if Firefox is installed but not found, it probably means that it
+        wasn't installed with admin rights, so you need to manually
+        specify the location of the file:
+
+``` r
+driver <- rsDriver(
+  browser = "firefox", 
+  extraCapabilities = list(
+    `moz:firefoxOptions` = list(
+      binary = "C:\\Users\\<USERNAME>\\AppData\\Local\\Mozilla Firefox\\firefox.exe"
+    )
+  )
+)
+```
+
+## Stopping Selenium {.smaller}
+
+-   The clean way to stop Selenium is to run `driver$server$stop()`
+
+-   If you close the browser by hand and try to re-run the script, you
+    may receive the following error:
+
+``` r
+"Error in wdman::selenium(port = port, verbose = verbose, version = version,: 
+Selenium server signals port = 4567 is already in use."
+```
+
+-   To avoid this error, you also need to run `driver$server$stop()`
+
+## Browsers (starting a server) {.smaller}
+
+::: columns
+::: {.column width="50%"}
+-   Use the `rsDriver` function to start a server, so that you can
+    control a web browser from within R
+
+-   Note that the defaults can cause errors, such as trying to start two
+    servers from the same port
+
+-   Note that `rsDriver()` creates a client and a server the code
+    singles out the client, with which our code will interact client is
+    best thought as the browser itself it has the class of remoteDriver
+:::
+
+::: {.column width="50%"}
+Connecting to browser
+
+``` r
+driver <- rsDriver(port = 4567L, browser = "firefox")
+remDr <- driver$client
+```
+:::
+:::
+
+## Navigating to page {.smaller}
+
+-   Simplest way to navigate is to use URL of page, but we can also
+    refresh, navigate forward and backward
+
+-   Navigate is called a method, not a function. Hence, it cannot be
+    piped `%>%` into remDr. Please use the dollar sign `$` notation
+    instead
+
+``` r
+remDr$Navigate("http://somewhere.com")
+
+# Other commands
+remDr$goBack() #Go back to the previous URL
+remDr$goForward() #Go forward
+remDr$refresh() #Refresh the page
+remDr$getCurrentUrl() #Get the URL of the current page
+remDr$getTitle() #Get the title of the current page
+```
+
+## Browser closing and opening {.smaller}
+
+-   Close the browser
+    -   which won't close the session on the server
+    -   recall that we have singled the client out
+
+``` r
+remDr$close()
+```
+
+-   Open a new browser
+    -   which doesn't require the rsDriver function because the server
+        is still running
+
+``` r
+browser$open()
+```
+
+## Finding elements {.smaller}
+
+::: columns
+::: {.column width="50%"}
+- If you want to use elements (e.g. clicking on the element), you need to find & assign them to an object
+  - all commands to this element will be performed using that environment, not the remoteDriver environment
+  - you should name it well! -- `webElem` is a common name
+- Note that
+  - the default selector is `xpath`
+  - requires entering the `xpath value`
+:::
+
+::: {.column width="50%"}
+```r
+findElement(using = "xpath", 
+            value
+            )
+```
+
+- Objects can be found by css selector, x-path, id or class, by name, by (partial) link text (anchor elements / links)
+:::
+:::
+
+
+## Find selectors {.smaller}
+
+- If there were a button created by the following code, 
+
+```r
+<button class="big-button" id="only-button" name="clickable">Click Me</button>
+```
+
+- any of those lines below would find it
+
+```r
+remDr$findElement(using = "xpath", value = '//*[(@id = "only-button")]')
+remDr$findElement(using = "css selector", value = ".big-button")
+remDr$findElement(using = "css", value = "#only-button")
+remDr$findElement(using = "id", value = "only-button")
+remDr$findElement(using = "name", value = "clickable")
+```
+
+- Save elements as R objects to be interacted later on
+
+```r
+WebElem <- remDr$findElement(using = ..., value = ...)
+```
+
+## Highlighting elements you find {.smaller}
+
+Highlight the element found in the previous step, with the `highlightElement` method
+
+```r
+# navigate to a page
+remDr$navigate("https://r-project.org")
+# find the element
+Contributors <- remDr$findElement(using = "link text", value = "Contributors")
+# highlight it to see if we found the correct element
+Contributors$highlightElement()
+```
+
+<img src="/figures/images/dynamic1.png" alt="Source:" width="500" height="375" style="display: block; margin: 0 auto;"/>
+
+## Clicking on the element {.smaller}
+
+- Click on the element found in the previous step, with the `clickElement` method
+
+ ```r
+ # navigate to a page
+remDr$navigate("http://example.com")
+# find an element
+search_icon <- remDr$findElement(using = "css", value = ".fa-search")
+# click on it
+search_icon$clickElement()
+ ```
+
+## Providing input(s) to element(s) {.smaller}
+
+- You can provide input to elements, such as text, with the value argument; keyboard presses; or mouse gestures, with the key argument
+
+- Note that user provides values while the selenium keys are pre-defined
+
+```r
+sendKeysToElement(list(value, key))
+# scrolling a bit
+webElem$sendKeysToElement(list(key = "down_arrow"))
+# scrolling to end of page
+webElem <- remDr$findElement("css", "body")
+webElem$sendKeysToElement(list(key = "end"))
+```
+
+## Selenium keys {.smaller}
+
+Here is the list of **Selenium keys**: 
+
+```{r}
+#| echo: FALSE
+#| warning: FALSE
+install.packages("RSelenium", quitely=T)
+install.packages("tidyverse", quitely=T)
+library(RSelenium)
+library(tidyverse)
+as_tibble(selKeys) %>% names()
+```
+
+## Searching a keyword (example) {.smaller}
+
+```r
+# navigate to the home page
+remDr$navigate("http://example.com/")
+
+# find the search icon and click on it
+search_icon <- remDr$findElement(using = "css", value = ".fa-search")
+search_icon$clickElement()
+
+# find the search bar on the new page and click on it
+search_bar <- browser$findElement(using = "css", value = "#search-query")
+search_bar$clickElement()
+
+# search for the keyword "R Package" and click enter
+search_bar$sendKeysToElement(list(value = "R Package", key = "enter"))
+```
+
+## Source code and extracting information {.smaller}
+
+- Screenshots
+  - central to working with headless browsers
+  
+- Getting source code
+  - preferable option: download HTML page source and save it for extraction
+
+- directly extracting elements from RSelenium session
+  - `findElements()` / `findElement()` for selection of nodes
+  - `getElementText()` for extracting text from individual nodes
+
+```r  
+# screen shots
+remDr$screenshot(display = TRUE)
+# getting source code
+remDr$getPageSource()
+# directly extracting elements
+webElem <- remDr$findElements(using = "class", value="results")
+values <- webElem[[1]]$getElementText()
+```
+
+# Lab Example {.smaller}
+
+Scraping the real-time list of billionaires 
+
+<img src="/figures/images/dynamic2.png" alt="Source:" width="400" height="300" style="display: block; margin: 0 auto;"/>
+
+## Setup {.smaller}
+
+```r
+if (!requireNamespace("pacman", quietly = TRUE)) install.packages("pacman")
+
+pacman::p_load(
+  RSelenium,
+  rvest,
+  purrr,
+  dplyr,
+  ggplot2,
+  plotly,
+  countrycode
+)
+```
+
+## Scraping step by step {.smaller}
+
+- Using the element inspector, we see that the table is a dynamic table
+  - the data of interest are in table rows **`<tr>`** of class **`base ng-scope`**
+  
+- Connecting to browser 
+
+```r
+driver <- rsDriver(browser = "firefox")
+remote_driver <- driver$client
+```
+
+- Navigating to the page 
+
+```r
+url <- "https://www.forbes.com/real-time-billionaires"
+remote_driver$navigate(url)
+```
+
+## Clicking on the "accept cookies" element {.smaller}
+
+<img src="/figures/images/dynamic3.png" alt="Source:" width="450" height="125" style="display: block; margin: 0 auto;"/>
+
+```r
+webElems <- remote_driver$findElements(using = "xpath", '/html/body/div/div/div/div/div[2]/button[2]')
+
+webElems[[1]]$clickElement()
+
+Sys.sleep(5) # wait for page loading
+```
+
+- Slow down the code where necessary, with the `Sys.sleep`
+  - for ethical reasons
+  - because R might be faster than the browser
+  
+## Let’s get the table from the browser {.smaller}
+
+``` r
+main <- remote_driver$findElements(using = "css", value = ".fbs-table")
+table <- read_html(main[[1]]$getElementAttribute("outerHTML")[[1]]) # get html
+```
+
+- And use rvest to extract the lines of the table:
+
+```r
+table  %>% html_nodes(xpath = "//tr[@class='base ng-scope']")
+```
+
+- As this is a dynamic table, we need to scroll it down to get more results
+
+## Scrolling all the way down {.smaller}
+
+- Use `sendKeysToElement`
+
+``` r
+webElem <- remote_driver$findElement("css", ".scrolly-table")
+webElem$sendKeysToElement(list(key = "end"))
+
+main <- remote_driver$findElements(using = "css", value = ".fbs-table")
+Sys.sleep(1)
+table <- read_html(main[[1]]$getElementAttribute("outerHTML")[[1]]) # get html
+table  %>% html_nodes(xpath = "//tr[@class='base ng-scope']")
+```
+
+## Automating the scrolling task {.smaller}
+
+- We get 50 more lines each time we scroll down. Let's scroll down 50 times:
+
+``` r
+webElem <- remote_driver$findElement("css", ".scrolly-table")
+for (i in 1:50) {
+  cat("Scroll", i, "\n")
+  webElem$sendKeysToElement(list(key = "end"))
+  Sys.sleep(3)
+}
+```
+
+## Parsing the html of the table to get all the lines: {.smaller}
+
+``` r
+main <- remote_driver$findElements(using = "css", value = ".fbs-table")
+table <- main[[1]]$getElementAttribute("outerHTML")[[1]] # get html
+# get all lines with attributes
+
+# Assuming 'table' is the HTML content
+html <- read_html(table)
+
+# Select the rows with class 'base ng-scope'
+data <- html %>% html_nodes(xpath = "//tr[@class='base ng-scope']")
+```
+
+## Extracting data from the table {.smaller}
+
+- Forming the data frame:
+
+```r
+# Extract data from each column and create a data-frame with all columns
+forbes2023 <- tibble(
+  name <- data %>% html_nodes(xpath = "//td[@class='name']") %>% html_text(),
+  rank <- data %>% html_nodes(xpath = "//td[@class='rank']") %>% html_text(),
+  money <- data %>% html_nodes(xpath = "//td[@class='Net Worth']") %>% html_text(),
+  age <- data %>% html_nodes(xpath = "//td[@class='age']") %>% html_text(),
+  source <- data %>% html_nodes(xpath = "//td[@class='source']") %>% html_text(),
+  country <- data %>% html_nodes(xpath = "//td[@class='Country/Territory']") %>% html_text() 
+)
+```
+
+- Tidying the data frame 
+
+```r
+# Replace empty cells with NA for the entire data frame
+forbes2023 <- forbes2023 %>% mutate_all(~ ifelse(. == "", NA, .))
+
+# Clean and convert 'money' to numeric
+forbes2023$money <- as.numeric(gsub("\\$|B", "", forbes2023$money))
+```
+
+## Bonus material (DataViz) {.smaller}
+
+- Let's create a choropleth map to visualise billionaires' wealth distribution by country
+
+```r
+# Aggregate money by country
+total_money_by_country <- aggregate(money ~ country, data = forbes2023, sum)
+
+# Convert country names to ISO codes for mapping
+iso_country <- countrycode(total_money_by_country$country, "country.name", "iso3c")
+
+# Create an interactive choropleth map
+plot_ly(
+  locations = iso_country,
+  z = total_money_by_country$money,
+  text = paste("Country: ", total_money_by_country$country, "<br>Net Worth: $", total_money_by_country$money, "B"),
+  type = "choropleth",
+  colorscale = "Viridis"
+) %>%
+  layout(
+    title = "Billionaires' Wealth Distribution by Country",
+    geo = list(
+      showframe = FALSE,
+      projection = list(type = 'mercator')
+    )
+  )
+```
+
+## Billionaires' Wealth Distribution by Country {.smaller}
+
+<img src="/figures/images/forbes2023.png" alt="Source:" width="550" height="400" style="display: block; margin: 0 auto;"/>
+
+## Further materials {.smaller}
+
+**Further texts**:
+
+- [Automated data collection with R](https://ucl.primo.exlibrisgroup.com/permalink/44UCL_INST/18kagqf/cdi_skillsoft_books24x7_bks00072676)
+
+**Tutorials**:
+
+- [RSelenium](https://docs.ropensci.org/RSelenium/)
+
+- {{< video https://youtu.be/WRjKyCZsbE4? width="600" height="300">}}
+
