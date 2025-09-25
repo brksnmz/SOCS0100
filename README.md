@@ -1,6 +1,6 @@
 # GitHub Page of Computational Social Science SOCS0100
 
-Acknowledgement: The module content is collected as much as it is authored. Hence, I list specific resources here:
+Acknowledgement: The module content is collected as much as it is authored. Hence, I list specific resources here.
 
 [Course website Quarto template](https://github.com/jonjoncardoso/quarto-template-for-university-courses) by Jonathan Cardoso-Silva
 
