@@ -161,7 +161,12 @@ Selenium server signals port = 4567 is already in use."
 Connecting to browser
 
 ``` r
-driver <- rsDriver(port = 4567L, browser = "firefox")
+driver <- rsDriver(
+  browser = "firefox",
+  port    = 4567L,
+  verbose = FALSE,
+  check   = FALSE
+)
 remDr <- driver$client
 ```
 :::
@@ -375,12 +380,17 @@ pacman::p_load(
 ## Scraping step by step {.smaller}
 
 - Using the element inspector, we see that the table is a dynamic table
-  - the data of interest are in table rows **`<tr>`** of class **`base ng-scope`**
+  - the data of interest are in table rows **`<tr>`** of class 
   
 - Connecting to browser 
 
 ```r
-driver <- rsDriver(browser = "firefox")
+driver <- rsDriver(
+  browser = "firefox",
+  port    = 4800L,
+  verbose = FALSE,
+  check   = FALSE
+)
 remote_driver <- driver$client
 ```
 
@@ -410,14 +420,8 @@ Sys.sleep(5) # wait for page loading
 ## Let’s get the table from the browser {.smaller}
 
 ``` r
-main <- remote_driver$findElements(using = "css", value = ".fbs-table")
+main <- remote_driver$findElements(using = "css", value = ".BNYQd")
 table <- read_html(main[[1]]$getElementAttribute("outerHTML")[[1]]) # get html
-```
-
-- And use rvest to extract the lines of the table:
-
-```r
-table  %>% html_nodes(xpath = "//tr[@class='base ng-scope']")
 ```
 
 - As this is a dynamic table, we need to scroll it down to get more results
@@ -427,13 +431,12 @@ table  %>% html_nodes(xpath = "//tr[@class='base ng-scope']")
 - Use `sendKeysToElement`
 
 ``` r
-webElem <- remote_driver$findElement("css", ".scrolly-table")
+webElem <- remote_driver$findElement("css", ".BNYQd")
 webElem$sendKeysToElement(list(key = "end"))
 
-main <- remote_driver$findElements(using = "css", value = ".fbs-table")
+main <- remote_driver$findElements(using = "css", value = ".BNYQd")
 Sys.sleep(1)
 table <- read_html(main[[1]]$getElementAttribute("outerHTML")[[1]]) # get html
-table  %>% html_nodes(xpath = "//tr[@class='base ng-scope']")
 ```
 
 ## Automating the scrolling task {.smaller}
@@ -441,7 +444,7 @@ table  %>% html_nodes(xpath = "//tr[@class='base ng-scope']")
 - We get 50 more lines each time we scroll down. Let's scroll down 50 times:
 
 ``` r
-webElem <- remote_driver$findElement("css", ".scrolly-table")
+webElem <- remote_driver$findElement("css", ".BNYQd")
 for (i in 1:50) {
   cat("Scroll", i, "\n")
   webElem$sendKeysToElement(list(key = "end"))
@@ -452,41 +455,48 @@ for (i in 1:50) {
 ## Parsing the html of the table to get all the lines: {.smaller}
 
 ``` r
-main <- remote_driver$findElements(using = "css", value = ".fbs-table")
+main <- remote_driver$findElements(using = "css", value = ".BNYQd")
 table <- main[[1]]$getElementAttribute("outerHTML")[[1]] # get html
-# get all lines with attributes
 
-# Assuming 'table' is the HTML content
-html <- read_html(table)
+# Parse the table 
+doc <- read_html(table)
 
-# Select the rows with class 'base ng-scope'
-data <- html %>% html_nodes(xpath = "//tr[@class='base ng-scope']")
+billionaires <- doc %>%
+  html_element("table") %>%       # or html_element(xpath = ".//table")
+  html_table(fill = TRUE)
+
 ```
 
-## Extracting data from the table {.smaller}
+## Inspecting data from the table {.smaller}
 
-- Forming the data frame:
+- Inspecting data frame:
 
 ```r
-# Extract data from each column and create a data-frame with all columns
-forbes2023 <- tibble(
-  name <- data %>% html_nodes(xpath = "//td[@class='name']") %>% html_text(),
-  rank <- data %>% html_nodes(xpath = "//td[@class='rank']") %>% html_text(),
-  money <- data %>% html_nodes(xpath = "//td[@class='Net Worth']") %>% html_text(),
-  age <- data %>% html_nodes(xpath = "//td[@class='age']") %>% html_text(),
-  source <- data %>% html_nodes(xpath = "//td[@class='source']") %>% html_text(),
-  country <- data %>% html_nodes(xpath = "//td[@class='Country/Territory']") %>% html_text() 
-)
+dim(billionaires)
+head(billionaires)
 ```
 
 - Tidying the data frame 
 
 ```r
-# Replace empty cells with NA for the entire data frame
-forbes2023 <- forbes2023 %>% mutate_all(~ ifelse(. == "", NA, .))
+# Get rid of the first empty column
+billionaires <- billionaires[ , -1]
+
+# Rename the variables 
+billionaires <- billionaires %>% 
+  rename(
+    name    = Name,
+    rank    = Rank,
+    money   = `Net Worth`,
+    age     = Age,
+    industry  = Industry,
+    country = `Country/Territory`
+  )
+  # Replace empty cells with NA for the entire data frame
+billionaires <- billionaires %>% mutate_all(~ ifelse(. == "", NA, .))
 
 # Clean and convert 'money' to numeric
-forbes2023$money <- as.numeric(gsub("\\$|B", "", forbes2023$money))
+billionaires$money <- as.numeric(gsub("\\$|B", "", billionaires$money))
 ```
 
 ## Bonus material (DataViz) {.smaller}
@@ -495,7 +505,7 @@ forbes2023$money <- as.numeric(gsub("\\$|B", "", forbes2023$money))
 
 ```r
 # Aggregate money by country
-total_money_by_country <- aggregate(money ~ country, data = forbes2023, sum)
+total_money_by_country <- aggregate(money ~ country, data = billionaires, sum)
 
 # Convert country names to ISO codes for mapping
 iso_country <- countrycode(total_money_by_country$country, "country.name", "iso3c")

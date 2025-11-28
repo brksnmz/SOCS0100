@@ -256,7 +256,7 @@
     "href": "2025/weeks/week08/slides8.html#browsers-starting-a-server",
     "title": "🗓️ Week 08Automated Data Collection II",
     "section": "Browsers (starting a server)",
-    "text": "Browsers (starting a server)\n\n\n\nUse the rsDriver function to start a server, so that you can control a web browser from within R\nNote that the defaults can cause errors, such as trying to start two servers from the same port\nNote that rsDriver() creates a client and a server the code singles out the client, with which our code will interact client is best thought as the browser itself it has the class of remoteDriver\n\n\nConnecting to browser\ndriver &lt;- rsDriver(port = 4567L, browser = \"firefox\")\nremDr &lt;- driver$client"
+    "text": "Browsers (starting a server)\n\n\n\nUse the rsDriver function to start a server, so that you can control a web browser from within R\nNote that the defaults can cause errors, such as trying to start two servers from the same port\nNote that rsDriver() creates a client and a server the code singles out the client, with which our code will interact client is best thought as the browser itself it has the class of remoteDriver\n\n\nConnecting to browser\ndriver &lt;- rsDriver(\n  browser = \"firefox\",\n  port    = 4567L,\n  verbose = FALSE,\n  check   = FALSE\n)\nremDr &lt;- driver$client"
   },
   {
     "objectID": "2025/weeks/week08/slides8.html#navigating-to-page",
@@ -312,7 +312,7 @@
     "href": "2025/weeks/week08/slides8.html#selenium-keys",
     "title": "🗓️ Week 08Automated Data Collection II",
     "section": "Selenium keys",
-    "text": "Selenium keys\nHere is the list of Selenium keys:\n\n\n\nThe downloaded binary packages are in\n    /var/folders/3b/f__hzkkn7h187ymsbptz__mw0000gn/T//RtmpExwdXH/downloaded_packages\n\n\n\nThe downloaded binary packages are in\n    /var/folders/3b/f__hzkkn7h187ymsbptz__mw0000gn/T//RtmpExwdXH/downloaded_packages\n\n\n [1] \"null\"         \"cancel\"       \"help\"         \"backspace\"    \"tab\"         \n [6] \"clear\"        \"return\"       \"enter\"        \"shift\"        \"control\"     \n[11] \"alt\"          \"pause\"        \"escape\"       \"space\"        \"page_up\"     \n[16] \"page_down\"    \"end\"          \"home\"         \"left_arrow\"   \"up_arrow\"    \n[21] \"right_arrow\"  \"down_arrow\"   \"insert\"       \"delete\"       \"semicolon\"   \n[26] \"equals\"       \"numpad_0\"     \"numpad_1\"     \"numpad_2\"     \"numpad_3\"    \n[31] \"numpad_4\"     \"numpad_5\"     \"numpad_6\"     \"numpad_7\"     \"numpad_8\"    \n[36] \"numpad_9\"     \"multiply\"     \"add\"          \"separator\"    \"subtract\"    \n[41] \"decimal\"      \"divide\"       \"f1\"           \"f2\"           \"f3\"          \n[46] \"f4\"           \"f5\"           \"f6\"           \"f7\"           \"f8\"          \n[51] \"f9\"           \"f10\"          \"f11\"          \"f12\"          \"command_meta\""
+    "text": "Selenium keys\nHere is the list of Selenium keys:\n\n\n\nThe downloaded binary packages are in\n    /var/folders/3b/f__hzkkn7h187ymsbptz__mw0000gn/T//RtmpUDErqb/downloaded_packages\n\n\n\nThe downloaded binary packages are in\n    /var/folders/3b/f__hzkkn7h187ymsbptz__mw0000gn/T//RtmpUDErqb/downloaded_packages\n\n\n [1] \"null\"         \"cancel\"       \"help\"         \"backspace\"    \"tab\"         \n [6] \"clear\"        \"return\"       \"enter\"        \"shift\"        \"control\"     \n[11] \"alt\"          \"pause\"        \"escape\"       \"space\"        \"page_up\"     \n[16] \"page_down\"    \"end\"          \"home\"         \"left_arrow\"   \"up_arrow\"    \n[21] \"right_arrow\"  \"down_arrow\"   \"insert\"       \"delete\"       \"semicolon\"   \n[26] \"equals\"       \"numpad_0\"     \"numpad_1\"     \"numpad_2\"     \"numpad_3\"    \n[31] \"numpad_4\"     \"numpad_5\"     \"numpad_6\"     \"numpad_7\"     \"numpad_8\"    \n[36] \"numpad_9\"     \"multiply\"     \"add\"          \"separator\"    \"subtract\"    \n[41] \"decimal\"      \"divide\"       \"f1\"           \"f2\"           \"f3\"          \n[46] \"f4\"           \"f5\"           \"f6\"           \"f7\"           \"f8\"          \n[51] \"f9\"           \"f10\"          \"f11\"          \"f12\"          \"command_meta\""
   },
   {
     "objectID": "2025/weeks/week08/slides8.html#searching-a-keyword-example",
@@ -340,7 +340,7 @@
     "href": "2025/weeks/week08/slides8.html#scraping-step-by-step",
     "title": "🗓️ Week 08Automated Data Collection II",
     "section": "Scraping step by step",
-    "text": "Scraping step by step\n\nUsing the element inspector, we see that the table is a dynamic table\n\nthe data of interest are in table rows &lt;tr&gt; of class base ng-scope\n\nConnecting to browser\n\ndriver &lt;- rsDriver(browser = \"firefox\")\nremote_driver &lt;- driver$client\n\nNavigating to the page\n\nurl &lt;- \"https://www.forbes.com/real-time-billionaires\"\nremote_driver$navigate(url)"
+    "text": "Scraping step by step\n\nUsing the element inspector, we see that the table is a dynamic table\n\nthe data of interest are in table rows &lt;tr&gt; of class\n\nConnecting to browser\n\ndriver &lt;- rsDriver(\n  browser = \"firefox\",\n  port    = 4800L,\n  verbose = FALSE,\n  check   = FALSE\n)\nremote_driver &lt;- driver$client\n\nNavigating to the page\n\nurl &lt;- \"https://www.forbes.com/real-time-billionaires\"\nremote_driver$navigate(url)"
   },
   {
     "objectID": "2025/weeks/week08/slides8.html#clicking-on-the-accept-cookies-element",
@@ -354,28 +354,28 @@
     "href": "2025/weeks/week08/slides8.html#lets-get-the-table-from-the-browser",
     "title": "🗓️ Week 08Automated Data Collection II",
     "section": "Let’s get the table from the browser",
-    "text": "Let’s get the table from the browser\nmain &lt;- remote_driver$findElements(using = \"css\", value = \".fbs-table\")\ntable &lt;- read_html(main[[1]]$getElementAttribute(\"outerHTML\")[[1]]) # get html\n\nAnd use rvest to extract the lines of the table:\n\ntable  %&gt;% html_nodes(xpath = \"//tr[@class='base ng-scope']\")\n\nAs this is a dynamic table, we need to scroll it down to get more results"
+    "text": "Let’s get the table from the browser\nmain &lt;- remote_driver$findElements(using = \"css\", value = \".BNYQd\")\ntable &lt;- read_html(main[[1]]$getElementAttribute(\"outerHTML\")[[1]]) # get html\n\nAs this is a dynamic table, we need to scroll it down to get more results"
   },
   {
     "objectID": "2025/weeks/week08/slides8.html#scrolling-all-the-way-down",
     "href": "2025/weeks/week08/slides8.html#scrolling-all-the-way-down",
     "title": "🗓️ Week 08Automated Data Collection II",
     "section": "Scrolling all the way down",
-    "text": "Scrolling all the way down\n\nUse sendKeysToElement\n\nwebElem &lt;- remote_driver$findElement(\"css\", \".scrolly-table\")\nwebElem$sendKeysToElement(list(key = \"end\"))\n\nmain &lt;- remote_driver$findElements(using = \"css\", value = \".fbs-table\")\nSys.sleep(1)\ntable &lt;- read_html(main[[1]]$getElementAttribute(\"outerHTML\")[[1]]) # get html\ntable  %&gt;% html_nodes(xpath = \"//tr[@class='base ng-scope']\")"
+    "text": "Scrolling all the way down\n\nUse sendKeysToElement\n\nwebElem &lt;- remote_driver$findElement(\"css\", \".BNYQd\")\nwebElem$sendKeysToElement(list(key = \"end\"))\n\nmain &lt;- remote_driver$findElements(using = \"css\", value = \".BNYQd\")\nSys.sleep(1)\ntable &lt;- read_html(main[[1]]$getElementAttribute(\"outerHTML\")[[1]]) # get html"
   },
   {
     "objectID": "2025/weeks/week08/slides8.html#automating-the-scrolling-task",
     "href": "2025/weeks/week08/slides8.html#automating-the-scrolling-task",
     "title": "🗓️ Week 08Automated Data Collection II",
     "section": "Automating the scrolling task",
-    "text": "Automating the scrolling task\n\nWe get 50 more lines each time we scroll down. Let’s scroll down 50 times:\n\nwebElem &lt;- remote_driver$findElement(\"css\", \".scrolly-table\")\nfor (i in 1:50) {\n  cat(\"Scroll\", i, \"\\n\")\n  webElem$sendKeysToElement(list(key = \"end\"))\n  Sys.sleep(3)\n}"
+    "text": "Automating the scrolling task\n\nWe get 50 more lines each time we scroll down. Let’s scroll down 50 times:\n\nwebElem &lt;- remote_driver$findElement(\"css\", \".BNYQd\")\nfor (i in 1:50) {\n  cat(\"Scroll\", i, \"\\n\")\n  webElem$sendKeysToElement(list(key = \"end\"))\n  Sys.sleep(3)\n}"
   },
   {
     "objectID": "2025/weeks/week08/slides8.html#parsing-the-html-of-the-table-to-get-all-the-lines",
     "href": "2025/weeks/week08/slides8.html#parsing-the-html-of-the-table-to-get-all-the-lines",
     "title": "🗓️ Week 08Automated Data Collection II",
     "section": "Parsing the html of the table to get all the lines:",
-    "text": "Parsing the html of the table to get all the lines:\nmain &lt;- remote_driver$findElements(using = \"css\", value = \".fbs-table\")\ntable &lt;- main[[1]]$getElementAttribute(\"outerHTML\")[[1]] # get html\n# get all lines with attributes\n\n# Assuming 'table' is the HTML content\nhtml &lt;- read_html(table)\n\n# Select the rows with class 'base ng-scope'\ndata &lt;- html %&gt;% html_nodes(xpath = \"//tr[@class='base ng-scope']\")"
+    "text": "Parsing the html of the table to get all the lines:\nmain &lt;- remote_driver$findElements(using = \"css\", value = \".BNYQd\")\ntable &lt;- main[[1]]$getElementAttribute(\"outerHTML\")[[1]] # get html\n\n# Parse the table \ndoc &lt;- read_html(table)\n\nbillionaires &lt;- doc %&gt;%\n  html_element(\"table\") %&gt;%       # or html_element(xpath = \".//table\")\n  html_table(fill = TRUE)"
   },
   {
     "objectID": "2025/weeks/week08/slides8.html#extracting-data-from-the-table",
@@ -389,7 +389,7 @@
     "href": "2025/weeks/week08/slides8.html#bonus-material-dataviz",
     "title": "🗓️ Week 08Automated Data Collection II",
     "section": "Bonus material (DataViz)",
-    "text": "Bonus material (DataViz)\n\nLet’s create a choropleth map to visualise billionaires’ wealth distribution by country\n\n# Aggregate money by country\ntotal_money_by_country &lt;- aggregate(money ~ country, data = forbes2023, sum)\n\n# Convert country names to ISO codes for mapping\niso_country &lt;- countrycode(total_money_by_country$country, \"country.name\", \"iso3c\")\n\n# Create an interactive choropleth map\nplot_ly(\n  locations = iso_country,\n  z = total_money_by_country$money,\n  text = paste(\"Country: \", total_money_by_country$country, \"&lt;br&gt;Net Worth: $\", total_money_by_country$money, \"B\"),\n  type = \"choropleth\",\n  colorscale = \"Viridis\"\n) %&gt;%\n  layout(\n    title = \"Billionaires' Wealth Distribution by Country\",\n    geo = list(\n      showframe = FALSE,\n      projection = list(type = 'mercator')\n    )\n  )"
+    "text": "Bonus material (DataViz)\n\nLet’s create a choropleth map to visualise billionaires’ wealth distribution by country\n\n# Aggregate money by country\ntotal_money_by_country &lt;- aggregate(money ~ country, data = billionaires, sum)\n\n# Convert country names to ISO codes for mapping\niso_country &lt;- countrycode(total_money_by_country$country, \"country.name\", \"iso3c\")\n\n# Create an interactive choropleth map\nplot_ly(\n  locations = iso_country,\n  z = total_money_by_country$money,\n  text = paste(\"Country: \", total_money_by_country$country, \"&lt;br&gt;Net Worth: $\", total_money_by_country$money, \"B\"),\n  type = \"choropleth\",\n  colorscale = \"Viridis\"\n) %&gt;%\n  layout(\n    title = \"Billionaires' Wealth Distribution by Country\",\n    geo = list(\n      showframe = FALSE,\n      projection = list(type = 'mercator')\n    )\n  )"
   },
   {
     "objectID": "2025/weeks/week08/slides8.html#billionaires-wealth-distribution-by-country",
@@ -2021,5 +2021,12 @@
     "title": "🗓️ A Gentle Introduction to R",
     "section": "👨‍🏫 Workshop Slides",
     "text": "👨‍🏫 Workshop Slides\nEither click on the slide area below or click here to view it in fullscreen. Use your keypad to navigate the slides.\n\n\n\n\n🎥 Looking for the workshop recording? You can only find those on Moodle."
+  },
+  {
+    "objectID": "2025/weeks/week08/slides8.html#inspecting-data-from-the-table",
+    "href": "2025/weeks/week08/slides8.html#inspecting-data-from-the-table",
+    "title": "🗓️ Week 08Automated Data Collection II",
+    "section": "Inspecting data from the table",
+    "text": "Inspecting data from the table\n\nInspecting data frame:\n\ndim(billionaires)\nhead(billionaires)\n\nTidying the data frame\n\n# Get rid of the first empty column\nbillionaires &lt;- billionaires[ , -1]\n\n# Rename the variables \nbillionaires &lt;- billionaires %&gt;% \n  rename(\n    name    = Name,\n    rank    = Rank,\n    money   = `Net Worth`,\n    age     = Age,\n    industry  = Industry,\n    country = `Country/Territory`\n  )\n  # Replace empty cells with NA for the entire data frame\nbillionaires &lt;- billionaires %&gt;% mutate_all(~ ifelse(. == \"\", NA, .))\n\n# Clean and convert 'money' to numeric\nbillionaires$money &lt;- as.numeric(gsub(\"\\\\$|B\", \"\", billionaires$money))"
   }
 ]
