@@ -144,7 +144,7 @@
     "href": "2025/weeks/week09/slides9.html#api-access-in-r",
     "title": "🗓️ Week 09Working with APIs",
     "section": "API access in R",
-    "text": "API access in R\n\nIt can be used without an API key by anyone for free directly in the internet browser\n\nExample using httr package:\nlibrary(httr)\nGET(\"https://trends.google.com/trends/explore\",\n    query=list(q = \"Humanitarian\",geo = \"GB\"))\n\nbut just html-output, I recommend to use the gtrendsR package"
+    "text": "API access in R\n\nDownloading November daily mean temp for London\n\nget_nov &lt;- function(year) {\n  url &lt;- \"https://archive-api.open-meteo.com/v1/era5\"\n  q &lt;- list(\n    latitude = 51.5074, longitude = -0.1278,\n    start_date = sprintf(\"%d-11-01\", year),\n    end_date   = sprintf(\"%d-11-30\", year),\n    daily = \"temperature_2m_mean\",\n    timezone = \"Europe/London\"\n  )\n  \n  dat &lt;- fromJSON(content(GET(url, query = q), \"text\"))$daily\n  \n  tibble(\n    day   = as.integer(substr(dat$time, 9, 10)),\n    tmean = dat$temperature_2m_mean,\n    year  = factor(year)\n  )\n}"
   },
   {
     "objectID": "2025/weeks/week09/slides9.html#using-gtrendsr-package",
@@ -2028,5 +2028,26 @@
     "title": "🗓️ Week 08Automated Data Collection II",
     "section": "Inspecting data from the table",
     "text": "Inspecting data from the table\n\nInspecting data frame:\n\ndim(billionaires)\nhead(billionaires)\n\nTidying the data frame\n\n# Get rid of the first empty column\nbillionaires &lt;- billionaires[ , -1]\n\n# Rename the variables \nbillionaires &lt;- billionaires %&gt;% \n  rename(\n    name    = Name,\n    rank    = Rank,\n    money   = `Net Worth`,\n    age     = Age,\n    industry  = Industry,\n    country = `Country/Territory`\n  )\n  # Replace empty cells with NA for the entire data frame\nbillionaires &lt;- billionaires %&gt;% mutate_all(~ ifelse(. == \"\", NA, .))\n\n# Clean and convert 'money' to numeric\nbillionaires$money &lt;- as.numeric(gsub(\"\\\\$|B\", \"\", billionaires$money))"
+  },
+  {
+    "objectID": "2025/weeks/week09/slides9.html#collecting-weather-data-through-an-api",
+    "href": "2025/weeks/week09/slides9.html#collecting-weather-data-through-an-api",
+    "title": "🗓️ Week 09Working with APIs",
+    "section": "Collecting Weather Data Through an API",
+    "text": "Collecting Weather Data Through an API\nSetup:\nlibrary(pacman)\npacman::p_load(httr, jsonlite, dplyr, ggplot2, purrr)\n\nThe data is provided by the Open-Meteo Weather API\n\nCompletely free and no API key required\nProvides historical and forecast weather data\nIncludes variables like temperature, wind, precipitation, humidity, etc.\n\nOutput is clean and easy to load into R (jsonlite, dplyr)\n\nWorks globally for any set of latitude/longitude coordinates"
+  },
+  {
+    "objectID": "2025/weeks/week09/slides9.html#weather-api-data---what-kind-of-data-do-we-get",
+    "href": "2025/weeks/week09/slides9.html#weather-api-data---what-kind-of-data-do-we-get",
+    "title": "🗓️ Week 09Working with APIs",
+    "section": "Weather API Data - What kind of data do we get?",
+    "text": "Weather API Data - What kind of data do we get?\n\nDaily or hourly weather variables\nValues are numerical and time-stamped → ideal for time-series analysis\n\n\n\n\n\n\n\ntemperature_2m_mean\nAverage air temperature at 2 metres above ground (°C)\n\n\ntemperature_2m_max\nDaily maximum air temperature (°C)\n\n\nrain_sum\nTotal rainfall only (mm)\n\n\nsunshine_duration\nMinutes of direct sunlight per day (minutes)"
+  },
+  {
+    "objectID": "2025/weeks/week09/slides9.html#using-httr-package",
+    "href": "2025/weeks/week09/slides9.html#using-httr-package",
+    "title": "🗓️ Week 09Working with APIs",
+    "section": "Using httr Package",
+    "text": "Using httr Package\n\n\n\nVisualising daily mean temperature (last 5 years-November)\n\n\n\n# Pick last 4 *complete* Novembers \nthis_year &lt;- as.integer(format(Sys.Date(), \"%Y\"))\nyears &lt;- (this_year - 5):(this_year - 1)\n\nnov &lt;- map_dfr(years, get_nov)\n# Plot \nggplot(nov, aes(day, tmean, colour = year, linetype = year)) +\n  geom_line(linewidth = 1) +\n  stat_summary(\n    fun = mean, geom = \"line\",\n    aes(group = 1),\n    colour = \"black\", linewidth = 1.3,\n    show.legend = FALSE\n  ) +\n  scale_colour_brewer(palette = \"Blues\") +\n  scale_linetype_manual(values = c(\"solid\",\"dashed\",\"dotdash\",\"twodash\",\"longdash\")) +\n  labs(\n    title = \"London – Daily Mean Temperature in November (Last 5 Years)\",\n    subtitle = \"Black line is the average temperature\",\n    x = \"Day of November\", y = \"Mean Temperature (°C)\"\n  ) +\n  theme_minimal(base_size = 14)"
   }
 ]

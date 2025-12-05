@@ -572,30 +572,29 @@ Dr <a href="#/">Burak Sonmez</a>
 <h1>Web API Examples</h1>
 
 </section>
-<section id="collecting-google-trends" class="slide level2 smaller">
-<h2>Collecting Google Trends</h2>
+<section id="collecting-weather-data-through-an-api" class="slide level2 smaller">
+<h2>Collecting Weather Data Through an API</h2>
 <p>Setup:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(pacman)</span>
-<span id="cb1-2"><a href="#cb1-2"></a>pacman<span class="sc">::</span><span class="fu">p_load</span>(<span class="st">'httr'</span>, <span class="st">'gtrendsR'</span>, <span class="st">'ggplot2'</span>,</span>
-<span id="cb1-3"><a href="#cb1-3"></a><span class="st">'dplyr'</span>, <span class="st">'ggmap'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-2"><a href="#cb1-2"></a>pacman<span class="sc">::</span><span class="fu">p_load</span>(httr, jsonlite, dplyr, ggplot2, purrr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
-<li>The API is provided by Google
+<li>The data is provided by the Open-Meteo Weather API
 <ul>
-<li>with Google Trends, one gets access to a largely unfiltered sample of actual search topics (up to 36h before your search) and a filtered and representative sample for search topics older than 36 hours starting from the year 2004</li>
+<li>Completely free and no API key required</li>
+<li>Provides historical and forecast weather data</li>
+<li>Includes variables like temperature, wind, precipitation, humidity, etc.</li>
 </ul></li>
-<li>The data is anonymised
+<li>Output is clean and easy to load into R (jsonlite, dplyr)
 <ul>
-<li>can be obtained from different Google products like “Web search”, “News”, “Images”, “Shopping” and “Youtube”</li>
-<li>can be filtered by different categories to get the data for the correct meaning of the word</li>
-<li>aggregated, which means that the searches of all cities/regions are aggregated to the federal state level, country level or world level</li>
+<li>Works globally for any set of latitude/longitude coordinates</li>
 </ul></li>
 </ul>
 </section>
-<section id="google-trends-data" class="slide level2 smaller">
-<h2>Google Trends Data</h2>
+<section id="weather-api-data---what-kind-of-data-do-we-get" class="slide level2 smaller">
+<h2>Weather API Data - What kind of data do we get?</h2>
 <ul>
-<li><p>The results you get are a standardised measure of search volume for single search terms, a combination of search terms using operators (see below), or comparisons (one input in relation to the other inputs) over a selected time period</p></li>
-<li><p>Google calculates how much search volume in each region a search term or query had, relative to all searches in that region. Using this information, Google assigns a measure of popularity to search terms (scale of 0 - 100), leaving out repeated searches from the same person over a short period of time and searches with apostrophes and other special characters]</p>
+<li><p>Daily or hourly weather variables</p></li>
+<li><p>Values are numerical and time-stamped → ideal for time-series analysis</p>
 <table>
 <colgroup>
 <col style="width: 50%">
@@ -603,20 +602,20 @@ Dr <a href="#/">Burak Sonmez</a>
 </colgroup>
 <tbody>
 <tr class="odd">
-<td>No quotation marks (e.g.&nbsp;Humanitarian crisis)</td>
-<td>You get results for each word in your query</td>
+<td>temperature_2m_mean</td>
+<td>Average air temperature at 2 metres above ground (°C)</td>
 </tr>
 <tr class="even">
-<td>Quotation marks (e.g.&nbsp;“Humanitarian crisis”)</td>
-<td>You get results for the coherent search phrase</td>
+<td>temperature_2m_max</td>
+<td>Daily maximum air temperature (°C)</td>
 </tr>
 <tr class="odd">
-<td>Plus sign (e.g.&nbsp;humanitarian +crisis)</td>
-<td>Serves as function of an OR-operator</td>
+<td>rain_sum</td>
+<td>Total rainfall only (mm)</td>
 </tr>
 <tr class="even">
-<td>Minus sign (e.g.&nbsp;humanitarian -crisis)</td>
-<td>Excludes word after the operator</td>
+<td>sunshine_duration</td>
+<td>Minutes of direct sunlight per day (minutes)</td>
 </tr>
 </tbody>
 </table></li>
@@ -625,49 +624,58 @@ Dr <a href="#/">Burak Sonmez</a>
 <section id="api-access-in-r" class="slide level2 smaller">
 <h2>API access in R</h2>
 <ul>
-<li>It can be used without an API key by anyone for free directly in the internet browser</li>
+<li>Downloading November daily mean temp for London</li>
 </ul>
-<p>Example using <code>httr</code> package:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">library</span>(httr)</span>
-<span id="cb2-2"><a href="#cb2-2"></a><span class="fu">GET</span>(<span class="st">"https://trends.google.com/trends/explore"</span>,</span>
-<span id="cb2-3"><a href="#cb2-3"></a>    <span class="at">query=</span><span class="fu">list</span>(<span class="at">q =</span> <span class="st">"Humanitarian"</span>,<span class="at">geo =</span> <span class="st">"GB"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<ul>
-<li>but just html-output, I recommend to use the <code>gtrendsR</code> package</li>
-</ul>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>get_nov <span class="ot">&lt;-</span> <span class="cf">function</span>(year) {</span>
+<span id="cb2-2"><a href="#cb2-2"></a>  url <span class="ot">&lt;-</span> <span class="st">"https://archive-api.open-meteo.com/v1/era5"</span></span>
+<span id="cb2-3"><a href="#cb2-3"></a>  q <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb2-4"><a href="#cb2-4"></a>    <span class="at">latitude =</span> <span class="fl">51.5074</span>, <span class="at">longitude =</span> <span class="sc">-</span><span class="fl">0.1278</span>,</span>
+<span id="cb2-5"><a href="#cb2-5"></a>    <span class="at">start_date =</span> <span class="fu">sprintf</span>(<span class="st">"%d-11-01"</span>, year),</span>
+<span id="cb2-6"><a href="#cb2-6"></a>    <span class="at">end_date   =</span> <span class="fu">sprintf</span>(<span class="st">"%d-11-30"</span>, year),</span>
+<span id="cb2-7"><a href="#cb2-7"></a>    <span class="at">daily =</span> <span class="st">"temperature_2m_mean"</span>,</span>
+<span id="cb2-8"><a href="#cb2-8"></a>    <span class="at">timezone =</span> <span class="st">"Europe/London"</span></span>
+<span id="cb2-9"><a href="#cb2-9"></a>  )</span>
+<span id="cb2-10"><a href="#cb2-10"></a>  </span>
+<span id="cb2-11"><a href="#cb2-11"></a>  dat <span class="ot">&lt;-</span> <span class="fu">fromJSON</span>(<span class="fu">content</span>(<span class="fu">GET</span>(url, <span class="at">query =</span> q), <span class="st">"text"</span>))<span class="sc">$</span>daily</span>
+<span id="cb2-12"><a href="#cb2-12"></a>  </span>
+<span id="cb2-13"><a href="#cb2-13"></a>  <span class="fu">tibble</span>(</span>
+<span id="cb2-14"><a href="#cb2-14"></a>    <span class="at">day   =</span> <span class="fu">as.integer</span>(<span class="fu">substr</span>(dat<span class="sc">$</span>time, <span class="dv">9</span>, <span class="dv">10</span>)),</span>
+<span id="cb2-15"><a href="#cb2-15"></a>    <span class="at">tmean =</span> dat<span class="sc">$</span>temperature_2m_mean,</span>
+<span id="cb2-16"><a href="#cb2-16"></a>    <span class="at">year  =</span> <span class="fu">factor</span>(year)</span>
+<span id="cb2-17"><a href="#cb2-17"></a>  )</span>
+<span id="cb2-18"><a href="#cb2-18"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="using-gtrendsr-package" class="slide level2 smaller">
-<h2>Using <code>gtrendsR</code> Package</h2>
+<section id="using-httr-package" class="slide level2 smaller">
+<h2>Using <code>httr</code> Package</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
 <ul>
-<li>Visualising google search activity for the word “vaccine fraud” and “vaccine danger” in UK</li>
+<li>Visualising daily mean temperature (last 5 years-November)</li>
 </ul>
-<p><img src="../../../figures/images/api6.png" alt="Source:" width="350" height="450" style="display: block; margin: 0 auto;"></p>
+<p><img src="../../../figures/images/api6.png" alt="Source:" width="450" height="350" style="display: block; margin: 0 auto;"></p>
 </div><div class="column" style="width:50%;">
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">data</span>(<span class="st">"countries"</span>) <span class="co"># get abbreviations of all countries to filter data </span></span>
-<span id="cb3-2"><a href="#cb3-2"></a><span class="fu">data</span>(<span class="st">"categories"</span>) <span class="co"># get numbers of all categories to filter data </span></span>
-<span id="cb3-3"><a href="#cb3-3"></a></span>
-<span id="cb3-4"><a href="#cb3-4"></a><span class="co">#Combination using dplyr and ggplot</span></span>
-<span id="cb3-5"><a href="#cb3-5"></a>trend <span class="ot">&lt;-</span> <span class="fu">gtrends</span>(<span class="at">keyword=</span><span class="st">"vaccine"</span>, <span class="at">geo=</span><span class="fu">c</span>(<span class="st">"GB"</span>), <span class="at">time =</span> <span class="st">"2021-01-01 2021-12-30"</span>, <span class="at">gprop=</span><span class="st">"web"</span>) </span>
-<span id="cb3-6"><a href="#cb3-6"></a></span>
-<span id="cb3-7"><a href="#cb3-7"></a>trend_df <span class="ot">&lt;-</span> trend<span class="sc">$</span>interest_over_time</span>
-<span id="cb3-8"><a href="#cb3-8"></a></span>
-<span id="cb3-9"><a href="#cb3-9"></a>trend_df <span class="ot">&lt;-</span> trend_df <span class="sc">%&gt;%</span></span>
-<span id="cb3-10"><a href="#cb3-10"></a>    <span class="fu">mutate</span>(<span class="at">hits =</span> <span class="fu">as.numeric</span>(hits), <span class="at">date =</span> <span class="fu">as.Date</span>(date)) <span class="sc">%&gt;%</span></span>
-<span id="cb3-11"><a href="#cb3-11"></a>    <span class="fu">replace</span>(<span class="fu">is.na</span>(.), <span class="dv">0</span>)</span>
-<span id="cb3-12"><a href="#cb3-12"></a></span>
-<span id="cb3-13"><a href="#cb3-13"></a><span class="fu">ggplot</span>(trend_df, <span class="fu">aes</span>(<span class="at">x=</span>date, <span class="at">y=</span>hits, <span class="at">group=</span>geo, <span class="at">col=</span>geo)) <span class="sc">+</span> <span class="fu">geom_line</span>(<span class="at">size=</span><span class="dv">2</span>) <span class="sc">+</span></span>
-<span id="cb3-14"><a href="#cb3-14"></a><span class="fu">scale_x_date</span>(<span class="at">date_breaks =</span> <span class="st">"2 months"</span> , <span class="at">date_labels =</span> <span class="st">"%b-%y"</span>) <span class="sc">+</span></span>
-<span id="cb3-15"><a href="#cb3-15"></a><span class="fu">labs</span>(<span class="at">color=</span> <span class="st">"Countries"</span>) <span class="sc">+</span></span>
-<span id="cb3-16"><a href="#cb3-16"></a><span class="fu">ggtitle</span>(<span class="st">"Frequencies for the query -vaccine harm- in the period: 2021-01-01 - 2021-12-3"</span>)</span>
-<span id="cb3-17"><a href="#cb3-17"></a></span>
-<span id="cb3-18"><a href="#cb3-18"></a><span class="co">#if gtrendsR package doesn't work, try trendecon package </span></span>
-<span id="cb3-19"><a href="#cb3-19"></a><span class="fu">library</span>(trendecon)</span>
-<span id="cb3-20"><a href="#cb3-20"></a>x <span class="ot">&lt;-</span> <span class="fu">ts_gtrends</span>(<span class="at">keyword =</span> <span class="fu">c</span>(<span class="st">"vaccine fraud"</span>, <span class="st">"vaccine danger"</span>), <span class="at">geo =</span> <span class="fu">c</span>(<span class="st">"GB"</span>), <span class="at">time =</span> <span class="st">"today+5-y"</span>,</span>
-<span id="cb3-21"><a href="#cb3-21"></a>  <span class="at">retry =</span> <span class="dv">5</span>,</span>
-<span id="cb3-22"><a href="#cb3-22"></a>  <span class="at">wait =</span> <span class="dv">10</span>)</span>
-<span id="cb3-23"><a href="#cb3-23"></a></span>
-<span id="cb3-24"><a href="#cb3-24"></a>tsbox<span class="sc">::</span><span class="fu">ts_plot</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="co"># Pick last 4 *complete* Novembers </span></span>
+<span id="cb3-2"><a href="#cb3-2"></a>this_year <span class="ot">&lt;-</span> <span class="fu">as.integer</span>(<span class="fu">format</span>(<span class="fu">Sys.Date</span>(), <span class="st">"%Y"</span>))</span>
+<span id="cb3-3"><a href="#cb3-3"></a>years <span class="ot">&lt;-</span> (this_year <span class="sc">-</span> <span class="dv">5</span>)<span class="sc">:</span>(this_year <span class="sc">-</span> <span class="dv">1</span>)</span>
+<span id="cb3-4"><a href="#cb3-4"></a></span>
+<span id="cb3-5"><a href="#cb3-5"></a>nov <span class="ot">&lt;-</span> <span class="fu">map_dfr</span>(years, get_nov)</span>
+<span id="cb3-6"><a href="#cb3-6"></a><span class="co"># Plot </span></span>
+<span id="cb3-7"><a href="#cb3-7"></a><span class="fu">ggplot</span>(nov, <span class="fu">aes</span>(day, tmean, <span class="at">colour =</span> year, <span class="at">linetype =</span> year)) <span class="sc">+</span></span>
+<span id="cb3-8"><a href="#cb3-8"></a>  <span class="fu">geom_line</span>(<span class="at">linewidth =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb3-9"><a href="#cb3-9"></a>  <span class="fu">stat_summary</span>(</span>
+<span id="cb3-10"><a href="#cb3-10"></a>    <span class="at">fun =</span> mean, <span class="at">geom =</span> <span class="st">"line"</span>,</span>
+<span id="cb3-11"><a href="#cb3-11"></a>    <span class="fu">aes</span>(<span class="at">group =</span> <span class="dv">1</span>),</span>
+<span id="cb3-12"><a href="#cb3-12"></a>    <span class="at">colour =</span> <span class="st">"black"</span>, <span class="at">linewidth =</span> <span class="fl">1.3</span>,</span>
+<span id="cb3-13"><a href="#cb3-13"></a>    <span class="at">show.legend =</span> <span class="cn">FALSE</span></span>
+<span id="cb3-14"><a href="#cb3-14"></a>  ) <span class="sc">+</span></span>
+<span id="cb3-15"><a href="#cb3-15"></a>  <span class="fu">scale_colour_brewer</span>(<span class="at">palette =</span> <span class="st">"Blues"</span>) <span class="sc">+</span></span>
+<span id="cb3-16"><a href="#cb3-16"></a>  <span class="fu">scale_linetype_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"solid"</span>,<span class="st">"dashed"</span>,<span class="st">"dotdash"</span>,<span class="st">"twodash"</span>,<span class="st">"longdash"</span>)) <span class="sc">+</span></span>
+<span id="cb3-17"><a href="#cb3-17"></a>  <span class="fu">labs</span>(</span>
+<span id="cb3-18"><a href="#cb3-18"></a>    <span class="at">title =</span> <span class="st">"London – Daily Mean Temperature in November (Last 5 Years)"</span>,</span>
+<span id="cb3-19"><a href="#cb3-19"></a>    <span class="at">subtitle =</span> <span class="st">"Black line is the average temperature"</span>,</span>
+<span id="cb3-20"><a href="#cb3-20"></a>    <span class="at">x =</span> <span class="st">"Day of November"</span>, <span class="at">y =</span> <span class="st">"Mean Temperature (°C)"</span></span>
+<span id="cb3-21"><a href="#cb3-21"></a>  ) <span class="sc">+</span></span>
+<span id="cb3-22"><a href="#cb3-22"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">14</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </section>

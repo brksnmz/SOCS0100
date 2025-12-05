@@ -171,102 +171,95 @@ definitely doable
 
 # Web API Examples
 
-## Collecting Google Trends {.smaller}
+## Collecting Weather Data Through an API {.smaller}
 
 Setup:
 
 ``` r
 library(pacman)
-pacman::p_load('httr', 'gtrendsR', 'ggplot2',
-'dplyr', 'ggmap')
+pacman::p_load(httr, jsonlite, dplyr, ggplot2, purrr)
 ```
 
--   The API is provided by Google
-    -   with Google Trends, one gets access to a largely unfiltered
-        sample of actual search topics (up to 36h before your search)
-        and a filtered and representative sample for search topics older
-        than 36 hours starting from the year 2004
--   The data is anonymised
-    -   can be obtained from different Google products like "Web
-        search", "News", "Images", "Shopping" and "Youtube"
-    -   can be filtered by different categories to get the data for the
-        correct meaning of the word
-    -   aggregated, which means that the searches of all cities/regions
-        are aggregated to the federal state level, country level or
-        world level
+-   The data is provided by the Open-Meteo Weather API
+    -   Completely free and no API key required
+    -   Provides historical and forecast weather data
+    -   Includes variables like temperature, wind, precipitation,
+        humidity, etc.
+-   Output is clean and easy to load into R (jsonlite, dplyr)
+    -   Works globally for any set of latitude/longitude coordinates
 
-## Google Trends Data {.smaller}
+## Weather API Data - What kind of data do we get? {.smaller}
 
--   The results you get are a standardised measure of search volume for
-    single search terms, a combination of search terms using operators
-    (see below), or comparisons (one input in relation to the other
-    inputs) over a selected time period
+-   Daily or hourly weather variables
 
--   Google calculates how much search volume in each region a search
-    term or query had, relative to all searches in that region. Using
-    this information, Google assigns a measure of popularity to search
-    terms (scale of 0 - 100), leaving out repeated searches from the
-    same person over a short period of time and searches with
-    apostrophes and other special characters\]
+-   Values are numerical and time-stamped → ideal for time-series
+    analysis
 
-    |                                               |                                                |
+    |                     |                                                       |
     |------------------------------------|------------------------------------|
-    | No quotation marks (e.g. Humanitarian crisis) | You get results for each word in your query    |
-    | Quotation marks (e.g. "Humanitarian crisis")  | You get results for the coherent search phrase |
-    | Plus sign (e.g. humanitarian +crisis)         | Serves as function of an OR-operator           |
-    | Minus sign (e.g. humanitarian -crisis)        | Excludes word after the operator               |
+    | temperature_2m_mean | Average air temperature at 2 metres above ground (°C) |
+    | temperature_2m_max  | Daily maximum air temperature (°C)                    |
+    | rain_sum            | Total rainfall only (mm)                              |
+    | sunshine_duration   | Minutes of direct sunlight per day (minutes)          |
 
 ## API access in R {.smaller}
 
--   It can be used without an API key by anyone for free directly in the
-    internet browser
-
-Example using `httr` package:
+-   Downloading November daily mean temp for London 
 
 ``` r
-library(httr)
-GET("https://trends.google.com/trends/explore",
-    query=list(q = "Humanitarian",geo = "GB"))
+get_nov <- function(year) {
+  url <- "https://archive-api.open-meteo.com/v1/era5"
+  q <- list(
+    latitude = 51.5074, longitude = -0.1278,
+    start_date = sprintf("%d-11-01", year),
+    end_date   = sprintf("%d-11-30", year),
+    daily = "temperature_2m_mean",
+    timezone = "Europe/London"
+  )
+  
+  dat <- fromJSON(content(GET(url, query = q), "text"))$daily
+  
+  tibble(
+    day   = as.integer(substr(dat$time, 9, 10)),
+    tmean = dat$temperature_2m_mean,
+    year  = factor(year)
+  )
+}
 ```
 
--   but just html-output, I recommend to use the `gtrendsR` package
-
-## Using `gtrendsR` Package {.smaller}
+## Using `httr` Package {.smaller}
 
 ::: columns
 ::: {.column width="50%"}
--   Visualising google search activity for the word "vaccine fraud" and
-    "vaccine danger" in UK
+-   Visualising daily mean temperature (last 5 years-November)
 
-<img src="/figures/images/api6.png" alt="Source:" width="350" height="450" style="display: block; margin: 0 auto;"/>
+<img src="/figures/images/api6.png" alt="Source:" width="450" height="350" style="display: block; margin: 0 auto;"/>
 :::
 
 ::: {.column width="50%"}
 ``` r
-data("countries") # get abbreviations of all countries to filter data 
-data("categories") # get numbers of all categories to filter data 
+# Pick last 4 *complete* Novembers 
+this_year <- as.integer(format(Sys.Date(), "%Y"))
+years <- (this_year - 5):(this_year - 1)
 
-#Combination using dplyr and ggplot
-trend <- gtrends(keyword="vaccine", geo=c("GB"), time = "2021-01-01 2021-12-30", gprop="web") 
-
-trend_df <- trend$interest_over_time
-
-trend_df <- trend_df %>%
-    mutate(hits = as.numeric(hits), date = as.Date(date)) %>%
-    replace(is.na(.), 0)
-
-ggplot(trend_df, aes(x=date, y=hits, group=geo, col=geo)) + geom_line(size=2) +
-scale_x_date(date_breaks = "2 months" , date_labels = "%b-%y") +
-labs(color= "Countries") +
-ggtitle("Frequencies for the query -vaccine harm- in the period: 2021-01-01 - 2021-12-3")
-
-#if gtrendsR package doesn't work, try trendecon package 
-library(trendecon)
-x <- ts_gtrends(keyword = c("vaccine fraud", "vaccine danger"), geo = c("GB"), time = "today+5-y",
-  retry = 5,
-  wait = 10)
-
-tsbox::ts_plot(x)
+nov <- map_dfr(years, get_nov)
+# Plot 
+ggplot(nov, aes(day, tmean, colour = year, linetype = year)) +
+  geom_line(linewidth = 1) +
+  stat_summary(
+    fun = mean, geom = "line",
+    aes(group = 1),
+    colour = "black", linewidth = 1.3,
+    show.legend = FALSE
+  ) +
+  scale_colour_brewer(palette = "Blues") +
+  scale_linetype_manual(values = c("solid","dashed","dotdash","twodash","longdash")) +
+  labs(
+    title = "London – Daily Mean Temperature in November (Last 5 Years)",
+    subtitle = "Black line is the average temperature",
+    x = "Day of November", y = "Mean Temperature (°C)"
+  ) +
+  theme_minimal(base_size = 14)
 ```
 :::
 :::
@@ -389,11 +382,10 @@ leaflet() %>%
 :::
 :::
 
-
-
 ## Lab exercise and further materials {.smaller}
 
-- Visualise location of pubs in Greater London, using OpenStreetMap API
+-   Visualise location of pubs in Greater London, using OpenStreetMap
+    API
 
 **Further texts**:
 
