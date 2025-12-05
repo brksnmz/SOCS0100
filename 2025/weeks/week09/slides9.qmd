@@ -233,7 +233,7 @@ get_nov <- function(year) {
 ::: {.column width="50%"}
 -   Visualising daily mean temperature (last 5 years-November)
 
-<img src="/figures/images/api6.png" alt="Source:" width="450" height="350" style="display: block; margin: 0 auto;"/>
+<img src="/figures/images/api6.png" alt="Source:" width="500" height="350" style="display: block; margin: 0 auto;"/>
 :::
 
 ::: {.column width="50%"}
