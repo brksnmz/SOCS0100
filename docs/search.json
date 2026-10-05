@@ -2866,8 +2866,8 @@
     "objectID": "2026/weeks/week01/slides.html#your-lecturer",
     "href": "2026/weeks/week01/slides.html#your-lecturer",
     "title": "🗓️ Week 01 Introduction to Computational Social Science",
-    "section": "",
-    "text": "Dr Burak Sonmez  Associate Professor in Quantitative Social Science\n\n\n\n\nPhD in Sociology (University of Essex)\nMA in Longitudinal Social Research (University of Essex)\nBA in Economics (Bilkent University)\n\nExperimental Methods  Social Norms  Trust"
+    "section": "Your lecturer",
+    "text": "Your lecturer\n\n\n\n\n\nDr Burak Sonmez  Associate Professor in Quantitative Social Science\n\n\n\n\nPhD in Sociology (University of Essex)\nMA in Longitudinal Social Research (University of Essex)\nBA in Economics (Bilkent University)\n\nExperimental Methods  Social Norms  Trust"
   },
   {
     "objectID": "2026/weeks/week01/slides.html#computational-social-science",
@@ -3000,7 +3000,7 @@
     "href": "2026/weeks/week01/slides.html#introducing-yourself-to-git",
     "title": "🗓️ Week 01 Introduction to Computational Social Science",
     "section": "Introducing yourself to Git",
-    "text": "Introducing yourself to Git\n\nIn the shell\n\ngit config --global user.name \"Burak Sonmez\"\ngit config --global user.email \"burak@example.com\"\ngit config --global --list\n\nsubstituting your name and the email associated with your GitHub account.\nThe usethis package offers an alternative approach. You can set your Git user name and email from within R:\n\n## install if needed (do this exactly once):\n## install.packages(\"usethis\")\n\nlibrary(usethis)\nuse_git_config(user.name = \"Burak Sonmez\", user.email = \"burak@example.org\")"
+    "text": "Introducing yourself to Git\n\nIn the shell\n\ngit config --global user.name \"Burak Sonmez\"\ngit config --global user.email \"burak@example.com\"\ngit config --global --list\n\nsubstituting your name and the email associated with your GitHub account.\nThe usethis package offers an alternative approach. You can set your Git user name and email from within R:\n\n## install if needed (do this exactly once):\n## install.packages(\"usethis\")\n\nlibrary(usethis)\nuse_git_config(user.name = \"Burak Sonmez\", user.email = \"burak@example.org\")\n\n\n\nSOCS0100 – Computational Social Science"
   },
   {
     "objectID": "2026/weeks/week02/slides2.html",
@@ -4100,5 +4100,33 @@
     "title": "🗓️ Week 09Working with APIs",
     "section": "Decision in scraping",
     "text": "Decision in scraping"
+  },
+  {
+    "objectID": "2026/weeks/week01/page.html",
+    "href": "2026/weeks/week01/page.html",
+    "title": "🗓️ Week 01 - Introduction to Computational Social Science",
+    "section": "",
+    "text": "Introduction to computational social science and open science: data and code sharing, project management, and collaborations – the use of git and GitHub. This week students will be introduced how they can set up their own GitHub account and subscribe to the module organisation to engage with both individual and group assignments throughout the module."
+  },
+  {
+    "objectID": "2026/weeks/week01/page.html#lecture-slides",
+    "href": "2026/weeks/week01/page.html#lecture-slides",
+    "title": "🗓️ Week 01 - Introduction to Computational Social Science",
+    "section": "👨‍🏫 Lecture Slides",
+    "text": "👨‍🏫 Lecture Slides\nEither click on the slide area below or click here to view it in fullscreen. Use your keypad to navigate the slides.\n\n\n\n\n🎥 Looking for lecture recordings? You can only find those on Moodle."
+  },
+  {
+    "objectID": "2026/weeks/week01/page.html#lab-materials",
+    "href": "2026/weeks/week01/page.html#lab-materials",
+    "title": "🗓️ Week 01 - Introduction to Computational Social Science",
+    "section": "✍️ Lab Materials",
+    "text": "✍️ Lab Materials\n🚧 Come back after the lecture to read the practicals for the week 🚧"
+  },
+  {
+    "objectID": "2026/weeks/week01/page.html#required-reading",
+    "href": "2026/weeks/week01/page.html#required-reading",
+    "title": "🗓️ Week 01 - Introduction to Computational Social Science",
+    "section": "📚 Required Reading",
+    "text": "📚 Required Reading\n\nEdelman, A., Wolff, T., Montagne, D. & Bail, C. A. (2020). Computational Social Science and Sociology, Annual Review of Sociology.\nBryan, J. (2018), Happy Git and GitHub for the useR, GitHub."
   }
 ]
