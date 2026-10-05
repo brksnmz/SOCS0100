@@ -4,21 +4,21 @@ project:
   output-dir: docs
   render:
     - "index.qmd"
-    - "2025/*.qmd"
-    - "2025/weeks/week01/*.qmd"
-    - "2025/weeks/week02/*.qmd"
-    - "2025/weeks/week03/*.qmd"
-    - "2025/weeks/week04/*.qmd"
-    - "2025/weeks/week05/*.qmd"
-    - "2025/weeks/week06/*.qmd"
-    - "2025/weeks/week07/*.qmd"
-    - "2025/weeks/week08/*.qmd"
-    - "2025/weeks/week09/*.qmd"
-    - "2025/workshop/rworkshop/*.qmd"
-    - "2025/syllabus/rsyllabus/*.qmd"
+    - "2026/*.qmd"
+    - "2026/weeks/week01/*.qmd"
+    - "2026/weeks/week02/*.qmd"
+    - "2026/weeks/week03/*.qmd"
+    - "2026/weeks/week04/*.qmd"
+    - "2026/weeks/week05/*.qmd"
+    - "2026/weeks/week06/*.qmd"
+    - "2026/weeks/week07/*.qmd"
+    - "2026/weeks/week08/*.qmd"
+    - "2026/weeks/week09/*.qmd"
+    - "2026/workshop/rworkshop/*.qmd"
+    - "2026/syllabus/rsyllabus/*.qmd"
 
 website:
-  title: "Computational Social Science 2025/26"
+  title: "Computational Social Science 2026/27"
   page-navigation: true
   reader-mode: true
   open-graph: true
@@ -32,85 +32,85 @@ website:
   sidebar:
     style: docked
     contents:
-      - href: 2025/index.qmd
+      - href: 2026/index.qmd
         text: "🏠 Home"
       - section: "📓 Syllabus"
         contents:
-        - href: 2025/syllabus/rsyllabus/syllabus.qmd
+        - href: 2026/syllabus/rsyllabus/syllabus.qmd
           text: "📓 Syllabus" 
           contents:
       - section: "📟 R Workshop"
         contents:
-         - href: 2025/workshop/rworkshop/page.qmd
+         - href: 2026/workshop/rworkshop/page.qmd
            text: "📟 R Workshop Slides"
            contents:
-      #      - href: 2025/workshop/rworkshop/page.qmd
+      #      - href: 2026/workshop/rworkshop/page.qmd
       #        text: "📟 R Workshop"
-      #     - href: 2025/assignments/assignment02.qmd
+      #     - href: 2026/assignments/assignment02.qmd
       #       text: "📝 Assignment 02"
       - section: "🗓️ Weeks"
         contents:
-         - href: 2025/weeks/week01/page.qmd
+         - href: 2026/weeks/week01/page.qmd
            text: Week 01
            contents:
-             - href: 2025/weeks/week01/page.qmd
+             - href: 2026/weeks/week01/page.qmd
                text: 👨‍🏫 Lecture Material
-         - href: 2025/weeks/week02/page2.qmd
+         - href: 2026/weeks/week02/page2.qmd
            text: Week 02
            contents:
-             - href: 2025/weeks/week02/page2.qmd
+             - href: 2026/weeks/week02/page2.qmd
                text: 👨‍🏫 Lecture Material 
-         - href: 2025/weeks/week03/page3.qmd
+         - href: 2026/weeks/week03/page3.qmd
            text: Week 03
            contents:
-             - href: 2025/weeks/week03/page3.qmd
+             - href: 2026/weeks/week03/page3.qmd
                text: 👨‍🏫 Lecture Material  
-         - href: 2025/weeks/week04/page4.qmd
+         - href: 2026/weeks/week04/page4.qmd
            text: Week 04
            contents:
-             - href: 2025/weeks/week04/page4.qmd
+             - href: 2026/weeks/week04/page4.qmd
                text: 👨‍🏫 Lecture Material
-         - href: 2025/weeks/week05/page5.qmd
+         - href: 2026/weeks/week05/page5.qmd
            text: Week 05
            contents:
-             - href: 2025/weeks/week05/page5.qmd
+             - href: 2026/weeks/week05/page5.qmd
                text: 👨‍🏫 Lecture Material
-         - href: 2025/weeks/week06/page6.qmd
+         - href: 2026/weeks/week06/page6.qmd
            text: Week 06
            contents:
-             - href: 2025/weeks/week06/page6.qmd
+             - href: 2026/weeks/week06/page6.qmd
                text: 👨‍🏫 Lecture Material 
-         - href: 2025/weeks/week07/page7.qmd
+         - href: 2026/weeks/week07/page7.qmd
            text: Week 07
            contents:
-             - href: 2025/weeks/week07/page7.qmd
+             - href: 2026/weeks/week07/page7.qmd
                text: 👨‍🏫 Lecture Material
-         - href: 2025/weeks/week08/page8.qmd
+         - href: 2026/weeks/week08/page8.qmd
            text: Week 08
            contents:
-             - href: 2025/weeks/week08/page8.qmd
+             - href: 2026/weeks/week08/page8.qmd
                text: 👨‍🏫 Lecture Material
-         - href: 2025/weeks/week09/page9.qmd
+         - href: 2026/weeks/week09/page9.qmd
            text: Week 09
            contents:
-             - href: 2025/weeks/week09/page9.qmd
+             - href: 2026/weeks/week09/page9.qmd
                text: 👨‍🏫 Lecture Material       
-            #  - href: 2025/weeks/week01/lab.qmd
+            #  - href: 2026/weeks/week01/lab.qmd
             #    text: 💻 Lab Roadmap
-            #  - href: 2025/weeks/week01/appendix.qmd
+            #  - href: 2026/weeks/week01/appendix.qmd
             #    text: 🔖 Appendix
       #- section: "📟 R Workshop"
        # contents:
-        # - href: 2025/workshop/rworkshop/page.qmd
+        # - href: 2026/workshop/rworkshop/page.qmd
          #  text: 📟 R Workshop
           # contents:
-           #  - href: 2025/workshop/rworkshop/page.qmd
+           #  - href: 2026/workshop/rworkshop/page.qmd
              #  text: 👨‍🏫 Workshop Material
   navbar:
     background: primary
   page-footer:
     background: light
-    left: "Copyright 2025, Burak Sonmez" 
+    left: "Copyright 2026, Burak Sonmez" 
 
 
 
