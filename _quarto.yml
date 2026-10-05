@@ -1,6 +1,6 @@
 project:
   type: "website"
-  title: "Computational Social Science 2025/26"
+  title: "Computational Social Science 2026/27"
   output-dir: docs
   render:
     - "index.qmd"
